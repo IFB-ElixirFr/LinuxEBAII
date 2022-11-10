@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Manipuler des fichiers" href="manipulate.html" />
-    <link rel="prev" title="Arborescence de fichiers" href="arborescence.html" />
+    <link rel="next" title="Manipuler des fichiers" href="09_manipulate.html" />
+    <link rel="prev" title="Arborescence de fichiers" href="07_arborescence.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,44 +108,44 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="home.html">
+                <a class="reference internal" href="00_home.html">
                     A la découverte de Linux
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="team.html">
+  <a class="reference internal" href="01_team.html">
    L’équipe pédagogique
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
+  <a class="reference internal" href="02_introduction.html">
    Le cluster de l’IFB
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="jupyter.html">
+  <a class="reference internal" href="03_jupyter.html">
    C’est quoi JupyterHub
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="bash.html">
+  <a class="reference internal" href="04_bash.html">
    Comment converser avec le terminal ?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="module.html">
+  <a class="reference internal" href="05_module.html">
    Charger l’environnement logiciel
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="protoCommande.html">
+  <a class="reference internal" href="06_protoCommande.html">
    Prototype(s) d’une commande
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="arborescence.html">
+  <a class="reference internal" href="07_arborescence.html">
    Arborescence de fichiers
   </a>
  </li>
@@ -155,22 +155,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="manipulate.html">
+  <a class="reference internal" href="09_manipulate.html">
    Manipuler des fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="redirection.html">
+  <a class="reference internal" href="10_redirection.html">
    Redirections
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="linuxIsMore.html">
+  <a class="reference internal" href="11_linuxIsMore.html">
    Linux c’est aussi tellement plus !
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="raccourcis.html">
+  <a class="reference internal" href="12_raccourcis.html">
    Les raccourcis clavier du terminal
   </a>
  </li>
@@ -233,7 +233,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/storage.ipynb"
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/08_storage.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -293,7 +293,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2Fstorage.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F08_storage.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -321,7 +321,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/storage.ipynb"
+        <a href="_sources/08_storage.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,6 +394,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#exercices">
    Exercices
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solutions">
+     Solutions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -428,6 +435,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#exercices">
    Exercices
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solutions">
+     Solutions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -492,7 +506,7 @@ ls -l
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 96
-drwxrwx---+ 2 tdenecker tdenecker  4096 10 nov.  16:51 <span class=" -Color -Color-C27">chip-seq</span>
+drwxrwx---+ 2 tdenecker tdenecker  4096 10 nov.  17:11 <span class=" -Color -Color-C27">chip-seq</span>
 -rw-rw----+ 1 tdenecker tdenecker    62 10 nov.  16:41 cleanFolder.sh
 -rw-rw----+ 1 tdenecker tdenecker 52296 10 nov.  15:14 cours1.ipynb
 -rw-rw----+ 1 tdenecker tdenecker 23607 10 nov.  12:19 cours2.ipynb
@@ -531,8 +545,8 @@ ls -l
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 8
-drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  16:51 <span class=" -Color -Color-C27">bam</span>
-drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  16:51 <span class=" -Color -Color-C27">fastq</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  17:11 <span class=" -Color -Color-C27">bam</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  17:11 <span class=" -Color -Color-C27">fastq</span>
 </pre></div>
 </div>
 </div>
@@ -615,14 +629,13 @@ cleanFolder.sh  cours2.ipynb  <span class=" -Color -Color-C27">LinuxEBAII</span>
 <span class=" -Color -Color-C27">docs</span>  LICENSE
 
 ./LinuxEBAII/docs:
-arborescence.ipynb  jupyter.md             protoCommande.ipynb
-bash.md             linuxIsMore.ipynb      raccourcis.md
-<span class=" -Color -Color-C27">_build</span>              <span class=" -Color -Color-C13">logo.png</span>               redirection.ipynb
-_config.yml         log.txt                references.bib
-file.txt            manipulate.ipynb       requirements.txt
-home.md             markdown-notebooks.md  storage.ipynb
-<span class=" -Color -Color-C27">images</span>              module.ipynb           team.md
-introduction.ipynb  notebooks.ipynb        _toc.yml
+00_home.md              07_arborescence.ipynb  _config.yml
+01_team.md              08_storage.ipynb       <span class=" -Color -Color-C27">images</span>
+02_introduction.ipynb   09_manipulate.ipynb    <span class=" -Color -Color-C13">logo.png</span>
+03_jupyter.md           10_redirection.ipynb   markdown-notebooks.md
+04_bash.md              11_linuxIsMore.ipynb   references.bib
+05_module.ipynb         12_raccourcis.md       requirements.txt
+06_protoCommande.ipynb  <span class=" -Color -Color-C27">_build</span>                 _toc.yml
 
 ./LinuxEBAII/docs/_build:
 <span class=" -Color -Color-C27">html</span>  <span class=" -Color -Color-C27">jupyter_execute</span>
@@ -631,18 +644,15 @@ introduction.ipynb  notebooks.ipynb        _toc.yml
 <span class=" -Color -Color-C27">reports</span>  <span class=" -Color -Color-C27">_sphinx_design_static</span>
 
 ./LinuxEBAII/docs/_build/html/reports:
-manipulate.log  module.log  notebooks.log  redirection.log
+05_module.log
 
 ./LinuxEBAII/docs/_build/html/_sphinx_design_static:
 design-style.b7bb847fb20b106c3d81b95245e65545.min.css  design-tabs.js
 
 ./LinuxEBAII/docs/_build/jupyter_execute:
-arborescence.ipynb  manipulate.ipynb          notebooks.ipynb
-arborescence.sh     manipulate.sh             notebooks.py
-introduction.ipynb  markdown-notebooks.ipynb  protoCommande.ipynb
-introduction.sh     markdown-notebooks.py     protoCommande.sh
-linuxIsMore.ipynb   module.ipynb              redirection.ipynb
-linuxIsMore.sh      module.sh                 redirection.sh
+02_introduction.ipynb  05_module.sh            07_arborescence.ipynb
+02_introduction.sh     06_protoCommande.ipynb  07_arborescence.sh
+05_module.ipynb        06_protoCommande.sh
 
 ./LinuxEBAII/docs/images:
 <span class=" -Color -Color-C13">arborescence2.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_no.png</span>
@@ -761,40 +771,36 @@ linuxIsMore.sh      module.sh                 redirection.sh
 │   └── tabTab.gif
 ├── LinuxEBAII
 │   ├── docs
-│   │   ├── arborescence.ipynb
-│   │   ├── bash.md
+│   │   ├── 00_home.md
+│   │   ├── 01_team.md
+│   │   ├── 02_introduction.ipynb
+│   │   ├── 03_jupyter.md
+│   │   ├── 04_bash.md
+│   │   ├── 05_module.ipynb
+│   │   ├── 06_protoCommande.ipynb
+│   │   ├── 07_arborescence.ipynb
+│   │   ├── 08_storage.ipynb
+│   │   ├── 09_manipulate.ipynb
+│   │   ├── 10_redirection.ipynb
+│   │   ├── 11_linuxIsMore.ipynb
+│   │   ├── 12_raccourcis.md
 │   │   ├── _build
 │   │   │   ├── html
 │   │   │   │   ├── reports
-│   │   │   │   │   ├── manipulate.log
-│   │   │   │   │   ├── module.log
-│   │   │   │   │   ├── notebooks.log
-│   │   │   │   │   └── redirection.log
+│   │   │   │   │   └── 05_module.log
 │   │   │   │   └── _sphinx_design_static
 │   │   │   │       ├── design-style.b7bb847fb20b106c3d81b95245e65545.min.css
 │   │   │   │       └── design-tabs.js
 │   │   │   └── jupyter_execute
-│   │   │       ├── arborescence.ipynb
-│   │   │       ├── arborescence.sh
-│   │   │       ├── introduction.ipynb
-│   │   │       ├── introduction.sh
-│   │   │       ├── linuxIsMore.ipynb
-│   │   │       ├── linuxIsMore.sh
-│   │   │       ├── manipulate.ipynb
-│   │   │       ├── manipulate.sh
-│   │   │       ├── markdown-notebooks.ipynb
-│   │   │       ├── markdown-notebooks.py
-│   │   │       ├── module.ipynb
-│   │   │       ├── module.sh
-│   │   │       ├── notebooks.ipynb
-│   │   │       ├── notebooks.py
-│   │   │       ├── protoCommande.ipynb
-│   │   │       ├── protoCommande.sh
-│   │   │       ├── redirection.ipynb
-│   │   │       └── redirection.sh
+│   │   │       ├── 02_introduction.ipynb
+│   │   │       ├── 02_introduction.sh
+│   │   │       ├── 05_module.ipynb
+│   │   │       ├── 05_module.sh
+│   │   │       ├── 06_protoCommande.ipynb
+│   │   │       ├── 06_protoCommande.sh
+│   │   │       ├── 07_arborescence.ipynb
+│   │   │       └── 07_arborescence.sh
 │   │   ├── _config.yml
-│   │   ├── file.txt
-│   │   ├── home.md
 │   │   ├── images
 │   │   │   ├── arborescence2.png
 │   │   │   ├── arborescence3.png
@@ -854,29 +860,17 @@ linuxIsMore.sh      module.sh                 redirection.sh
 │   │   │   ├── redirection.png
 │   │   │   ├── Roscoff.jpeg
 │   │   │   └── tabTab.gif
-│   │   ├── introduction.ipynb
-│   │   ├── jupyter.md
-│   │   ├── linuxIsMore.ipynb
 │   │   ├── logo.png
-│   │   ├── log.txt
-│   │   ├── manipulate.ipynb
 │   │   ├── markdown-notebooks.md
-│   │   ├── module.ipynb
-│   │   ├── notebooks.ipynb
-│   │   ├── protoCommande.ipynb
-│   │   ├── raccourcis.md
-│   │   ├── redirection.ipynb
 │   │   ├── references.bib
 │   │   ├── requirements.txt
-│   │   ├── storage.ipynb
-│   │   ├── team.md
 │   │   └── _toc.yml
 │   └── LICENSE
 └── rna-seq
     └── output
         └── bam
 
-15 directories, 166 files
+15 directories, 150 files
 </pre></div>
 </div>
 </div>
@@ -895,18 +889,8 @@ linuxIsMore.sh      module.sh                 redirection.sh
 <li><p>Déplacez-vous dans <strong>mm10/gff</strong></p></li>
 <li><p>Depuis ce dossier listez le contenu du dossier <strong>hg38</strong></p></li>
 </ol>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="2d48c335-66f7-4bfe-a50f-4412e7761c6d" name="c203f590-2484-489b-a38e-482bfb8a9a72" type="radio">
-</input><label class="sd-tab-label" for="2d48c335-66f7-4bfe-a50f-4412e7761c6d">
-Tab 1 title</label><div class="sd-tab-content docutils">
-<p>My first tab</p>
-</div>
-<input id="b8c9aff5-fab1-4a5c-8b9f-0076746e75cf" name="c203f590-2484-489b-a38e-482bfb8a9a72" type="radio">
-</input><label class="sd-tab-label" for="b8c9aff5-fab1-4a5c-8b9f-0076746e75cf">
-Tab 2 title</label><div class="sd-tab-content docutils">
-<p>My second tab with <code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">code</span></code>!</p>
-</div>
-</div>
+<section id="solutions">
+<h3>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remplacer &lt;project&gt; </span>
@@ -999,6 +983,7 @@ ls ../../hg38
 </div>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1027,14 +1012,14 @@ ls ../../hg38
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="arborescence.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="07_arborescence.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Arborescence de fichiers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="manipulate.html" title="next page">
+    <a class='right-next' id="next-link" href="09_manipulate.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Manipuler des fichiers</p>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Le cluster de l’IFB &#8212; Linux en Bioinformatique</title>
+    <title>Linux c’est aussi tellement plus ! &#8212; Linux en Bioinformatique</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="C’est quoi JupyterHub" href="jupyter.html" />
-    <link rel="prev" title="L’équipe pédagogique" href="team.html" />
+    <link rel="next" title="Les raccourcis clavier du terminal" href="12_raccourcis.html" />
+    <link rel="prev" title="Redirections" href="10_redirection.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,69 +108,69 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="home.html">
+                <a class="reference internal" href="00_home.html">
                     A la découverte de Linux
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="team.html">
+  <a class="reference internal" href="01_team.html">
    L’équipe pédagogique
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_introduction.html">
    Le cluster de l’IFB
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="jupyter.html">
+  <a class="reference internal" href="03_jupyter.html">
    C’est quoi JupyterHub
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="bash.html">
+  <a class="reference internal" href="04_bash.html">
    Comment converser avec le terminal ?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="module.html">
+  <a class="reference internal" href="05_module.html">
    Charger l’environnement logiciel
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="protoCommande.html">
+  <a class="reference internal" href="06_protoCommande.html">
    Prototype(s) d’une commande
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="arborescence.html">
+  <a class="reference internal" href="07_arborescence.html">
    Arborescence de fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="storage.html">
+  <a class="reference internal" href="08_storage.html">
    Stockage fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="manipulate.html">
+  <a class="reference internal" href="09_manipulate.html">
    Manipuler des fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="redirection.html">
+  <a class="reference internal" href="10_redirection.html">
    Redirections
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="linuxIsMore.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Linux c’est aussi tellement plus !
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="raccourcis.html">
+  <a class="reference internal" href="12_raccourcis.html">
    Les raccourcis clavier du terminal
   </a>
  </li>
@@ -233,7 +233,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/introduction.ipynb"
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/11_linuxIsMore.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -293,7 +293,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2Fintroduction.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F11_linuxIsMore.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -321,7 +321,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/introduction.ipynb"
+        <a href="_sources/11_linuxIsMore.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -381,62 +381,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-propos-du-serveur-un-controleur-controler-et-des-ouvriers-workers">
-   A propos du serveur: Un contrôleur (controler) et des ouvriers (workers)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#le-cluster-de-calcul">
-     Le cluster de calcul
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#larchitecture-dun-cluster-de-calcul">
-     L’architecture d’un cluster de calcul
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#info-le-serveur-ifb-core-cluster">
-     Info: le serveur IFB-core-cluster
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#la-connexion-ssh-vers-le-cluster">
-   La connexion ssh vers le cluster
+  <a class="reference internal nav-link" href="#une-commande-magique">
+   Une commande magique !
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-connecter-depuis-windows-avec-mobaxterm-1">
-   Se connecter depuis Windows avec MobaXterm (1)
+  <a class="reference internal nav-link" href="#creation-dun-alias">
+   Création d’un alias
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-connecter-depuis-mac-osx-ou-linux">
-   Se connecter depuis Mac OSX ou Linux
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#macosx">
-     MacOSX
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linux">
-     Linux
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-connecter-depuis-un-navigateur-web">
-   Se connecter depuis un navigateur web !
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reserver-des-ressources">
-   Réserver des ressources
+  <a class="reference internal nav-link" href="#un-mot-sur-le-bashrc">
+   Un mot sur le ~/.bashrc
   </a>
  </li>
 </ul>
@@ -448,7 +404,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Le cluster de l’IFB</h1>
+                <h1>Linux c’est aussi tellement plus !</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -459,62 +415,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-propos-du-serveur-un-controleur-controler-et-des-ouvriers-workers">
-   A propos du serveur: Un contrôleur (controler) et des ouvriers (workers)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#le-cluster-de-calcul">
-     Le cluster de calcul
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#larchitecture-dun-cluster-de-calcul">
-     L’architecture d’un cluster de calcul
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#info-le-serveur-ifb-core-cluster">
-     Info: le serveur IFB-core-cluster
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#la-connexion-ssh-vers-le-cluster">
-   La connexion ssh vers le cluster
+  <a class="reference internal nav-link" href="#une-commande-magique">
+   Une commande magique !
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-connecter-depuis-windows-avec-mobaxterm-1">
-   Se connecter depuis Windows avec MobaXterm (1)
+  <a class="reference internal nav-link" href="#creation-dun-alias">
+   Création d’un alias
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-connecter-depuis-mac-osx-ou-linux">
-   Se connecter depuis Mac OSX ou Linux
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#macosx">
-     MacOSX
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linux">
-     Linux
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#se-connecter-depuis-un-navigateur-web">
-   Se connecter depuis un navigateur web !
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reserver-des-ressources">
-   Réserver des ressources
+  <a class="reference internal nav-link" href="#un-mot-sur-le-bashrc">
+   Un mot sur le ~/.bashrc
   </a>
  </li>
 </ul>
@@ -527,152 +439,100 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="le-cluster-de-l-ifb">
-<h1>Le cluster de l’IFB<a class="headerlink" href="#le-cluster-de-l-ifb" title="Permalink to this headline">#</a></h1>
-<p>Un session entière sera consacrée au cluster de l’IFB. Ici, il ne s’agit que d’une introduction pour s’y connecter.</p>
-<section id="a-propos-du-serveur-un-controleur-controler-et-des-ouvriers-workers">
-<h2>A propos du serveur: Un contrôleur (controler) et des ouvriers (workers)<a class="headerlink" href="#a-propos-du-serveur-un-controleur-controler-et-des-ouvriers-workers" title="Permalink to this headline">#</a></h2>
-<section id="le-cluster-de-calcul">
-<h3>Le cluster de calcul<a class="headerlink" href="#le-cluster-de-calcul" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>Regroupement de machines</p>
-<ul>
-<li><p>Machines: “noeuds/node”</p></li>
-</ul>
-</li>
-<li><p>Gestion transparente pour les utilisateurs</p></li>
-<li><p>Connexion depuis le monde entier</p>
-<ul>
-<li><p>Nécessité de se connecter à distance</p></li>
-</ul>
-</li>
-<li><p>Accès partagé</p>
-<ul>
-<li><p>De nombreux utilisateurs</p></li>
-<li><p>Nécessité d’adopter des règles.</p>
-<ul>
-<li><p>Gestion des ressources de calcul</p></li>
-<li><p>Gestion des ressources de stockage</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="larchitecture-dun-cluster-de-calcul">
-<h3>L’architecture d’un cluster de calcul<a class="headerlink" href="#larchitecture-dun-cluster-de-calcul" title="Permalink to this headline">#</a></h3>
-<p><img alt="" src="_images/archiCluster.png" /></p>
-</section>
-<section id="info-le-serveur-ifb-core-cluster">
-<h3>Info: le serveur IFB-core-cluster<a class="headerlink" href="#info-le-serveur-ifb-core-cluster" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>Hébergé à l’IDRIS (<a class="reference external" href="http://www.idris.fr/">http://www.idris.fr/</a>)</p></li>
-<li><p>Capacité actuelle 1904 coeurs physiques</p>
-<ul>
-<li><p>soit 3808 coeurs “hyperthreadés”</p></li>
-</ul>
-</li>
-<li><p>Plus d’info</p>
-<ul>
-<li><p><a class="reference external" href="https://ifb-elixirfr.gitlab.io/cluster/doc/cluster-desc/">https://ifb-elixirfr.gitlab.io/cluster/doc/cluster-desc/</a></p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
-<section id="la-connexion-ssh-vers-le-cluster">
-<h2>La connexion ssh vers le cluster<a class="headerlink" href="#la-connexion-ssh-vers-le-cluster" title="Permalink to this headline">#</a></h2>
-<p>ssh (secure shell)</p>
-<ul class="simple">
-<li><p>Protocole sécurisé</p>
-<ul>
-<li><p>les informations passant sur le réseau sont protégées (chiffrées)</p></li>
-</ul>
-</li>
-<li><p>Plusieurs outils pour la connexion</p>
-<ul>
-<li><p>Via une application réseau comme MobaXterm</p>
-<ul>
-<li><p>Windows</p></li>
-<li><p>Permet l’accès à un terminal</p></li>
-</ul>
-</li>
-<li><p>Via un terminal</p>
-<ul>
-<li><p>Linux ou MacOSX</p></li>
-<li><p>Windows 10 (WSL2, Windows subsystem for linux 2)</p></li>
-</ul>
-</li>
-<li><p>Via une application web</p>
-<ul>
-<li><p>JupyterHub</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="se-connecter-depuis-windows-avec-mobaxterm-1">
-<h2>Se connecter depuis Windows avec MobaXterm (1)<a class="headerlink" href="#se-connecter-depuis-windows-avec-mobaxterm-1" title="Permalink to this headline">#</a></h2>
-<img alt="_images/mobaXterm.png" class="align-center" src="_images/mobaXterm.png" />
-<ol class="simple">
-<li><p>Session : ssh</p></li>
-<li><p>Remote host : <a class="reference external" href="http://core.cluster.france-bioinformatique.fr">core.cluster.france-bioinformatique.fr</a></p></li>
-<li><p>Username : Indiquez votre login</p></li>
-<li><p>Pressez OK</p></li>
-</ol>
-<img alt="_images/mobaXterm2.png" class="align-center" src="_images/mobaXterm2.png" />
-</section>
-<section id="se-connecter-depuis-mac-osx-ou-linux">
-<h2>Se connecter depuis Mac OSX ou Linux<a class="headerlink" href="#se-connecter-depuis-mac-osx-ou-linux" title="Permalink to this headline">#</a></h2>
-<section id="macosx">
-<h3>MacOSX<a class="headerlink" href="#macosx" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>Finder &gt; Applications &gt; Utilities &gt; Terminal</p></li>
-<li><p>Tapez la commande ci-dessous</p></li>
-</ul>
-</section>
-<section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">#</a></h3>
-<ul class="simple">
-<li><p>La localisation du terminal varie selon les bureaux (Faites-vous aider si vous ne trouvez pas).</p></li>
-<li><p>Utilisez la commande ci-dessous</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Connection en ssh au serveur IFB </span>
-<span class="c1"># Remplacez [login] par votre compte utilisateur</span>
-<span class="c1"># Tapez votre mot de passe</span>
-<span class="n">ssh</span> <span class="o">-</span><span class="n">Y</span> <span class="p">[</span><span class="n">login</span><span class="p">]</span><span class="nd">@core</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">france</span><span class="o">-</span><span class="n">bioinformatique</span><span class="o">.</span><span class="n">fr</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="linux-cest-aussi-tellement-plus">
+<h1>Linux c’est aussi tellement plus !<a class="headerlink" href="#linux-cest-aussi-tellement-plus" title="Permalink to this headline">#</a></h1>
+<section id="une-commande-magique">
+<h2>Une commande magique !<a class="headerlink" href="#une-commande-magique" title="Permalink to this headline">#</a></h2>
+<p>Un exemple parmi tant d’autres : identifier et compter le nombre d’éléments d’un fichier d’annotation de type GFF (Generic Feature Format).</p>
+<p>On demande à awk de récupérer la 3ème colonne ($3) du gff (à l’exclusion des lignes de commentaires !/^#/) puis sort trie alphabétiquement les éléments et uniq les comptes</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">annotationFile</span><span class="o">=</span><span class="s2">&quot;/shared/bank/escherichia_coli/NC_000913.3_K-12_substr_MG1655/gff3/GCA_000005845.2_ASM584v2_genomic.gff&quot;</span>
+awk -F <span class="s2">&quot;\t&quot;</span> <span class="s1">&#39;!/^#/{print $3}&#39;</span> <span class="si">${</span><span class="nv">annotationFile</span><span class="si">}</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c
 </pre></div>
 </div>
-<div class="admonition-remarques admonition">
-<p class="admonition-title">Remarques</p>
-<ul class="simple">
-<li><p>Le caractère # indique un commentaire, qui sera ignoré par le shell.</p></li>
-<li><p>Le $ en rose représente l’invite de commande, qui varie selon les configurations.</p></li>
-<li><p>La commande à taper dans votre terminal commence juste après l’invite de commande:  ssh …</p></li>
-<li><p>L’argument -Y permet d’ouvrir des fenêtres graphiques à distance (e.g. éditeurs)</p></li>
-</ul>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   4324 CDS
+    187 exon
+   4464 gene
+     50 mobile_genetic_element
+     79 ncRNA
+      1 origin_of_replication
+    164 pseudogene
+      1 region
+     22 rRNA
+     48 sequence_feature
+     86 tRNA
+</pre></div>
+</div>
+</div>
 </div>
 </section>
+<section id="creation-dun-alias">
+<h2>Création d’un alias<a class="headerlink" href="#creation-dun-alias" title="Permalink to this headline">#</a></h2>
+<p>Vous aimez la commande ? Créons un alias pour simplifier son utilisation</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~
+nano .bashrc
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Ajouter à la fin</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>alias listGFF=listGFF
+function listGFF() { 
+    awk -F &#39;\t&#39; &#39;!/^\s*$|^#/{print $3}&#39; $1 | grep &#39;[[:alpha:]]&#39; | sort -n | uniq -c 
+}
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Déconnecter vous</p></li>
+<li><p>Reconnecter vous</p></li>
+</ol>
+<p>et voilà !</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>listGFF /shared/bank/escherichia_coli/NC_000913.3_K-12_substr_MG1655/gff3/GCA_000005845.2_ASM584v2_genomic.gff
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   4324 CDS
+    187 exon
+   4464 gene
+     50 mobile_genetic_element
+     79 ncRNA
+      1 origin_of_replication
+    164 pseudogene
+      1 region
+     22 rRNA
+     48 sequence_feature
+     86 tRNA
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="se-connecter-depuis-un-navigateur-web">
-<h2>Se connecter depuis un navigateur web !<a class="headerlink" href="#se-connecter-depuis-un-navigateur-web" title="Permalink to this headline">#</a></h2>
-<p>Et oui, nous pouvons utiliser les ressources du cluster directement dans notre navigateur préférés. Nous parlerons par exemple dans la section suivante de JupyterHub.</p>
-</section>
-<section id="reserver-des-ressources">
-<h2>Réserver des ressources<a class="headerlink" href="#reserver-des-ressources" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Un programme disponible sur le controller (SLURM) permet de réserver des ressources (des processeurs sur des noeuds).</p>
-<ul>
-<li><p>Vous verrez dans une autre session comment faire des réservations en ligne de commande avec SLURM.</p></li>
-</ul>
-</li>
-<li><p>Avec Jupyter, la demande de réservation des ressources (ouvriers) est gérée pour nous lors de la connexion.</p>
-<ul>
-<li><p>Quand vous quittez Jupyter les ressources sont libérées</p></li>
-</ul>
-</li>
-</ul>
+<section id="un-mot-sur-le-bashrc">
+<h2>Un mot sur le ~/.bashrc<a class="headerlink" href="#un-mot-sur-le-bashrc" title="Permalink to this headline">#</a></h2>
+<p>Le fichier <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> est un fichier script qui est exécuté lorsqu’un utilisateur se connecte. Le fichier lui-même contient une série de configurations pour la session du terminal. Il s’agit notamment de configurer ou d’activer : la coloration, la complétion, l’historique du shell, les alias de commande, etc. Vous pouvez donc ajouter d’autres alias si vous le souhaitez comme :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># We declare a new command &#39;ll&#39;. Equivalent to &#39;ls -l&#39;</span>
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s2">&quot;ls -l&quot;</span> 	
+  
+<span class="c1"># When using the &#39;ls&#39; command, file and directory names will be colored.</span>
+<span class="c1"># NB use ls --color=none or \ls to cancel this behaviour</span>
+<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s2">&quot;ls --color&quot;</span> 
+
+<span class="c1"># When using the &#39;ls&#39; command, file and directory names will be colored.</span>
+<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s2">&quot;grep --color&quot;</span> 
+  
+<span class="c1"># If the rm command is used the system will ask before... (but don&#39;t use it please)</span>
+<span class="nb">alias</span> <span class="nv">rm</span><span class="o">=</span><span class="s2">&quot;rm -i&quot;</span>	
+  
+<span class="c1"># Changing the prompt display (don&#39;t worry it this line seems obscure to you)</span>
+<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[\033[01;34m\]\h\[\033[00m\]\[\033[01;32m\] \[\033[01;32m\]\u \[\033[00;33m\]\w\n\[\033[01;30m\e[0m\e[1;00m\]</span>$<span class="s2"> &quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -703,17 +563,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="team.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="10_redirection.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">L’équipe pédagogique</p>
+            <p class="prev-next-title">Redirections</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="jupyter.html" title="next page">
+    <a class='right-next' id="next-link" href="12_raccourcis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C’est quoi JupyterHub</p>
+        <p class="prev-next-title">Les raccourcis clavier du terminal</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

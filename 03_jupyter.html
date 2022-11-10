@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Comment converser avec le terminal ? &#8212; Linux en Bioinformatique</title>
+    <title>C’est quoi JupyterHub &#8212; Linux en Bioinformatique</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Charger l’environnement logiciel" href="module.html" />
-    <link rel="prev" title="C’est quoi JupyterHub" href="jupyter.html" />
+    <link rel="next" title="Comment converser avec le terminal ?" href="04_bash.html" />
+    <link rel="prev" title="Le cluster de l’IFB" href="02_introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -108,69 +108,69 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="home.html">
+                <a class="reference internal" href="00_home.html">
                     A la découverte de Linux
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="team.html">
+  <a class="reference internal" href="01_team.html">
    L’équipe pédagogique
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="introduction.html">
+  <a class="reference internal" href="02_introduction.html">
    Le cluster de l’IFB
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="jupyter.html">
-   C’est quoi JupyterHub
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
+   C’est quoi JupyterHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_bash.html">
    Comment converser avec le terminal ?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="module.html">
+  <a class="reference internal" href="05_module.html">
    Charger l’environnement logiciel
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="protoCommande.html">
+  <a class="reference internal" href="06_protoCommande.html">
    Prototype(s) d’une commande
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="arborescence.html">
+  <a class="reference internal" href="07_arborescence.html">
    Arborescence de fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="storage.html">
+  <a class="reference internal" href="08_storage.html">
    Stockage fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="manipulate.html">
+  <a class="reference internal" href="09_manipulate.html">
    Manipuler des fichiers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="redirection.html">
+  <a class="reference internal" href="10_redirection.html">
    Redirections
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="linuxIsMore.html">
+  <a class="reference internal" href="11_linuxIsMore.html">
    Linux c’est aussi tellement plus !
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="raccourcis.html">
+  <a class="reference internal" href="12_raccourcis.html">
    Les raccourcis clavier du terminal
   </a>
  </li>
@@ -264,7 +264,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2Fbash.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F03_jupyter.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -292,7 +292,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/bash.md"
+        <a href="_sources/03_jupyter.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -329,23 +329,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyterhub-ifb">
+   JupyterHub @ IFB
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-connecter-depuis-jupyterlab">
+   Se connecter depuis JupyterLab
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Comment converser avec le terminal ?</h1>
+                <h1>C’est quoi JupyterHub</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyterhub-ifb">
+   JupyterHub @ IFB
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#se-connecter-depuis-jupyterlab">
+   Se connecter depuis JupyterLab
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -353,27 +400,31 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="comment-converser-avec-le-terminal">
-<h1>Comment converser avec le terminal ?<a class="headerlink" href="#comment-converser-avec-le-terminal" title="Permalink to this headline">#</a></h1>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>tdenecker@cpu-node-25 ~<span class="o">]</span>$ Bonjour mon nom est Thomas. Et toi ?
-bash: Bonjour: <span class="nb">command</span> not found
-<span class="o">[</span>tdenecker@cpu-node-25 ~<span class="o">]</span>$ 
-</pre></div>
-</div>
-<p><strong>Réponse</strong> : lui parler en langage <strong>BASH (Bourne Again Shell)</strong> <a class="footnote-reference brackets" href="#footnote1" id="id1">1</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="c-est-quoi-jupyterhub">
+<h1>C’est quoi JupyterHub<a class="headerlink" href="#c-est-quoi-jupyterhub" title="Permalink to this headline">#</a></h1>
+<p>JupyterHub est une application web qui vous permet de créer des serveurs JupyterLab sur un cluster ou une infrastructure en cloud.</p>
+<p><img alt="" src="_images/jupyterHub.png" /></p>
+<section id="jupyterhub-ifb">
+<h2>JupyterHub &#64; IFB<a class="headerlink" href="#jupyterhub-ifb" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://jupyterhub.cluster.france-bioinformatique.fr">https://jupyterhub.cluster.france-bioinformatique.fr</a></p>
 <ul class="simple">
-<li><p>Le langage BASH est un des nombreux dialectes Shell (bsh, ksh, csh, zsh,…).</p></li>
-<li><p>Tous ces langages Shell sont extrêmement similaires.</p></li>
-<li><p>Ce langage repose notamment sur un ensemble de commandes.</p></li>
-<li><p>Ces commandes modulaires permettent de réaliser des tâches.</p></li>
-<li><p>Ces tâches permettent de piloter un ordinateur à distance.</p></li>
+<li><p>Use your IFB cluster account to log in</p></li>
+<li><p>Spawn JupyterLab server in SLURM jobs</p></li>
+<li><p>Work on the same storage as the cluster (ssh)</p></li>
 </ul>
-<hr class="footnotes docutils" />
-<dl class="footnote brackets">
-<dt class="label" id="footnote1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Référence (calembour) au premier langage Shell écrit par Stephen Bourne (bsh) :)</p>
-</dd>
-</dl>
+<p><img alt="gif" src="_images/JupyterConnexion.gif" /></p>
+<p><strong>Choisissez le profil EBAII</strong></p>
+<p><img alt="" src="_images/JupyterProfile.png" /></p>
+</section>
+<section id="se-connecter-depuis-jupyterlab">
+<h2>Se connecter depuis JupyterLab<a class="headerlink" href="#se-connecter-depuis-jupyterlab" title="Permalink to this headline">#</a></h2>
+<p><img alt="" src="_images/JupyterConnect.png" /></p>
+<p>Prompt  (invite de commande)</p>
+<ul class="simple">
+<li><p>login&#64;hostname current working directory</p></li>
+</ul>
+<p><img alt="" src="_images/prompt.png" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -403,17 +454,17 @@ bash: Bonjour: <span class="nb">command</span> not found
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="jupyter.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02_introduction.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">C’est quoi JupyterHub</p>
+            <p class="prev-next-title">Le cluster de l’IFB</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="module.html" title="next page">
+    <a class='right-next' id="next-link" href="04_bash.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Charger l’environnement logiciel</p>
+        <p class="prev-next-title">Comment converser avec le terminal ?</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
