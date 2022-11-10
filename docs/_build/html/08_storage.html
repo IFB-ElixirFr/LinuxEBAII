@@ -1,0 +1,1661 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Stockage fichiers &#8212; Linux en Bioinformatique</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Manipuler des fichiers" href="09_manipulate.html" />
+    <link rel="prev" title="Arborescence de fichiers" href="07_arborescence.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linux en Bioinformatique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_home.html">
+                    A la découverte de Linux
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_team.html">
+   L’équipe pédagogique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_introduction.html">
+   Le cluster de l’IFB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_jupyter.html">
+   C’est quoi JupyterHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_bash.html">
+   Comment converser avec le terminal ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_module.html">
+   Charger l’environnement logiciel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_protoCommande.html">
+   Prototype(s) d’une commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_arborescence.html">
+   Arborescence de fichiers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Stockage fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_manipulate.html">
+   Manipuler des fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_redirection.html">
+   Redirections
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_linuxIsMore.html">
+   Linux c’est aussi tellement plus !
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/08_storage.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F08_storage.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/08_storage.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ou-stocker-vos-fichiers-dossiers">
+   Où stocker vos fichiers/dossiers ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-des-repertoires">
+   Créer des répertoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercices">
+   Exercices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solutions">
+     Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Stockage fichiers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ou-stocker-vos-fichiers-dossiers">
+   Où stocker vos fichiers/dossiers ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creer-des-repertoires">
+   Créer des répertoires
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercices">
+   Exercices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solutions">
+     Solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="stockage-fichiers">
+<h1>Stockage fichiers<a class="headerlink" href="#stockage-fichiers" title="Permalink to this headline">#</a></h1>
+<section id="ou-stocker-vos-fichiers-dossiers">
+<h2>Où stocker vos fichiers/dossiers ?<a class="headerlink" href="#ou-stocker-vos-fichiers-dossiers" title="Permalink to this headline">#</a></h2>
+<p>Varie selon les plateformes. Se renseigner !</p>
+<p><strong>A l’IFB</strong></p>
+<p>❌
+Votre “maison”: ~ (e.g. /shared/home/cnorris)</p>
+<ul class="simple">
+<li><p>Ce dossier est très limité en stockage</p></li>
+<li><p>Pour les fichiers et dossiers <strong>très peu volumineux</strong></p></li>
+<li><p><strong>Pas pour faire des analyses</strong></p></li>
+<li><p>Utiliser la commande cd (sans argument) pour vous rendre dans ce dossier</p></li>
+<li><p>Le chemin vers le dossier home est symbolisé par ~</p></li>
+<li><p>Quota de <strong>5Go</strong></p></li>
+</ul>
+<p>✅
+Votre dossier projet (e.g /shared/projects/<project>)</p>
+<ul class="simple">
+<li><p><em><em>C’est le dossier dans lequel vous devez téléverser</em> vos données</em>*</p></li>
+<li><p><strong>C’est LE dossier pour lancer vos analyses …</strong></p></li>
+</ul>
+<p><em>* Vous pouvez aussi dire ‘uploader’ :)</em></p>
+</section>
+<section id="creer-des-repertoires">
+<h2>Créer des répertoires<a class="headerlink" href="#creer-des-repertoires" title="Permalink to this headline">#</a></h2>
+<p>On utilisera la commande <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (<strong>m</strong>a<strong>k</strong>e <strong>dir</strong>ectory).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remplacer &lt;project&gt;</span>
+<span class="c1"># cd /shared/projects/&lt;project&gt;/</span>
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On crée le dossier</span>
+mkdir chip-seq
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vérifier la création du dossier</span>
+ls -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 96
+drwxrwx---+ 2 tdenecker tdenecker  4096 10 nov.  17:27 <span class=" -Color -Color-C27">chip-seq</span>
+-rw-rw----+ 1 tdenecker tdenecker    62 10 nov.  16:41 cleanFolder.sh
+-rw-rw----+ 1 tdenecker tdenecker 52296 10 nov.  15:14 cours1.ipynb
+-rw-rw----+ 1 tdenecker tdenecker 23607 10 nov.  12:19 cours2.ipynb
+drwxrwx---+ 3 tdenecker tdenecker  4096 10 nov.  12:09 <span class=" -Color -Color-C27">images</span>
+drwxrwx---+ 4 tdenecker tdenecker  4096 10 nov.  16:40 <span class=" -Color -Color-C27">LinuxEBAII</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title">Sur le ./</p>
+<p>L’utilisation de ./ est souvent facultative.</p>
+</aside>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equivalent de cd ./chip-seq</span>
+<span class="nb">cd</span> chip-seq
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On crée deux dossiers d&#39;un coup</span>
+mkdir bam fastq	 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On a bien deux dossiers</span>
+ls -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 8
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  17:27 <span class=" -Color -Color-C27">bam</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  17:27 <span class=" -Color -Color-C27">fastq</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans fastq</span>
+<span class="nb">cd</span> fastq
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On remonte de deux niveaux</span>
+<span class="nb">cd</span> ../..
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On créé un chemin vers un dossier ‘bam’</span>
+mkdir -p rna-seq/output/bam
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On liste Récursivement les dossiers</span>
+ls -R
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.:
+<span class=" -Color -Color-C27">chip-seq</span>        cours1.ipynb  <span class=" -Color -Color-C27">images</span>      <span class=" -Color -Color-C27">rna-seq</span>
+cleanFolder.sh  cours2.ipynb  <span class=" -Color -Color-C27">LinuxEBAII</span>
+
+./chip-seq:
+<span class=" -Color -Color-C27">bam</span>  <span class=" -Color -Color-C27">fastq</span>
+
+./chip-seq/bam:
+
+./chip-seq/fastq:
+
+./images:
+<span class=" -Color -Color-C13">arborescence2.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_no.png</span>
+<span class=" -Color -Color-C13">arborescence3.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_ok.png</span>
+<span class=" -Color -Color-C13">arborescence4.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_no.png</span>
+<span class=" -Color -Color-C13">arborescence.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_ok.png</span>
+<span class=" -Color -Color-C13">archiCluster.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_stat.png</span>
+<span class=" -Color -Color-C13">BED.png</span>                         <span class=" -Color -Color-C13">ebaii_fastqc_tricolore.png</span>
+<span class=" -Color -Color-C13">ebaii_4lignesFastq.png</span>          <span class=" -Color -Color-C13">ebaii_GATA2publi.png</span>
+<span class=" -Color -Color-C13">ebaii_acces_html.png</span>            <span class=" -Color -Color-C13">ebaii_jupyterAcces.png</span>
+<span class=" -Color -Color-C13">ebaii_accesJupyter.png</span>          <span class=" -Color -Color-C13">ebaii_jupyterStop.png</span>
+<span class=" -Color -Color-C13">ebaii_Ascii_sanger.png</span>          <span class=" -Color -Color-C13">ebaii_mapping.png</span>
+<span class=" -Color -Color-C13">ebaii_cigarEx.png</span>               <span class=" -Color -Color-C13">ebaii_mapping_positions.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck1.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_quality.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck2.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_readSeed.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck3.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_uniqMultiMap.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck4.png</span>            <span class=" -Color -Color-C13">ebaii_MAPQ.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck5.png</span>            <span class=" -Color -Color-C13">ebaii_protocole_Chipseq.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_litle.png</span>  <span class=" -Color -Color-C13">ebaii_SangerScore.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_ok.png</span>     <span class=" -Color -Color-C13">ebaii_sickle_slidingWindow.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_ok.png</span>   <span class=" -Color -Color-C13">ebaii_trimmingPackman.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_RNA.png</span>  <span class=" -Color -Color-C13">JupyterConnect.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_overSeq_polyA.png</span>  <span class=" -Color -Color-C13">JupyterConnexion.gif</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_no.png</span>        <span class=" -Color -Color-C13">jupyterHub.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_ok.png</span>        <span class=" -Color -Color-C13">JupyterProfile.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_no.png</span>        <span class=" -Color -Color-C13">mobaXterm2.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_ok.png</span>        <span class=" -Color -Color-C13">mobaXterm.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_no.png</span>        <span class=" -Color -Color-C13">prompt.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_ok.png</span>        <span class=" -Color -Color-C13">redirection.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_no.png</span>       <span class=" -Color -Color-C13">Roscoff.jpeg</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_ok.png</span>       <span class=" -Color -Color-C13">tabTab.gif</span>
+
+./LinuxEBAII:
+<span class=" -Color -Color-C27">docs</span>  LICENSE
+
+./LinuxEBAII/docs:
+00_home.md              07_arborescence.ipynb  _config.yml
+01_team.md              08_storage.ipynb       <span class=" -Color -Color-C27">images</span>
+02_introduction.ipynb   09_manipulate.ipynb    <span class=" -Color -Color-C13">logo.png</span>
+03_jupyter.md           10_redirection.ipynb   markdown-notebooks.md
+04_bash.md              11_linuxIsMore.ipynb   references.bib
+05_module.ipynb         12_raccourcis.md       requirements.txt
+06_protoCommande.ipynb  <span class=" -Color -Color-C27">_build</span>                 _toc.yml
+
+./LinuxEBAII/docs/_build:
+<span class=" -Color -Color-C27">html</span>  <span class=" -Color -Color-C27">jupyter_execute</span>
+
+./LinuxEBAII/docs/_build/html:
+00_home.html           08_storage.html      markdown-notebooks.html
+01_team.html           09_manipulate.html   objects.inv
+02_introduction.html   10_redirection.html  <span class=" -Color -Color-C27">reports</span>
+03_jupyter.html        11_linuxIsMore.html  search.html
+04_bash.html           12_raccourcis.html   searchindex.js
+05_module.html         genindex.html        <span class=" -Color -Color-C27">_sources</span>
+06_protoCommande.html  <span class=" -Color -Color-C27">_images</span>              <span class=" -Color -Color-C27">_sphinx_design_static</span>
+07_arborescence.html   index.html           <span class=" -Color -Color-C27">_static</span>
+
+./LinuxEBAII/docs/_build/html/_images:
+<span class=" -Color -Color-C13">arborescence2.png</span>  <span class=" -Color -Color-C13">archiCluster.png</span>      <span class=" -Color -Color-C13">jupyterHub.png</span>      <span class=" -Color -Color-C13">prompt.png</span>
+<span class=" -Color -Color-C13">arborescence3.png</span>  <span class=" -Color -Color-C13">BED.png</span>               <span class=" -Color -Color-C13">JupyterProfile.png</span>  <span class=" -Color -Color-C13">redirection.png</span>
+<span class=" -Color -Color-C13">arborescence4.png</span>  <span class=" -Color -Color-C13">JupyterConnect.png</span>    <span class=" -Color -Color-C13">mobaXterm2.png</span>      <span class=" -Color -Color-C13">tabTab.gif</span>
+<span class=" -Color -Color-C13">arborescence.png</span>   <span class=" -Color -Color-C13">JupyterConnexion.gif</span>  <span class=" -Color -Color-C13">mobaXterm.png</span>
+
+./LinuxEBAII/docs/_build/html/reports:
+05_module.log
+
+./LinuxEBAII/docs/_build/html/_sources:
+00_home.md             05_module.ipynb         10_redirection.ipynb
+01_team.md             06_protoCommande.ipynb  11_linuxIsMore.ipynb
+02_introduction.ipynb  07_arborescence.ipynb   12_raccourcis.md
+03_jupyter.md          08_storage.ipynb        markdown-notebooks.ipynb
+04_bash.md             09_manipulate.ipynb     markdown-notebooks.md
+
+./LinuxEBAII/docs/_build/html/_sphinx_design_static:
+design-style.b7bb847fb20b106c3d81b95245e65545.min.css  design-tabs.js
+
+./LinuxEBAII/docs/_build/html/_static:
+basic.css                                              <span class=" -Color -Color-C13">logo.png</span>
+<span class=" -Color -Color-C13">check-solid.svg</span>                                        <span class=" -Color -Color-C13">minus.png</span>
+clipboard.min.js                                       mystnb.css
+copybutton.css                                         <span class=" -Color -Color-C13">plus.png</span>
+copybutton_funcs.js                                    pygments.css
+copybutton.js                                          sbt-webpack-macros.html
+<span class=" -Color -Color-C13">copy-button.svg</span>                                        <span class=" -Color -Color-C27">scripts</span>
+design-style.b7bb847fb20b106c3d81b95245e65545.min.css  searchtools.js
+design-tabs.js                                         sphinx-thebe.css
+doctools.js                                            sphinx-thebe.js
+documentation_options.js                               <span class=" -Color -Color-C27">styles</span>
+<span class=" -Color -Color-C13">file.png</span>                                               togglebutton.css
+<span class=" -Color -Color-C27">images</span>                                                 togglebutton.js
+jquery-3.5.1.js                                        underscore-1.13.1.js
+jquery.js                                              underscore.js
+language_data.js                                       <span class=" -Color -Color-C27">vendor</span>
+<span class=" -Color -Color-C27">locales</span>                                                webpack-macros.html
+
+./LinuxEBAII/docs/_build/html/_static/images:
+<span class=" -Color -Color-C13">logo_binder.svg</span>  <span class=" -Color -Color-C13">logo_colab.png</span>  <span class=" -Color -Color-C13">logo_deepnote.svg</span>  <span class=" -Color -Color-C13">logo_jupyterhub.svg</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales:
+<span class=" -Color -Color-C27">ar</span>  <span class=" -Color -Color-C27">ca</span>  <span class=" -Color -Color-C27">de</span>  <span class=" -Color -Color-C27">es</span>  <span class=" -Color -Color-C27">fr</span>  <span class=" -Color -Color-C27">it</span>  <span class=" -Color -Color-C27">ko</span>  <span class=" -Color -Color-C27">ml</span>  <span class=" -Color -Color-C27">nl</span>  <span class=" -Color -Color-C27">pt</span>  <span class=" -Color -Color-C27">sk</span>  <span class=" -Color -Color-C27">sv</span>  <span class=" -Color -Color-C27">tg</span>  <span class=" -Color -Color-C27">tr</span>  <span class=" -Color -Color-C27">vi</span>
+<span class=" -Color -Color-C27">bg</span>  <span class=" -Color -Color-C27">cs</span>  <span class=" -Color -Color-C27">el</span>  <span class=" -Color -Color-C27">et</span>  <span class=" -Color -Color-C27">hr</span>  <span class=" -Color -Color-C27">iw</span>  <span class=" -Color -Color-C27">lt</span>  <span class=" -Color -Color-C27">mr</span>  <span class=" -Color -Color-C27">no</span>  <span class=" -Color -Color-C27">ro</span>  <span class=" -Color -Color-C27">sl</span>  <span class=" -Color -Color-C27">ta</span>  <span class=" -Color -Color-C27">th</span>  <span class=" -Color -Color-C27">uk</span>  <span class=" -Color -Color-C27">zh_CN</span>
+<span class=" -Color -Color-C27">bn</span>  <span class=" -Color -Color-C27">da</span>  <span class=" -Color -Color-C27">eo</span>  <span class=" -Color -Color-C27">fi</span>  <span class=" -Color -Color-C27">id</span>  <span class=" -Color -Color-C27">ja</span>  <span class=" -Color -Color-C27">lv</span>  <span class=" -Color -Color-C27">ms</span>  <span class=" -Color -Color-C27">pl</span>  <span class=" -Color -Color-C27">ru</span>  <span class=" -Color -Color-C27">sr</span>  <span class=" -Color -Color-C27">te</span>  <span class=" -Color -Color-C27">tl</span>  <span class=" -Color -Color-C27">ur</span>  <span class=" -Color -Color-C27">zh_TW</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ar:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ar/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/bg:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/bg/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/bn:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/bn/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ca:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ca/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/cs:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/cs/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/da:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/da/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/de:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/de/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/el:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/el/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/eo:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/eo/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/es:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/es/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/et:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/et/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/fi:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/fi/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/fr:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/fr/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/hr:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/hr/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/id:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/id/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/it:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/it/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/iw:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/iw/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ja:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ja/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ko:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ko/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/lt:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/lt/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/lv:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/lv/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ml:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ml/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/mr:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/mr/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ms:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ms/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/nl:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/nl/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/no:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/no/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/pl:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/pl/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/pt:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/pt/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ro:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ro/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ru:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ru/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/sk:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/sk/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/sl:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/sl/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/sr:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/sr/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/sv:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/sv/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ta:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ta/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/te:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/te/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/tg:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/tg/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/th:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/th/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/tl:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/tl/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/tr:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/tr/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/uk:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/uk/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/ur:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/ur/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/vi:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/vi/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/zh_CN:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/zh_CN/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/locales/zh_TW:
+<span class=" -Color -Color-C27">LC_MESSAGES</span>
+
+./LinuxEBAII/docs/_build/html/_static/locales/zh_TW/LC_MESSAGES:
+booktheme.po
+
+./LinuxEBAII/docs/_build/html/_static/scripts:
+pydata-sphinx-theme.js  sphinx-book-theme.js  sphinx-book-theme.js.map
+
+./LinuxEBAII/docs/_build/html/_static/styles:
+pydata-sphinx-theme.css  sphinx-book-theme.css  theme.css
+
+./LinuxEBAII/docs/_build/html/_static/vendor:
+<span class=" -Color -Color-C27">fontawesome</span>
+
+./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome:
+<span class=" -Color -Color-C27">5.13.0</span>
+
+./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome/5.13.0:
+<span class=" -Color -Color-C27">css</span>  LICENSE.txt  <span class=" -Color -Color-C27">webfonts</span>
+
+./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome/5.13.0/css:
+all.min.css
+
+./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome/5.13.0/webfonts:
+fa-brands-400.eot    fa-regular-400.eot    fa-solid-900.eot
+<span class=" -Color -Color-C13">fa-brands-400.svg</span>    <span class=" -Color -Color-C13">fa-regular-400.svg</span>    <span class=" -Color -Color-C13">fa-solid-900.svg</span>
+fa-brands-400.ttf    fa-regular-400.ttf    fa-solid-900.ttf
+fa-brands-400.woff   fa-regular-400.woff   fa-solid-900.woff
+fa-brands-400.woff2  fa-regular-400.woff2  fa-solid-900.woff2
+
+./LinuxEBAII/docs/_build/jupyter_execute:
+02_introduction.ipynb   07_arborescence.ipynb  10_redirection.ipynb
+02_introduction.sh      07_arborescence.sh     10_redirection.sh
+05_module.ipynb         08_storage.ipynb       11_linuxIsMore.ipynb
+05_module.sh            08_storage.sh          11_linuxIsMore.sh
+06_protoCommande.ipynb  09_manipulate.ipynb    markdown-notebooks.ipynb
+06_protoCommande.sh     09_manipulate.sh       markdown-notebooks.py
+
+./LinuxEBAII/docs/images:
+<span class=" -Color -Color-C13">arborescence2.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_no.png</span>
+<span class=" -Color -Color-C13">arborescence3.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_ok.png</span>
+<span class=" -Color -Color-C13">arborescence4.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_no.png</span>
+<span class=" -Color -Color-C13">arborescence.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_ok.png</span>
+<span class=" -Color -Color-C13">archiCluster.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_stat.png</span>
+<span class=" -Color -Color-C13">BED.png</span>                         <span class=" -Color -Color-C13">ebaii_fastqc_tricolore.png</span>
+<span class=" -Color -Color-C13">ebaii_4lignesFastq.png</span>          <span class=" -Color -Color-C13">ebaii_GATA2publi.png</span>
+<span class=" -Color -Color-C13">ebaii_acces_html.png</span>            <span class=" -Color -Color-C13">ebaii_jupyterAcces.png</span>
+<span class=" -Color -Color-C13">ebaii_accesJupyter.png</span>          <span class=" -Color -Color-C13">ebaii_jupyterStop.png</span>
+<span class=" -Color -Color-C13">ebaii_Ascii_sanger.png</span>          <span class=" -Color -Color-C13">ebaii_mapping.png</span>
+<span class=" -Color -Color-C13">ebaii_cigarEx.png</span>               <span class=" -Color -Color-C13">ebaii_mapping_positions.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck1.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_quality.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck2.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_readSeed.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck3.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_uniqMultiMap.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck4.png</span>            <span class=" -Color -Color-C13">ebaii_MAPQ.png</span>
+<span class=" -Color -Color-C13">ebaii_cyberduck5.png</span>            <span class=" -Color -Color-C13">ebaii_protocole_Chipseq.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_litle.png</span>  <span class=" -Color -Color-C13">ebaii_SangerScore.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_ok.png</span>     <span class=" -Color -Color-C13">ebaii_sickle_slidingWindow.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_ok.png</span>   <span class=" -Color -Color-C13">ebaii_trimmingPackman.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_RNA.png</span>  <span class=" -Color -Color-C13">JupyterConnect.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_overSeq_polyA.png</span>  <span class=" -Color -Color-C13">JupyterConnexion.gif</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_no.png</span>        <span class=" -Color -Color-C13">jupyterHub.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_ok.png</span>        <span class=" -Color -Color-C13">JupyterProfile.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_no.png</span>        <span class=" -Color -Color-C13">mobaXterm2.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_ok.png</span>        <span class=" -Color -Color-C13">mobaXterm.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_no.png</span>        <span class=" -Color -Color-C13">prompt.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_ok.png</span>        <span class=" -Color -Color-C13">redirection.png</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_no.png</span>       <span class=" -Color -Color-C13">Roscoff.jpeg</span>
+<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_ok.png</span>       <span class=" -Color -Color-C13">tabTab.gif</span>
+
+./rna-seq:
+<span class=" -Color -Color-C27">output</span>
+
+./rna-seq/output:
+<span class=" -Color -Color-C27">bam</span>
+
+./rna-seq/output/bam:
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tree
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+├── chip-seq
+│   ├── bam
+│   └── fastq
+├── cleanFolder.sh
+├── cours1.ipynb
+├── cours2.ipynb
+├── images
+│   ├── arborescence2.png
+│   ├── arborescence3.png
+│   ├── arborescence4.png
+│   ├── arborescence.png
+│   ├── archiCluster.png
+│   ├── BED.png
+│   ├── ebaii_4lignesFastq.png
+│   ├── ebaii_acces_html.png
+│   ├── ebaii_accesJupyter.png
+│   ├── ebaii_Ascii_sanger.png
+│   ├── ebaii_cigarEx.png
+│   ├── ebaii_cyberduck1.png
+│   ├── ebaii_cyberduck2.png
+│   ├── ebaii_cyberduck3.png
+│   ├── ebaii_cyberduck4.png
+│   ├── ebaii_cyberduck5.png
+│   ├── ebaii_fastqc_adaptor_litle.png
+│   ├── ebaii_fastqc_adaptor_ok.png
+│   ├── ebaii_fastqc_duplicSeq_ok.png
+│   ├── ebaii_fastqc_duplicSeq_RNA.png
+│   ├── ebaii_fastqc_overSeq_polyA.png
+│   ├── ebaii_fastqc_pbNc_no.png
+│   ├── ebaii_fastqc_pbNc_ok.png
+│   ├── ebaii_fastqc_pbsc_no.png
+│   ├── ebaii_fastqc_pbsc_ok.png
+│   ├── ebaii_fastqc_pbsq_no.png
+│   ├── ebaii_fastqc_pbsq_ok.png
+│   ├── ebaii_fastqc_psGCc_no.png
+│   ├── ebaii_fastqc_psGCc_ok.png
+│   ├── ebaii_fastqc_psqs_no.png
+│   ├── ebaii_fastqc_psqs_ok.png
+│   ├── ebaii_fastqc_ptsq_no.png
+│   ├── ebaii_fastqc_ptsq_ok.png
+│   ├── ebaii_fastqc_stat.png
+│   ├── ebaii_fastqc_tricolore.png
+│   ├── ebaii_GATA2publi.png
+│   ├── ebaii_jupyterAcces.png
+│   ├── ebaii_jupyterStop.png
+│   ├── ebaii_mapping.png
+│   ├── ebaii_mapping_positions.png
+│   ├── ebaii_mapping_quality.png
+│   ├── ebaii_mapping_readSeed.png
+│   ├── ebaii_mapping_uniqMultiMap.png
+│   ├── ebaii_MAPQ.png
+│   ├── ebaii_protocole_Chipseq.png
+│   ├── ebaii_SangerScore.png
+│   ├── ebaii_sickle_slidingWindow.png
+│   ├── ebaii_trimmingPackman.png
+│   ├── JupyterConnect.png
+│   ├── JupyterConnexion.gif
+│   ├── jupyterHub.png
+│   ├── JupyterProfile.png
+│   ├── mobaXterm2.png
+│   ├── mobaXterm.png
+│   ├── prompt.png
+│   ├── redirection.png
+│   ├── Roscoff.jpeg
+│   └── tabTab.gif
+├── LinuxEBAII
+│   ├── docs
+│   │   ├── 00_home.md
+│   │   ├── 01_team.md
+│   │   ├── 02_introduction.ipynb
+│   │   ├── 03_jupyter.md
+│   │   ├── 04_bash.md
+│   │   ├── 05_module.ipynb
+│   │   ├── 06_protoCommande.ipynb
+│   │   ├── 07_arborescence.ipynb
+│   │   ├── 08_storage.ipynb
+│   │   ├── 09_manipulate.ipynb
+│   │   ├── 10_redirection.ipynb
+│   │   ├── 11_linuxIsMore.ipynb
+│   │   ├── 12_raccourcis.md
+│   │   ├── _build
+│   │   │   ├── html
+│   │   │   │   ├── 00_home.html
+│   │   │   │   ├── 01_team.html
+│   │   │   │   ├── 02_introduction.html
+│   │   │   │   ├── 03_jupyter.html
+│   │   │   │   ├── 04_bash.html
+│   │   │   │   ├── 05_module.html
+│   │   │   │   ├── 06_protoCommande.html
+│   │   │   │   ├── 07_arborescence.html
+│   │   │   │   ├── 08_storage.html
+│   │   │   │   ├── 09_manipulate.html
+│   │   │   │   ├── 10_redirection.html
+│   │   │   │   ├── 11_linuxIsMore.html
+│   │   │   │   ├── 12_raccourcis.html
+│   │   │   │   ├── genindex.html
+│   │   │   │   ├── _images
+│   │   │   │   │   ├── arborescence2.png
+│   │   │   │   │   ├── arborescence3.png
+│   │   │   │   │   ├── arborescence4.png
+│   │   │   │   │   ├── arborescence.png
+│   │   │   │   │   ├── archiCluster.png
+│   │   │   │   │   ├── BED.png
+│   │   │   │   │   ├── JupyterConnect.png
+│   │   │   │   │   ├── JupyterConnexion.gif
+│   │   │   │   │   ├── jupyterHub.png
+│   │   │   │   │   ├── JupyterProfile.png
+│   │   │   │   │   ├── mobaXterm2.png
+│   │   │   │   │   ├── mobaXterm.png
+│   │   │   │   │   ├── prompt.png
+│   │   │   │   │   ├── redirection.png
+│   │   │   │   │   └── tabTab.gif
+│   │   │   │   ├── index.html
+│   │   │   │   ├── markdown-notebooks.html
+│   │   │   │   ├── objects.inv
+│   │   │   │   ├── reports
+│   │   │   │   │   └── 05_module.log
+│   │   │   │   ├── search.html
+│   │   │   │   ├── searchindex.js
+│   │   │   │   ├── _sources
+│   │   │   │   │   ├── 00_home.md
+│   │   │   │   │   ├── 01_team.md
+│   │   │   │   │   ├── 02_introduction.ipynb
+│   │   │   │   │   ├── 03_jupyter.md
+│   │   │   │   │   ├── 04_bash.md
+│   │   │   │   │   ├── 05_module.ipynb
+│   │   │   │   │   ├── 06_protoCommande.ipynb
+│   │   │   │   │   ├── 07_arborescence.ipynb
+│   │   │   │   │   ├── 08_storage.ipynb
+│   │   │   │   │   ├── 09_manipulate.ipynb
+│   │   │   │   │   ├── 10_redirection.ipynb
+│   │   │   │   │   ├── 11_linuxIsMore.ipynb
+│   │   │   │   │   ├── 12_raccourcis.md
+│   │   │   │   │   ├── markdown-notebooks.ipynb
+│   │   │   │   │   └── markdown-notebooks.md
+│   │   │   │   ├── _sphinx_design_static
+│   │   │   │   │   ├── design-style.b7bb847fb20b106c3d81b95245e65545.min.css
+│   │   │   │   │   └── design-tabs.js
+│   │   │   │   └── _static
+│   │   │   │       ├── basic.css
+│   │   │   │       ├── check-solid.svg
+│   │   │   │       ├── clipboard.min.js
+│   │   │   │       ├── copybutton.css
+│   │   │   │       ├── copybutton_funcs.js
+│   │   │   │       ├── copybutton.js
+│   │   │   │       ├── copy-button.svg
+│   │   │   │       ├── design-style.b7bb847fb20b106c3d81b95245e65545.min.css
+│   │   │   │       ├── design-tabs.js
+│   │   │   │       ├── doctools.js
+│   │   │   │       ├── documentation_options.js
+│   │   │   │       ├── file.png
+│   │   │   │       ├── images
+│   │   │   │       │   ├── logo_binder.svg
+│   │   │   │       │   ├── logo_colab.png
+│   │   │   │       │   ├── logo_deepnote.svg
+│   │   │   │       │   └── logo_jupyterhub.svg
+│   │   │   │       ├── jquery-3.5.1.js
+│   │   │   │       ├── jquery.js
+│   │   │   │       ├── language_data.js
+│   │   │   │       ├── locales
+│   │   │   │       │   ├── ar
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── bg
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── bn
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ca
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── cs
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── da
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── de
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── el
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── eo
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── es
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── et
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── fi
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── fr
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── hr
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── id
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── it
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── iw
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ja
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ko
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── lt
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── lv
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ml
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── mr
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ms
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── nl
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── no
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── pl
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── pt
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ro
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ru
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── sk
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── sl
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── sr
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── sv
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ta
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── te
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── tg
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── th
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── tl
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── tr
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── uk
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── ur
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── vi
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   ├── zh_CN
+│   │   │   │       │   │   └── LC_MESSAGES
+│   │   │   │       │   │       └── booktheme.po
+│   │   │   │       │   └── zh_TW
+│   │   │   │       │       └── LC_MESSAGES
+│   │   │   │       │           └── booktheme.po
+│   │   │   │       ├── logo.png
+│   │   │   │       ├── minus.png
+│   │   │   │       ├── mystnb.css
+│   │   │   │       ├── plus.png
+│   │   │   │       ├── pygments.css
+│   │   │   │       ├── sbt-webpack-macros.html
+│   │   │   │       ├── scripts
+│   │   │   │       │   ├── pydata-sphinx-theme.js
+│   │   │   │       │   ├── sphinx-book-theme.js
+│   │   │   │       │   └── sphinx-book-theme.js.map
+│   │   │   │       ├── searchtools.js
+│   │   │   │       ├── sphinx-thebe.css
+│   │   │   │       ├── sphinx-thebe.js
+│   │   │   │       ├── styles
+│   │   │   │       │   ├── pydata-sphinx-theme.css
+│   │   │   │       │   ├── sphinx-book-theme.css
+│   │   │   │       │   └── theme.css
+│   │   │   │       ├── togglebutton.css
+│   │   │   │       ├── togglebutton.js
+│   │   │   │       ├── underscore-1.13.1.js
+│   │   │   │       ├── underscore.js
+│   │   │   │       ├── vendor
+│   │   │   │       │   └── fontawesome
+│   │   │   │       │       └── 5.13.0
+│   │   │   │       │           ├── css
+│   │   │   │       │           │   └── all.min.css
+│   │   │   │       │           ├── LICENSE.txt
+│   │   │   │       │           └── webfonts
+│   │   │   │       │               ├── fa-brands-400.eot
+│   │   │   │       │               ├── fa-brands-400.svg
+│   │   │   │       │               ├── fa-brands-400.ttf
+│   │   │   │       │               ├── fa-brands-400.woff
+│   │   │   │       │               ├── fa-brands-400.woff2
+│   │   │   │       │               ├── fa-regular-400.eot
+│   │   │   │       │               ├── fa-regular-400.svg
+│   │   │   │       │               ├── fa-regular-400.ttf
+│   │   │   │       │               ├── fa-regular-400.woff
+│   │   │   │       │               ├── fa-regular-400.woff2
+│   │   │   │       │               ├── fa-solid-900.eot
+│   │   │   │       │               ├── fa-solid-900.svg
+│   │   │   │       │               ├── fa-solid-900.ttf
+│   │   │   │       │               ├── fa-solid-900.woff
+│   │   │   │       │               └── fa-solid-900.woff2
+│   │   │   │       └── webpack-macros.html
+│   │   │   └── jupyter_execute
+│   │   │       ├── 02_introduction.ipynb
+│   │   │       ├── 02_introduction.sh
+│   │   │       ├── 05_module.ipynb
+│   │   │       ├── 05_module.sh
+│   │   │       ├── 06_protoCommande.ipynb
+│   │   │       ├── 06_protoCommande.sh
+│   │   │       ├── 07_arborescence.ipynb
+│   │   │       ├── 07_arborescence.sh
+│   │   │       ├── 08_storage.ipynb
+│   │   │       ├── 08_storage.sh
+│   │   │       ├── 09_manipulate.ipynb
+│   │   │       ├── 09_manipulate.sh
+│   │   │       ├── 10_redirection.ipynb
+│   │   │       ├── 10_redirection.sh
+│   │   │       ├── 11_linuxIsMore.ipynb
+│   │   │       ├── 11_linuxIsMore.sh
+│   │   │       ├── markdown-notebooks.ipynb
+│   │   │       └── markdown-notebooks.py
+│   │   ├── _config.yml
+│   │   ├── images
+│   │   │   ├── arborescence2.png
+│   │   │   ├── arborescence3.png
+│   │   │   ├── arborescence4.png
+│   │   │   ├── arborescence.png
+│   │   │   ├── archiCluster.png
+│   │   │   ├── BED.png
+│   │   │   ├── ebaii_4lignesFastq.png
+│   │   │   ├── ebaii_acces_html.png
+│   │   │   ├── ebaii_accesJupyter.png
+│   │   │   ├── ebaii_Ascii_sanger.png
+│   │   │   ├── ebaii_cigarEx.png
+│   │   │   ├── ebaii_cyberduck1.png
+│   │   │   ├── ebaii_cyberduck2.png
+│   │   │   ├── ebaii_cyberduck3.png
+│   │   │   ├── ebaii_cyberduck4.png
+│   │   │   ├── ebaii_cyberduck5.png
+│   │   │   ├── ebaii_fastqc_adaptor_litle.png
+│   │   │   ├── ebaii_fastqc_adaptor_ok.png
+│   │   │   ├── ebaii_fastqc_duplicSeq_ok.png
+│   │   │   ├── ebaii_fastqc_duplicSeq_RNA.png
+│   │   │   ├── ebaii_fastqc_overSeq_polyA.png
+│   │   │   ├── ebaii_fastqc_pbNc_no.png
+│   │   │   ├── ebaii_fastqc_pbNc_ok.png
+│   │   │   ├── ebaii_fastqc_pbsc_no.png
+│   │   │   ├── ebaii_fastqc_pbsc_ok.png
+│   │   │   ├── ebaii_fastqc_pbsq_no.png
+│   │   │   ├── ebaii_fastqc_pbsq_ok.png
+│   │   │   ├── ebaii_fastqc_psGCc_no.png
+│   │   │   ├── ebaii_fastqc_psGCc_ok.png
+│   │   │   ├── ebaii_fastqc_psqs_no.png
+│   │   │   ├── ebaii_fastqc_psqs_ok.png
+│   │   │   ├── ebaii_fastqc_ptsq_no.png
+│   │   │   ├── ebaii_fastqc_ptsq_ok.png
+│   │   │   ├── ebaii_fastqc_stat.png
+│   │   │   ├── ebaii_fastqc_tricolore.png
+│   │   │   ├── ebaii_GATA2publi.png
+│   │   │   ├── ebaii_jupyterAcces.png
+│   │   │   ├── ebaii_jupyterStop.png
+│   │   │   ├── ebaii_mapping.png
+│   │   │   ├── ebaii_mapping_positions.png
+│   │   │   ├── ebaii_mapping_quality.png
+│   │   │   ├── ebaii_mapping_readSeed.png
+│   │   │   ├── ebaii_mapping_uniqMultiMap.png
+│   │   │   ├── ebaii_MAPQ.png
+│   │   │   ├── ebaii_protocole_Chipseq.png
+│   │   │   ├── ebaii_SangerScore.png
+│   │   │   ├── ebaii_sickle_slidingWindow.png
+│   │   │   ├── ebaii_trimmingPackman.png
+│   │   │   ├── JupyterConnect.png
+│   │   │   ├── JupyterConnexion.gif
+│   │   │   ├── jupyterHub.png
+│   │   │   ├── JupyterProfile.png
+│   │   │   ├── mobaXterm2.png
+│   │   │   ├── mobaXterm.png
+│   │   │   ├── prompt.png
+│   │   │   ├── redirection.png
+│   │   │   ├── Roscoff.jpeg
+│   │   │   └── tabTab.gif
+│   │   ├── logo.png
+│   │   ├── markdown-notebooks.md
+│   │   ├── references.bib
+│   │   ├── requirements.txt
+│   │   └── _toc.yml
+│   └── LICENSE
+└── rna-seq
+    └── output
+        └── bam
+
+117 directories, 310 files
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercices">
+<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><strong>Déplacez-vous dans votre dossier projet</strong></p></li>
+<li><p>Créez un répertoire <strong>annotations dans votre dossier projet</strong></p></li>
+<li><p><strong>Déplacez-vous dans le dossier annotations</strong></p></li>
+<li><p><strong>Dans ce dossier créez un dossier hg38 et son sous-dossier gff (hg38/gff)</strong></p></li>
+<li><p>Déplacez-vous dans le répertoire <strong>hg38/gff</strong></p></li>
+<li><p>Déplacez-vous dans annotations.</p></li>
+<li><p>Créez un sous-dossier <strong>mm10</strong> et son sous-dossier gff (<strong>mm10/gff</strong>)</p></li>
+<li><p>Déplacez-vous dans <strong>mm10/gff</strong></p></li>
+<li><p>Depuis ce dossier listez le contenu du dossier <strong>hg38</strong></p></li>
+</ol>
+<section id="solutions">
+<h3>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remplacer &lt;project&gt; </span>
+<span class="c1"># cd /shared/projects/&lt;project&gt;/</span>
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On crée le dossier</span>
+mkdir annotations
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace</span>
+<span class="nb">cd</span> annotations
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Où sommes nous ?</span>
+<span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/projects/form_2022_32/coursLinux/annotations
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On crée le dossier gff dans hg38</span>
+mkdir -p hg38/gff
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace</span>
+<span class="nb">cd</span> hg38/gff
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans annotations</span>
+<span class="nb">cd</span> ../..
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On crée le dossier gff dans mm10</span>
+mkdir -p mm10/gff
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> mm10/gff
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On voit un dossier gff</span>
+ls ../../hg38
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C27">gff</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "bash"
+        },
+        kernelOptions: {
+            kernelName: "bash",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'bash'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="07_arborescence.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Arborescence de fichiers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="09_manipulate.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Manipuler des fichiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Thomas Denecker & Claire Toffano-Nioche<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

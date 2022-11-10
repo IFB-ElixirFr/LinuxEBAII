@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Analyser la qualité avec fastQC &#8212; Linux en Bioinformatique</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mapping" href="15_mapping.html" />
+    <link rel="prev" title="Jeu de données" href="13_data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linux en Bioinformatique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_home.html">
+                    A la découverte de Linux
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_team.html">
+   L’équipe pédagogique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_introduction.html">
+   Le cluster de l’IFB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_jupyter.html">
+   C’est quoi JupyterHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_bash.html">
+   Comment converser avec le terminal ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_module.html">
+   Charger l’environnement logiciel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_protoCommande.html">
+   Prototype(s) d’une commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_arborescence.html">
+   Arborescence de fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_storage.html">
+   Stockage fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_manipulate.html">
+   Manipuler des fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_redirection.html">
+   Redirections
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_linuxIsMore.html">
+   Linux c’est aussi tellement plus !
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_data.html">
+   Jeu de données
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Analyser la qualité avec fastQC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_mapping.html">
+   Mapping
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/14_fastqc.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F14_fastqc.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/14_fastqc.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-lab-acces-au-fichier-html">
+   Jupyter Lab : accès au fichier html
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#telecharger-les-resultats-avec-cyberduck-osx">
+   Télécharger les résultats avec Cyberduck (OSX)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resultats-de-fastqc">
+   Résultats de FastQC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-statistics">
+     Basic Statistics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-base-sequence-quality">
+     Per Base Sequence Quality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-tile-sequence-quality">
+     Per Tile Sequence Quality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-sequence-quality-scores">
+     Per Sequence Quality Scores
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-base-sequence-content">
+     Per Base Sequence Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-sequence-gc-content">
+     Per Sequence GC Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-base-n-content">
+     Per Base N Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sequence-length-distribution">
+     Sequence Length Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#duplicate-sequences">
+     Duplicate Sequences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overrepresented-sequences">
+     Overrepresented Sequences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adapter-content">
+     Adapter Content
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rogner-les-reads">
+   Rogner les reads
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sickle">
+     Sickle
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#principe">
+       Principe
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linterface-de-sickle">
+       L’interface de sickle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-note">
+     Exercice (noté)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Analyser la qualité avec fastQC</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-lab-acces-au-fichier-html">
+   Jupyter Lab : accès au fichier html
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#telecharger-les-resultats-avec-cyberduck-osx">
+   Télécharger les résultats avec Cyberduck (OSX)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resultats-de-fastqc">
+   Résultats de FastQC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-statistics">
+     Basic Statistics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-base-sequence-quality">
+     Per Base Sequence Quality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-tile-sequence-quality">
+     Per Tile Sequence Quality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-sequence-quality-scores">
+     Per Sequence Quality Scores
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-base-sequence-content">
+     Per Base Sequence Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-sequence-gc-content">
+     Per Sequence GC Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#per-base-n-content">
+     Per Base N Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sequence-length-distribution">
+     Sequence Length Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#duplicate-sequences">
+     Duplicate Sequences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overrepresented-sequences">
+     Overrepresented Sequences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adapter-content">
+     Adapter Content
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rogner-les-reads">
+   Rogner les reads
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sickle">
+     Sickle
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#principe">
+       Principe
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linterface-de-sickle">
+       L’interface de sickle
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-note">
+     Exercice (noté)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="analyser-la-qualite-avec-fastqc">
+<h1>Analyser la qualité avec fastQC<a class="headerlink" href="#analyser-la-qualite-avec-fastqc" title="Permalink to this headline">#</a></h1>
+<p>Fast Quality Control (FastQC)</p>
+<p>Propose un certain nombre de diagrammes pour évaluer la qualité du séquençage.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fastqc</span> <span class="pre">[-o</span> <span class="pre">output</span> <span class="pre">dir]</span> <span class="pre">[--(no)extract]</span> <span class="pre">[-f</span> <span class="pre">fastq|bam|sam]</span> <span class="pre">fq1</span> <span class="pre">fq2</span> <span class="pre">...</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On remonte d’un niveau dans l’arborescence</span>
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/chip-seq/                                   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On créé un répertoire</span>
+mkdir qc
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « qc »: Le fichier existe
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2 instructions sur la même ligne séparées par ‘;’</span>
+ls -l <span class="p">;</span> <span class="nb">cd</span> qc
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 16
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:27 bam
+drwxrwx---+ 3 tdenecker tdenecker 4096 Nov 10 17:53 fastq
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:52 qc
+-rw-rw----+ 1 tdenecker tdenecker   86 Nov 10 17:53 siNT_ER_E2_r3_chr21_fastqc.log
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Charge l&#39;outil fastqc dans l’environnement  </span>
+module load fastqc/0.11.8 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtenir de l’aide </span>
+fastqc -h 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lancer fastqc </span>
+fastqc -f fastq -o ./ ../fastq/siNT_ER_E2_r3_chr21.fastq <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_fastqc.log
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analysis complete for siNT_ER_E2_r3_chr21.fastq
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>less siNT_ER_E2_r3_chr21_fastqc.log  
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Que voyez vous ?</span>
+ls 
+</pre></div>
+</div>
+</div>
+</div>
+<section id="jupyter-lab-acces-au-fichier-html">
+<h2>Jupyter Lab : accès au fichier html<a class="headerlink" href="#jupyter-lab-acces-au-fichier-html" title="Permalink to this headline">#</a></h2>
+<p>Côté gauche, avec l’onglet “répertoire” se placer à la racine du cluster</p>
+<p>Sélectionner les répertoires jusqu’au répertoire de travail <code class="docutils literal notranslate"><span class="pre">/shared/projects/&lt;project&gt;/chip-seq/qc</span></code> (adapter <code class="docutils literal notranslate"><span class="pre">&lt;projet&gt;</span></code>)</p>
+<p>Cliquer sur le fichier html pour l’ouvrir dans un nouvel onglet</p>
+<p><img alt="" src="_images/ebaii_acces_html.png" /></p>
+</section>
+<section id="telecharger-les-resultats-avec-cyberduck-osx">
+<h2>Télécharger les résultats avec Cyberduck (OSX)<a class="headerlink" href="#telecharger-les-resultats-avec-cyberduck-osx" title="Permalink to this headline">#</a></h2>
+<p><img alt="" src="_images/ebaii_cyberduck1.png" /></p>
+<p><img alt="" src="_images/ebaii_cyberduck2.png" /></p>
+<p><img alt="" src="_images/ebaii_cyberduck3.png" /></p>
+<p><img alt="" src="_images/ebaii_cyberduck4.png" /></p>
+<p><img alt="" src="_images/ebaii_cyberduck5.png" /></p>
+</section>
+<section id="resultats-de-fastqc">
+<h2>Résultats de FastQC<a class="headerlink" href="#resultats-de-fastqc" title="Permalink to this headline">#</a></h2>
+<p>Exploration des résultats de fastqc en interactif.</p>
+<ul class="simple">
+<li><p>A quoi correspond le diagramme “Per base sequence quality”.</p></li>
+<li><p>A quoi correspond le diagramme “Per sequence quality score” ?</p></li>
+<li><p>A quoi correspond le diagramme “Per base sequence content” ?</p></li>
+<li><p>A quoi correspond le diagramme “Per sequence GC content” ?</p></li>
+<li><p>A quoi correspond le diagramme “Per sequence N content” ?</p></li>
+<li><p>A quoi correspond le diagramme “Sequence length distribution” ?</p></li>
+<li><p>A quoi correspond le diagramme “Sequence duplication level” ?</p></li>
+<li><p>A quoi correspond le diagramme “Kmer content” ?</p></li>
+</ul>
+<p><img alt="" src="_images/ebaii_fastqc_tricolore.png" /></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Les explications ci-dessous sont la compilation des 3 ressources suivantes :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/">https://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/</a></p></li>
+<li><p><a class="reference external" href="https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf">https://dnacore.missouri.edu/PDF/FastQC_Manual.pdf</a></p></li>
+<li><p><a class="reference external" href="https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/">https://rtsf.natsci.msu.edu/genomics/tech-notes/fastqc-tutorial-and-faq/</a></p></li>
+</ul>
+</div>
+<section id="basic-statistics">
+<h3>Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="_images/ebaii_fastqc_stat.png" /></p>
+<p>The Basic Statistics module generates some simple composition statistics for the file analysed.</p>
+<ul class="simple">
+<li><p>Filename</p></li>
+<li><p>File type</p></li>
+<li><p>Encoding: Says which ASCII encoding of quality values was found in this file.</p></li>
+<li><p>Total Sequences: A count of the total number of sequences processed.</p></li>
+<li><p>Filtered Sequences:</p></li>
+<li><p>Sequence Length</p></li>
+<li></li>
+</ul>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>Basic Statistics never raises a warning.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>Basic Statistics never raises an error.</p>
+</div>
+</section>
+<section id="per-base-sequence-quality">
+<h3>Per Base Sequence Quality<a class="headerlink" href="#per-base-sequence-quality" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_pbsq_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_pbsq_no.png" /></p>
+</div>
+</div>
+</div>
+<p>This view shows an overview of the range of quality values across all bases at each position in the FastQ file.
+For each position a BoxWhisker type plot is drawn. The elements of the plot are as follows:  The central red line is the median value  The yellow box represents the inter-quartile range (25-75%)  The upper and lower whiskers represent the 10% and 90% points  The blue line represents the mean quality The y-axis on the graph shows the quality scores. The higher the score the better the base call. The background of the graph divides the y axis into very good quality calls (green), calls of reasonable quality (orange), and calls of poor quality (red). The quality of calls on most platforms will degrade as the run progresses, so it is common to see base calls falling into the orange area towards the end of a read.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>A warning will be issued if the lower quartile for any base is less than 10, or if the median for any base is less than 25.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will raise a failure if the lower quartile for any base is less than 5 or if the median for any base is less than 20.</p>
+</div>
+</section>
+<section id="per-tile-sequence-quality">
+<h3>Per Tile Sequence Quality<a class="headerlink" href="#per-tile-sequence-quality" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="_images/ebaii_fastqc_ptsq_ok.png" />
+<img alt="" src="_images/ebaii_fastqc_ptsq_no.png" /></p>
+<p>The plot shows the deviation from the average quality for each tile. The colours are on a cold to hot scale, with cold colours being positions where the quality was at or above the average for that base in the run, and hotter colours indicate that a tile had worse qualities than other tiles for that base. In the example below you can see that certain tiles show consistently poor quality. A good plot should be blue all over.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module will issue a warning if any tile shows a mean Phred score more than 2 less than the mean for that base across all tiles.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will issue a warning if any tile shows a mean Phred score more than 5 less than the mean for that base across all tiles.</p>
+</div>
+</section>
+<section id="per-sequence-quality-scores">
+<h3>Per Sequence Quality Scores<a class="headerlink" href="#per-sequence-quality-scores" title="Permalink to this headline">#</a></h3>
+<p>The per sequence quality score report allows you to see if a subset of your sequences have universally low quality values. It is often the case that a subset of sequences will have universally poor quality, often because they are poorly imaged (on the edge of the field of view etc), however these should represent only a small percentage of the total sequences.</p>
+<p>If a significant proportion of the sequences in a run have overall low quality then this could indicate some kind of systematic problem - possibly with just part of the run (for example one end of a flowcell).</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>A warning is raised if the most frequently observed mean quality is below 27 - this equates to a 0.2% error rate.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>An error is raised if the most frequently observed mean quality is below 20 - this equates to a 1% error rate.</p>
+</div>
+</section>
+<section id="per-base-sequence-content">
+<h3>Per Base Sequence Content<a class="headerlink" href="#per-base-sequence-content" title="Permalink to this headline">#</a></h3>
+<p>Per Base Sequence Content plots out the proportion of each base position in a file for which each of the four normal DNA bases has been called.</p>
+<p>In a random library you would expect that there would be little to no difference between the different bases of a sequence run, so the lines in this plot should run parallel with each other.</p>
+<p>If you see strong biases which change in different bases then this usually indicates an overrepresented sequence which is contaminating your library. A bias which is consistent across all bases either indicates that the original library was sequence biased, or that there was a systematic problem during the sequencing of the library.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module issues a warning if the difference between A and T, or G and C is greater than 10% in any position.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will fail if the difference between A and T, or G and C is greater than 20% in any position.</p>
+</div>
+</section>
+<section id="per-sequence-gc-content">
+<h3>Per Sequence GC Content<a class="headerlink" href="#per-sequence-gc-content" title="Permalink to this headline">#</a></h3>
+<p>This module measures the GC content across the whole length of each sequence in a file and compares it to a modelled normal distribution of GC content.
+In a normal random library you would expect to see a roughly normal distribution of GC content where the central peak corresponds to the overall GC content of the underlying genome. Since we don’t know the the GC content of the genome the modal GC content is calculated from the observed data and used to build a reference distribution. An unusually shaped distribution could indicate a contaminated library or some other kinds of biased subset. A normal distribution which is shifted indicates some systematic bias which is independent of base position. If there is a systematic bias which creates a shifted normal distribution then this won’t be flagged as an error by the module since it doesn’t know what your genome’s GC content should be.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>A warning is raised if the sum of the deviations from the normal distribution represents more than 15% of the reads.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will indicate a failure if the sum of the deviations from the normal distribution represents more than 30% of the reads.</p>
+</div>
+</section>
+<section id="per-base-n-content">
+<h3>Per Base N Content<a class="headerlink" href="#per-base-n-content" title="Permalink to this headline">#</a></h3>
+<p>If a sequencer is unable to make a base call with sufficient confidence then it will normally substitute an N rather than a conventional base call This module plots out the percentage of base calls at each position for which an N was called.</p>
+<p>It’s not unusual to see a very low proportion of Ns appearing in a sequence, especially nearer the end of a sequence. However, if this proportion rises above a few percent it suggests that the analysis pipeline was unable to interpret the data well enough to make valid base calls.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module raises a warning if any position shows an N content of &gt;5%.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will raise an error if any position shows an N content of &gt;20%.</p>
+</div>
+</section>
+<section id="sequence-length-distribution">
+<h3>Sequence Length Distribution<a class="headerlink" href="#sequence-length-distribution" title="Permalink to this headline">#</a></h3>
+<p>Some high throughput sequencers generate sequence fragments of uniform length, but others can contain reads of wildly varying lengths. Even within uniform length libraries some pipelines will trim sequences to remove poor quality base calls from the end. This module generates a graph showing the distribution of fragment sizes in the file which was analysed.
+In many cases this will produce a simple graph showing a peak only at one size, but for variable length FastQ files this will show the relative amounts of each different size of sequence fragment.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module will raise a warning if all sequences are not the same length.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will raise an error if any of the sequences have zero length.</p>
+</div>
+</section>
+<section id="duplicate-sequences">
+<h3>Duplicate Sequences<a class="headerlink" href="#duplicate-sequences" title="Permalink to this headline">#</a></h3>
+<p>In a diverse library most sequences will occur only once in the final set. A low level of duplication may indicate a very high level of coverage of the target sequence, but a high level of duplication is more likely to indicate some kind of enrichment bias (eg PCR over amplification).</p>
+<p>This module counts the degree of duplication for every sequence in the set and creates a plot showing the relative number of sequences with different degrees of duplication.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module will issue a warning if non-unique sequences make up more than 20% of the total.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will issue a error if non-unique sequences make up more than 50% of the total.</p>
+</div>
+</section>
+<section id="overrepresented-sequences">
+<h3>Overrepresented Sequences<a class="headerlink" href="#overrepresented-sequences" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="_images/ebaii_fastqc_overSeq_polyA.png" /></p>
+<p>A normal high-throughput library will contain a diverse set of sequences, with no individual sequence making up a tiny fraction of the whole. Finding that a single sequence is very overrepresented in the set either means that it is highly biologically significant, or indicates that the library is contaminated, or not as diverse as you expected. This module lists all of the sequence which make up more than 0.1% of the total. To conserve memory only sequences which appear in the first 200,000 sequences are tracked to the end of the file. It is therefore possible that a sequence which is overrepresented but doesn’t appear at the start of the file for some reason could be missed by this module.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module will issue a warning if any sequence is found to represent more than 0.1% of the total.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will issue an error if any sequence is found to represent more than 1% of the total.</p>
+</div>
+</section>
+<section id="adapter-content">
+<h3>Adapter Content<a class="headerlink" href="#adapter-content" title="Permalink to this headline">#</a></h3>
+<p>The Kmer Content module will do a generic analysis of all of the Kmers in your library to find those which do not have even coverage through the length of your reads. This can find a number of different sources of bias in the library which can include the presence of read-through adapter sequences building up on the end of your sequences.
+You can however find that the presence of any overrepresented sequences in your library (such as adapter dimers) will cause the Kmer plot to be dominated by the Kmers these sequences contain, and that it’s not always easy to see if there are other biases present in which you might be interested.</p>
+<div class="caution admonition">
+<p class="admonition-title">Warning</p>
+<p>This module will issue a warning if any sequence is present in more than 5% of all reads.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Error</p>
+<p>This module will issue a warning if any sequence is present in more than 10% of all reads.</p>
+</div>
+</section>
+</section>
+<section id="rogner-les-reads">
+<h2>Rogner les reads<a class="headerlink" href="#rogner-les-reads" title="Permalink to this headline">#</a></h2>
+<p>Une étape de pré-processing</p>
+<ul class="simple">
+<li><p>Les reads en entrée sont rognés afin d’éliminer des extrémités de mauvaises qualités.</p></li>
+<li><p>En fonction de la capacité de l’outil à faire des alignements locaux ou globaux et de la qualité intrinsèque des données, cette étape peut être cruciale.</p>
+<ul>
+<li><p>Risque: peu de reads alignés</p></li>
+</ul>
+</li>
+</ul>
+<p>Quelques logiciels existants</p>
+<ul class="simple">
+<li><p>Sickle-trim (sliding window-based trimming)</p></li>
+<li><p>FASTX-Toolkit (cut a defined number of nucleotides)</p></li>
+<li><p>Trimmomatic</p></li>
+<li><p>Cutadapt</p></li>
+</ul>
+<p><img alt="" src="_images/ebaii_trimmingPackman.png" /></p>
+<section id="sickle">
+<h3>Sickle<a class="headerlink" href="#sickle" title="Permalink to this headline">#</a></h3>
+<section id="principe">
+<h4>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">#</a></h4>
+<p>Objectif:</p>
+<ul class="simple">
+<li><p>Supprimer les extrémités de mauvaise qualité.</p></li>
+</ul>
+<p>Solution:</p>
+<ul class="simple">
+<li><p>Parcourir le read avec un fenêtre coulissante de droite à gauche. Calculer la qualité moyenne dans chaque fenêtre</p></li>
+<li><p>Si la valeur de qualité chute en dessous d’une valeur seuil q, déléter l’extrémité 3’.</p></li>
+<li><p>Si la taille restante du read est inférieure à une longueur seuil l, déléter le read.</p></li>
+</ul>
+<p><img alt="" src="_images/ebaii_sickle_slidingWindow.png" /></p>
+</section>
+<section id="linterface-de-sickle">
+<h4>L’interface de sickle<a class="headerlink" href="#linterface-de-sickle" title="Permalink to this headline">#</a></h4>
+<p>Sickle contient 2 sous-commandes: pe (paired-end sequence trimming) et se (single-end sequence trimming)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load sickle-trim/1.33
+sickle -h
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sickle se --help <span class="c1"># Obtenir de l’aide sur la sous-commande se.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="exercice-note">
+<h3>Exercice (noté)<a class="headerlink" href="#exercice-note" title="Permalink to this headline">#</a></h3>
+<p>1- Créez un répertoire trimmed au même niveau dans l’arborescence que fastq</p>
+<p>2- Placez vous dans ce répertoire</p>
+<p>3- Ivoquez l’aide de sickle (se)</p>
+<p>4- Construisez une commande qui combine les options suivantes :</p>
+<ul class="simple">
+<li><p>Fournissez à sickle le fichier d’entrée siNT_ER_E2_r3_chr21.fastq.</p></li>
+<li><p>Qualité de type “Sanger”, seuils de qualité et de longueur tous deux à 20.</p></li>
+<li><p>Demandez à sickle se de produire un fichier de sortie que vous nommerez siNT_ER_E2_r3_chr21_trim.fastq et qui devra être créé dans le dossier trimmed.</p></li>
+<li><p>Rediriger la sortie standard dans un fichier que vous nommerez siNT_ER_E2_r3_chr21_sicke_log.txt placé dans le dossier trimmed.</p></li>
+</ul>
+<p>5- Comptez le nombre de lignes présentes dans les fichiers fastq avant et après utilisation de sickle (commande <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-l</span></code>)</p>
+<p>6- Lisez le contenu du fichier log. Obtenez-vous le même résultat ?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..                 <span class="c1"># On remonte d’un niveau dans l’arborescence</span>
+mkdir trimmed         <span class="c1"># On créé un répertoire</span>
+<span class="nb">cd</span> trimmed          <span class="c1"># On se déplace dans ce répertoire</span>
+<span class="c1"># On lance sickle</span>
+<span class="c1"># Ici le \ indique un retour à la ligne mais vous n’êtes pas censé le </span>
+<span class="c1"># taper et aller à la ligne</span>
+<span class="c1"># &amp;&gt; redirige la sortie d’erreur et la sortie standard dans un fichier</span>
+sickle se -f ../fastq/siNT_ER_E2_r3_chr21.fastq <span class="se">\</span>
+-t sanger -o siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
+<span class="p">&amp;</span>&gt; siNT_ER_E2_r3_chr21_sickle.log
+<span class="c1"># le nombre de lignes présentes dans les fichiers fastq</span>
+wc -l ../fastq/siNT_ER_E2_r3_chr21.fastq     <span class="c1"># Données brutes</span>
+wc -l siNT_ER_E2_r3_chr21_trim.fastq         <span class="c1"># Données nettoyées</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "bash"
+        },
+        kernelOptions: {
+            kernelName: "bash",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'bash'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="13_data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Jeu de données</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="15_mapping.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mapping</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Thomas Denecker & Claire Toffano-Nioche<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

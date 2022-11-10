@@ -2,17 +2,20 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: home
+root: 00_home
 chapters:
-- file: team
-- file: introduction
-- file: jupyter
-- file: bash
-- file: module
-- file: protoCommande
-- file: arborescence
-- file: storage
-- file: manipulate
-- file: redirection
-- file: linuxIsMore
-- file: raccourcis
+- file: 01_team
+- file: 02_introduction
+- file: 03_jupyter
+- file: 04_bash
+- file: 05_module
+- file: 06_protoCommande
+- file: 07_arborescence
+- file: 08_storage
+- file: 09_manipulate
+- file: 10_redirection
+- file: 11_linuxIsMore
+- file: 12_raccourcis
+- file: 13_data
+- file: 14_fastqc
+- file: 15_mapping
