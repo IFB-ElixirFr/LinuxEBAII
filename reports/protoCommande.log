@@ -17,11 +17,36 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Exemple d'argument sans valeur associée
-# v pouvant signifier verbose, version (ou autre suivant la commande).
-fastqc -v # quelle est la version du logiciel fastqc sur ce serveur ?
+```{tip} 
+*Raccourcis dans l'aide*:
+- `/color` : pour chercher le terme ‘color’.
+- `n` : (**n**ext) pour chercher la prochaine occurrence de 'truc'.
+- `p`: (**p**revious) pour chercher l'occurrence précédente de 'truc'.
+- `q` : pour **q**uitter l'aide.
+```
+
+## Zoom sur la commande ls
+### La commande ls et ses arguments
+
+La commande ls peut prendre un certain nombre d'arguments.
+
+Parmis les arguments principaux:
+- `-l` (**l**ong/lot) donne beaucoup d'informations sur les fichiers.
+- `-a` (**a**ll) montre tous les fichiers y compris ceux qui sont cachés*.
+- `-t` (**t**ime) trie par date de modification.
+- `-h` (**h**uman-readable) affiche les tailles des fichiers en unités lisibles
+- `-r` (**r**everse) inverse l'ordre du tri.
+
+On peut combiner les arguments : `ls -l --all`
+
+On peut fusionner les arguments (au format court) : `ls -la`
+
+**Sous Linux les noms des fichiers cachés commencent par un point (e.g '.bashrc').**
+
+### La commande ls et ses arguments
+
 ------------------
 
 
-: 127
+: 2
 
