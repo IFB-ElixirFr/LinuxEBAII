@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>jupytext: formats: md:myst text_representation: extension: .md format_name: myst kernelspec: display_name: bash language: bash name: bash &#8212; Linux en Bioinformatique</title>
+    <title>Prototype(s) d’une commande &#8212; Linux en Bioinformatique</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Arborescence de fichiers" href="arborescence.html" />
     <link rel="prev" title="Charger l’environnement logiciel" href="module.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -140,15 +141,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   jupytext:
-formats: md:myst
-text_representation:
-extension: .md
-format_name: myst
-kernelspec:
-display_name: bash
-language: bash
-name: bash
+   Prototype(s) d’une commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="arborescence.html">
+   Arborescence de fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Stockage et manipulation de fichiers
   </a>
  </li>
 </ul>
@@ -357,30 +360,10 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   jupytext:
-formats: md:myst
-text_representation:
-extension: .md
-format_name: myst
-kernelspec:
-display_name: bash
-language: bash
-name: bash
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trouver-de-l-aide">
+   Trouver de l’aide !
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prototype-s-d-une-commande">
-   Prototype(s) d’une commande
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trouver-de-l-aide">
-     Trouver de l’aide !
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -391,15 +374,7 @@ name: bash
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>jupytext:
-formats: md:myst
-text_representation:
-extension: .md
-format_name: myst
-kernelspec:
-display_name: bash
-language: bash
-name: bash</h1>
+                <h1>Prototype(s) d’une commande</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -409,30 +384,10 @@ name: bash</h1>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   jupytext:
-formats: md:myst
-text_representation:
-extension: .md
-format_name: myst
-kernelspec:
-display_name: bash
-language: bash
-name: bash
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trouver-de-l-aide">
+   Trouver de l’aide !
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prototype-s-d-une-commande">
-   Prototype(s) d’une commande
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trouver-de-l-aide">
-     Trouver de l’aide !
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -444,19 +399,7 @@ name: bash
                 
               <div>
                 
-  <hr class="docutils" />
-<section id="jupytext-formats-md-myst-text-representation-extension-md-format-name-myst-kernelspec-display-name-bash-language-bash-name-bash">
-<h1>jupytext:
-formats: md:myst
-text_representation:
-extension: .md
-format_name: myst
-kernelspec:
-display_name: bash
-language: bash
-name: bash<a class="headerlink" href="#jupytext-formats-md-myst-text-representation-extension-md-format-name-myst-kernelspec-display-name-bash-language-bash-name-bash" title="Permalink to this headline">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="prototype-s-d-une-commande">
+  <section class="tex2jax_ignore mathjax_ignore" id="prototype-s-d-une-commande">
 <h1>Prototype(s) d’une commande<a class="headerlink" href="#prototype-s-d-une-commande" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>Une commande réalise une tâche (trier, sélectionner, ouvrir, aligner des reads,…).</p></li>
@@ -493,11 +436,13 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+├── arborescence.ipynb
 ├── bash.md
 ├── _build
 │   ├── html
 │   └── jupyter_execute
 ├── _config.yml
+├── files.ipynb
 ├── home.md
 ├── images
 │   ├── arborescence2.png
@@ -571,7 +516,7 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 ├── team.md
 └── _toc.yml
 
-4 directories, 73 files
+4 directories, 75 files
 </pre></div>
 </div>
 </div>
@@ -582,16 +527,13 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
-<span class="c1"># Demander de l&#39;aide (help) sur fastqc avec l&#39;argument -h</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demander de l&#39;aide (help) sur fastqc avec l&#39;argument -h</span>
 fastqc -h  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
-
-            FastQC - A high throughput sequence QC analysis tool
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            FastQC - A high throughput sequence QC analysis tool
 
 SYNOPSIS
 
@@ -718,16 +660,13 @@ BUGS
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
-<span class="c1"># La commande précédente est équivalente mais un peu plus lisible</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># La commande précédente est équivalente mais un peu plus lisible</span>
 fastqc --help
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
-
-            FastQC - A high throughput sequence QC analysis tool
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            FastQC - A high throughput sequence QC analysis tool
 
 SYNOPSIS
 
@@ -857,15 +796,13 @@ BUGS
 <p>Appeler la police, appeler son collègue, chercher sur internet ou utiliser la commande <strong>man</strong> (<strong>man</strong>uel)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
-<span class="c1"># obtenir de l&#39;aide sur la commande ls</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtenir de l&#39;aide sur la commande ls</span>
 man ls  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
-LS(1)                            User Commands                           LS(1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LS(1)                            User Commands                           LS(1)
 
 
 
@@ -1122,15 +1059,13 @@ GNU coreutils 8.22                April 2018                             LS(1)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
-<span class="c1"># obtenir de l&#39;aide sur la commande man ...</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtenir de l&#39;aide sur la commande man ...</span>
 man man  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
-MAN(1)                        Manual pager utils                        MAN(1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAN(1)                        Manual pager utils                        MAN(1)
 
 
 
@@ -1998,6 +1933,13 @@ ls -rtlh
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Charger l’environnement logiciel</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="arborescence.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Arborescence de fichiers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
