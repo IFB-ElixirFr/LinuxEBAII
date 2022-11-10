@@ -634,15 +634,18 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: cd: /shared/projects/form_2022_32/coursLinux/annotations/hg38: Aucun fichier ou dossier de ce type
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir bed<span class="p">;</span> <span class="nb">cd</span> bed
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « bed »: Le fichier existe
 </pre></div>
 </div>
 </div>
@@ -654,35 +657,11 @@ wget https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 16:29:16--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
-Résolution de zenodo.org (zenodo.org)... 188.184.117.155
-Connexion vers zenodo.org (zenodo.org)|188.184.117.155|:443...connecté.
-requête HTTP transmise, en attente de la réponse...200 OK
-Longueur: 8838009 (8,4M) [application/octet-stream]
-Sauvegarde en : «hg38_exons.bed.gz.1»
-
-100%[======================================&gt;] 8 838 009   --.-K/s   ds 0,1s    
-
-2022-11-10 16:29:17 (86,5 MB/s) - «hg38_exons.bed.gz.1» sauvegardé [8838009/8838009]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Le fichier compressé (finit par &quot;.gz&quot;). Il pèse 8,4Mo.</span>
 ls -lh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 90M
--rw-rw----+ 1 tdenecker tdenecker  81M 25 oct.  21:57 hg38_exons.bed
--rw-rw----+ 1 tdenecker tdenecker 8,5M 25 oct.  21:57 <span class=" -Color -Color-C9">hg38_exons.bed.gz</span>
--rw-rw----+ 1 tdenecker tdenecker 8,5M 25 oct.  21:57 hg38_exons.bed.gz.1
--rw-r-----+ 1 tdenecker tdenecker  12K  9 nov.  10:42 omes différents
--rw-r-----+ 1 tdenecker tdenecker 3,7K  9 nov.  10:41 te non redondante de chromosomes présents dans le fichier
 </pre></div>
 </div>
 </div>
@@ -694,21 +673,11 @@ file hg38_exons.bed.gz
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38_exons.bed.gz: gzip compressed data, was &quot;hg38_exons.bed&quot;, from Unix, last modified: Tue Nov 20 11:29:21 2018
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On le décompresse</span>
 gunzip hg38_exons.bed.gz
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gzip: hg38_exons.bed already exists; do you wish to overwrite (y or n)? 
 </pre></div>
 </div>
 </div>
@@ -834,16 +803,16 @@ file hg38_exons.bed
 (</em>) Un avantage de less est qu’on peut remonter en arrière; avec more … c’est mort (Marc Deloger)</p>
 <div class="tip admonition">
 <p class="admonition-title">Raccourcis dans less</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>↑ : se déplacer vers le haut. &lt;br&gt;
-↓ : se déplacer vers le bas. &lt;br&gt;
-&gt; : Aller à la première ligne.  &lt;br&gt;
-&lt; : Aller à la dernière ligne. &lt;br&gt;
-/chr : pour chercher le terme ‘chr’ (puis touche ‘enter’). &lt;br&gt;
-n : (next) pour chercher la prochaine occurrence de &#39;truc&#39;. &lt;br&gt;
-p: (previous) pour chercher l&#39;occurrence précédente de &#39;truc&#39;. &lt;br&gt;
-q : pour quitter. &lt;br&gt;
-</pre></div>
-</div>
+<p>↑ : se déplacer vers le haut. <br>
+↓ : se déplacer vers le bas. <br></p>
+<blockquote>
+<div><p>: Aller à la première ligne.  <br>
+&lt; : Aller à la dernière ligne. <br>
+/chr : pour chercher le terme ‘chr’ (puis touche ‘enter’). <br>
+n : (next) pour chercher la prochaine occurrence de ‘truc’. <br>
+p: (previous) pour chercher l’occurrence précédente de ‘truc’. <br>
+q : pour quitter. <br></p>
+</div></blockquote>
 </div>
 </section>
 <section id="exercices">

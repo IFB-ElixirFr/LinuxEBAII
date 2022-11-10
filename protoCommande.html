@@ -385,6 +385,23 @@ title="Print to PDF"
    Trouver de l’aide !
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zoom-sur-la-commande-ls">
+   Zoom sur la commande ls
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-commande-ls-et-ses-arguments">
+     La commande ls et ses arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     La commande ls et ses arguments
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -408,6 +425,23 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#trouver-de-l-aide">
    Trouver de l’aide !
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zoom-sur-la-commande-ls">
+   Zoom sur la commande ls
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-commande-ls-et-ses-arguments">
+     La commande ls et ses arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     La commande ls et ses arguments
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -1807,65 +1841,36 @@ HHIISSTTOORRYY
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span><span class="o">{</span>tip<span class="o">}</span> 
-*Raccourcis dans l<span class="s1">&#39;aide*:</span>
-<span class="s1">- `/color` : pour chercher le terme ‘color’.</span>
-<span class="s1">- `n` : (**n**ext) pour chercher la prochaine occurrence de &#39;</span>truc<span class="s1">&#39;.</span>
-<span class="s1">- `p`: (**p**revious) pour chercher l&#39;</span>occurrence précédente de <span class="s1">&#39;truc&#39;</span>.
-- <span class="sb">`</span>q<span class="sb">`</span> : pour **q**uitter l<span class="s1">&#39;aide.</span>
-<span class="s1">```</span>
-
-<span class="s1">## Zoom sur la commande ls</span>
-<span class="s1">### La commande ls et ses arguments</span>
-
-<span class="s1">La commande ls peut prendre un certain nombre d&#39;</span>arguments.
-
-Parmis les arguments principaux:
-- <span class="sb">`</span>-l<span class="sb">`</span> <span class="o">(</span>**l**ong/lot<span class="o">)</span> donne beaucoup d<span class="s1">&#39;informations sur les fichiers.</span>
-<span class="s1">- `-a` (**a**ll) montre tous les fichiers y compris ceux qui sont cachés*.</span>
-<span class="s1">- `-t` (**t**ime) trie par date de modification.</span>
-<span class="s1">- `-h` (**h**uman-readable) affiche les tailles des fichiers en unités lisibles</span>
-<span class="s1">- `-r` (**r**everse) inverse l&#39;</span>ordre du tri.
-
-On peut combiner les arguments : <span class="sb">`</span>ls -l --all<span class="sb">`</span>
-
-On peut fusionner les arguments <span class="o">(</span>au format court<span class="o">)</span> : <span class="sb">`</span>ls -la<span class="sb">`</span>
-
-**Sous Linux les noms des fichiers cachés commencent par un point <span class="o">(</span>e.g <span class="s1">&#39;.bashrc&#39;</span><span class="o">)</span>.**
-
-<span class="c1">### La commande ls et ses arguments</span>
-</pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><em>Raccourcis dans l’aide</em>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">/color</span></code> : pour chercher le terme ‘color’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> : (<strong>n</strong>ext) pour chercher la prochaine occurrence de ‘truc’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code>: (<strong>p</strong>revious) pour chercher l’occurrence précédente de ‘truc’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> : pour <strong>q</strong>uitter l’aide.</p></li>
+</ul>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: {tip} : commande introuvable
-bash: command substitution: ligne2: Caractère de fin de fichier (EOF) prématuré lors de la recherche du « &#39; » correspondant
-bash: command substitution: ligne4: Erreur de syntaxe : fin de fichier prématurée
-bash: - : commande introuvable
-bash: command substitution: ligne1: Erreur de syntaxe près du symbole inattendu « **n**ext »
-bash: command substitution: ligne1: ` : (**n**ext) pour chercher la prochaine occurrence de &#39;truc&#39;.&#39;
-bash: command substitution: ligne1: Erreur de syntaxe près du symbole inattendu « **p**revious »
-bash: command substitution: ligne1: `: (**p**revious) pour chercher l&#39;occurrence précédente de &#39;truc&#39;.&#39;
-bash: command substitution: ligne1: Caractère de fin de fichier (EOF) prématuré lors de la recherche du « &#39; » correspondant
-bash: command substitution: ligne2: Erreur de syntaxe : fin de fichier prématurée
-bash: /colornpq: Aucun fichier ou dossier de ce type
-bash: La : commande introuvable
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: On : commande introuvable
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="zoom-sur-la-commande-ls">
+<h2>Zoom sur la commande ls<a class="headerlink" href="#zoom-sur-la-commande-ls" title="Permalink to this headline">#</a></h2>
+<section id="la-commande-ls-et-ses-arguments">
+<h3>La commande ls et ses arguments<a class="headerlink" href="#la-commande-ls-et-ses-arguments" title="Permalink to this headline">#</a></h3>
+<p>La commande ls peut prendre un certain nombre d’arguments.</p>
+<p>Parmis les arguments principaux:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-l</span></code> (<strong>l</strong>ong/lot) donne beaucoup d’informations sur les fichiers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-a</span></code> (<strong>a</strong>ll) montre tous les fichiers y compris ceux qui sont cachés*.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code> (<strong>t</strong>ime) trie par date de modification.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-h</span></code> (<strong>h</strong>uman-readable) affiche les tailles des fichiers en unités lisibles</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-r</span></code> (<strong>r</strong>everse) inverse l’ordre du tri.</p></li>
+</ul>
+<p>On peut combiner les arguments : <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">--all</span></code></p>
+<p>On peut fusionner les arguments (au format court) : <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code></p>
+<p><strong>Sous Linux les noms des fichiers cachés commencent par un point (e.g ‘.bashrc’).</strong></p>
+</section>
+<section id="id1">
+<h3>La commande ls et ses arguments<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans le dossier</span>
@@ -1881,11 +1886,23 @@ ls
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38.fa  hg38.fa.fai
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Information détaillée sur les fichiers (taille, date modif,...)</span>
 ls -l 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3196788
+-rw-rw-r-- 1 glecorguille glecorguille 3273481150 16 janv.  2014 hg38.fa
+-rw-rw-r-- 1 glecorguille glecorguille      19381 21 nov.   2016 hg38.fa.fai
 </pre></div>
 </div>
 </div>
@@ -1897,11 +1914,25 @@ ls -lh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3,1G
+-rw-rw-r-- 1 glecorguille glecorguille 3,1G 16 janv.  2014 hg38.fa
+-rw-rw-r-- 1 glecorguille glecorguille  19K 21 nov.   2016 hg38.fa.fai
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers, tailles en Ko,Mo,Go,To…, tri par date</span>
 ls -tlh
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3,1G
+-rw-rw-r-- 1 glecorguille glecorguille  19K 21 nov.   2016 hg38.fa.fai
+-rw-rw-r-- 1 glecorguille glecorguille 3,1G 16 janv.  2014 hg38.fa
 </pre></div>
 </div>
 </div>
@@ -1914,6 +1945,13 @@ ls -rtlh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3,1G
+-rw-rw-r-- 1 glecorguille glecorguille 3,1G 16 janv.  2014 hg38.fa
+-rw-rw-r-- 1 glecorguille glecorguille  19K 21 nov.   2016 hg38.fa.fai
+</pre></div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1922,6 +1960,7 @@ ls -rtlh
 <li><p>Le comportement par défaut de ls est de trier par ordre alphabétique en tenant compte de la casse (i.e majuscule minuscule).</p></li>
 </ul>
 </div>
+</section>
 </section>
 </section>
 

@@ -17,25 +17,9 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Redirections
-
-![](images/redirection.png)
-
-- Entrée standard (stdin): **un fichier** ou du texte (**un flux** de texte).
-- Sortie standard (stdout, “output 1”): renvoyée à l’écran par défaut **et transférée via le tube**.
-- Erreur standard (stderr, “output 2”): renvoyée à l’écran par défaut **et non transférée via le tube**.
-- Opérateurs de redirection
-    - `|` : le caractère “pipe” passe le flux de texte stdin à une autre commande
-    - `> file.txt` : stocke le flux stdout en créant (ou écrasant) le fichier file.txt
-    - `>> file.txt` : stocke le flux stdout en ajoutant des lignes dans le fichier file.txt
-    - `2> log.txt` : stocke le flux stderr dans un fichier nommé log.txt
-    - `1> file.txt 2> log.txt` : stocke stdout dans un fichier et stderr dans un autre
-
-## Un exemple
-
-Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes
+grep -c "chr22" hg38_exons.bed 
 ------------------
 
 
-: 127
+: 2
 
