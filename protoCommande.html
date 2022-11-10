@@ -582,13 +582,16 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demander de l&#39;aide (help) sur fastqc avec l&#39;argument -h</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
+<span class="c1"># Demander de l&#39;aide (help) sur fastqc avec l&#39;argument -h</span>
 fastqc -h  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            FastQC - A high throughput sequence QC analysis tool
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
+
+            FastQC - A high throughput sequence QC analysis tool
 
 SYNOPSIS
 
@@ -715,13 +718,16 @@ BUGS
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># La commande précédente est équivalente mais un peu plus lisible</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
+<span class="c1"># La commande précédente est équivalente mais un peu plus lisible</span>
 fastqc --help
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            FastQC - A high throughput sequence QC analysis tool
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
+
+            FastQC - A high throughput sequence QC analysis tool
 
 SYNOPSIS
 
@@ -851,13 +857,15 @@ BUGS
 <p>Appeler la police, appeler son collègue, chercher sur internet ou utiliser la commande <strong>man</strong> (<strong>man</strong>uel)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtenir de l&#39;aide sur la commande ls</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
+<span class="c1"># obtenir de l&#39;aide sur la commande ls</span>
 man ls  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LS(1)                            User Commands                           LS(1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
+LS(1)                            User Commands                           LS(1)
 
 
 
@@ -1114,13 +1122,15 @@ GNU coreutils 8.22                April 2018                             LS(1)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtenir de l&#39;aide sur la commande man ...</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:tags: <span class="o">[</span>output_scroll<span class="o">]</span>
+<span class="c1"># obtenir de l&#39;aide sur la commande man ...</span>
 man man  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAN(1)                        Manual pager utils                        MAN(1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: :tags: : commande introuvable
+MAN(1)                        Manual pager utils                        MAN(1)
 
 
 
@@ -1895,6 +1905,62 @@ bash: Erreur de syntaxe près du symbole inattendu « ( »
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans le dossier</span>
+<span class="nb">cd</span> /shared/bank/homo_sapiens/hg38/fasta   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On liste les fichiers</span>
+ls   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Information détaillée sur les fichiers (taille, date modif,...)</span>
+ls -l 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers et tailles en Ko,Mo,Go,To... </span>
+ls -lh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers, tailles en Ko,Mo,Go,To…, tri par date</span>
+ls -tlh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers, tailles en Ko,Mo,Go,To…, tri par date</span>
+<span class="c1"># du plus ancien au plus récent</span>
+ls -rtlh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>ATTENTION aux espaces, nécessaires entre la commande et ses arguments. La commande <code class="docutils literal notranslate"><span class="pre">ls-l</span></code> n’existe pas !</p></li>
+<li><p>Le comportement par défaut de ls est de trier par ordre alphabétique en tenant compte de la casse (i.e majuscule minuscule).</p></li>
+</ul>
 </div>
 </section>
 </section>
