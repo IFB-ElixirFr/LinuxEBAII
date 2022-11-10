@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Arrêter le serveur Jupyterhub" href="16_stopJupyter.html" />
     <link rel="prev" title="Analyser la qualité avec fastQC" href="14_fastqc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -186,6 +187,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Mapping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_stopJupyter.html">
+   Arrêter le serveur Jupyterhub
   </a>
  </li>
 </ul>
@@ -476,6 +482,21 @@ title="Print to PDF"
    Bitwise flag
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-extended-cigar-string">
+   The extended CIGAR string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pourquoi-filtrer-sur-la-qualite">
+   Pourquoi filtrer sur la qualité ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-for-mapping-quality-mapq">
+   Filtering for Mapping Quality (MAPQ)
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -577,6 +598,21 @@ title="Print to PDF"
    Bitwise flag
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-extended-cigar-string">
+   The extended CIGAR string
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pourquoi-filtrer-sur-la-qualite">
+   Pourquoi filtrer sur la qualité ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering-for-mapping-quality-mapq">
+   Filtering for Mapping Quality (MAPQ)
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -623,11 +659,6 @@ mkdir index
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « index »: Le fichier existe
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="creation-de-l-index">
@@ -655,16 +686,16 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 18:53:53--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 21:30:58--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Résolution de hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connexion vers hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80...connecté.
 requête HTTP transmise, en attente de la réponse...200 OK
 Longueur: 12709705 (12M) [application/x-gzip]
 Sauvegarde en : «chr21.fa.gz»
 
-100%[======================================&gt;] 12 709 705  7,31MB/s   ds 1,7s   
+100%[======================================&gt;] 12 709 705  6,75MB/s   ds 1,8s   
 
-2022-11-10 18:53:55 (7,31 MB/s) - «chr21.fa.gz» sauvegardé [12709705/12709705]
+2022-11-10 21:31:01 (6,75 MB/s) - «chr21.fa.gz» sauvegardé [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -673,11 +704,6 @@ Sauvegarde en : «chr21.fa.gz»
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># décompression</span>
 gunzip chr21.fa.gz
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gzip: chr21.fa already exists; do you wish to overwrite (y or n)? 
 </pre></div>
 </div>
 </div>
@@ -712,7 +738,7 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:00
+  Time reading reference sizes: 00:00:01
 Calculating joined length
 Writing header
 Reserving space for joined string
@@ -727,12 +753,12 @@ Building DifferenceCoverSample
   Building sPrime
   Building sPrimeOrder
   V-Sorting samples
-  V-Sorting samples time: 00:00:00
+  V-Sorting samples time: 00:00:01
   Allocating rank array
   Ranking v-sort output
   Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:01
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -753,7 +779,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:10
+  Sorting block time: 00:00:14
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -792,7 +818,7 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:13
+Total time for call to driver() for forward index: 00:00:19
 Reading reference sizes
   Time reading reference sizes: 00:00:01
 Calculating joined length
@@ -836,46 +862,20 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:10
-Returning block of 40088620 for bucket 1
-Exited Ebwt loop
-fchr[A]: 0
-fchr[C]: 11820664
-fchr[G]: 20005908
-fchr[T]: 28232289
-fchr[$]: 40088619
-Exiting Ebwt::buildToDisk()
-Returning from initFromVector
-Wrote 17557951 bytes to primary EBWT file: chr21_hg38.rev.1.bt2
-Wrote 10022160 bytes to secondary EBWT file: chr21_hg38.rev.2.bt2
-Re-opening _in1 and _in2 as input streams
-Returning from Ebwt constructor
-Headers:
-    len: 40088619
-    bwtLen: 40088620
-    sz: 10022155
-    bwtSz: 10022155
-    lineRate: 6
-    offRate: 4
-    offMask: 0xfffffff0
-    ftabChars: 10
-    eftabLen: 20
-    eftabSz: 80
-    ftabLen: 1048577
-    ftabSz: 4194308
-    offsLen: 2505539
-    offsSz: 10022156
-    lineSz: 64
-    sideSz: 64
-    sideBwtSz: 48
-    sideBwtLen: 192
-    numSides: 208795
-    numLines: 208795
-    ebwtTotLen: 13362880
-    ebwtTotSz: 13362880
-    color: 0
-    reverse: 1
-Total time for backward call to driver() for mirror index: 00:00:14
+Traceback (most recent call last):
+  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 90, in &lt;module&gt;
+    main()
+  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 87, in main
+    sys.exit(subprocess.call(argv))
+  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 341, in call
+    return p.wait(timeout=timeout)
+  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1019, in wait
+    return self._wait(timeout=timeout)
+  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1653, in _wait
+    (pid, sts) = self._try_wait(0)
+  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1611, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
 </pre></div>
 </div>
 </div>
@@ -1078,6 +1078,58 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
 <p>Voir (Explained SAM flags)[<a class="reference external" href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a>]</p>
 </div>
 </section>
+<section id="the-extended-cigar-string">
+<h2>The extended CIGAR string<a class="headerlink" href="#the-extended-cigar-string" title="Permalink to this headline">#</a></h2>
+<p>Quelques exemples de drapeaux (flag)</p>
+<ul class="simple">
+<li><p>M : match ou mismatch…</p></li>
+<li><p>I : Insertion par rapport à la référence</p></li>
+<li><p>D : Délétion par rapport à la référence</p></li>
+<li><p>N : Espace dans l’alignement (Gap)</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Voir (SAM)[<a class="reference external" href="http://samtools.sourceforge.net/SAM1.pdf">http://samtools.sourceforge.net/SAM1.pdf</a>]</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ATTCAGATGCAGTA</span>
+<span class="n">ATTCA</span><span class="o">--</span><span class="n">TGCAGTA</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="n">M2D7M</span>
+</pre></div>
+</div>
+</section>
+<section id="pourquoi-filtrer-sur-la-qualite">
+<h2>Pourquoi filtrer sur la qualité ?<a class="headerlink" href="#pourquoi-filtrer-sur-la-qualite" title="Permalink to this headline">#</a></h2>
+<p>Sommes-nous plus confiants</p>
+<ul class="simple">
+<li><p>dans l’alignement du read 1 ?</p></li>
+<li><p>dans l’alignement read 2 ?</p></li>
+</ul>
+<p><img alt="" src="_images/filter_quality.png" /></p>
+<p>Sommes-nous plus confiants dans l’alignement 1 ?</p>
+<ul class="simple">
+<li><p>Si la moyenne de qualité des nucléotides séquencés dans le read est 40 dans l’alignement 1’ ?</p></li>
+<li><p>Si la moyenne de qualité des nucléotides séquencés dans le read est 10 ?</p></li>
+</ul>
+<p><img alt="" src="_images/filter_quality2.png" /></p>
+</section>
+<section id="filtering-for-mapping-quality-mapq">
+<h2>Filtering for Mapping Quality (MAPQ)<a class="headerlink" href="#filtering-for-mapping-quality-mapq" title="Permalink to this headline">#</a></h2>
+<p>Mapping quality is a score that integrates both the quality of the read itself and the number of positions it maps</p>
+<p>Mapping quality score is computed from the probability that alignment is wrong:</p>
+<ul class="simple">
+<li><p>takes mappability and sequence quality into account</p></li>
+<li><p>-10.log10(Prob(alignment is wrong))</p>
+<ul>
+<li><p>p=0.01 -&gt; MAPQ: 20</p></li>
+<li><p>p=0.001 -&gt; MAPQ: 30</p></li>
+<li><p>p=0.0001 -&gt; MAPQ: 40</p></li>
+<li><p>…</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1113,6 +1165,13 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Analyser la qualité avec fastQC</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="16_stopJupyter.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Arrêter le serveur Jupyterhub</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

@@ -174,6 +174,26 @@ const thebe_selector_output = ".output, .cell_output"
    Les raccourcis clavier du terminal
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_data.html">
+   Jeu de données
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_fastqc.html">
+   Analyser la qualité avec fastQC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_mapping.html">
+   Mapping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_stopJupyter.html">
+   Arrêter le serveur Jupyterhub
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -823,6 +843,7 @@ ls
 <span class=" -Color -Color-C27">canceropole_ngs_2021</span>
 <span class=" -Color -Color-C27">candida_ms_ptm</span>
 <span class=" -Color -Color-C27">capture_copia93</span>
+<span class=" -Color -Color-C27">carcinus</span>
 <span class=" -Color -Color-C27">cardio_ctcf_hic</span>
 <span class=" -Color -Color-C27">cat_cardio</span>
 <span class=" -Color -Color-C27">cat_cardiopathy</span>
@@ -1138,6 +1159,7 @@ ddn_testbackup.tar.zst
 <span class=" -Color -Color-C27">fusion_transcripts</span>
 <span class=" -Color -Color-C27">gametic_segregation_distortion</span>
 <span class=" -Color -Color-C27">gata2</span>
+<span class=" -Color -Color-C27">gcm_cut_run_on_s2_cells</span>
 <span class=" -Color -Color-C27">gcn2</span>
 <span class=" -Color -Color-C27">genepi_rnaseq_fibro</span>
 <span class=" -Color -Color-C27">genetic_determinants_of_cancer</span>
@@ -1185,6 +1207,7 @@ ddn_testbackup.tar.zst
 <span class=" -Color -Color-C27">hs_pbmc_myosite</span>
 <span class=" -Color -Color-C27">htregpoptp</span>
 <span class=" -Color -Color-C27">htt_ct</span>
+<span class=" -Color -Color-C27">humancd34_diff_rna_atacseq</span>
 <span class=" -Color -Color-C27">iba</span>
 <span class=" -Color -Color-C27">icare</span>
 <span class=" -Color -Color-C27">icf_epi</span>
@@ -1895,6 +1918,7 @@ ls .
 <span class=" -Color -Color-C27">canceropole_ngs_2021</span>
 <span class=" -Color -Color-C27">candida_ms_ptm</span>
 <span class=" -Color -Color-C27">capture_copia93</span>
+<span class=" -Color -Color-C27">carcinus</span>
 <span class=" -Color -Color-C27">cardio_ctcf_hic</span>
 <span class=" -Color -Color-C27">cat_cardio</span>
 <span class=" -Color -Color-C27">cat_cardiopathy</span>
@@ -2210,6 +2234,7 @@ ddn_testbackup.tar.zst
 <span class=" -Color -Color-C27">fusion_transcripts</span>
 <span class=" -Color -Color-C27">gametic_segregation_distortion</span>
 <span class=" -Color -Color-C27">gata2</span>
+<span class=" -Color -Color-C27">gcm_cut_run_on_s2_cells</span>
 <span class=" -Color -Color-C27">gcn2</span>
 <span class=" -Color -Color-C27">genepi_rnaseq_fibro</span>
 <span class=" -Color -Color-C27">genetic_determinants_of_cancer</span>
@@ -2257,6 +2282,7 @@ ddn_testbackup.tar.zst
 <span class=" -Color -Color-C27">hs_pbmc_myosite</span>
 <span class=" -Color -Color-C27">htregpoptp</span>
 <span class=" -Color -Color-C27">htt_ct</span>
+<span class=" -Color -Color-C27">humancd34_diff_rna_atacseq</span>
 <span class=" -Color -Color-C27">iba</span>
 <span class=" -Color -Color-C27">icare</span>
 <span class=" -Color -Color-C27">icf_epi</span>
@@ -2916,7 +2942,7 @@ ls ~
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C27">divers</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C27">divers</span>  <span class=" -Color -Color-C27">tmp</span>
 </pre></div>
 </div>
 </div>
@@ -2925,6 +2951,14 @@ ls ~
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On crée un répertoire ‘tmp’ dans le home (make directory)</span>
 mkdir ~/tmp
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « /shared/home/tdenecker/tmp »: Le fichier existe
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
