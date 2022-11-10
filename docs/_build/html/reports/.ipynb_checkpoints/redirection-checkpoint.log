@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/asyncio/base_events.py", line 646, in run_until_complete
+    return future.result()
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/shared/ifbstor1/software/miniconda/envs/jupyter-book-0.13.1/lib/python3.10/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Redirections
+
+![](images/redirection.png)
+
+- Entrée standard (stdin): **un fichier** ou du texte (**un flux** de texte).
+- Sortie standard (stdout, “output 1”): renvoyée à l’écran par défaut **et transférée via le tube**.
+- Erreur standard (stderr, “output 2”): renvoyée à l’écran par défaut **et non transférée via le tube**.
+- Opérateurs de redirection
+    - `|` : le caractère “pipe” passe le flux de texte stdin à une autre commande
+    - `> file.txt` : stocke le flux stdout en créant (ou écrasant) le fichier file.txt
+    - `>> file.txt` : stocke le flux stdout en ajoutant des lignes dans le fichier file.txt
+    - `2> log.txt` : stocke le flux stderr dans un fichier nommé log.txt
+    - `1> file.txt 2> log.txt` : stocke stdout dans un fichier et stderr dans un autre
+
+## Un exemple
+
+Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes
+------------------
+
+
+: 127
+

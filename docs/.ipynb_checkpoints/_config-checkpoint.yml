@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Linux en Bioinformatique
-author: Thomas Denecker et Claire Toffano-Nioche
+author: Thomas Denecker & Claire Toffano-Nioche
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -30,3 +30,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+sphinx:
+  config:
+    nb_merge_streams: true
