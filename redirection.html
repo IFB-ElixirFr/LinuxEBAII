@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Demo: enchaînements de commandes &#8212; Linux en Bioinformatique</title>
+    <title>Redirections &#8212; Linux en Bioinformatique</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -161,7 +161,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Demo: enchaînements de commandes
+   Redirections
   </a>
  </li>
  <li class="toctree-l1">
@@ -381,14 +381,33 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-i">
-   Exercice I
+  <a class="reference internal nav-link" href="#un-exemple">
+   Un exemple
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercices">
+     Exercices
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#demo-enchainements-de-commandes">
+   Demo: enchaînements de commandes
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-i">
+     Exercice I
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -399,7 +418,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Demo: enchaînements de commandes</h1>
+                <h1>Redirections</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -410,14 +429,33 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercice-i">
-   Exercice I
+  <a class="reference internal nav-link" href="#un-exemple">
+   Un exemple
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercices">
+     Exercices
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#demo-enchainements-de-commandes">
+   Demo: enchaînements de commandes
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice-i">
+     Exercice I
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -429,49 +467,26 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Redirections</span>
-
-!<span class="o">[](</span>images/redirection.png<span class="o">)</span>
-
-- Entrée standard <span class="o">(</span>stdin<span class="o">)</span>: **un fichier** ou du texte <span class="o">(</span>**un flux** de texte<span class="o">)</span>.
-- Sortie standard <span class="o">(</span>stdout, “output <span class="m">1</span>”<span class="o">)</span>: renvoyée à l’écran par défaut **et transférée via le tube**.
-- Erreur standard <span class="o">(</span>stderr, “output <span class="m">2</span>”<span class="o">)</span>: renvoyée à l’écran par défaut **et non transférée via le tube**.
-- Opérateurs de redirection
-    - <span class="sb">`</span><span class="p">|</span><span class="sb">`</span> : le caractère “pipe” passe le flux de texte stdin à une autre commande
-    - <span class="sb">`</span>&gt; file.txt<span class="sb">`</span> : stocke le flux stdout en créant <span class="o">(</span>ou écrasant<span class="o">)</span> le fichier file.txt
-    - <span class="sb">`</span>&gt;&gt; file.txt<span class="sb">`</span> : stocke le flux stdout en ajoutant des lignes dans le fichier file.txt
-    - <span class="sb">`</span><span class="m">2</span>&gt; log.txt<span class="sb">`</span> : stocke le flux stderr dans un fichier nommé log.txt
-    - <span class="sb">`</span><span class="m">1</span>&gt; file.txt <span class="m">2</span>&gt; log.txt<span class="sb">`</span> : stocke stdout dans un fichier et stderr dans un autre
-
-<span class="c1">## Un exemple</span>
-
-Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: ![]: event not found
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: - : commande introuvable
-bash: command substitution: ligne1: Erreur de syntaxe près du symbole inattendu « | »
-bash: command substitution: ligne1: `|&#39;
-bash: - : commande introuvable
-bash: Erreur de syntaxe près du symbole inattendu « ( »
-bash: - : commande introuvable
-bash: - : commande introuvable
-bash: - : commande introuvable
-bash: Compter : commande introuvable
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="redirections">
+<h1>Redirections<a class="headerlink" href="#redirections" title="Permalink to this headline">#</a></h1>
+<p><img alt="" src="_images/redirection.png" /></p>
+<ul class="simple">
+<li><p>Entrée standard (stdin): <strong>un fichier</strong> ou du texte (<strong>un flux</strong> de texte).</p></li>
+<li><p>Sortie standard (stdout, “output 1”): renvoyée à l’écran par défaut <strong>et transférée via le tube</strong>.</p></li>
+<li><p>Erreur standard (stderr, “output 2”): renvoyée à l’écran par défaut <strong>et non transférée via le tube</strong>.</p></li>
+<li><p>Opérateurs de redirection</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> : le caractère “pipe” passe le flux de texte stdin à une autre commande</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">file.txt</span></code> : stocke le flux stdout en créant (ou écrasant) le fichier file.txt</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span> <span class="pre">file.txt</span></code> : stocke le flux stdout en ajoutant des lignes dans le fichier file.txt</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2&gt;</span> <span class="pre">log.txt</span></code> : stocke le flux stderr dans un fichier nommé log.txt</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1&gt;</span> <span class="pre">file.txt</span> <span class="pre">2&gt;</span> <span class="pre">log.txt</span></code> : stocke stdout dans un fichier et stderr dans un autre</p></li>
+</ul>
+</li>
+</ul>
+<section id="un-exemple">
+<h2>Un exemple<a class="headerlink" href="#un-exemple" title="Permalink to this headline">#</a></h2>
+<p>Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/annotations/hg38/bed
@@ -479,32 +494,39 @@ ls -l *.bed <span class="p">|</span> wc -l
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">### Exercices</span>
-
-- **Hommage à Marseille**
-    - Utilisez les commandes **head** pour visualiser les <span class="m">51</span> premières lignes du fichier hg38_exons.bed et renvoyer le résultat dans **less**
-- **Hommage au finistère**
-    - Utilisez les commandes **head** et **tail** pour récupérer la 29ème ligne du fichier hg38_exons.bed.
-    
-<span class="c1">### Solution</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
+<section id="exercices">
+<h3>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="828df5ac-d6c1-4e08-85d4-be1d6b9abda0" name="e6af87aa-0e17-46bb-b032-40649de3dce5" type="radio">
+</input><label class="sd-tab-label" for="828df5ac-d6c1-4e08-85d4-be1d6b9abda0">
+Questions</label><div class="sd-tab-content docutils">
+<ul class="simple">
+<li><p><strong>Hommage à Marseille</strong></p>
+<ul>
+<li><p>Utilisez les commandes <strong>head</strong> pour visualiser les 51 premières lignes du fichier hg38_exons.bed et renvoyer le résultat dans <strong>less</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Hommage au finistère</strong></p>
+<ul>
+<li><p>Utilisez les commandes <strong>head</strong> et <strong>tail</strong> pour récupérer la 29ème ligne du fichier hg38_exons.bed.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<input id="da571e10-5e8c-4ef4-b126-04e4e3ea59d1" name="e6af87aa-0e17-46bb-b032-40649de3dce5" type="radio">
+</input><label class="sd-tab-label" for="da571e10-5e8c-4ef4-b126-04e4e3ea59d1">
+Solutions</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On utilise head puis un tube qui renvoie vers less. </span>
 <span class="c1"># Tapez q pour quitter.</span>
 head -n <span class="m">51</span> hg38_exons.bed <span class="p">|</span> less 
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On récupère les 29 premières lignes avec head,</span>
 <span class="c1"># puis on extrait de ce flux de texte la dernière ligne avec tail</span>
 head -n <span class="m">29</span> hg38_exons.bed <span class="p">|</span> tail -n <span class="m">1</span>
@@ -512,12 +534,42 @@ head -n <span class="m">29</span> hg38_exons.bed <span class="p">|</span> tail -
 </div>
 </div>
 </div>
+</section>
+</section>
 <section id="demo-enchainements-de-commandes">
-<h1>Demo: enchaînements de commandes<a class="headerlink" href="#demo-enchainements-de-commandes" title="Permalink to this headline">#</a></h1>
+<h2>Demo: enchaînements de commandes<a class="headerlink" href="#demo-enchainements-de-commandes" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtenir la liste non redondante de chromosomes présents dans le fichier</span>
 cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <span class="p">|</span> uniq
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chr1
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr2
+chr20
+chr21
+chr22
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chrX
+chrY
 </pre></div>
 </div>
 </div>
@@ -526,6 +578,11 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nombre de chromosomes différents</span>
 cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <span class="p">|</span> uniq <span class="p">|</span> wc -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
 </pre></div>
 </div>
 </div>
@@ -539,6 +596,34 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 117347 chr1
+  46414 chr10
+  75294 chr11
+  72970 chr12
+  20371 chr13
+  43618 chr14
+  47068 chr15
+  60375 chr16
+  77950 chr17
+  22378 chr18
+  73716 chr19
+  97092 chr2
+  28097 chr20
+  14332 chr21
+  27854 chr22
+  80596 chr3
+  49351 chr4
+  55719 chr5
+  56433 chr6
+  60961 chr7
+  45192 chr8
+  45468 chr9
+  39510 chrX
+   3764 chrY
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -548,13 +633,41 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 117347 chr1
+  97092 chr2
+  80596 chr3
+  77950 chr17
+  75294 chr11
+  73716 chr19
+  72970 chr12
+  60961 chr7
+  60375 chr16
+  56433 chr6
+  55719 chr5
+  49351 chr4
+  47068 chr15
+  46414 chr10
+  45468 chr9
+  45192 chr8
+  43618 chr14
+  39510 chrX
+  28097 chr20
+  27854 chr22
+  22378 chr18
+  20371 chr13
+  14332 chr21
+   3764 chrY
+</pre></div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>La commande uniq permet d’éliminer les doublons dans un flux de texte trié</p>
 </div>
 <section id="exercice-i">
-<h2>Exercice I<a class="headerlink" href="#exercice-i" title="Permalink to this headline">#</a></h2>
+<h3>Exercice I<a class="headerlink" href="#exercice-i" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>En quoi la commande <code class="docutils literal notranslate"><span class="pre">less</span></code> diffère-t-elle de la commande <code class="docutils literal notranslate"><span class="pre">more</span></code> ? (15 pts)</p></li>
 <li><p>En utilisant la command <code class="docutils literal notranslate"><span class="pre">grep</span></code> indiquez : (5 pts)</p>
@@ -566,10 +679,15 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </ul>
 </section>
 <section id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h2>
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="s2">&quot;chr22&quot;</span> hg38_exons.bed <span class="p">|</span> wc -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27854
 </pre></div>
 </div>
 </div>
@@ -580,10 +698,20 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>846
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -c <span class="s2">&quot;chr22&quot;</span> hg38_exons.bed 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27854
 </pre></div>
 </div>
 </div>
@@ -594,7 +722,13 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>846
+</pre></div>
 </div>
+</div>
+</div>
+</section>
 </section>
 </section>
 

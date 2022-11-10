@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Redirections" href="redirection.html" />
     <link rel="prev" title="Stockage fichiers" href="storage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -156,6 +157,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Manipuler des fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="redirection.html">
+   Redirections
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linuxIsMore.html">
+   Linux c’est aussi tellement plus !
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="raccourcis.html">
+   Les raccourcis clavier du terminal
   </a>
  </li>
 </ul>
@@ -639,16 +655,16 @@ wget https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 16:02:43--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 16:29:16--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 Résolution de zenodo.org (zenodo.org)... 188.184.117.155
 Connexion vers zenodo.org (zenodo.org)|188.184.117.155|:443...connecté.
 requête HTTP transmise, en attente de la réponse...200 OK
 Longueur: 8838009 (8,4M) [application/octet-stream]
-Sauvegarde en : «hg38_exons.bed.gz»
+Sauvegarde en : «hg38_exons.bed.gz.1»
 
 100%[======================================&gt;] 8 838 009   --.-K/s   ds 0,1s    
 
-2022-11-10 16:02:44 (86,0 MB/s) - «hg38_exons.bed.gz» sauvegardé [8838009/8838009]
+2022-11-10 16:29:17 (86,5 MB/s) - «hg38_exons.bed.gz.1» sauvegardé [8838009/8838009]
 </pre></div>
 </div>
 </div>
@@ -661,9 +677,10 @@ ls -lh
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 81M
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 90M
 -rw-rw----+ 1 tdenecker tdenecker  81M 25 oct.  21:57 hg38_exons.bed
 -rw-rw----+ 1 tdenecker tdenecker 8,5M 25 oct.  21:57 <span class=" -Color -Color-C9">hg38_exons.bed.gz</span>
+-rw-rw----+ 1 tdenecker tdenecker 8,5M 25 oct.  21:57 hg38_exons.bed.gz.1
 -rw-r-----+ 1 tdenecker tdenecker  12K  9 nov.  10:42 omes différents
 -rw-r-----+ 1 tdenecker tdenecker 3,7K  9 nov.  10:41 te non redondante de chromosomes présents dans le fichier
 </pre></div>
@@ -965,6 +982,13 @@ sort -k1,1 -k2,2nr hg38_exons.bed
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Stockage fichiers</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="redirection.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Redirections</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
