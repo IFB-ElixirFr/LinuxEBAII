@@ -686,16 +686,16 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 21:30:58--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 21:57:17--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Résolution de hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connexion vers hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80...connecté.
 requête HTTP transmise, en attente de la réponse...200 OK
 Longueur: 12709705 (12M) [application/x-gzip]
 Sauvegarde en : «chr21.fa.gz»
 
-100%[======================================&gt;] 12 709 705  6,75MB/s   ds 1,8s   
+100%[======================================&gt;] 12 709 705  6,67MB/s   ds 1,8s   
 
-2022-11-10 21:31:01 (6,75 MB/s) - «chr21.fa.gz» sauvegardé [12709705/12709705]
+2022-11-10 21:57:20 (6,67 MB/s) - «chr21.fa.gz» sauvegardé [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -779,7 +779,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:14
+  Sorting block time: 00:00:12
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -818,9 +818,9 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:19
+Total time for call to driver() for forward index: 00:00:17
 Reading reference sizes
-  Time reading reference sizes: 00:00:01
+  Time reading reference sizes: 00:00:00
 Calculating joined length
 Writing header
 Reserving space for joined string
@@ -862,6 +862,8 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
+  Sorting block time: 00:00:11
+Returning block of 40088620 for bucket 1
 Traceback (most recent call last):
   File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 90, in &lt;module&gt;
     main()
@@ -1064,6 +1066,9 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
 <li><p>second in pair</p></li>
 <li><p>not primary alignment</p></li>
 <li><p>…</p></li>
+</ul>
+<p>Détails:</p>
+<ul class="simple">
 <li><p>00000000001 → 2^0  = 1 (read paired)</p></li>
 <li><p>00000000010 → 2^1  = 2 (read mapped in proper pair)</p></li>
 <li><p>00000000100 → 2^2  = 4 (read unmapped)</p></li>

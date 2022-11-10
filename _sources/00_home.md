@@ -3,6 +3,10 @@
 Bienvenues dans le cours de Linux de l'EBAII ! Pour accompagner ce cours, Thomas Denecker et Claire Toffano-Nioche vous proposent ce livre. 
 C'est une grande première alors n'hésitez pas à nous faire des retours.
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7311900.svg)](https://doi.org/10.5281/zenodo.7311900)
+
+
 ## Demandez le programme ! 
 
 ```{list-table}

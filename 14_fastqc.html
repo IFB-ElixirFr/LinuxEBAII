@@ -651,14 +651,6 @@ mkdir qc
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « qc »: Le fichier existe
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -668,11 +660,10 @@ ls -l <span class="p">;</span> <span class="nb">cd</span> qc
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 16
-drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:27 bam
-drwxrwx---+ 3 tdenecker tdenecker 4096 Nov 10 17:53 fastq
-drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:52 qc
--rw-rw----+ 1 tdenecker tdenecker   86 Nov 10 17:53 siNT_ER_E2_r3_chr21_fastqc.log
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 12
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  21:56 <span class=" -Color -Color-C27">bam</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  21:57 <span class=" -Color -Color-C27">fastq</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  21:57 <span class=" -Color -Color-C27">qc</span>
 </pre></div>
 </div>
 </div>
@@ -681,6 +672,17 @@ drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:52 qc
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Charge l&#39;outil fastqc dans l’environnement  </span>
 module load fastqc/0.11.8 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading fastqc/0.11.8[m
+  ERROR: fastqc/0.11.8 cannot be loaded due to a conflict.[m
+    HINT: Might try &quot;module unload fastqc&quot; first.[m
+[K[?1l&gt;
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -917,6 +919,16 @@ In a normal random library you would expect to see a roughly normal distribution
 </section>
 <section id="sequence-length-distribution">
 <h3>Sequence Length Distribution<a class="headerlink" href="#sequence-length-distribution" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/fastqc_sld_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/fastqc_sld_bad.png" /></p>
+</div>
+</div>
+</div>
 <p>Some high throughput sequencers generate sequence fragments of uniform length, but others can contain reads of wildly varying lengths. Even within uniform length libraries some pipelines will trim sequences to remove poor quality base calls from the end. This module generates a graph showing the distribution of fragment sizes in the file which was analysed.
 In many cases this will produce a simple graph showing a peak only at one size, but for variable length FastQ files this will show the relative amounts of each different size of sequence fragment.</p>
 <div class="caution admonition">
