@@ -19,3 +19,4 @@ chapters:
 - file: 13_data
 - file: 14_fastqc
 - file: 15_mapping
+- file: 16_stopJupyter

@@ -189,6 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
    Mapping
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_stopJupyter.html">
+   Arrêter le serveur Jupyterhub
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -646,14 +651,6 @@ mkdir qc
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « qc »: Le fichier existe
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -663,11 +660,10 @@ ls -l <span class="p">;</span> <span class="nb">cd</span> qc
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 16
-drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:27 bam
-drwxrwx---+ 3 tdenecker tdenecker 4096 Nov 10 17:53 fastq
-drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:52 qc
--rw-rw----+ 1 tdenecker tdenecker   86 Nov 10 17:53 siNT_ER_E2_r3_chr21_fastqc.log
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 12
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  21:56 <span class=" -Color -Color-C27">bam</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  21:57 <span class=" -Color -Color-C27">fastq</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 10 nov.  21:57 <span class=" -Color -Color-C27">qc</span>
 </pre></div>
 </div>
 </div>
@@ -676,6 +672,17 @@ drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 10 17:52 qc
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Charge l&#39;outil fastqc dans l’environnement  </span>
 module load fastqc/0.11.8 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading fastqc/0.11.8[m
+  ERROR: fastqc/0.11.8 cannot be loaded due to a conflict.[m
+    HINT: Might try &quot;module unload fastqc&quot; first.[m
+[K[?1l&gt;
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -797,8 +804,16 @@ For each position a BoxWhisker type plot is drawn. The elements of the plot are 
 </section>
 <section id="per-tile-sequence-quality">
 <h3>Per Tile Sequence Quality<a class="headerlink" href="#per-tile-sequence-quality" title="Permalink to this headline">#</a></h3>
-<p><img alt="" src="_images/ebaii_fastqc_ptsq_ok.png" />
-<img alt="" src="_images/ebaii_fastqc_ptsq_no.png" /></p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_ptsq_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_ptsq_no.png" /></p>
+</div>
+</div>
+</div>
 <p>The plot shows the deviation from the average quality for each tile. The colours are on a cold to hot scale, with cold colours being positions where the quality was at or above the average for that base in the run, and hotter colours indicate that a tile had worse qualities than other tiles for that base. In the example below you can see that certain tiles show consistently poor quality. A good plot should be blue all over.</p>
 <div class="caution admonition">
 <p class="admonition-title">Warning</p>
@@ -811,6 +826,16 @@ For each position a BoxWhisker type plot is drawn. The elements of the plot are 
 </section>
 <section id="per-sequence-quality-scores">
 <h3>Per Sequence Quality Scores<a class="headerlink" href="#per-sequence-quality-scores" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_psqs_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_psqs_no.png" /></p>
+</div>
+</div>
+</div>
 <p>The per sequence quality score report allows you to see if a subset of your sequences have universally low quality values. It is often the case that a subset of sequences will have universally poor quality, often because they are poorly imaged (on the edge of the field of view etc), however these should represent only a small percentage of the total sequences.</p>
 <p>If a significant proportion of the sequences in a run have overall low quality then this could indicate some kind of systematic problem - possibly with just part of the run (for example one end of a flowcell).</p>
 <div class="caution admonition">
@@ -824,6 +849,16 @@ For each position a BoxWhisker type plot is drawn. The elements of the plot are 
 </section>
 <section id="per-base-sequence-content">
 <h3>Per Base Sequence Content<a class="headerlink" href="#per-base-sequence-content" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_pbsc_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_pbsc_no.png" /></p>
+</div>
+</div>
+</div>
 <p>Per Base Sequence Content plots out the proportion of each base position in a file for which each of the four normal DNA bases has been called.</p>
 <p>In a random library you would expect that there would be little to no difference between the different bases of a sequence run, so the lines in this plot should run parallel with each other.</p>
 <p>If you see strong biases which change in different bases then this usually indicates an overrepresented sequence which is contaminating your library. A bias which is consistent across all bases either indicates that the original library was sequence biased, or that there was a systematic problem during the sequencing of the library.</p>
@@ -838,6 +873,16 @@ For each position a BoxWhisker type plot is drawn. The elements of the plot are 
 </section>
 <section id="per-sequence-gc-content">
 <h3>Per Sequence GC Content<a class="headerlink" href="#per-sequence-gc-content" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_psGCc_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="images/ebaii_fastqc_psGCs_no.png" /></p>
+</div>
+</div>
+</div>
 <p>This module measures the GC content across the whole length of each sequence in a file and compares it to a modelled normal distribution of GC content.
 In a normal random library you would expect to see a roughly normal distribution of GC content where the central peak corresponds to the overall GC content of the underlying genome. Since we don’t know the the GC content of the genome the modal GC content is calculated from the observed data and used to build a reference distribution. An unusually shaped distribution could indicate a contaminated library or some other kinds of biased subset. A normal distribution which is shifted indicates some systematic bias which is independent of base position. If there is a systematic bias which creates a shifted normal distribution then this won’t be flagged as an error by the module since it doesn’t know what your genome’s GC content should be.</p>
 <div class="caution admonition">
@@ -851,6 +896,16 @@ In a normal random library you would expect to see a roughly normal distribution
 </section>
 <section id="per-base-n-content">
 <h3>Per Base N Content<a class="headerlink" href="#per-base-n-content" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_pbNc_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_pbNc_no.png" /></p>
+</div>
+</div>
+</div>
 <p>If a sequencer is unable to make a base call with sufficient confidence then it will normally substitute an N rather than a conventional base call This module plots out the percentage of base calls at each position for which an N was called.</p>
 <p>It’s not unusual to see a very low proportion of Ns appearing in a sequence, especially nearer the end of a sequence. However, if this proportion rises above a few percent it suggests that the analysis pipeline was unable to interpret the data well enough to make valid base calls.</p>
 <div class="caution admonition">
@@ -864,6 +919,16 @@ In a normal random library you would expect to see a roughly normal distribution
 </section>
 <section id="sequence-length-distribution">
 <h3>Sequence Length Distribution<a class="headerlink" href="#sequence-length-distribution" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/fastqc_sld_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/fastqc_sld_bad.png" /></p>
+</div>
+</div>
+</div>
 <p>Some high throughput sequencers generate sequence fragments of uniform length, but others can contain reads of wildly varying lengths. Even within uniform length libraries some pipelines will trim sequences to remove poor quality base calls from the end. This module generates a graph showing the distribution of fragment sizes in the file which was analysed.
 In many cases this will produce a simple graph showing a peak only at one size, but for variable length FastQ files this will show the relative amounts of each different size of sequence fragment.</p>
 <div class="caution admonition">
@@ -877,6 +942,16 @@ In many cases this will produce a simple graph showing a peak only at one size, 
 </section>
 <section id="duplicate-sequences">
 <h3>Duplicate Sequences<a class="headerlink" href="#duplicate-sequences" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_duplicSeq_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_duplicSeq_RNA.png" /></p>
+</div>
+</div>
+</div>
 <p>In a diverse library most sequences will occur only once in the final set. A low level of duplication may indicate a very high level of coverage of the target sequence, but a high level of duplication is more likely to indicate some kind of enrichment bias (eg PCR over amplification).</p>
 <p>This module counts the degree of duplication for every sequence in the set and creates a plot showing the relative number of sequences with different degrees of duplication.</p>
 <div class="caution admonition">
@@ -903,6 +978,16 @@ In many cases this will produce a simple graph showing a peak only at one size, 
 </section>
 <section id="adapter-content">
 <h3>Adapter Content<a class="headerlink" href="#adapter-content" title="Permalink to this headline">#</a></h3>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-2 sd-g-xs-2 sd-g-sm-2 sd-g-md-2 sd-g-lg-2 docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_adaptor_ok.png" /></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><img alt="" src="_images/ebaii_fastqc_adaptor_litle.png" /></p>
+</div>
+</div>
+</div>
 <p>The Kmer Content module will do a generic analysis of all of the Kmers in your library to find those which do not have even coverage through the length of your reads. This can find a number of different sources of bias in the library which can include the presence of read-through adapter sequences building up on the end of your sequences.
 You can however find that the presence of any overrepresented sequences in your library (such as adapter dimers) will cause the Kmer plot to be dominated by the Kmers these sequences contain, and that it’s not always easy to see if there are other biases present in which you might be interested.</p>
 <div class="caution admonition">
