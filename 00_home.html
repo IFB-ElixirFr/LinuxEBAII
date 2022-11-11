@@ -112,7 +112,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_team.html">
    L’équipe pédagogique
@@ -143,6 +148,13 @@ const thebe_selector_output = ".output, .cell_output"
    Prototype(s) d’une commande
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Name of Part 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="07_arborescence.html">
    Arborescence de fichiers
@@ -173,6 +185,13 @@ const thebe_selector_output = ".output, .cell_output"
    Les raccourcis clavier du terminal
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Qualité des lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="13_data.html">
    Jeu de données
@@ -183,6 +202,13 @@ const thebe_selector_output = ".output, .cell_output"
    Analyser la qualité avec fastQC
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Qualité des lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="15_mapping.html">
    Mapping
@@ -379,6 +405,8 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#contenu-du-livre">
    Contenu du livre
   </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
  </li>
 </ul>
 
@@ -408,6 +436,8 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#contenu-du-livre">
    Contenu du livre
   </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
  </li>
 </ul>
 
@@ -477,6 +507,7 @@ C’est une grande première alors n’hésitez pas à nous faire des retours.</
 <section id="contenu-du-livre">
 <h2>Contenu du livre<a class="headerlink" href="#contenu-du-livre" title="Permalink to this headline">#</a></h2>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="01_team.html">L’équipe pédagogique</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_introduction.html">Le cluster de l’IFB</a></li>
@@ -484,14 +515,29 @@ C’est une grande première alors n’hésitez pas à nous faire des retours.</
 <li class="toctree-l1"><a class="reference internal" href="04_bash.html">Comment converser avec le terminal ?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="05_module.html">Charger l’environnement logiciel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_protoCommande.html">Prototype(s) d’une commande</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Name of Part 1</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="07_arborescence.html">Arborescence de fichiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08_storage.html">Stockage fichiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="09_manipulate.html">Manipuler des fichiers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10_redirection.html">Redirections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_linuxIsMore.html">Linux c’est aussi tellement plus !</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12_raccourcis.html">Les raccourcis clavier du terminal</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Qualité des lectures</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="13_data.html">Jeu de données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="14_fastqc.html">Analyser la qualité avec fastQC</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Qualité des lectures</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="15_mapping.html">Mapping</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16_stopJupyter.html">Arrêter le serveur Jupyterhub</a></li>
 </ul>
