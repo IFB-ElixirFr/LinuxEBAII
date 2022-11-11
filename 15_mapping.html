@@ -113,7 +113,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_team.html">
    L’équipe pédagogique
@@ -144,6 +149,13 @@ const thebe_selector_output = ".output, .cell_output"
    Prototype(s) d’une commande
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Arborescence
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="07_arborescence.html">
    Arborescence de fichiers
@@ -174,6 +186,13 @@ const thebe_selector_output = ".output, .cell_output"
    Les raccourcis clavier du terminal
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Qualité des lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="13_data.html">
    Jeu de données
@@ -184,6 +203,13 @@ const thebe_selector_output = ".output, .cell_output"
    Analyser la qualité avec fastQC
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Qualité des lectures
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Mapping
@@ -659,6 +685,11 @@ mkdir index
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: impossible de créer le répertoire « index »: Le fichier existe
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="creation-de-l-index">
@@ -686,16 +717,16 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 21:57:17--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-11 21:44:08--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Résolution de hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connexion vers hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80...connecté.
 requête HTTP transmise, en attente de la réponse...200 OK
 Longueur: 12709705 (12M) [application/x-gzip]
 Sauvegarde en : «chr21.fa.gz»
 
-100%[======================================&gt;] 12 709 705  6,67MB/s   ds 1,8s   
+100%[======================================&gt;] 12 709 705  6,74MB/s   ds 1,8s   
 
-2022-11-10 21:57:20 (6,67 MB/s) - «chr21.fa.gz» sauvegardé [12709705/12709705]
+2022-11-11 21:44:11 (6,74 MB/s) - «chr21.fa.gz» sauvegardé [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -704,6 +735,11 @@ Sauvegarde en : «chr21.fa.gz»
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># décompression</span>
 gunzip chr21.fa.gz
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gzip: chr21.fa already exists; do you wish to overwrite (y or n)? 
 </pre></div>
 </div>
 </div>
@@ -738,7 +774,7 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:01
+  Time reading reference sizes: 00:00:00
 Calculating joined length
 Writing header
 Reserving space for joined string
@@ -753,12 +789,12 @@ Building DifferenceCoverSample
   Building sPrime
   Building sPrimeOrder
   V-Sorting samples
-  V-Sorting samples time: 00:00:01
+  V-Sorting samples time: 00:00:00
   Allocating rank array
   Ranking v-sort output
   Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Invoking Larsson-Sadakane on ranks time: 00:00:01
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -779,7 +815,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:12
+  Sorting block time: 00:00:10
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -818,9 +854,9 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:17
+Total time for call to driver() for forward index: 00:00:13
 Reading reference sizes
-  Time reading reference sizes: 00:00:00
+  Time reading reference sizes: 00:00:01
 Calculating joined length
 Writing header
 Reserving space for joined string
@@ -862,22 +898,46 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:11
+  Sorting block time: 00:00:10
 Returning block of 40088620 for bucket 1
-Traceback (most recent call last):
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 90, in &lt;module&gt;
-    main()
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 87, in main
-    sys.exit(subprocess.call(argv))
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 341, in call
-    return p.wait(timeout=timeout)
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1019, in wait
-    return self._wait(timeout=timeout)
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1653, in _wait
-    (pid, sts) = self._try_wait(0)
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1611, in _try_wait
-    (pid, sts) = os.waitpid(self.pid, wait_flags)
-KeyboardInterrupt
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 11820664
+fchr[G]: 20005908
+fchr[T]: 28232289
+fchr[$]: 40088619
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 17557951 bytes to primary EBWT file: chr21_hg38.rev.1.bt2
+Wrote 10022160 bytes to secondary EBWT file: chr21_hg38.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 40088619
+    bwtLen: 40088620
+    sz: 10022155
+    bwtSz: 10022155
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 2505539
+    offsSz: 10022156
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 208795
+    numLines: 208795
+    ebwtTotLen: 13362880
+    ebwtTotSz: 13362880
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:00:14
 </pre></div>
 </div>
 </div>

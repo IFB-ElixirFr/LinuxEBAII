@@ -17,12 +17,9 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# On se déplace dans annotations
-# remplacer <project> 
-# cd /shared/projects/<project>/annotations/hg38 
-cd /shared/projects/form_2022_32/coursLinux/annotations/hg38 
+grep -c "chr22" hg38_exons.bed 
 ------------------
 
 
-: 1
+: 2
 
