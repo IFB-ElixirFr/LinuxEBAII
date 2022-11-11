@@ -36,11 +36,6 @@ pwd
 
 # On se retrouve 1 cran plus haut puis projects
 cd ../projects
-# On voit le contenu du dossier "projects"
-ls
-
-# On voit le contenu du répertoire courant "."
-ls .
 
 # Aller dans uniprot_swissprot
 # cd ../b<TAB>/u<TAB><TAB><TAB>p<TAB><TAB>_<TAB>
