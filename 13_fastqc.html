@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Mapping" href="15_mapping.html" />
-    <link rel="prev" title="Jeu de données" href="13_data.html" />
+    <link rel="next" title="Rogner les reads" href="14_rogner.html" />
+    <link rel="prev" title="Jeu de données" href="12_data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -204,13 +204,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="13_data.html">
+  <a class="reference internal" href="12_data.html">
    Jeu de données
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Analyser la qualité avec fastQC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_rogner.html">
+   Rogner les reads
   </a>
  </li>
 </ul>
@@ -238,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
+  <a class="reference internal" href="17_raccourcis.html">
    Les raccourcis clavier du terminal
   </a>
  </li>
@@ -306,7 +311,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/14_fastqc.ipynb"
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/13_fastqc.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -366,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F14_fastqc.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F13_fastqc.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/14_fastqc.ipynb"
+        <a href="_sources/13_fastqc.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -467,6 +472,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#resultats-de-fastqc">
    Résultats de FastQC
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretation">
+   Interprétation
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#basic-statistics">
@@ -521,35 +531,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adapter-content">
      Adapter Content
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rogner-les-reads">
-   Rogner les reads
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sickle">
-     Sickle
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principe">
-       Principe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#linterface-de-sickle">
-       L’interface de sickle
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-note">
-     Exercice (noté)
     </a>
    </li>
   </ul>
@@ -587,6 +568,11 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#resultats-de-fastqc">
    Résultats de FastQC
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretation">
+   Interprétation
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#basic-statistics">
@@ -641,35 +627,6 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adapter-content">
      Adapter Content
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#rogner-les-reads">
-   Rogner les reads
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sickle">
-     Sickle
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principe">
-       Principe
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#linterface-de-sickle">
-       L’interface de sickle
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercice-note">
-     Exercice (noté)
     </a>
    </li>
   </ul>
@@ -787,7 +744,10 @@ ls
 </section>
 <section id="resultats-de-fastqc">
 <h2>Résultats de FastQC<a class="headerlink" href="#resultats-de-fastqc" title="Permalink to this headline">#</a></h2>
-<p>Cliquer <a href='https://raw.githubusercontent.com/IFB-ElixirFr/LinuxEBAII/main/docs/data/siNT_ER_E2_r3_chr21_fastqc.html' download>ici</a> pour télécharger le fichier FASTQC puis ouvrez le pour le visualiser.</p>
+<iframe class="frame" is="x-frame-bypass" src="https://raw.githubusercontent.com/IFB-ElixirFr/LinuxEBAII/main/docs/data/siNT_ER_E2_r3_chr21_fastqc.html"></iframe>
+</section>
+<section id="interpretation">
+<h2>Interprétation<a class="headerlink" href="#interpretation" title="Permalink to this headline">#</a></h2>
 <p>Exploration des résultats de fastqc en interactif.</p>
 <ul class="simple">
 <li><p>A quoi correspond le diagramme “Per base sequence quality”.</p></li>
@@ -1052,95 +1012,6 @@ You can however find that the presence of any overrepresented sequences in your 
 </div>
 </section>
 </section>
-<section id="rogner-les-reads">
-<h2>Rogner les reads<a class="headerlink" href="#rogner-les-reads" title="Permalink to this headline">#</a></h2>
-<p>Une étape de pré-processing</p>
-<ul class="simple">
-<li><p>Les reads en entrée sont rognés afin d’éliminer des extrémités de mauvaises qualités.</p></li>
-<li><p>En fonction de la capacité de l’outil à faire des alignements locaux ou globaux et de la qualité intrinsèque des données, cette étape peut être cruciale.</p>
-<ul>
-<li><p>Risque: peu de reads alignés</p></li>
-</ul>
-</li>
-</ul>
-<p>Quelques logiciels existants</p>
-<ul class="simple">
-<li><p>Sickle-trim (sliding window-based trimming)</p></li>
-<li><p>FASTX-Toolkit (cut a defined number of nucleotides)</p></li>
-<li><p>Trimmomatic</p></li>
-<li><p>Cutadapt</p></li>
-</ul>
-<p><img alt="" src="_images/ebaii_trimmingPackman.png" /></p>
-<section id="sickle">
-<h3>Sickle<a class="headerlink" href="#sickle" title="Permalink to this headline">#</a></h3>
-<section id="principe">
-<h4>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">#</a></h4>
-<p>Objectif:</p>
-<ul class="simple">
-<li><p>Supprimer les extrémités de mauvaise qualité.</p></li>
-</ul>
-<p>Solution:</p>
-<ul class="simple">
-<li><p>Parcourir le read avec un fenêtre coulissante de droite à gauche. Calculer la qualité moyenne dans chaque fenêtre</p></li>
-<li><p>Si la valeur de qualité chute en dessous d’une valeur seuil q, déléter l’extrémité 3’.</p></li>
-<li><p>Si la taille restante du read est inférieure à une longueur seuil l, déléter le read.</p></li>
-</ul>
-<p><img alt="" src="_images/ebaii_sickle_slidingWindow.png" /></p>
-</section>
-<section id="linterface-de-sickle">
-<h4>L’interface de sickle<a class="headerlink" href="#linterface-de-sickle" title="Permalink to this headline">#</a></h4>
-<p>Sickle contient 2 sous-commandes: pe (paired-end sequence trimming) et se (single-end sequence trimming)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load sickle-trim/1.33
-sickle -h
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sickle se --help <span class="c1"># Obtenir de l’aide sur la sous-commande se.</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="exercice-note">
-<h3>Exercice (noté)<a class="headerlink" href="#exercice-note" title="Permalink to this headline">#</a></h3>
-<p>1- Créez un répertoire trimmed au même niveau dans l’arborescence que fastq</p>
-<p>2- Placez vous dans ce répertoire</p>
-<p>3- Ivoquez l’aide de sickle (se)</p>
-<p>4- Construisez une commande qui combine les options suivantes :</p>
-<ul class="simple">
-<li><p>Fournissez à sickle le fichier d’entrée siNT_ER_E2_r3_chr21.fastq.</p></li>
-<li><p>Qualité de type “Sanger”, seuils de qualité et de longueur tous deux à 20.</p></li>
-<li><p>Demandez à sickle se de produire un fichier de sortie que vous nommerez siNT_ER_E2_r3_chr21_trim.fastq et qui devra être créé dans le dossier trimmed.</p></li>
-<li><p>Rediriger la sortie standard dans un fichier que vous nommerez siNT_ER_E2_r3_chr21_sicke_log.txt placé dans le dossier trimmed.</p></li>
-</ul>
-<p>5- Comptez le nombre de lignes présentes dans les fichiers fastq avant et après utilisation de sickle (commande <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-l</span></code>)</p>
-<p>6- Lisez le contenu du fichier log. Obtenez-vous le même résultat ?</p>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Solution</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ..                 <span class="c1"># On remonte d’un niveau dans l’arborescence</span>
-mkdir trimmed         <span class="c1"># On créé un répertoire</span>
-<span class="nb">cd</span> trimmed          <span class="c1"># On se déplace dans ce répertoire</span>
-<span class="c1"># On lance sickle</span>
-<span class="c1"># Ici le \ indique un retour à la ligne mais vous n’êtes pas censé le </span>
-<span class="c1"># taper et aller à la ligne</span>
-<span class="c1"># &amp;&gt; redirige la sortie d’erreur et la sortie standard dans un fichier</span>
-sickle se -f ../fastq/siNT_ER_E2_r3_chr21.fastq <span class="se">\</span>
--t sanger -o siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-<span class="p">&amp;</span>&gt; siNT_ER_E2_r3_chr21_sickle.log
-<span class="c1"># le nombre de lignes présentes dans les fichiers fastq</span>
-wc -l ../fastq/siNT_ER_E2_r3_chr21.fastq     <span class="c1"># Données brutes</span>
-wc -l siNT_ER_E2_r3_chr21_trim.fastq         <span class="c1"># Données nettoyées</span>
-</pre></div>
-</div>
-</div>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1170,17 +1041,17 @@ wc -l siNT_ER_E2_r3_chr21_trim.fastq         <span class="c1"># Données nettoy�
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="13_data.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="12_data.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Jeu de données</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="15_mapping.html" title="next page">
+    <a class='right-next' id="next-link" href="14_rogner.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mapping</p>
+        <p class="prev-next-title">Rogner les reads</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

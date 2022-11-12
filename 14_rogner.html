@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Fiches de révision &#8212; Linux en Bioinformatique</title>
+    <title>Rogner les reads &#8212; Linux en Bioinformatique</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Arborescence de fichiers" href="07_arborescence.html" />
-    <link rel="prev" title="Quizz 1" href="quizz_01.html" />
+    <link rel="next" title="Mapping" href="15_mapping.html" />
+    <link rel="prev" title="Analyser la qualité avec fastQC" href="13_fastqc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
   Introduction
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_team.html">
    L’équipe pédagogique
@@ -154,8 +154,8 @@ const thebe_selector_output = ".output, .cell_output"
    Quizz 1
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cards_01.html">
    Fiches de révision
   </a>
  </li>
@@ -192,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
-   Les raccourcis clavier du terminal
+  <a class="reference internal" href="quizz_02.html">
+   Quizz 2
   </a>
  </li>
 </ul>
@@ -202,21 +202,26 @@ const thebe_selector_output = ".output, .cell_output"
   Qualité des lectures
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="13_data.html">
+  <a class="reference internal" href="12_data.html">
    Jeu de données
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="14_fastqc.html">
+  <a class="reference internal" href="13_fastqc.html">
    Analyser la qualité avec fastQC
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Rogner les reads
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Qualité des lectures
+  Read mapping
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -228,6 +233,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="16_stopJupyter.html">
    Arrêter le serveur Jupyterhub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="17_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="formats.html">
+   Formats
   </a>
  </li>
 </ul>
@@ -289,7 +311,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/cards_01.ipynb"
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/14_rogner.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -349,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2Fcards_01.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F14_rogner.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -377,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/cards_01.ipynb"
+        <a href="_sources/14_rogner.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -414,23 +436,114 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pourquoi">
+   Pourquoi ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sickle">
+   Sickle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe">
+     Principe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linterface-de-sickle">
+     L’interface de sickle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Fiches de révision</h1>
+                <h1>Rogner les reads</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pourquoi">
+   Pourquoi ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sickle">
+   Sickle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#principe">
+     Principe
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linterface-de-sickle">
+     L’interface de sickle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution">
+     Solution
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -438,22 +551,151 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="fiches-de-revision">
-<h1>Fiches de révision<a class="headerlink" href="#fiches-de-revision" title="Permalink to this headline">#</a></h1>
-<div class="cell tag_remove-input docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="rogner-les-reads">
+<h1>Rogner les reads<a class="headerlink" href="#rogner-les-reads" title="Permalink to this headline">#</a></h1>
+<section id="pourquoi">
+<h2>Pourquoi ?<a class="headerlink" href="#pourquoi" title="Permalink to this headline">#</a></h2>
+<p>Une étape de pré-processing</p>
+<ul class="simple">
+<li><p>Les reads en entrée sont rognés afin d’éliminer des extrémités de mauvaises qualités.</p></li>
+<li><p>En fonction de la capacité de l’outil à faire des alignements locaux ou globaux et de la qualité intrinsèque des données, cette étape peut être cruciale.</p>
+<ul>
+<li><p>Risque: peu de reads alignés</p></li>
+</ul>
+</li>
+</ul>
+<p>Quelques logiciels existants</p>
+<ul class="simple">
+<li><p>Sickle-trim (sliding window-based trimming)</p></li>
+<li><p>FASTX-Toolkit (cut a defined number of nucleotides)</p></li>
+<li><p>Trimmomatic</p></li>
+<li><p>Cutadapt</p></li>
+</ul>
+<p><img alt="" src="_images/ebaii_trimmingPackman.png" /></p>
+</section>
+<section id="sickle">
+<h2>Sickle<a class="headerlink" href="#sickle" title="Permalink to this headline">#</a></h2>
+<section id="principe">
+<h3>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">#</a></h3>
+<p>Objectif:</p>
+<ul class="simple">
+<li><p>Supprimer les extrémités de mauvaise qualité.</p></li>
+</ul>
+<p>Solution:</p>
+<ul class="simple">
+<li><p>Parcourir le read avec un fenêtre coulissante de droite à gauche. Calculer la qualité moyenne dans chaque fenêtre</p></li>
+<li><p>Si la valeur de qualité chute en dessous d’une valeur seuil q, déléter l’extrémité 3’.</p></li>
+<li><p>Si la taille restante du read est inférieure à une longueur seuil l, déléter le read.</p></li>
+</ul>
+<p><img alt="" src="_images/ebaii_sickle_slidingWindow.png" /></p>
+</section>
+<section id="linterface-de-sickle">
+<h3>L’interface de sickle<a class="headerlink" href="#linterface-de-sickle" title="Permalink to this headline">#</a></h3>
+<p>Sickle contient 2 sous-commandes: pe (paired-end sequence trimming) et se (single-end sequence trimming)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load sickle-trim/1.33
+sickle -h
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">jupytercards</span> <span class="kn">import</span> <span class="n">md2json</span><span class="p">,</span> <span class="n">display_flashcards</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: sickle &lt;command&gt; [options]
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;jupytercards&#39;
+Command:
+pe	paired-end sequence trimming
+se	single-end sequence trimming
+
+--help, display this help and exit
+--version, output version information and exit
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sickle se --help <span class="c1"># Obtenir de l’aide sur la sous-commande se.</span>
+</pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="exercice">
+<h3>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">#</a></h3>
+<p>1- Créez un répertoire trimmed au même niveau dans l’arborescence que fastq</p>
+<p>2- Placez vous dans ce répertoire</p>
+<p>3- Ivoquez l’aide de sickle (se)</p>
+<p>4- Construisez une commande qui combine les options suivantes :</p>
+<ul class="simple">
+<li><p>Fournissez à sickle le fichier d’entrée siNT_ER_E2_r3_chr21.fastq.</p></li>
+<li><p>Qualité de type “Sanger”, seuils de qualité et de longueur tous deux à 20.</p></li>
+<li><p>Demandez à sickle se de produire un fichier de sortie que vous nommerez siNT_ER_E2_r3_chr21_trim.fastq et qui devra être créé dans le dossier trimmed.</p></li>
+<li><p>Rediriger la sortie standard dans un fichier que vous nommerez siNT_ER_E2_r3_chr21_sicke_log.txt placé dans le dossier trimmed.</p></li>
+</ul>
+<p>5- Comptez le nombre de lignes présentes dans les fichiers fastq avant et après utilisation de sickle (commande <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">-l</span></code>)</p>
+<p>6- Lisez le contenu du fichier log. Obtenez-vous le même résultat ?</p>
+</section>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On remonte d’un niveau dans l’arborescence</span>
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo/chip-seq/  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On créé un répertoire</span>
+mkdir trimmed
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans ce répertoire</span>
+<span class="nb">cd</span> trimmed
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On lance sickle</span>
+<span class="c1"># Ici le \ indique un retour à la ligne mais vous n’êtes pas censé le </span>
+<span class="c1"># taper et aller à la ligne</span>
+<span class="c1"># &amp;&gt; redirige la sortie d’erreur et la sortie standard dans un fichier</span>
+sickle se -f ../fastq/siNT_ER_E2_r3_chr21.fastq <span class="se">\</span>
+-t sanger -o siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
+<span class="p">&amp;</span>&gt; siNT_ER_E2_r3_chr21_sickle.log
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># le nombre de lignes présentes dans les fichiers fastq</span>
+<span class="c1"># Données brutes</span>
+wc -l ../fastq/siNT_ER_E2_r3_chr21.fastq     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Données nettoyées</span>
+wc -l siNT_ER_E2_r3_chr21_trim.fastq         
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -465,16 +707,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "bash"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "bash",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'bash'</script>
 
               </div>
               
@@ -483,17 +725,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="quizz_01.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="13_fastqc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Quizz 1</p>
+            <p class="prev-next-title">Analyser la qualité avec fastQC</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="07_arborescence.html" title="next page">
+    <a class='right-next' id="next-link" href="15_mapping.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Arborescence de fichiers</p>
+        <p class="prev-next-title">Mapping</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

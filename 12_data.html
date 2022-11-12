@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Analyser la qualité avec fastQC" href="14_fastqc.html" />
+    <link rel="next" title="Analyser la qualité avec fastQC" href="13_fastqc.html" />
     <link rel="prev" title="Quizz 2" href="quizz_02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -209,8 +209,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="14_fastqc.html">
+  <a class="reference internal" href="13_fastqc.html">
    Analyser la qualité avec fastQC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_rogner.html">
+   Rogner les reads
   </a>
  </li>
 </ul>
@@ -238,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
+  <a class="reference internal" href="17_raccourcis.html">
    Les raccourcis clavier du terminal
   </a>
  </li>
@@ -306,7 +311,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/13_data.ipynb"
+        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/12_data.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -366,7 +371,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F13_data.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F12_data.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +399,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/13_data.ipynb"
+        <a href="_sources/12_data.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -622,16 +627,16 @@ On utilise alors la commande wget.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 14:18:02--  https://zenodo.org/record/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 21:30:41--  https://zenodo.org/record/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
 Resolving zenodo.org (zenodo.org)... 188.184.117.155
 Connecting to zenodo.org (zenodo.org)|188.184.117.155|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 10857524 (10M) [application/octet-stream]
-Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
+Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz.1’
 
 100%[======================================&gt;] 10,857,524  --.-K/s   in 0.1s    
 
-2022-11-12 14:18:02 (90.7 MB/s) - ‘siNT_ER_E2_r3_chr21.fastq.gz’ saved [10857524/10857524]
+2022-11-12 21:30:42 (83.5 MB/s) - ‘siNT_ER_E2_r3_chr21.fastq.gz.1’ saved [10857524/10857524]
 </pre></div>
 </div>
 </div>
@@ -644,7 +649,8 @@ Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C9">siNT_ER_E2_r3_chr21.fastq.gz</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21.fastq     siNT_ER_E2_r3_chr21.fastq.gz.1
+<span class=" -Color -Color-C9">siNT_ER_E2_r3_chr21.fastq.gz</span>
 </pre></div>
 </div>
 </div>
@@ -661,16 +667,16 @@ Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gzip: siNT_ER_E2_r3_chr21.fastq already exists; do you wish to overwrite (y or n)? 
+</pre></div>
+</div>
+</div>
 </div>
 <p>Regarder l’extension du fichier et remarquer que la partie <code class="docutils literal notranslate"><span class="pre">.gz</span></code> a disparu :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21.fastq
 </pre></div>
 </div>
 </div>
@@ -747,7 +753,7 @@ Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
             <p class="prev-next-title">Quizz 2</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="14_fastqc.html" title="next page">
+    <a class='right-next' id="next-link" href="13_fastqc.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Analyser la qualité avec fastQC</p>
