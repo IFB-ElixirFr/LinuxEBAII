@@ -32,7 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-# décompression
-gunzip chr21.fa.gz
+module load bowtie2/2.3.4.3 samtools/1.9		# ici on charge 2 outils à la fois
+# Construction de l’index
+bowtie2-build chr21.fa chr21_hg38
 -------------------
 

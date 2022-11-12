@@ -574,19 +574,17 @@ mkdir chip-seq
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory ‘chip-seq’: File exists
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vérifier la création du dossier</span>
 ls -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 4
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 21:46 <span class=" -Color -Color-C27">chip-seq</span>
 </pre></div>
 </div>
 </div>
@@ -615,6 +613,13 @@ mkdir bam fastq
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On a bien deux dossiers</span>
 ls -l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 8
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 21:46 <span class=" -Color -Color-C27">bam</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 21:46 <span class=" -Color -Color-C27">fastq</span>
 </pre></div>
 </div>
 </div>
@@ -650,10 +655,44 @@ ls -R
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.:
+<span class=" -Color -Color-C27">chip-seq</span>  <span class=" -Color -Color-C27">rna-seq</span>
+
+./chip-seq:
+<span class=" -Color -Color-C27">bam</span>  <span class=" -Color -Color-C27">fastq</span>
+
+./chip-seq/bam:
+
+./chip-seq/fastq:
+
+./rna-seq:
+<span class=" -Color -Color-C27">output</span>
+
+./rna-seq/output:
+<span class=" -Color -Color-C27">bam</span>
+
+./rna-seq/output/bam:
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tree
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+├── chip-seq
+│   ├── bam
+│   └── fastq
+└── rna-seq
+    └── output
+        └── bam
+
+6 directories, 0 files
 </pre></div>
 </div>
 </div>
@@ -706,6 +745,11 @@ mkdir annotations
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/projects/form_2022_32/coursLinux/demo/annotations
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -750,6 +794,11 @@ mkdir -p mm10/gff
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On voit un dossier gff</span>
 ls ../../hg38
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C27">gff</span>
 </pre></div>
 </div>
 </div>
