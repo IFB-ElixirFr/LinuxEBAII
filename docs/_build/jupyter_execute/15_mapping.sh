@@ -1,5 +1,5 @@
 # Créez un répertoire pour y stocker l’index dans chip-seq/
-cd /shared/projects/form_2022_32/coursLinux/chip-seq/   
+cd /shared/projects/form_2022_32/coursLinux/demo/chip-seq/   
 mkdir index
 cd index
 

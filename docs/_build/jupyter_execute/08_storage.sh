@@ -1,6 +1,6 @@
 # remplacer <project>
 # cd /shared/projects/<project>/
-cd /shared/projects/form_2022_32/coursLinux/
+cd /shared/projects/form_2022_32/coursLinux/demo
 
 # On crée le dossier
 mkdir chip-seq
@@ -33,7 +33,7 @@ tree
 
 # remplacer <project> 
 # cd /shared/projects/<project>/
-cd /shared/projects/form_2022_32/coursLinux/
+cd /shared/projects/form_2022_32/coursLinux/demo
 
 # On crée le dossier
 mkdir annotations

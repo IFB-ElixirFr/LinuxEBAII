@@ -154,6 +154,11 @@ const thebe_selector_output = ".output, .cell_output"
    Quizz 1
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cards_01.html">
+   Fiches de révision
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -187,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
-   Les raccourcis clavier du terminal
+  <a class="reference internal" href="quizz_02.html">
+   Quizz 2
   </a>
  </li>
 </ul>
@@ -211,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Qualité des lectures
+  Read mapping
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -223,6 +228,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="16_stopJupyter.html">
    Arrêter le serveur Jupyterhub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="formats.html">
+   Formats
   </a>
  </li>
 </ul>
@@ -561,7 +583,11 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 ├── _build
 │   ├── html
 │   └── jupyter_execute
+├── cards_01.ipynb
+├── cards2.json
+├── cards.json
 ├── _config.yml
+├── formats.md
 ├── images
 │   ├── arborescence2.png
 │   ├── arborescence3.png
@@ -615,6 +641,7 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 │   ├── fastqc_sld_ok.png
 │   ├── filter_quality2.png
 │   ├── filter_quality.png
+│   ├── GTF.png
 │   ├── JupyterConnect.png
 │   ├── JupyterConnexion.gif
 │   ├── jupyterHub.png
@@ -627,17 +654,17 @@ tree -L <span class="m">2</span> <span class="c1"># Afficher sous forme d’arbr
 │   ├── stopJupyter.png
 │   └── tabTab.gif
 ├── logo.png
-├── markdown-notebooks.md
 ├── qc
 │   ├── siNT_ER_E2_r3_chr21_fastqc.html
 │   ├── siNT_ER_E2_r3_chr21_fastqc.log
 │   └── siNT_ER_E2_r3_chr21_fastqc.zip
 ├── quizz_01.ipynb
+├── quizz_02.ipynb
 ├── references.bib
 ├── requirements.txt
 └── _toc.yml
 
-5 directories, 90 files
+5 directories, 95 files
 </pre></div>
 </div>
 </div>
@@ -1963,8 +1990,8 @@ ls -l
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3196788
--rw-rw-r-- 1 glecorguille glecorguille 3273481150 16 janv.  2014 hg38.fa
--rw-rw-r-- 1 glecorguille glecorguille      19381 21 nov.   2016 hg38.fa.fai
+-rw-rw-r-- 1 glecorguille glecorguille 3273481150 Jan 16  2014 hg38.fa
+-rw-rw-r-- 1 glecorguille glecorguille      19381 Nov 21  2016 hg38.fa.fai
 </pre></div>
 </div>
 </div>
@@ -1977,9 +2004,9 @@ ls -lh
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3,1G
--rw-rw-r-- 1 glecorguille glecorguille 3,1G 16 janv.  2014 hg38.fa
--rw-rw-r-- 1 glecorguille glecorguille  19K 21 nov.   2016 hg38.fa.fai
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3.1G
+-rw-rw-r-- 1 glecorguille glecorguille 3.1G Jan 16  2014 hg38.fa
+-rw-rw-r-- 1 glecorguille glecorguille  19K Nov 21  2016 hg38.fa.fai
 </pre></div>
 </div>
 </div>
@@ -1992,9 +2019,9 @@ ls -tlh
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3,1G
--rw-rw-r-- 1 glecorguille glecorguille  19K 21 nov.   2016 hg38.fa.fai
--rw-rw-r-- 1 glecorguille glecorguille 3,1G 16 janv.  2014 hg38.fa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3.1G
+-rw-rw-r-- 1 glecorguille glecorguille  19K Nov 21  2016 hg38.fa.fai
+-rw-rw-r-- 1 glecorguille glecorguille 3.1G Jan 16  2014 hg38.fa
 </pre></div>
 </div>
 </div>
@@ -2008,9 +2035,9 @@ ls -rtlh
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3,1G
--rw-rw-r-- 1 glecorguille glecorguille 3,1G 16 janv.  2014 hg38.fa
--rw-rw-r-- 1 glecorguille glecorguille  19K 21 nov.   2016 hg38.fa.fai
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3.1G
+-rw-rw-r-- 1 glecorguille glecorguille 3.1G Jan 16  2014 hg38.fa
+-rw-rw-r-- 1 glecorguille glecorguille  19K Nov 21  2016 hg38.fa.fai
 </pre></div>
 </div>
 </div>

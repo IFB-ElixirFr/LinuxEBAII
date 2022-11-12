@@ -8,7 +8,7 @@
 
 from jupyterquiz import display_quiz
 
-q1 =[{
+quizz =[{
         "question": "Comment charger un module sur le cluster de l'IFB ?",
         "type": "multiple_choice",
         "answers": [
@@ -25,6 +25,45 @@ q1 =[{
                 "correct": False
             }
         ]
-    }]
-display_quiz(q1)
+    },
+    {
+        "question": "Comment se connecter au cluster de l'IFB ?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "SSH",
+                "correct": True
+            },
+            {
+                "code": "Jypyter",
+                "correct": True
+            },
+            {
+                "code": "Galaxy",
+                "correct": True
+            },
+            {
+                "code": "En branchant mon ordinateur directement dessus",
+                "correct": False
+            }
+        ]
+    },
+    {
+        "question": "BASH est le seul langage compris par le Shell ?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "code": "Vrai",
+                "correct": True,
+                "feedback": "Il y a aussi : bsh, ksh, csh, zsh,…"
+            },
+            {
+                "code": "Faux",
+                "correct": False,
+                "feedback": "Il y a aussi : bsh, ksh, csh, zsh,…"
+            },
+        ]
+    }
+]
+display_quiz(quizz)
 

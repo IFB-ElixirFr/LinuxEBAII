@@ -14,9 +14,15 @@ q1=[{
         "answers": [
             {
                 "type": "value",
-                "range": 740, 
+                "value": 740, 
                 "correct": True,
                 "feedback": "Bravo !"
+            },
+            {
+                "type": "range",
+                "range": [ 650, 750], 
+                "correct": False,
+                "feedback": "Pas assez précis ;) Peut $etre avec la commande : module avail -l | wc -l"
             },
             {
                 "type": "default",

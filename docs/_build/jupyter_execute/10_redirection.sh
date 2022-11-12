@@ -1,4 +1,4 @@
-cd /shared/projects/form_2022_32/coursLinux/annotations/hg38/bed
+cd /shared/projects/form_2022_32/coursLinux/demo/annotations/hg38/bed
 ls -l *.bed | wc -l
 
 # Obtenir la liste non redondante de chromosomes présents dans le fichier

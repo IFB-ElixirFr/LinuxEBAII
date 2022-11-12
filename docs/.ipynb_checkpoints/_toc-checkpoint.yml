@@ -21,13 +21,16 @@ parts:
     - file: 09_manipulate
     - file: 10_redirection
     - file: 11_linuxIsMore
-    - file: 12_raccourcis
     - file: quizz_02
   - caption: Qualité des lectures
     chapters:
     - file: 13_data
     - file: 14_fastqc
-  - caption: Qualité des lectures
+  - caption: Read mapping
     chapters:
     - file: 15_mapping
     - file: 16_stopJupyter
+  - caption: Ressources
+    chapters:
+    - file: 12_raccourcis
+    - file: formats

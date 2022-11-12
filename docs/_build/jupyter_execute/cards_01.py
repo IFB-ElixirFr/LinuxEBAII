@@ -26,9 +26,29 @@ cards = [
     {
         "front": "Que fait la commande: man ?",
         "back": "Interface de consultation des manuels de référence en ligne."
+    },
+    {
+        "front": "Que fait la commande: tree ?",
+        "back": "List contents of directories in a tree-like format"
     }
 ]
 
 
 display_flashcards(cards)
+
+
+# ## Les outils
+
+# In[3]:
+
+
+cards_2 = [
+    {
+        "front": "Que fait la commande: FastQC ? ",
+        "back": "A high throughput sequence QC analysis tool"
+    }
+]
+
+
+display_flashcards(cards_2)
 

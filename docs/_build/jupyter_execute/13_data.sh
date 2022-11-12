@@ -1,5 +1,5 @@
 # form_2022_32 à adapter à votre projet
-cd /shared/projects/form_2022_32/coursLinux/chip-seq/fastq
+cd /shared/projects/form_2022_32/coursLinux/demo/chip-seq/fastq
 
 # form_2022_32 à adapter à votre projet
 pwd

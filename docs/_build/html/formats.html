@@ -1,0 +1,1191 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Formats &#8212; Linux en Bioinformatique</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Les raccourcis clavier du terminal" href="12_raccourcis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linux en Bioinformatique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_home.html">
+                    A la découverte de Linux
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_team.html">
+   L’équipe pédagogique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_introduction.html">
+   Le cluster de l’IFB
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_jupyter.html">
+   C’est quoi JupyterHub
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_bash.html">
+   Comment converser avec le terminal ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_module.html">
+   Charger l’environnement logiciel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_protoCommande.html">
+   Prototype(s) d’une commande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quizz_01.html">
+   Quizz 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cards_01.html">
+   Fiches de révision
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Arborescence
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_arborescence.html">
+   Arborescence de fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_storage.html">
+   Stockage fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_manipulate.html">
+   Manipuler des fichiers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_redirection.html">
+   Redirections
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_linuxIsMore.html">
+   Linux c’est aussi tellement plus !
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quizz_02.html">
+   Quizz 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Qualité des lectures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_data.html">
+   Jeu de données
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_fastqc.html">
+   Analyser la qualité avec fastQC
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Read mapping
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_mapping.html">
+   Mapping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_stopJupyter.html">
+   Arrêter le serveur Jupyterhub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Formats
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2Fformats.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/formats.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fasta">
+   FASTA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-de-fichier">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#signification-du-nom">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qui-le-genere">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qui-le-lit">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explications">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastq">
+   FASTQ
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bed">
+   BED
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remarque">
+     Remarque
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-1-simple">
+     Exemple 1 (simple)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Explications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-2-jonctions-entre-exons">
+     Exemple 2 (jonctions entre exons)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gtf">
+   GTF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gff">
+   GFF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id24">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Formats</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fasta">
+   FASTA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-de-fichier">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#signification-du-nom">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qui-le-genere">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qui-le-lit">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explications">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fastq">
+   FASTQ
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bed">
+   BED
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remarque">
+     Remarque
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-1-simple">
+     Exemple 1 (simple)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Explications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-2-jonctions-entre-exons">
+     Exemple 2 (jonctions entre exons)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gtf">
+   GTF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gff">
+   GFF
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Type de fichier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id20">
+     Signification du nom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id21">
+     Qui le génère
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id22">
+     Qui le lit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id23">
+     Exemple
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id24">
+     Explications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="formats">
+<h1>Formats<a class="headerlink" href="#formats" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Un grand merci à Matthias Zytnicki !</p>
+</div>
+<section id="fasta">
+<h2>FASTA<a class="headerlink" href="#fasta" title="Permalink to this headline">#</a></h2>
+<section id="type-de-fichier">
+<h3>Type de fichier<a class="headerlink" href="#type-de-fichier" title="Permalink to this headline">#</a></h3>
+<p>Séquence</p>
+</section>
+<section id="signification-du-nom">
+<h3>Signification du nom<a class="headerlink" href="#signification-du-nom" title="Permalink to this headline">#</a></h3>
+<p>Format utilisé par l’outil FastA (fast alignment)</p>
+</section>
+<section id="qui-le-genere">
+<h3>Qui le génère<a class="headerlink" href="#qui-le-genere" title="Permalink to this headline">#</a></h3>
+<p>Presque tous</p>
+</section>
+<section id="qui-le-lit">
+<h3>Qui le lit<a class="headerlink" href="#qui-le-lit" title="Permalink to this headline">#</a></h3>
+<p>Presque tous, vous</p>
+</section>
+<section id="exemple">
+<h3>Exemple<a class="headerlink" href="#exemple" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">sequence1</span>
+<span class="n">CGATGTACGCTAGAT</span>
+</pre></div>
+</div>
+</section>
+<section id="explications">
+<h3>Explications<a class="headerlink" href="#explications" title="Permalink to this headline">#</a></h3>
+<p>Chaque séquence commence par un chevron (&gt;), suivi du nom de la séquence. Bien que cela ne soit pas obligatoire, il est recommandé que le nom de la séquence soit unique dans le fichier. La séquence elle-même suit.</p>
+</section>
+</section>
+<section id="fastq">
+<h2>FASTQ<a class="headerlink" href="#fastq" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Type de fichier<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Séquence de lecture</p>
+</section>
+<section id="id2">
+<h3>Signification du nom<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>Comme FASTA, mais avec la qualité (Q)</p>
+</section>
+<section id="id3">
+<h3>Qui le génère<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>Le séquenceur</p>
+</section>
+<section id="id4">
+<h3>Qui le lit<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>Les outils de mapping, les visualisateurs, vous</p>
+</section>
+<section id="id5">
+<h3>Exemple<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!&#39;&#39;*((((***+))%%%++)(%%%%).1***-+*&#39;&#39;))**55CCF&gt;&gt;&gt;&gt;&gt;&gt;CCCCCCC65
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>Explications<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
+<p>Chaque séquence est codée sur 4 ligne :
+un &#64;, suivi du nom de la séquence ;
+la séquence elle-même suit ;
+un + (avec éventuellement le nom de la séquence, encore une fois) ;
+la qualité de la séquence.
+La qualité de la séquence suit un codage particulier, où chaque caractère représente un nombre. En général, l’association est la suivante:</p>
+<p><img alt="" src="_images/ebaii_Ascii_sanger.png" /></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">!</span></code> correspond à 0</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">“</span></code> correspond à 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#</span></code> correspond à 2</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span></code> correspond à 3</p></li>
+<li><p>…</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">I</span></code> correspond à 40</p></li>
+</ul>
+<p>Chaque nombre représente la probabilité p de se tromper sur la lecture d’une base. Le code représente la valeur −10 log10(p). Par exemple, le caractère C code le nombre 34. Il représente donc une probabilité d’erreur d’environ 4.10-4. Les codes les plus à droite représentent donc les meilleures qualités.
+Attention : pour des données relativement anciennes, il existe d’autres codages de la qualité (i.e. d’autres associations entre les caractères et les nombres).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Pour en savoir plus</p>
+<ul class="simple">
+<li><p>Page Wikipedia du format : <a class="reference external" href="http://en.wikipedia.org/wiki/FASTQ_format">http://en.wikipedia.org/wiki/FASTQ_format</a></p></li>
+<li><p>Référence : <a class="reference external" href="http://maq.sourceforge.net/fastq.shtml">http://maq.sourceforge.net/fastq.shtml</a></p></li>
+<li><p>Article NAR présentant le format : <a class="reference external" href="http://nar.oxfordjournals.org/content/38/6/1767.full">http://nar.oxfordjournals.org/content/38/6/1767.full</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="bed">
+<h2>BED<a class="headerlink" href="#bed" title="Permalink to this headline">#</a></h2>
+<section id="id7">
+<h3>Type de fichier<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
+<p>Annotation</p>
+</section>
+<section id="id8">
+<h3>Signification du nom<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
+<p>Browser Extensible Format</p>
+</section>
+<section id="id9">
+<h3>Qui le génère<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
+<p>Les outils d’annotation, TopHat</p>
+</section>
+<section id="id10">
+<h3>Qui le lit<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
+<p>Les visualisateurs, vous</p>
+</section>
+<section id="remarque">
+<h3>Remarque<a class="headerlink" href="#remarque" title="Permalink to this headline">#</a></h3>
+<p>Le format BED est un format multi-forme, qui peut être utilisé dans beaucoup de contextes.</p>
+</section>
+<section id="exemple-1-simple">
+<h3>Exemple 1 (simple)<a class="headerlink" href="#exemple-1-simple" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr1</span>   <span class="mi">100</span>   <span class="mi">200</span>    <span class="n">peak_1</span>    <span class="mi">123</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h3>Explications<a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h3>
+<p>Chaque ligne est une annotation. Les informations sont tabulées, i.e. chaque ligne contient un nombre fixe de colonnes (ici, 5), séparées par des tabulations.</p>
+<p>Le format BED est utilisée pour beaucoup de types d’annotations, comme les régions MACS :</p>
+<ol class="simple">
+<li><p>(chr1) le nombre du chromosome (ou du scaffold)</p></li>
+<li><p>(100) position extrémale en 5’</p></li>
+<li><p>(2099) position extrémale en 3’</p></li>
+<li><p>(peak_1) nom systématique de la jonction</p></li>
+<li><p>(123) score de la région</p></li>
+</ol>
+<p>Dans d’autres contexte, on peut ne trouver que les 3 ou 4 premiers champs.</p>
+</section>
+<section id="exemple-2-jonctions-entre-exons">
+<h3>Exemple 2 (jonctions entre exons)<a class="headerlink" href="#exemple-2-jonctions-entre-exons" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr1</span>   <span class="mi">990</span>   <span class="mi">2099</span>   <span class="n">JUNC00001560</span>   <span class="mi">3</span>   <span class="o">+</span>   <span class="mi">990</span>   <span class="mi">2099</span>   <span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>   <span class="mi">2</span>   <span class="mi">40</span><span class="p">,</span><span class="mi">67</span>   <span class="mi">0</span><span class="p">,</span><span class="mi">1042</span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h3>Explications<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h3>
+<p>Ici, le format contient 12 colonnes:
+6. (chr1) le nombre du chromosome (ou du scaffold)
+7. (990) position extrémale en 5’ des lectures chevauchant la jonction
+8. (2099) position extrémale en 3’ des lectures chevauchant la jonction
+9. (JUNC00001560) nom systématique de la jonction
+10. (3) nombre de lectures couvrant la jonction
+11. (+) brin
+12. (990) même chose que la colonne 2
+13. (2099) même chose que la colonne 3
+14. (255,0,0) pas important
+15. (2) pas important
+16. (40,67) taille maximum des lectures couvrant l’exon à gauche et à droite de l’intron.
+17. (0,1042) pas important</p>
+<p><img alt="" src="_images/BED.png" /></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Pour en savoir plus :</p>
+<ul class="simple">
+<li><p>Documentation : <a class="reference external" href="http://genome.ucsc.edu/FAQ/FAQformat.html#format1">http://genome.ucsc.edu/FAQ/FAQformat.html#format1</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="gtf">
+<h2>GTF<a class="headerlink" href="#gtf" title="Permalink to this headline">#</a></h2>
+<section id="id13">
+<h3>Type de fichier<a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h3>
+<p>Annotation</p>
+</section>
+<section id="id14">
+<h3>Signification du nom<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h3>
+<p>Gene Transfer Format</p>
+</section>
+<section id="id15">
+<h3>Qui le génère<a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h3>
+<p>Les outils d’annotation</p>
+</section>
+<section id="id16">
+<h3>Qui le lit<a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h3>
+<p>Les browsers, TopHat</p>
+</section>
+<section id="id17">
+<h3>Exemple<a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">100</span>   <span class="mi">200</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t1&quot;</span><span class="p">;</span>
+<span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">300</span>   <span class="mi">400</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t1&quot;</span><span class="p">;</span>
+<span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">500</span>   <span class="mi">600</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t1&quot;</span><span class="p">;</span>
+<span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">100</span>   <span class="mi">450</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t2&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="id18">
+<h3>Explications<a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h3>
+<p>C’est un autre format tabulé à 9 champs. Chaque exon est noté sur une ligne :</p>
+<ol class="simple">
+<li><p>(chr20) le chromosome</p></li>
+<li><p>(example) la source de l’annotation, habituellement l’outil qui a généré l’annotation</p></li>
+<li><p>(exon) le type d’annotation ; nous avons ici des exons, mais cela pourrait des CDS (si l’on s’intéressait aux protéines traduites)</p></li>
+<li><p>(100) le début de l’annotation</p></li>
+<li><p>(200) la fin de l’annotation</p></li>
+<li><p>(.) pas important</p></li>
+<li><p>(+) le brin</p></li>
+<li><p>(.) pas important</p></li>
+<li><p>(gene_id “g1”; transcript_id “t1”;) les attributs, ou champs. C’est un fourre-tout. On peut y trouver le nom usuel du gène.</p></li>
+</ol>
+<p>Le champ 9 indique à quel transcrit et quel gène appartient chaque exon.</p>
+<p><img alt="" src="_images/GTF.png" /></p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>Pour en savoir plus</p>
+<ul class="simple">
+<li><p>Documentation : <a class="reference external" href="http://mblab.wustl.edu/GTF22.html">http://mblab.wustl.edu/GTF22.html</a></p></li>
+<li><p>Le format GTF est adapté du format GFF, moins contraint. Documentation du format GFF : <a class="reference external" href="http://www.sequenceontology.org/gff3.shtml">http://www.sequenceontology.org/gff3.shtml</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="gff">
+<h2>GFF<a class="headerlink" href="#gff" title="Permalink to this headline">#</a></h2>
+<section id="id19">
+<h3>Type de fichier<a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h3>
+<p>Annotation</p>
+</section>
+<section id="id20">
+<h3>Signification du nom<a class="headerlink" href="#id20" title="Permalink to this headline">#</a></h3>
+<p>Gene Feature Format</p>
+</section>
+<section id="id21">
+<h3>Qui le génère<a class="headerlink" href="#id21" title="Permalink to this headline">#</a></h3>
+<p>Les outils d’annotation</p>
+</section>
+<section id="id22">
+<h3>Qui le lit<a class="headerlink" href="#id22" title="Permalink to this headline">#</a></h3>
+<p>Les browsers</p>
+</section>
+<section id="id23">
+<h3>Exemple<a class="headerlink" href="#id23" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">100</span>   <span class="mi">200</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t1&quot;</span><span class="p">;</span>
+<span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">300</span>   <span class="mi">400</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t1&quot;</span><span class="p">;</span>
+<span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">500</span>   <span class="mi">600</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t1&quot;</span><span class="p">;</span>
+<span class="n">chr20</span>   <span class="n">example</span>   <span class="n">exon</span>   <span class="mi">100</span>   <span class="mi">450</span>   <span class="o">.</span>   <span class="o">+</span>   <span class="o">.</span>   <span class="n">gene_id</span> <span class="s2">&quot;g1&quot;</span><span class="p">;</span> <span class="n">transcript_id</span> <span class="s2">&quot;t2&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="id24">
+<h3>Explications<a class="headerlink" href="#id24" title="Permalink to this headline">#</a></h3>
+<p>C’est un autre format tabulé à 9 champs. Chaque exon est noté sur une ligne :</p>
+<ol class="simple">
+<li><p>(chr20) le chromosome</p></li>
+<li><p>(example) la source de l’annotation, habituellement l’outil qui a généré l’annotation</p></li>
+<li><p>(exon) le type d’annotation ; nous avons ici des exons, mais cela pourrait des CDS (si l’on s’intéressait aux protéines traduites)</p></li>
+<li><p>(100) le début de l’annotation</p></li>
+<li><p>(200) la fin de l’annotation</p></li>
+<li><p>(.) pas important</p></li>
+<li><p>(+) le brin</p></li>
+<li><p>(.) pas important</p></li>
+<li><p>(gene_id “g1”; transcript_id “t1”;) les attributs, ou champs. C’est un fourre-tout. On peut y trouver le nom usuel du gène.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les format suivants seront bientôt disponibles:</p>
+<ul class="simple">
+<li><p>SAM</p></li>
+<li><p>BAM</p></li>
+<li><p>BAI</p></li>
+<li><p>WIG</p></li>
+<li><p>BedGraph</p></li>
+<li><p>BigWig</p></li>
+<li><p>Pileup</p></li>
+<li><p>VCF</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="12_raccourcis.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Les raccourcis clavier du terminal</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Thomas Denecker & Claire Toffano-Nioche<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

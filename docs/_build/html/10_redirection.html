@@ -154,6 +154,11 @@ const thebe_selector_output = ".output, .cell_output"
    Quizz 1
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cards_01.html">
+   Fiches de révision
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -187,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
-   Les raccourcis clavier du terminal
+  <a class="reference internal" href="quizz_02.html">
+   Quizz 2
   </a>
  </li>
 </ul>
@@ -211,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Qualité des lectures
+  Read mapping
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -223,6 +228,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="16_stopJupyter.html">
    Arrêter le serveur Jupyterhub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="formats.html">
+   Formats
   </a>
  </li>
 </ul>
@@ -540,15 +562,13 @@ title="Print to PDF"
 <p>Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/annotations/hg38/bed
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo/annotations/hg38/bed
 ls -l *.bed <span class="p">|</span> wc -l
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: cd: /shared/projects/form_2022_32/coursLinux/annotations/hg38/bed: Aucun fichier ou dossier de ce type
-ls: impossible d&#39;accéder à *.bed: Aucun fichier ou dossier de ce type
-0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
@@ -556,8 +576,8 @@ ls: impossible d&#39;accéder à *.bed: Aucun fichier ou dossier de ce type
 <section id="exercices">
 <h3>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="51e7b30d-2aa3-4f64-9caf-eadf7d39dd3f" name="65ac4b1f-8693-4bee-9bff-1ed5d5d4c913" type="radio">
-</input><label class="sd-tab-label" for="51e7b30d-2aa3-4f64-9caf-eadf7d39dd3f">
+<input checked="checked" id="11ed3b44-f03b-41eb-82e9-4edba2b42742" name="8e7ca11a-8bfb-4383-91a7-89cba6881d19" type="radio">
+</input><label class="sd-tab-label" for="11ed3b44-f03b-41eb-82e9-4edba2b42742">
 Questions</label><div class="sd-tab-content docutils">
 <ul class="simple">
 <li><p><strong>Hommage à Marseille</strong></p>
@@ -572,8 +592,8 @@ Questions</label><div class="sd-tab-content docutils">
 </li>
 </ul>
 </div>
-<input id="42702a4f-07ad-403d-8b4e-c2022e32f644" name="65ac4b1f-8693-4bee-9bff-1ed5d5d4c913" type="radio">
-</input><label class="sd-tab-label" for="42702a4f-07ad-403d-8b4e-c2022e32f644">
+<input id="5327c59e-9f80-40e8-a3fa-f248a0e99062" name="8e7ca11a-8bfb-4383-91a7-89cba6881d19" type="radio">
+</input><label class="sd-tab-label" for="5327c59e-9f80-40e8-a3fa-f248a0e99062">
 Solutions</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On utilise head puis un tube qui renvoie vers less. </span>
 <span class="c1"># Tapez q pour quitter.</span>
@@ -599,7 +619,30 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cut: hg38_exons.bed: Aucun fichier ou dossier de ce type
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chr1
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr2
+chr20
+chr21
+chr22
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chrX
+chrY
 </pre></div>
 </div>
 </div>
@@ -612,8 +655,7 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cut: hg38_exons.bed: Aucun fichier ou dossier de ce type
-0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
 </pre></div>
 </div>
 </div>
@@ -628,7 +670,30 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cut: hg38_exons.bed: Aucun fichier ou dossier de ce type
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 117347 chr1
+  46414 chr10
+  75294 chr11
+  72970 chr12
+  20371 chr13
+  43618 chr14
+  47068 chr15
+  60375 chr16
+  77950 chr17
+  22378 chr18
+  73716 chr19
+  97092 chr2
+  28097 chr20
+  14332 chr21
+  27854 chr22
+  80596 chr3
+  49351 chr4
+  55719 chr5
+  56433 chr6
+  60961 chr7
+  45192 chr8
+  45468 chr9
+  39510 chrX
+   3764 chrY
 </pre></div>
 </div>
 </div>
@@ -642,7 +707,30 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cut: hg38_exons.bed: Aucun fichier ou dossier de ce type
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 117347 chr1
+  97092 chr2
+  80596 chr3
+  77950 chr17
+  75294 chr11
+  73716 chr19
+  72970 chr12
+  60961 chr7
+  60375 chr16
+  56433 chr6
+  55719 chr5
+  49351 chr4
+  47068 chr15
+  46414 chr10
+  45468 chr9
+  45192 chr8
+  43618 chr14
+  39510 chrX
+  28097 chr20
+  27854 chr22
+  22378 chr18
+  20371 chr13
+  14332 chr21
+   3764 chrY
 </pre></div>
 </div>
 </div>
@@ -672,8 +760,7 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grep: hg38_exons.bed: Aucun fichier ou dossier de ce type
-0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27854
 </pre></div>
 </div>
 </div>
@@ -685,8 +772,7 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grep: hg38_exons.bed: Aucun fichier ou dossier de ce type
-0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>846
 </pre></div>
 </div>
 </div>
@@ -698,10 +784,7 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grep: hg38_exons.bed: Aucun fichier ou dossier de ce type
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27854
 </pre></div>
 </div>
 </div>
@@ -709,6 +792,11 @@ cut -f <span class="m">1</span> hg38_exons.bed <span class="p">|</span> sort <sp
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="s2">&quot;chr22&quot;</span> hg38_exons.bed <span class="p">|</span> grep -c <span class="s2">&quot;lincRNA&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>846
 </pre></div>
 </div>
 </div>

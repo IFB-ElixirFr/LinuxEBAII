@@ -1,7 +1,7 @@
 # On se déplace dans annotations
 # remplacer <project> 
 # cd /shared/projects/<project>/annotations/hg38 
-cd /shared/projects/form_2022_32/coursLinux/annotations/hg38 
+cd /shared/projects/form_2022_32/coursLinux/demo/annotations/hg38 
 
 mkdir bed; cd bed
 

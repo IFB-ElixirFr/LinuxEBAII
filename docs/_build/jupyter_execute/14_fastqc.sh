@@ -1,5 +1,5 @@
 # On remonte d’un niveau dans l’arborescence
-cd /shared/projects/form_2022_32/coursLinux/chip-seq/                                   
+cd /shared/projects/form_2022_32/coursLinux/demo/chip-seq/                                   
 
 # On créé un répertoire
 mkdir qc
