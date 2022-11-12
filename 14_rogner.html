@@ -599,31 +599,41 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sickle -h
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: sickle &lt;command&gt; [options]
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Usage: sickle &lt;command&gt; <span class="o">[</span>options<span class="o">]</span>
 
 Command:
 pe	paired-end sequence trimming
 se	single-end sequence trimming
 
---help, display this help and exit
---version, output version information and exit
+--help, display this <span class="nb">help</span> and <span class="nb">exit</span>
+--version, output version information and <span class="nb">exit</span>
 </pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sickle se --help <span class="c1"># Obtenir de l’aide sur la sous-commande se.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtenir de l’aide sur la sous-commande se.</span>
+sickle se --help 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: sickle se [options] -f &lt;fastq sequence file&gt; -t &lt;quality type&gt; -o &lt;trimmed fastq file&gt;
+
+Options:
+-f, --fastq-file, Input fastq file (required)
+-t, --qual-type, Type of quality values (solexa (CASAVA &lt; 1.3), illumina (CASAVA 1.3 to 1.7), sanger (which is CASAVA &gt;= 1.8)) (required)
+-o, --output-file, Output trimmed fastq file (required)
+-q, --qual-threshold, Threshold for trimming based on average quality in a window. Default 20.
+-l, --length-threshold, Threshold to keep a read based on length after trimming. Default 20.
+-x, --no-fiveprime, Don&#39;t do five prime trimming.
+-n, --trunc-n, Truncate sequences at position of first N.
+-g, --gzip-output, Output gzipped files.
+--quiet, Don&#39;t print out any trimming information
+--help, display this help and exit
+--version, output version information and exit
 </pre></div>
 </div>
 </div>
@@ -692,11 +702,21 @@ wc -l ../fastq/siNT_ER_E2_r3_chr21.fastq
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1183584 ../fastq/siNT_ER_E2_r3_chr21.fastq
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Données nettoyées</span>
 wc -l siNT_ER_E2_r3_chr21_trim.fastq         
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1181352 siNT_ER_E2_r3_chr21_trim.fastq
 </pre></div>
 </div>
 </div>
