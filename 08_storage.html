@@ -557,7 +557,7 @@ Votre dossier projet (e.g /shared/projects/<project>)</p>
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remplacer &lt;project&gt;</span>
 <span class="c1"># cd /shared/projects/&lt;project&gt;/</span>
-<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo
 </pre></div>
 </div>
 </div>
@@ -578,14 +578,8 @@ ls -l
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 100
-drwxrwx---+ 2 tdenecker tdenecker  4096 Nov 12 13:05 <span class=" -Color -Color-C27">chip-seq</span>
--rw-rw----+ 1 tdenecker tdenecker    62 Nov 10 16:41 cleanFolder.sh
--rw-rw----+ 1 tdenecker tdenecker 52296 Nov 10 15:14 cours1.ipynb
--rw-rw----+ 1 tdenecker tdenecker 23607 Nov 10 18:34 cours2.ipynb
-drwxrwx---+ 3 tdenecker tdenecker  4096 Nov 10 12:09 <span class=" -Color -Color-C27">images</span>
-drwxrwx---+ 5 tdenecker tdenecker  4096 Nov 12 12:51 <span class=" -Color -Color-C27">LinuxEBAII</span>
-drwxrwx---+ 3 tdenecker tdenecker  4096 Nov 12 13:04 <span class=" -Color -Color-C27">rna-seq</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 4
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 13:31 <span class=" -Color -Color-C27">chip-seq</span>
 </pre></div>
 </div>
 </div>
@@ -619,8 +613,8 @@ ls -l
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 8
-drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 13:05 <span class=" -Color -Color-C27">bam</span>
-drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 13:05 <span class=" -Color -Color-C27">fastq</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 13:31 <span class=" -Color -Color-C27">bam</span>
+drwxrwx---+ 2 tdenecker tdenecker 4096 Nov 12 13:31 <span class=" -Color -Color-C27">fastq</span>
 </pre></div>
 </div>
 </div>
@@ -658,8 +652,7 @@ ls -R
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.:
-<span class=" -Color -Color-C27">chip-seq</span>        cours1.ipynb  <span class=" -Color -Color-C27">images</span>      <span class=" -Color -Color-C27">rna-seq</span>
-cleanFolder.sh  cours2.ipynb  <span class=" -Color -Color-C27">LinuxEBAII</span>
+<span class=" -Color -Color-C27">chip-seq</span>  <span class=" -Color -Color-C27">rna-seq</span>
 
 ./chip-seq:
 <span class=" -Color -Color-C27">bam</span>  <span class=" -Color -Color-C27">fastq</span>
@@ -668,506 +661,8 @@ cleanFolder.sh  cours2.ipynb  <span class=" -Color -Color-C27">LinuxEBAII</span>
 
 ./chip-seq/fastq:
 
-./images:
-<span class=" -Color -Color-C13">arborescence2.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_no.png</span>
-<span class=" -Color -Color-C13">arborescence3.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_psqs_ok.png</span>
-<span class=" -Color -Color-C13">arborescence4.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_no.png</span>
-<span class=" -Color -Color-C13">arborescence.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_ok.png</span>
-<span class=" -Color -Color-C13">archiCluster.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_stat.png</span>
-<span class=" -Color -Color-C13">BED.png</span>                         <span class=" -Color -Color-C13">ebaii_fastqc_tricolore.png</span>
-<span class=" -Color -Color-C13">ebaii_4lignesFastq.png</span>          <span class=" -Color -Color-C13">ebaii_GATA2publi.png</span>
-<span class=" -Color -Color-C13">ebaii_acces_html.png</span>            <span class=" -Color -Color-C13">ebaii_jupyterAcces.png</span>
-<span class=" -Color -Color-C13">ebaii_accesJupyter.png</span>          <span class=" -Color -Color-C13">ebaii_jupyterStop.png</span>
-<span class=" -Color -Color-C13">ebaii_Ascii_sanger.png</span>          <span class=" -Color -Color-C13">ebaii_mapping.png</span>
-<span class=" -Color -Color-C13">ebaii_cigarEx.png</span>               <span class=" -Color -Color-C13">ebaii_mapping_positions.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck1.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_quality.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck2.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_readSeed.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck3.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_uniqMultiMap.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck4.png</span>            <span class=" -Color -Color-C13">ebaii_MAPQ.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck5.png</span>            <span class=" -Color -Color-C13">ebaii_protocole_Chipseq.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_litle.png</span>  <span class=" -Color -Color-C13">ebaii_SangerScore.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_ok.png</span>     <span class=" -Color -Color-C13">ebaii_sickle_slidingWindow.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_ok.png</span>   <span class=" -Color -Color-C13">ebaii_trimmingPackman.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_RNA.png</span>  <span class=" -Color -Color-C13">JupyterConnect.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_overSeq_polyA.png</span>  <span class=" -Color -Color-C13">JupyterConnexion.gif</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_no.png</span>        <span class=" -Color -Color-C13">jupyterHub.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_ok.png</span>        <span class=" -Color -Color-C13">JupyterProfile.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_no.png</span>        <span class=" -Color -Color-C13">mobaXterm2.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_ok.png</span>        <span class=" -Color -Color-C13">mobaXterm.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_no.png</span>        <span class=" -Color -Color-C13">prompt.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_ok.png</span>        <span class=" -Color -Color-C13">redirection.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_no.png</span>       <span class=" -Color -Color-C13">Roscoff.jpeg</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_ok.png</span>       <span class=" -Color -Color-C13">tabTab.gif</span>
-
-./LinuxEBAII:
-<span class=" -Color -Color-C27">docs</span>  LICENSE  README.md
-
-./LinuxEBAII/docs:
-00_home.md              11_linuxIsMore.ipynb  formats.md
-01_team.md              12_raccourcis.md      <span class=" -Color -Color-C27">images</span>
-02_introduction.ipynb   13_data.ipynb         <span class=" -Color -Color-C13">logo.png</span>
-03_jupyter.md           14_fastqc.ipynb       <span class=" -Color -Color-C27">qc</span>
-04_bash.md              15_mapping.ipynb      quizz_01.ipynb
-05_module.ipynb         16_stopJupyter.md     quizz_02.ipynb
-06_protoCommande.ipynb  <span class=" -Color -Color-C27">_build</span>                references.bib
-07_arborescence.ipynb   cards_01.ipynb        requirements.txt
-08_storage.ipynb        cards2.json           _toc.yml
-09_manipulate.ipynb     cards.json
-10_redirection.ipynb    _config.yml
-
-./LinuxEBAII/docs/_build:
-<span class=" -Color -Color-C27">html</span>  <span class=" -Color -Color-C27">jupyter_execute</span>
-
-./LinuxEBAII/docs/_build/html:
-00_home.html           11_linuxIsMore.html  markdown-notebooks.html
-01_team.html           12_raccourcis.html   objects.inv
-02_introduction.html   13_data.html         quizz_01.html
-03_jupyter.html        14_fastqc.html       quizz_02.html
-04_bash.html           15_mapping.html      <span class=" -Color -Color-C27">reports</span>
-05_module.html         16_stopJupyter.html  search.html
-06_protoCommande.html  cards_01.html        searchindex.js
-07_arborescence.html   formats.html         <span class=" -Color -Color-C27">_sources</span>
-08_storage.html        genindex.html        <span class=" -Color -Color-C27">_sphinx_design_static</span>
-09_manipulate.html     <span class=" -Color -Color-C27">_images</span>              <span class=" -Color -Color-C27">_static</span>
-10_redirection.html    index.html
-
-./LinuxEBAII/docs/_build/html/_images:
-<span class=" -Color -Color-C13">arborescence2.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_no.png</span>
-<span class=" -Color -Color-C13">arborescence3.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_ok.png</span>
-<span class=" -Color -Color-C13">arborescence4.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_stat.png</span>
-<span class=" -Color -Color-C13">arborescence.png</span>                <span class=" -Color -Color-C13">ebaii_fastqc_tricolore.png</span>
-<span class=" -Color -Color-C13">archiCluster.png</span>                <span class=" -Color -Color-C13">ebaii_GATA2publi.png</span>
-<span class=" -Color -Color-C13">BED.png</span>                         <span class=" -Color -Color-C13">ebaii_jupyterAcces.png</span>
-<span class=" -Color -Color-C13">ebaii_4lignesFastq.png</span>          <span class=" -Color -Color-C13">ebaii_mapping.png</span>
-<span class=" -Color -Color-C13">ebaii_acces_html.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_positions.png</span>
-<span class=" -Color -Color-C13">ebaii_Ascii_sanger.png</span>          <span class=" -Color -Color-C13">ebaii_mapping_readSeed.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck1.png</span>            <span class=" -Color -Color-C13">ebaii_protocole_Chipseq.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck2.png</span>            <span class=" -Color -Color-C13">ebaii_SangerScore.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck3.png</span>            <span class=" -Color -Color-C13">ebaii_sickle_slidingWindow.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck4.png</span>            <span class=" -Color -Color-C13">ebaii_trimmingPackman.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck5.png</span>            <span class=" -Color -Color-C13">fastqc_sld_bad.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_litle.png</span>  <span class=" -Color -Color-C13">fastqc_sld_ok.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_ok.png</span>     <span class=" -Color -Color-C13">filter_quality2.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_ok.png</span>   <span class=" -Color -Color-C13">filter_quality.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_RNA.png</span>  <span class=" -Color -Color-C13">GTF.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_overSeq_polyA.png</span>  <span class=" -Color -Color-C13">JupyterConnect.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_no.png</span>        <span class=" -Color -Color-C13">JupyterConnexion.gif</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_ok.png</span>        <span class=" -Color -Color-C13">jupyterHub.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_no.png</span>        <span class=" -Color -Color-C13">JupyterProfile.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_ok.png</span>        <span class=" -Color -Color-C13">mobaXterm2.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_no.png</span>        <span class=" -Color -Color-C13">mobaXterm.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_ok.png</span>        <span class=" -Color -Color-C13">prompt.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_no.png</span>       <span class=" -Color -Color-C13">redirection.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_ok.png</span>       <span class=" -Color -Color-C13">stopJupyter.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psqs_no.png</span>        <span class=" -Color -Color-C13">tabTab.gif</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psqs_ok.png</span>
-
-./LinuxEBAII/docs/_build/html/reports:
-05_module.log        09_manipulate.log   14_fastqc.log
-07_arborescence.log  10_redirection.log  15_mapping.log
-08_storage.log       13_data.log         cards_01.log
-
-./LinuxEBAII/docs/_build/html/_sources:
-00_home.md              08_storage.ipynb      16_stopJupyter.md
-01_team.md              09_manipulate.ipynb   cards_01.ipynb
-02_introduction.ipynb   10_redirection.ipynb  formats.md
-03_jupyter.md           11_linuxIsMore.ipynb  markdown-notebooks.ipynb
-04_bash.md              12_raccourcis.md      markdown-notebooks.md
-05_module.ipynb         13_data.ipynb         quizz_01.ipynb
-06_protoCommande.ipynb  14_fastqc.ipynb       quizz_02.ipynb
-07_arborescence.ipynb   15_mapping.ipynb
-
-./LinuxEBAII/docs/_build/html/_sphinx_design_static:
-design-style.b7bb847fb20b106c3d81b95245e65545.min.css  design-tabs.js
-
-./LinuxEBAII/docs/_build/html/_static:
-basic.css                                              <span class=" -Color -Color-C13">logo.png</span>
-<span class=" -Color -Color-C13">check-solid.svg</span>                                        <span class=" -Color -Color-C13">minus.png</span>
-clipboard.min.js                                       mystnb.css
-copybutton.css                                         <span class=" -Color -Color-C13">plus.png</span>
-copybutton_funcs.js                                    pygments.css
-copybutton.js                                          sbt-webpack-macros.html
-<span class=" -Color -Color-C13">copy-button.svg</span>                                        <span class=" -Color -Color-C27">scripts</span>
-design-style.b7bb847fb20b106c3d81b95245e65545.min.css  searchtools.js
-design-tabs.js                                         sphinx-thebe.css
-doctools.js                                            sphinx-thebe.js
-documentation_options.js                               <span class=" -Color -Color-C27">styles</span>
-<span class=" -Color -Color-C13">file.png</span>                                               togglebutton.css
-<span class=" -Color -Color-C27">images</span>                                                 togglebutton.js
-jquery-3.5.1.js                                        underscore-1.13.1.js
-jquery.js                                              underscore.js
-language_data.js                                       <span class=" -Color -Color-C27">vendor</span>
-<span class=" -Color -Color-C27">locales</span>                                                webpack-macros.html
-
-./LinuxEBAII/docs/_build/html/_static/images:
-<span class=" -Color -Color-C13">logo_binder.svg</span>  <span class=" -Color -Color-C13">logo_colab.png</span>  <span class=" -Color -Color-C13">logo_deepnote.svg</span>  <span class=" -Color -Color-C13">logo_jupyterhub.svg</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales:
-<span class=" -Color -Color-C27">ar</span>  <span class=" -Color -Color-C27">ca</span>  <span class=" -Color -Color-C27">de</span>  <span class=" -Color -Color-C27">es</span>  <span class=" -Color -Color-C27">fr</span>  <span class=" -Color -Color-C27">it</span>  <span class=" -Color -Color-C27">ko</span>  <span class=" -Color -Color-C27">ml</span>  <span class=" -Color -Color-C27">nl</span>  <span class=" -Color -Color-C27">pt</span>  <span class=" -Color -Color-C27">sk</span>  <span class=" -Color -Color-C27">sv</span>  <span class=" -Color -Color-C27">tg</span>  <span class=" -Color -Color-C27">tr</span>  <span class=" -Color -Color-C27">vi</span>
-<span class=" -Color -Color-C27">bg</span>  <span class=" -Color -Color-C27">cs</span>  <span class=" -Color -Color-C27">el</span>  <span class=" -Color -Color-C27">et</span>  <span class=" -Color -Color-C27">hr</span>  <span class=" -Color -Color-C27">iw</span>  <span class=" -Color -Color-C27">lt</span>  <span class=" -Color -Color-C27">mr</span>  <span class=" -Color -Color-C27">no</span>  <span class=" -Color -Color-C27">ro</span>  <span class=" -Color -Color-C27">sl</span>  <span class=" -Color -Color-C27">ta</span>  <span class=" -Color -Color-C27">th</span>  <span class=" -Color -Color-C27">uk</span>  <span class=" -Color -Color-C27">zh_CN</span>
-<span class=" -Color -Color-C27">bn</span>  <span class=" -Color -Color-C27">da</span>  <span class=" -Color -Color-C27">eo</span>  <span class=" -Color -Color-C27">fi</span>  <span class=" -Color -Color-C27">id</span>  <span class=" -Color -Color-C27">ja</span>  <span class=" -Color -Color-C27">lv</span>  <span class=" -Color -Color-C27">ms</span>  <span class=" -Color -Color-C27">pl</span>  <span class=" -Color -Color-C27">ru</span>  <span class=" -Color -Color-C27">sr</span>  <span class=" -Color -Color-C27">te</span>  <span class=" -Color -Color-C27">tl</span>  <span class=" -Color -Color-C27">ur</span>  <span class=" -Color -Color-C27">zh_TW</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ar:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ar/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/bg:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/bg/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/bn:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/bn/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ca:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ca/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/cs:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/cs/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/da:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/da/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/de:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/de/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/el:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/el/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/eo:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/eo/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/es:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/es/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/et:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/et/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/fi:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/fi/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/fr:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/fr/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/hr:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/hr/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/id:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/id/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/it:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/it/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/iw:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/iw/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ja:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ja/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ko:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ko/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/lt:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/lt/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/lv:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/lv/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ml:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ml/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/mr:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/mr/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ms:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ms/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/nl:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/nl/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/no:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/no/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/pl:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/pl/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/pt:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/pt/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ro:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ro/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ru:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ru/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/sk:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/sk/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/sl:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/sl/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/sr:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/sr/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/sv:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/sv/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ta:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ta/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/te:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/te/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/tg:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/tg/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/th:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/th/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/tl:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/tl/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/tr:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/tr/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/uk:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/uk/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/ur:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/ur/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/vi:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/vi/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/zh_CN:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/zh_CN/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/locales/zh_TW:
-<span class=" -Color -Color-C27">LC_MESSAGES</span>
-
-./LinuxEBAII/docs/_build/html/_static/locales/zh_TW/LC_MESSAGES:
-booktheme.po
-
-./LinuxEBAII/docs/_build/html/_static/scripts:
-pydata-sphinx-theme.js  sphinx-book-theme.js  sphinx-book-theme.js.map
-
-./LinuxEBAII/docs/_build/html/_static/styles:
-pydata-sphinx-theme.css  sphinx-book-theme.css  theme.css
-
-./LinuxEBAII/docs/_build/html/_static/vendor:
-<span class=" -Color -Color-C27">fontawesome</span>
-
-./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome:
-<span class=" -Color -Color-C27">5.13.0</span>
-
-./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome/5.13.0:
-<span class=" -Color -Color-C27">css</span>  LICENSE.txt  <span class=" -Color -Color-C27">webfonts</span>
-
-./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome/5.13.0/css:
-all.min.css
-
-./LinuxEBAII/docs/_build/html/_static/vendor/fontawesome/5.13.0/webfonts:
-fa-brands-400.eot    fa-regular-400.eot    fa-solid-900.eot
-<span class=" -Color -Color-C13">fa-brands-400.svg</span>    <span class=" -Color -Color-C13">fa-regular-400.svg</span>    <span class=" -Color -Color-C13">fa-solid-900.svg</span>
-fa-brands-400.ttf    fa-regular-400.ttf    fa-solid-900.ttf
-fa-brands-400.woff   fa-regular-400.woff   fa-solid-900.woff
-fa-brands-400.woff2  fa-regular-400.woff2  fa-solid-900.woff2
-
-./LinuxEBAII/docs/_build/jupyter_execute:
-02_introduction.ipynb   09_manipulate.ipynb   15_mapping.ipynb
-02_introduction.sh      09_manipulate.sh      15_mapping.sh
-05_module.ipynb         10_redirection.ipynb  cards_01.ipynb
-05_module.sh            10_redirection.sh     cards_01.py
-06_protoCommande.ipynb  11_linuxIsMore.ipynb  markdown-notebooks.ipynb
-06_protoCommande.sh     11_linuxIsMore.sh     markdown-notebooks.py
-07_arborescence.ipynb   13_data.ipynb         quizz_01.ipynb
-07_arborescence.sh      13_data.sh            quizz_01.py
-08_storage.ipynb        14_fastqc.ipynb       quizz_02.ipynb
-08_storage.sh           14_fastqc.sh          quizz_02.py
-
-./LinuxEBAII/docs/images:
-<span class=" -Color -Color-C13">arborescence2.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_ptsq_ok.png</span>
-<span class=" -Color -Color-C13">arborescence3.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_stat.png</span>
-<span class=" -Color -Color-C13">arborescence4.png</span>               <span class=" -Color -Color-C13">ebaii_fastqc_tricolore.png</span>
-<span class=" -Color -Color-C13">arborescence.png</span>                <span class=" -Color -Color-C13">ebaii_GATA2publi.png</span>
-<span class=" -Color -Color-C13">archiCluster.png</span>                <span class=" -Color -Color-C13">ebaii_jupyterAcces.png</span>
-<span class=" -Color -Color-C13">BED.png</span>                         <span class=" -Color -Color-C13">ebaii_jupyterStop.png</span>
-<span class=" -Color -Color-C13">ebaii_4lignesFastq.png</span>          <span class=" -Color -Color-C13">ebaii_mapping.png</span>
-<span class=" -Color -Color-C13">ebaii_acces_html.png</span>            <span class=" -Color -Color-C13">ebaii_mapping_positions.png</span>
-<span class=" -Color -Color-C13">ebaii_accesJupyter.png</span>          <span class=" -Color -Color-C13">ebaii_mapping_quality.png</span>
-<span class=" -Color -Color-C13">ebaii_Ascii_sanger.png</span>          <span class=" -Color -Color-C13">ebaii_mapping_readSeed.png</span>
-<span class=" -Color -Color-C13">ebaii_cigarEx.png</span>               <span class=" -Color -Color-C13">ebaii_mapping_uniqMultiMap.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck1.png</span>            <span class=" -Color -Color-C13">ebaii_MAPQ.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck2.png</span>            <span class=" -Color -Color-C13">ebaii_protocole_Chipseq.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck3.png</span>            <span class=" -Color -Color-C13">ebaii_SangerScore.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck4.png</span>            <span class=" -Color -Color-C13">ebaii_sickle_slidingWindow.png</span>
-<span class=" -Color -Color-C13">ebaii_cyberduck5.png</span>            <span class=" -Color -Color-C13">ebaii_trimmingPackman.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_litle.png</span>  <span class=" -Color -Color-C13">fastqc_sld_bad.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_adaptor_ok.png</span>     <span class=" -Color -Color-C13">fastqc_sld_ok.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_ok.png</span>   <span class=" -Color -Color-C13">filter_quality2.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_duplicSeq_RNA.png</span>  <span class=" -Color -Color-C13">filter_quality.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_overSeq_polyA.png</span>  <span class=" -Color -Color-C13">GTF.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_no.png</span>        <span class=" -Color -Color-C13">JupyterConnect.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbNc_ok.png</span>        <span class=" -Color -Color-C13">JupyterConnexion.gif</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_no.png</span>        <span class=" -Color -Color-C13">jupyterHub.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsc_ok.png</span>        <span class=" -Color -Color-C13">JupyterProfile.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_no.png</span>        <span class=" -Color -Color-C13">mobaXterm2.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_pbsq_ok.png</span>        <span class=" -Color -Color-C13">mobaXterm.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_no.png</span>       <span class=" -Color -Color-C13">prompt.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psGCc_ok.png</span>       <span class=" -Color -Color-C13">redirection.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psqs_no.png</span>        <span class=" -Color -Color-C13">Roscoff.jpeg</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_psqs_ok.png</span>        <span class=" -Color -Color-C13">stopJupyter.png</span>
-<span class=" -Color -Color-C13">ebaii_fastqc_ptsq_no.png</span>        <span class=" -Color -Color-C13">tabTab.gif</span>
-
-./LinuxEBAII/docs/qc:
-siNT_ER_E2_r3_chr21_fastqc.html  <span class=" -Color -Color-C9">siNT_ER_E2_r3_chr21_fastqc.zip</span>
-siNT_ER_E2_r3_chr21_fastqc.log
-
 ./rna-seq:
-<span class=" -Color -Color-C27">01-Bioinfo</span>  <span class=" -Color -Color-C27">output</span>
-
-./rna-seq/01-Bioinfo:
-<span class=" -Color -Color-C27">results</span>  <span class=" -Color -Color-C27">TAIR10</span>
-
-./rna-seq/01-Bioinfo/results:
-<span class=" -Color -Color-C27">KO1__STARgenome</span>  <span class=" -Color -Color-C27">KO3__STARgenome</span>  <span class=" -Color -Color-C27">WT2__STARgenome</span>
-<span class=" -Color -Color-C27">KO2__STARgenome</span>  <span class=" -Color -Color-C27">WT1__STARgenome</span>  <span class=" -Color -Color-C27">WT3__STARgenome</span>
-ls: cannot open directory ./rna-seq/01-Bioinfo/results/KO1__STARgenome: Permission denied
-ls: cannot open directory ./rna-seq/01-Bioinfo/results/KO2__STARgenome: Permission denied
-ls: cannot open directory ./rna-seq/01-Bioinfo/results/KO3__STARgenome: Permission denied
-ls: cannot open directory ./rna-seq/01-Bioinfo/results/WT1__STARgenome: Permission denied
-ls: cannot open directory ./rna-seq/01-Bioinfo/results/WT2__STARgenome: Permission denied
-ls: cannot open directory ./rna-seq/01-Bioinfo/results/WT3__STARgenome: Permission denied
-ls: cannot open directory ./rna-seq/01-Bioinfo/TAIR10: Permission denied
+<span class=" -Color -Color-C27">output</span>
 
 ./rna-seq/output:
 <span class=" -Color -Color-C27">bam</span>
@@ -1175,14 +670,24 @@ ls: cannot open directory ./rna-seq/01-Bioinfo/TAIR10: Permission denied
 ./rna-seq/output/bam:
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tree
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+├── chip-seq
+│   ├── bam
+│   └── fastq
+└── rna-seq
+    └── output
+        └── bam
+
+6 directories, 0 files
 </pre></div>
 </div>
 </div>
@@ -1207,7 +712,7 @@ ls: cannot open directory ./rna-seq/01-Bioinfo/TAIR10: Permission denied
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># remplacer &lt;project&gt; </span>
 <span class="c1"># cd /shared/projects/&lt;project&gt;/</span>
-<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo
 </pre></div>
 </div>
 </div>
@@ -1232,6 +737,11 @@ mkdir annotations
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Où sommes nous ?</span>
 <span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/projects/form_2022_32/coursLinux/demo/annotations
 </pre></div>
 </div>
 </div>
@@ -1279,6 +789,11 @@ mkdir -p mm10/gff
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On voit un dossier gff</span>
 ls ../../hg38
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C27">gff</span>
 </pre></div>
 </div>
 </div>

@@ -706,7 +706,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Créez un répertoire pour y stocker l’index dans chip-seq/</span>
-<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/chip-seq/   
+<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo/chip-seq/   
 mkdir index
 <span class="nb">cd</span> index
 </pre></div>
@@ -739,16 +739,16 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 13:05:47--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 13:32:45--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 12709705 (12M) [application/x-gzip]
 Saving to: ‘chr21.fa.gz’
 
-100%[======================================&gt;] 12,709,705  6.74MB/s   in 1.8s   
+100%[======================================&gt;] 12,709,705  6.80MB/s   in 1.8s   
 
-2022-11-12 13:05:49 (6.74 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+2022-11-12 13:32:47 (6.80 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -791,12 +791,12 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:00
+  Time reading reference sizes: 00:00:01
 Calculating joined length
 Writing header
 Reserving space for joined string
 Joining reference sequences
-  Time to join reference sequences: 00:00:01
+  Time to join reference sequences: 00:00:00
 bmax according to bmaxDivN setting: 10022154
 Using parameters --bmax 7516616 --dcv 1024
   Doing ahead-of-time memory usage test
@@ -809,9 +809,9 @@ Building DifferenceCoverSample
   V-Sorting samples time: 00:00:01
   Allocating rank array
   Ranking v-sort output
-  Ranking v-sort output time: 00:00:00
+  Ranking v-sort output time: 00:00:01
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:01
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -832,8 +832,63 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:23
+  Sorting block time: 00:00:20
 Returning block of 40088620 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 11820664
+fchr[G]: 20005908
+fchr[T]: 28232289
+fchr[$]: 40088619
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 17557951 bytes to primary EBWT file: chr21_hg38.1.bt2
+Wrote 10022160 bytes to secondary EBWT file: chr21_hg38.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 40088619
+    bwtLen: 40088620
+    sz: 10022155
+    bwtSz: 10022155
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 2505539
+    offsSz: 10022156
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 208795
+    numLines: 208795
+    ebwtTotLen: 13362880
+    ebwtTotSz: 13362880
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:00:28
+Reading reference sizes
+  Time reading reference sizes: 00:00:00
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:01
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 10022154
+Using parameters --bmax 7516616 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 7516616 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
 Traceback (most recent call last):
   File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 90, in &lt;module&gt;
     main()
