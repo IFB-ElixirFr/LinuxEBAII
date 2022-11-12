@@ -34,3 +34,4 @@ html:
 sphinx:
   config:
     nb_merge_streams: true
+    html_extra_path: ['assets']

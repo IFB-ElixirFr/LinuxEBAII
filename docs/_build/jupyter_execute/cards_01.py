@@ -32,8 +32,6 @@ cards = [
         "back": "List contents of directories in a tree-like format"
     }
 ]
-
-
 display_flashcards(cards)
 
 
@@ -48,7 +46,5 @@ cards_2 = [
         "back": "A high throughput sequence QC analysis tool"
     }
 ]
-
-
 display_flashcards(cards_2)
 
