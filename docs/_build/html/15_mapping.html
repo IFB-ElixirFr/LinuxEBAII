@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Arrêter le serveur Jupyterhub" href="16_stopJupyter.html" />
-    <link rel="prev" title="Analyser la qualité avec fastQC" href="14_fastqc.html" />
+    <link rel="prev" title="Rogner les reads" href="14_rogner.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -204,13 +204,18 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="13_data.html">
+  <a class="reference internal" href="12_data.html">
    Jeu de données
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="14_fastqc.html">
+  <a class="reference internal" href="13_fastqc.html">
    Analyser la qualité avec fastQC
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_rogner.html">
+   Rogner les reads
   </a>
  </li>
 </ul>
@@ -238,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
+  <a class="reference internal" href="17_raccourcis.html">
    Les raccourcis clavier du terminal
   </a>
  </li>
@@ -739,16 +744,16 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 14:18:22--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 22:05:49--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 12709705 (12M) [application/x-gzip]
 Saving to: ‘chr21.fa.gz’
 
-100%[======================================&gt;] 12,709,705  6.77MB/s   in 1.8s   
+100%[======================================&gt;] 12,709,705  6.26MB/s   in 1.9s   
 
-2022-11-12 14:18:24 (6.77 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+2022-11-12 22:05:52 (6.26 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -791,12 +796,12 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:00
+  Time reading reference sizes: 00:00:01
 Calculating joined length
 Writing header
 Reserving space for joined string
 Joining reference sequences
-  Time to join reference sequences: 00:00:01
+  Time to join reference sequences: 00:00:00
 bmax according to bmaxDivN setting: 10022154
 Using parameters --bmax 7516616 --dcv 1024
   Doing ahead-of-time memory usage test
@@ -832,7 +837,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:17
+  Sorting block time: 00:00:12
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -871,9 +876,9 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:21
+Total time for call to driver() for forward index: 00:00:17
 Reading reference sizes
-  Time reading reference sizes: 00:00:01
+  Time reading reference sizes: 00:00:00
 Calculating joined length
 Writing header
 Reserving space for joined string
@@ -894,7 +899,7 @@ Building DifferenceCoverSample
   Ranking v-sort output
   Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:01
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -1215,11 +1220,11 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="14_fastqc.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="14_rogner.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Analyser la qualité avec fastQC</p>
+            <p class="prev-next-title">Rogner les reads</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="16_stopJupyter.html" title="next page">

@@ -24,13 +24,14 @@ parts:
     - file: quizz_02
   - caption: Qualité des lectures
     chapters:
-    - file: 13_data
-    - file: 14_fastqc
+    - file: 12_data
+    - file: 13_fastqc
+    - file: 14_rogner
   - caption: Read mapping
     chapters:
     - file: 15_mapping
     - file: 16_stopJupyter
   - caption: Ressources
     chapters:
-    - file: 12_raccourcis
+    - file: 17_raccourcis
     - file: formats
