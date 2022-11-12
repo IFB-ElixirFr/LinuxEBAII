@@ -13,6 +13,7 @@ parts:
     - file: 05_module
     - file: 06_protoCommande
     - file: quizz_01
+    - file: cards_01
   - caption: Arborescence
     chapters:
     - file: 07_arborescence
@@ -21,6 +22,7 @@ parts:
     - file: 10_redirection
     - file: 11_linuxIsMore
     - file: 12_raccourcis
+    - file: quizz_02
   - caption: Qualité des lectures
     chapters:
     - file: 13_data

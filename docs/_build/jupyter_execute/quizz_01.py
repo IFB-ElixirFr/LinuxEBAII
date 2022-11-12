@@ -6,7 +6,9 @@
 # In[1]:
 
 
-example=[{
+from jupyterquiz import display_quiz
+
+q1 =[{
         "question": "Comment charger un module sur le cluster de l'IFB ?",
         "type": "multiple_choice",
         "answers": [
@@ -24,11 +26,5 @@ example=[{
             }
         ]
     }]
-
-
-# In[2]:
-
-
-from jupyterquiz import display_quiz
-display_quiz(example)
+display_quiz(q1)
 
