@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Analyser la qualité avec fastQC" href="14_fastqc.html" />
-    <link rel="prev" title="Les raccourcis clavier du terminal" href="12_raccourcis.html" />
+    <link rel="prev" title="Quizz 2" href="quizz_02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -154,6 +154,11 @@ const thebe_selector_output = ".output, .cell_output"
    Quizz 1
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cards_01.html">
+   Fiches de révision
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -187,8 +192,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="12_raccourcis.html">
-   Les raccourcis clavier du terminal
+  <a class="reference internal" href="quizz_02.html">
+   Quizz 2
   </a>
  </li>
 </ul>
@@ -211,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Qualité des lectures
+  Read mapping
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -223,6 +228,23 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="16_stopJupyter.html">
    Arrêter le serveur Jupyterhub
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Ressources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_raccourcis.html">
+   Les raccourcis clavier du terminal
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="formats.html">
+   Formats
   </a>
  </li>
 </ul>
@@ -600,16 +622,16 @@ On utilise alors la commande wget.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-11 21:51:20--  https://zenodo.org/record/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
-Résolution de zenodo.org (zenodo.org)... 188.184.117.155
-Connexion vers zenodo.org (zenodo.org)|188.184.117.155|:443...connecté.
-requête HTTP transmise, en attente de la réponse...200 OK
-Longueur: 10857524 (10M) [application/octet-stream]
-Sauvegarde en : «siNT_ER_E2_r3_chr21.fastq.gz.1»
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 13:05:23--  https://zenodo.org/record/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
+Resolving zenodo.org (zenodo.org)... 188.184.117.155
+Connecting to zenodo.org (zenodo.org)|188.184.117.155|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10857524 (10M) [application/octet-stream]
+Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
 
-100%[======================================&gt;] 10 857 524  --.-K/s   ds 0,09s   
+100%[======================================&gt;] 10,857,524  67.7MB/s   in 0.2s   
 
-2022-11-11 21:51:21 (113 MB/s) - «siNT_ER_E2_r3_chr21.fastq.gz.1» sauvegardé [10857524/10857524]
+2022-11-12 13:05:24 (67.7 MB/s) - ‘siNT_ER_E2_r3_chr21.fastq.gz’ saved [10857524/10857524]
 </pre></div>
 </div>
 </div>
@@ -622,8 +644,7 @@ Sauvegarde en : «siNT_ER_E2_r3_chr21.fastq.gz.1»
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21.fastq     siNT_ER_E2_r3_chr21.fastq.gz.1
-<span class=" -Color -Color-C9">siNT_ER_E2_r3_chr21.fastq.gz</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C9">siNT_ER_E2_r3_chr21.fastq.gz</span>
 </pre></div>
 </div>
 </div>
@@ -640,16 +661,16 @@ Sauvegarde en : «siNT_ER_E2_r3_chr21.fastq.gz.1»
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gzip: siNT_ER_E2_r3_chr21.fastq already exists; do you wish to overwrite (y or n)? 
-</pre></div>
-</div>
-</div>
 </div>
 <p>Regarder l’extension du fichier et remarquer que la partie <code class="docutils literal notranslate"><span class="pre">.gz</span></code> a disparu :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21.fastq
 </pre></div>
 </div>
 </div>
@@ -719,11 +740,11 @@ Sauvegarde en : «siNT_ER_E2_r3_chr21.fastq.gz.1»
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="12_raccourcis.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="quizz_02.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Les raccourcis clavier du terminal</p>
+            <p class="prev-next-title">Quizz 2</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="14_fastqc.html" title="next page">
