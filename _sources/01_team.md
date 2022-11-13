@@ -4,7 +4,6 @@
 
 ::::{grid}
 :::{grid-item}
-
 :columns: 3
 ```{image} images/CTN_photo.jpeg
 :alt: CTN
@@ -22,7 +21,6 @@ I2BC, claire.toffano-nioche@u-psud.fr
 
 ::::{grid}
 :::{grid-item}
-
 :columns: 3
 ```{image} images/TD_photo.jpeg
 :alt: TD
