@@ -744,16 +744,16 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-13 15:11:05--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-13 15:35:37--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 12709705 (12M) [application/x-gzip]
 Saving to: ‘chr21.fa.gz’
 
-100%[======================================&gt;] 12,709,705  6.80MB/s   in 1.8s   
+100%[======================================&gt;] 12,709,705  6.26MB/s   in 1.9s   
 
-2022-11-13 15:11:08 (6.80 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+2022-11-13 15:35:40 (6.26 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -796,12 +796,12 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:01
+  Time reading reference sizes: 00:00:00
 Calculating joined length
 Writing header
 Reserving space for joined string
 Joining reference sequences
-  Time to join reference sequences: 00:00:00
+  Time to join reference sequences: 00:00:01
 bmax according to bmaxDivN setting: 10022154
 Using parameters --bmax 7516616 --dcv 1024
   Doing ahead-of-time memory usage test
@@ -814,7 +814,7 @@ Building DifferenceCoverSample
   V-Sorting samples time: 00:00:01
   Allocating rank array
   Ranking v-sort output
-  Ranking v-sort output time: 00:00:01
+  Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
   Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
@@ -876,22 +876,90 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:27
+Total time for call to driver() for forward index: 00:00:26
 Reading reference sizes
-Traceback (most recent call last):
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 90, in &lt;module&gt;
-    main()
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/bin/bowtie2-build&quot;, line 87, in main
-    sys.exit(subprocess.call(argv))
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 341, in call
-    return p.wait(timeout=timeout)
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1019, in wait
-    return self._wait(timeout=timeout)
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1653, in _wait
-    (pid, sts) = self._try_wait(0)
-  File &quot;/shared/ifbstor1/software/miniconda/envs/bowtie2-2.3.4.3/lib/python3.7/subprocess.py&quot;, line 1611, in _try_wait
-    (pid, sts) = os.waitpid(self.pid, wait_flags)
-KeyboardInterrupt
+  Time reading reference sizes: 00:00:01
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:00
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 10022154
+Using parameters --bmax 7516616 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 7516616 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:01
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:01
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 4.00886e+07 (target: 7516615)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 40088619 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:00:19
+Returning block of 40088620 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 11820664
+fchr[G]: 20005908
+fchr[T]: 28232289
+fchr[$]: 40088619
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 17557951 bytes to primary EBWT file: chr21_hg38.rev.1.bt2
+Wrote 10022160 bytes to secondary EBWT file: chr21_hg38.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 40088619
+    bwtLen: 40088620
+    sz: 10022155
+    bwtSz: 10022155
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 2505539
+    offsSz: 10022156
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 208795
+    numLines: 208795
+    ebwtTotLen: 13362880
+    ebwtTotSz: 13362880
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:00:28
 </pre></div>
 </div>
 </div>
@@ -1026,8 +1094,8 @@ bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>core.47529		      siNT_ER_E2_r3_chr21_trim.bam.bai
-siNT_ER_E2_r3_chr21_trim.bam  siNT_ER_E2_r3_chr21_trim_bowtie2.log
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21_trim.bam      siNT_ER_E2_r3_chr21_trim_bowtie2.log
+siNT_ER_E2_r3_chr21_trim.bam.bai
 </pre></div>
 </div>
 </div>

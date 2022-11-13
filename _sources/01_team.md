@@ -2,6 +2,25 @@
 
 ## Intervenants
 
+::::{grid}
+:gutter: 3
+
+:::{grid-item-card}
+
+
+Claire Toffano-Nioche
+I2BC, claire.toffano-nioche@u-psud.fr
+:::
+
+:::{grid-item-card} Two!
+Here's the second card.
+:::
+
+:::{grid-item-card} Three!
+Here's the third card.
+:::
+::::
+
 - **Claire Toffano-Nioche** (I2BC, claire.toffano-nioche@u-psud.fr)
 - **Thomas Denecker** (IFB, thomas.denecker@france-bioinformatique.fr) 
 
