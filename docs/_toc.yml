@@ -35,3 +35,6 @@ parts:
     chapters:
     - file: 17_raccourcis
     - file: formats
+    - file: pourquoiCaPlante
+    - file: glossaire 
+    - file: genindex

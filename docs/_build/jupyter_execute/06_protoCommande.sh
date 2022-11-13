@@ -3,8 +3,11 @@
 module load fastqc
 fastqc -v # quelle est la version du logiciel fastqc sur ce serveur ?
 
+# Exemple de commande avec une valeur choisie par l'utilisateur
+cd /shared/projects/form_2022_32/
+
 # Exemple d'argument avec valeur associée 
-tree -L 2 # Afficher sous forme d’arbre l’arborescence sur deux niveaux
+tree -L 1 # Afficher sous forme d’arbre l’arborescence sur un niveaux
 
 # Demander de l'aide (help) sur fastqc avec l'argument -h
 fastqc -h  

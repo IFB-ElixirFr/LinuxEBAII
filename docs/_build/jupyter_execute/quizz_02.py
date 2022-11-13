@@ -9,7 +9,7 @@
 from jupyterquiz import display_quiz
 
 q1=[{
-        "question": "Comment de module différents sont disponibles sur le cluster de l'IFB ?",
+        "question": "Combien de modules différents sont disponibles sur le cluster de l'IFB ?",
         "type": "numeric",
         "answers": [
             {
