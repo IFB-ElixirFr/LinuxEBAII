@@ -728,7 +728,7 @@ wget https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-12 22:05:09--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-13 15:10:11--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 Resolving zenodo.org (zenodo.org)... 188.184.117.155
 Connecting to zenodo.org (zenodo.org)|188.184.117.155|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -737,7 +737,7 @@ Saving to: ‘hg38_exons.bed.gz’
 
 100%[======================================&gt;] 8,838,009   --.-K/s   in 0.1s    
 
-2022-11-12 22:05:10 (85.7 MB/s) - ‘hg38_exons.bed.gz’ saved [8838009/8838009]
+2022-11-13 15:10:12 (64.5 MB/s) - ‘hg38_exons.bed.gz’ saved [8838009/8838009]
 </pre></div>
 </div>
 </div>
@@ -838,16 +838,16 @@ file hg38_exons.bed
 </section>
 <section id="explications">
 <h4>Explications<a class="headerlink" href="#explications" title="Permalink to this headline">#</a></h4>
-<p>Chaque ligne est une annotation. Les informations sont tabulées, i.e. chaque ligne contient un nombre fixe de colonnes (ici, 5), séparées par des tabulations.</p>
-<p>Le format BED est utilisée pour beaucoup de types d’annotations, comme les régions MACS :</p>
+<p>Chaque ligne est une annotation. Les informations sont tabulées, ie. chaque ligne contient un nombre fixe de colonnes (ici, 5), séparées par des tabulations.</p>
+<p>Le format BED est utilisé pour beaucoup de types d’annotations, comme les régions MACS :</p>
 <ol class="simple">
 <li><p>(chr1) le nombre du chromosome (ou du scaffold)</p></li>
-<li><p>(100) position extrémale en 5’</p></li>
-<li><p>(2099) position extrémale en 3’</p></li>
+<li><p>(100) position extrême en 5’</p></li>
+<li><p>(2099) position extrême en 3’</p></li>
 <li><p>(peak_1) nom systématique de la jonction</p></li>
-<li><p>(123) score de la région</p></li>
+<li><p>(123) score pour cette région</p></li>
 </ol>
-<p>Dans d’autres contexte, on peut ne trouver que les 3 ou 4 premiers champs.</p>
+<p>Dans d’autres contextes, on peut ne trouver que les 3 ou 4 premiers champs.</p>
 </section>
 <section id="exemple-2-jonctions-entre-exons">
 <h4>Exemple 2 (jonctions entre exons)<a class="headerlink" href="#exemple-2-jonctions-entre-exons" title="Permalink to this headline">#</a></h4>
@@ -857,16 +857,16 @@ file hg38_exons.bed
 </section>
 <section id="id1">
 <h4>Explications<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
-<p>Ici, le format contient 12 colonnes:
+<p>Ici, le format contient 12 colonnes (BED12):
 6. (chr1) le nombre du chromosome (ou du scaffold)
-7. (990) position extrémale en 5’ des lectures chevauchant la jonction
-8. (2099) position extrémale en 3’ des lectures chevauchant la jonction
+7. (990) position extrême en 5’ des lectures chevauchant la jonction
+8. (2099) position extrême en 3’ des lectures chevauchant la jonction
 9. (JUNC00001560) nom systématique de la jonction
 10. (3) nombre de lectures couvrant la jonction
 11. (+) brin
 12. (990) même chose que la colonne 2
 13. (2099) même chose que la colonne 3
-14. (255,0,0) pas important
+14. (255,0,0) code couleur (RVB)
 15. (2) pas important
 16. (40,67) taille maximum des lectures couvrant l’exon à gauche et à droite de l’intron.
 17. (0,1042) pas important</p>
@@ -893,7 +893,7 @@ file hg38_exons.bed
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Positions Start et End sont toujours données par rapport au sens 5’/3’ du brin +. Les coordonnées sont ‘zero-based, half-open’</p>
+<p>Positions Start et End sont toujours données par rapport au sens 5’/3’ du brin +. Les coordonnées sont ‘zero-based, half-open’ <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">n)</span></code> (une autre convention est l’intervalle clos <code class="docutils literal notranslate"><span class="pre">[1,n]</span></code>)</p>
 </div>
 </section>
 </section>
@@ -922,14 +922,14 @@ q : pour quitter. <br></p>
 <section id="exercices">
 <h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
-<li><p>Utilisez la commande <strong>head</strong> pour regarder les 10 premières lignes du fichier hg38_exons.bed</p></li>
-<li><p>Utilisez la commande <strong>tail</strong> pour regarder les 10 dernières lignes du fichier hg38_exons.bed</p></li>
-<li><p>Promenez-vous dans le fichier hg38_exons.bed en utilisant la commande less. Quittez <strong>less</strong>.</p></li>
-<li><p>Renvoyer le contenu du fichier à l’écran avec <strong>cat</strong>.</p></li>
+<li><p>Utilisez la commande <code class="docutils literal notranslate"><span class="pre">head</span></code> pour regarder les 10 premières lignes du fichier hg38_exons.bed</p></li>
+<li><p>Utilisez la commande <code class="docutils literal notranslate"><span class="pre">tail</span></code> pour regarder les 10 dernières lignes du fichier hg38_exons.bed</p></li>
+<li><p>Promenez-vous dans le fichier hg38_exons.bed en utilisant la commande less. Quittez <code class="docutils literal notranslate"><span class="pre">less</span></code>.</p></li>
+<li><p>Renvoyer le contenu du fichier à l’écran avec <code class="docutils literal notranslate"><span class="pre">cat</span></code>.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Si la lecture vous fatigue, utilisez <ctrl> + c (cancel) pour arrêter le défilement. *Attention ce truc ne semble pas bien marcher à travers Jupyter Lab</p>
+<p>Si la lecture vous fatigue, utilisez <code class="docutils literal notranslate"><span class="pre">&lt;ctrl&gt;</span> <span class="pre">+</span> <span class="pre">c</span></code> (cancel) pour arrêter le défilement. *Attention ce truc ne semble pas bien marcher à travers Jupyter Lab</p>
 </div>
 </section>
 <section id="solutions">
@@ -984,7 +984,7 @@ chr1	100007033	100007156	SLC35A3|ENST00000370155|nonsense_mediated_decay	.	+
 <section id="extraire-des-colonnes">
 <h2>Extraire des colonnes<a class="headerlink" href="#extraire-des-colonnes" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Pour extraire des colonnes on utilisera la commande cut avec l’argument <code class="docutils literal notranslate"><span class="pre">-f</span></code> (field)</p></li>
+<li><p>Pour extraire des colonnes on utilisera la commande <code class="docutils literal notranslate"><span class="pre">cut</span></code> avec l’argument <code class="docutils literal notranslate"><span class="pre">-f</span></code> (field)</p></li>
 <li><p>Les colonnes du fichiers doivent nécessairement être séparées par une <strong>tabulation</strong> (sinon utiliser l’argument <code class="docutils literal notranslate"><span class="pre">-d</span></code> pour ‘delimiter’)</p></li>
 </ul>
 <div class="admonition tip">
@@ -1014,7 +1014,7 @@ cut -f <span class="m">3</span>- hg38_exons.bed
 </section>
 <section id="trier-un-fichier">
 <h2>Trier un fichier<a class="headerlink" href="#trier-un-fichier" title="Permalink to this headline">#</a></h2>
-<p>Il faut utiliser la commande sort (tri alphabétique par défaut).</p>
+<p>Il faut utiliser la commande <code class="docutils literal notranslate"><span class="pre">sort</span></code> (tri alphabétique par défaut).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-k</span></code> (<strong>k</strong>ey): e.g</p>
 <ul>

@@ -522,7 +522,7 @@ title="Print to PDF"
 <section id="une-commande-magique">
 <h2>Une commande magique !<a class="headerlink" href="#une-commande-magique" title="Permalink to this headline">#</a></h2>
 <p>Un exemple parmi tant d’autres : identifier et compter le nombre d’éléments d’un fichier d’annotation de type GFF (Generic Feature Format).</p>
-<p>On demande à awk de récupérer la 3ème colonne ($3) du gff (à l’exclusion des lignes de commentaires !/^#/) puis sort trie alphabétiquement les éléments et uniq les comptes</p>
+<p>On demande à awk de récupérer la 3ème colonne ($3) du gff (à l’exclusion des lignes de commentaires !/^#/) puis sort trie alphabétiquement les éléments et <code class="docutils literal notranslate"><span class="pre">uniq</span></code> les compte.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">annotationFile</span><span class="o">=</span><span class="s2">&quot;/shared/bank/escherichia_coli/NC_000913.3_K-12_substr_MG1655/gff3/GCA_000005845.2_ASM584v2_genomic.gff&quot;</span>
