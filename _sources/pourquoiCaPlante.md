@@ -1,7 +1,13 @@
 # Pourquoi ça plante ?
 
+```{note}
+Un grand merci à Morgane Thomas-Chollier !
+```
+
 ## Panique ! Comment arrêter le programme ?
-Ctrl C (les deux touches en même temps)
+```
+Ctrl + C (les deux touches en même temps)
+```
 
 ## Où suis-je ?
 ### Problème possible
