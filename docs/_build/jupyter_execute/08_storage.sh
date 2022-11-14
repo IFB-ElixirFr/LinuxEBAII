@@ -1,5 +1,8 @@
 # remplacer <project>
 # cd /shared/projects/<project>/
+# Dans notre cadre de ce livre, <project> = form_2022_32/coursLinux/demo
+# attention de ne pas utiliser ce nom là mais le votre
+
 cd /shared/projects/form_2022_32/coursLinux/demo
 
 # On crée le dossier

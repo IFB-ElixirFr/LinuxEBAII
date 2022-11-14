@@ -13,14 +13,10 @@ mkdir trimmed
 cd trimmed
 
 # On lance sickle
-# Ici le \ indique un retour à la ligne mais vous n’êtes pas censé le 
-# taper et aller à la ligne
 # &> redirige la sortie d’erreur et la sortie standard dans un fichier
-sickle se -f ../fastq/siNT_ER_E2_r3_chr21.fastq \
--t sanger -o siNT_ER_E2_r3_chr21_trim.fastq \
-&> siNT_ER_E2_r3_chr21_sickle.log
+sickle se -f ../fastq/siNT_ER_E2_r3_chr21.fastq -t sanger -o siNT_ER_E2_r3_chr21_trim.fastq &> siNT_ER_E2_r3_chr21_sickle.log
 
-# le nombre de lignes présentes dans les fichiers fastq
+# Le nombre de lignes présentes dans les fichiers fastq
 # Données brutes
 wc -l ../fastq/siNT_ER_E2_r3_chr21.fastq     
 

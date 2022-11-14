@@ -6,6 +6,8 @@ cd index
 # Téléchargez l’index avec wget
 wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz 
 
+zcat chr21.fa.gz | head 
+
 # décompression
 gunzip chr21.fa.gz
 

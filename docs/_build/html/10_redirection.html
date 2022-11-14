@@ -252,6 +252,26 @@ const thebe_selector_output = ".output, .cell_output"
    Formats
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pourquoiCaPlante.html">
+   Pourquoi ça plante ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossaire.html">
+   Glossaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="genindex.html">
+   Index
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -562,9 +582,13 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si vous souhaitez rediriger stdout et stderr dans le même fichier : <code class="docutils literal notranslate"><span class="pre">&amp;&gt;</span> <span class="pre">monFichier.txt</span></code></p>
+</div>
 <section id="un-exemple">
 <h2>Un exemple<a class="headerlink" href="#un-exemple" title="Permalink to this headline">#</a></h2>
-<p>Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes</p>
+<p>Compter le nombre de fichiers d’extension “bed” présents dans le répertoire où vous êtes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo/annotations/hg38/bed
@@ -581,8 +605,8 @@ ls -l *.bed <span class="p">|</span> wc -l
 <section id="exercices">
 <h3>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="01d3dc35-a609-49ec-a35a-270b165364d9" name="1b8e27a7-0e74-4d52-8d53-4a614f9fc961" type="radio">
-</input><label class="sd-tab-label" for="01d3dc35-a609-49ec-a35a-270b165364d9">
+<input checked="checked" id="2b23d58b-3e6f-4a31-a377-cfb712594cea" name="7ba877a7-616a-44bd-9d3d-eaa1410c4a86" type="radio">
+</input><label class="sd-tab-label" for="2b23d58b-3e6f-4a31-a377-cfb712594cea">
 Questions</label><div class="sd-tab-content docutils">
 <ul class="simple">
 <li><p><strong>Hommage à Marseille</strong></p>
@@ -597,8 +621,8 @@ Questions</label><div class="sd-tab-content docutils">
 </li>
 </ul>
 </div>
-<input id="0cc19164-73ac-4cab-baab-218c383fc85b" name="1b8e27a7-0e74-4d52-8d53-4a614f9fc961" type="radio">
-</input><label class="sd-tab-label" for="0cc19164-73ac-4cab-baab-218c383fc85b">
+<input id="e90492f8-651e-4958-8648-3c32f139b33c" name="7ba877a7-616a-44bd-9d3d-eaa1410c4a86" type="radio">
+</input><label class="sd-tab-label" for="e90492f8-651e-4958-8648-3c32f139b33c">
 Solutions</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On utilise head puis un tube qui renvoie vers less. </span>
 <span class="c1"># Tapez q pour quitter.</span>
