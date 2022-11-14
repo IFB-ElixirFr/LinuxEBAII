@@ -1,6 +1,6 @@
 # Markdown 
 
-Le Markdown est un langage de balises simple. Il est utilisé pour formater les textes sur Github. Ce wiki par exemple a été écrit en Markdown. Vous trouverez ici les balises les plus utilisées.
+Le Markdown est un langage de balises simple. Il est utilisé pour formater les textes sur Github, Jupyter, ...
 
 ## Titre
 
