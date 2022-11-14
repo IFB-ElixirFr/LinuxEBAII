@@ -42,4 +42,8 @@ head
 
 tail
     output the last part of files
+
+file
+    determine file type
+
 ```

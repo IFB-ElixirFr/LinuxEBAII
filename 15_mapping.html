@@ -252,6 +252,26 @@ const thebe_selector_output = ".output, .cell_output"
    Formats
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pourquoiCaPlante.html">
+   Pourquoi ça plante ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossaire.html">
+   Glossaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="genindex.html">
+   Index
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -744,16 +764,40 @@ wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-13 16:18:06--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-14 18:29:09--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 12709705 (12M) [application/x-gzip]
 Saving to: ‘chr21.fa.gz’
 
-100%[======================================&gt;] 12,709,705  6.80MB/s   in 1.8s   
+100%[======================================&gt;] 12,709,705  7.20MB/s   in 1.7s   
 
-2022-11-13 16:18:08 (6.80 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+2022-11-14 18:29:11 (7.20 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il est possible de visualiser un fichier compressé avec <code class="docutils literal notranslate"><span class="pre">zcat</span></code> (<code class="docutils literal notranslate"><span class="pre">z</span></code> (zip) + <code class="docutils literal notranslate"><span class="pre">cat</span></code>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zcat chr21.fa.gz <span class="p">|</span> head 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt;chr21
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+gzip: stdout: Broken pipe
 </pre></div>
 </div>
 </div>
@@ -796,12 +840,12 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:01
+  Time reading reference sizes: 00:00:00
 Calculating joined length
 Writing header
 Reserving space for joined string
 Joining reference sequences
-  Time to join reference sequences: 00:00:00
+  Time to join reference sequences: 00:00:01
 bmax according to bmaxDivN setting: 10022154
 Using parameters --bmax 7516616 --dcv 1024
   Doing ahead-of-time memory usage test
@@ -816,7 +860,7 @@ Building DifferenceCoverSample
   Ranking v-sort output
   Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:01
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -837,7 +881,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:20
+  Sorting block time: 00:00:21
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -876,14 +920,14 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:28
+Total time for call to driver() for forward index: 00:00:30
 Reading reference sizes
-  Time reading reference sizes: 00:00:00
+  Time reading reference sizes: 00:00:01
 Calculating joined length
 Writing header
 Reserving space for joined string
 Joining reference sequences
-  Time to join reference sequences: 00:00:01
+  Time to join reference sequences: 00:00:00
   Time to reverse reference sequence: 00:00:00
 bmax according to bmaxDivN setting: 10022154
 Using parameters --bmax 7516616 --dcv 1024
@@ -959,7 +1003,7 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 1
-Total time for backward call to driver() for mirror index: 00:00:27
+Total time for backward call to driver() for mirror index: 00:00:28
 </pre></div>
 </div>
 </div>
@@ -1160,6 +1204,7 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
 <li><p>00000001101 → 2^0+2^2+2^3 =13 …</p></li>
 <li><p>…</p></li>
 </ul>
+<p>Un outil est disponible <a class="reference external" href="https://www.samformat.info/sam-format-flag">ici</a> pour vous dire à quoi correspond votre valeur.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>Voir (Explained SAM flags)[<a class="reference external" href="https://broadinstitute.github.io/picard/explain-flags.html">https://broadinstitute.github.io/picard/explain-flags.html</a>]</p>

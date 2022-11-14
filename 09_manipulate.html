@@ -252,6 +252,26 @@ const thebe_selector_output = ".output, .cell_output"
    Formats
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pourquoiCaPlante.html">
+   Pourquoi ça plante ?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossaire.html">
+   Glossaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="genindex.html">
+   Index
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -728,7 +748,7 @@ wget https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-13 16:17:11--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-14 18:28:10--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 Resolving zenodo.org (zenodo.org)... 188.184.117.155
 Connecting to zenodo.org (zenodo.org)|188.184.117.155|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -737,7 +757,7 @@ Saving to: ‘hg38_exons.bed.gz’
 
 100%[======================================&gt;] 8,838,009   --.-K/s   in 0.1s    
 
-2022-11-13 16:17:12 (84.9 MB/s) - ‘hg38_exons.bed.gz’ saved [8838009/8838009]
+2022-11-14 18:28:10 (88.5 MB/s) - ‘hg38_exons.bed.gz’ saved [8838009/8838009]
 </pre></div>
 </div>
 </div>
@@ -769,6 +789,7 @@ file hg38_exons.bed.gz
 </div>
 </div>
 </div>
+<p>Le <code class="docutils literal notranslate"><span class="pre">.gz</span></code> indique que le fichier est compressé. Si vous faites un head sur ce fichier, vous risquez de ne rien comprendre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On le décompresse</span>
@@ -785,7 +806,7 @@ ls -lh
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 65M
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 78M
 -rw-rw----+ 1 tdenecker tdenecker 81M Oct 25 21:57 hg38_exons.bed
 </pre></div>
 </div>
@@ -902,7 +923,7 @@ file hg38_exons.bed
 <ul class="simple">
 <li><p>On utilisera <code class="docutils literal notranslate"><span class="pre">less</span></code> ou <code class="docutils literal notranslate"><span class="pre">more</span></code> (*) pour parcourir le fichier ligne à ligne (logiciels de type ‘pager’).</p></li>
 <li><p>On utilisera <code class="docutils literal notranslate"><span class="pre">head</span></code> ou <code class="docutils literal notranslate"><span class="pre">tail</span></code> pour voir les <strong>n premières</strong> ou <strong>n dernières</strong> lignes d’un fichier.</p></li>
-<li><p>La commande cat permet de renvoyer tout le contenu d’un fichier sur la sortie standard (l’écran). <ctrl> + c (cancel) pour arrêter.</p></li>
+<li><p>La commande <code class="docutils literal notranslate"><span class="pre">cat</span></code> permet de renvoyer tout le contenu d’un fichier sur la sortie standard (l’écran). <ctrl> + c (cancel) pour arrêter.</p></li>
 <li><p>Les <strong>raccourcis clavier dans less</strong> sont les mêmes que pour la commande man.</p></li>
 </ul>
 <p>(<em>) Less does more or less the same as more, but rather more than less, I like less more than more (Jacques van Helden)
