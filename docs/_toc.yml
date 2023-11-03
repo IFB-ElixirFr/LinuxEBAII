@@ -20,7 +20,7 @@ parts:
     - file: 08_storage
     - file: 09_manipulate
     - file: 10_redirection
-    - file: 11_linuxIsMore
+    - file: 11_bonnesPratiques
     - file: quizz_02
   - caption: Qualité des lectures
     chapters:
