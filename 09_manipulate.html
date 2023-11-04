@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Manipuler des fichiers &#8212; Linux en Bioinformatique</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +62,103 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '09_manipulate';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Redirections" href="10_redirection.html" />
     <link rel="prev" title="Stockage fichiers" href="08_storage.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="00_home.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Linux en Bioinformatique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Linux en Bioinformatique - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Linux en Bioinformatique - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -113,612 +167,278 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_team.html">
-   L’équipe pédagogique
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_introduction.html">
-   Le cluster de l’IFB
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_jupyter.html">
-   C’est quoi JupyterHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_bash.html">
-   Comment converser avec le terminal ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_module.html">
-   Charger l’environnement logiciel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_protoCommande.html">
-   Prototype(s) d’une commande
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quizz_01.html">
-   Quizz 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cards_01.html">
-   Fiches de révision
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="01_team.html">L’équipe pédagogique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_introduction.html">Le cluster de l’IFB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_jupyter.html">C’est quoi JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_bash.html">Comment converser avec le terminal ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_module.html">Charger l’environnement logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_protoCommande.html">Prototype(s) d’une commande</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quizz_01.html">Quizz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cards_01.html">Fiches de révision</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Arborescence
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Arborescence</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="07_arborescence.html">
-   Arborescence de fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_storage.html">
-   Stockage fichiers
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Manipuler des fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_redirection.html">
-   Redirections
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_linuxIsMore.html">
-   Linux c’est aussi tellement plus !
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quizz_02.html">
-   Quizz 2
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="07_arborescence.html">Arborescence de fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_storage.html">Stockage fichiers</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Manipuler des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_redirection.html">Redirections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_bonnesPratiques.html">Quelques bonnes pratiques…</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quizz_02.html">Quizz 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Qualité des lectures
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Qualité des lectures</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="12_data.html">
-   Jeu de données
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="13_fastqc.html">
-   Analyser la qualité avec fastQC
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_rogner.html">
-   Rogner les reads
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="12_data.html">Jeu de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_fastqc.html">Analyser la qualité avec fastQC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_rogner.html">Rogner les reads</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Read mapping
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Read mapping</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="15_mapping.html">
-   Mapping
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="16_stopJupyter.html">
-   Arrêter le serveur Jupyterhub
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="15_mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_stopJupyter.html">Arrêter le serveur Jupyterhub</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ressources
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="17_raccourcis.html">
-   Les raccourcis clavier du terminal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="formats.html">
-   Formats
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pourquoiCaPlante.html">
-   Pourquoi ça plante ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="glossaire.html">
-   Glossaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="genindex.html">
-   Index
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="17_raccourcis.html">Les raccourcis clavier du terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pourquoiCaPlante.html">Pourquoi ça plante ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/09_manipulate.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IFB-ElixirFr/LinuxEBAII" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F09_manipulate.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/09_manipulate.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F09_manipulate.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/09_manipulate.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#telecharger-et-decompresser-un-fichier">
-   Télécharger et décompresser un fichier
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-fichier-hg38-exons-bed">
-   Le fichier hg38_exons.bed
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#focus-sur-le-format-bed">
-     Focus sur le format BED
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#type-de-fichier">
-       Type de fichier
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#signification-du-nom">
-       Signification du nom
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#qui-le-genere">
-       Qui le génère
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#qui-le-lit">
-       Qui le lit
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remarque">
-       Remarque
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemple-1-simple">
-       Exemple 1 (simple)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#explications">
-       Explications
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemple-2-jonctions-entre-exons">
-       Exemple 2 (jonctions entre exons)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Explications
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pour-en-savoir-plus">
-       Pour en savoir plus
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notre-fichier">
-     Notre fichier
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualiser-le-contenu-d-un-fichier">
-   Visualiser le contenu d’un fichier
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercices">
-   Exercices
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solutions">
-   Solutions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compter-les-lignes-d-un-fichier">
-   Compter les lignes d’un fichier
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extraire-des-colonnes">
-   Extraire des colonnes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trier-un-fichier">
-   Trier un fichier
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Manipuler des fichiers</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#telecharger-et-decompresser-un-fichier">
-   Télécharger et décompresser un fichier
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-fichier-hg38-exons-bed">
-   Le fichier hg38_exons.bed
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#focus-sur-le-format-bed">
-     Focus sur le format BED
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#type-de-fichier">
-       Type de fichier
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#signification-du-nom">
-       Signification du nom
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#qui-le-genere">
-       Qui le génère
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#qui-le-lit">
-       Qui le lit
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remarque">
-       Remarque
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemple-1-simple">
-       Exemple 1 (simple)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#explications">
-       Explications
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exemple-2-jonctions-entre-exons">
-       Exemple 2 (jonctions entre exons)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Explications
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pour-en-savoir-plus">
-       Pour en savoir plus
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notre-fichier">
-     Notre fichier
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualiser-le-contenu-d-un-fichier">
-   Visualiser le contenu d’un fichier
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercices">
-   Exercices
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solutions">
-   Solutions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compter-les-lignes-d-un-fichier">
-   Compter les lignes d’un fichier
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extraire-des-colonnes">
-   Extraire des colonnes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trier-un-fichier">
-   Trier un fichier
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Manipuler des fichiers</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#telecharger-et-decompresser-un-fichier">Télécharger et décompresser un fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-fichier-hg38-exons-bed">Le fichier hg38_exons.bed</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focus-sur-le-format-bed">Focus sur le format BED</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-de-fichier">Type de fichier</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signification-du-nom">Signification du nom</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qui-le-genere">Qui le génère</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qui-le-lit">Qui le lit</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remarque">Remarque</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-bed6-simple">Exemple 1 - BED6 (simple)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-2-bed12-jonctions-entre-exons">Exemple 2 - BED12 (jonctions entre exons)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Explications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-en-savoir-plus">Pour en savoir plus</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notre-fichier">Notre fichier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-le-contenu-d-un-fichier">Visualiser le contenu d’un fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compter-les-lignes-d-un-fichier">Compter les lignes d’un fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extraire-des-colonnes">Extraire des colonnes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trier-un-fichier">Trier un fichier</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="manipuler-des-fichiers">
-<h1>Manipuler des fichiers<a class="headerlink" href="#manipuler-des-fichiers" title="Permalink to this headline">#</a></h1>
+<h1>Manipuler des fichiers<a class="headerlink" href="#manipuler-des-fichiers" title="Permalink to this heading">#</a></h1>
 <section id="telecharger-et-decompresser-un-fichier">
-<h2>Télécharger et décompresser un fichier<a class="headerlink" href="#telecharger-et-decompresser-un-fichier" title="Permalink to this headline">#</a></h2>
+<h2>Télécharger et décompresser un fichier<a class="headerlink" href="#telecharger-et-decompresser-un-fichier" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Pour le téléchargement, on pourra utiliser par exemple la commande <code class="docutils literal notranslate"><span class="pre">wget</span></code>.</p></li>
 <li><p>Pour la décompression on utilisera la commande <code class="docutils literal notranslate"><span class="pre">gunzip</span></code> si le fichier a été compressé avec l’algorithme <code class="docutils literal notranslate"><span class="pre">gzip</span></code> (extension .gz)</p></li>
@@ -728,14 +448,22 @@ title="Print to PDF"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans annotations</span>
 <span class="c1"># remplacer &lt;project&gt; </span>
 <span class="c1"># cd /shared/projects/&lt;project&gt;/annotations/hg38 </span>
-<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo/annotations/hg38 
+<span class="nb">cd</span><span class="w"> </span>/shared/projects/form_2022_32/coursLinux/demo/annotations/hg38<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir bed<span class="p">;</span> <span class="nb">cd</span> bed
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>bed<span class="p">;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>bed
 </pre></div>
 </div>
 </div>
@@ -743,21 +471,7 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On télécharge le fichier </span>
-wget https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-14 18:28:10--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
-Resolving zenodo.org (zenodo.org)... 188.184.117.155
-Connecting to zenodo.org (zenodo.org)|188.184.117.155|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 8838009 (8.4M) [application/octet-stream]
-Saving to: ‘hg38_exons.bed.gz’
-
-100%[======================================&gt;] 8,838,009   --.-K/s   in 0.1s    
-
-2022-11-14 18:28:10 (88.5 MB/s) - ‘hg38_exons.bed.gz’ saved [8838009/8838009]
+wget<span class="w"> </span>https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
 </pre></div>
 </div>
 </div>
@@ -765,13 +479,7 @@ Saving to: ‘hg38_exons.bed.gz’
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Le fichier compressé (finit par &quot;.gz&quot;). Il pèse 8,4Mo.</span>
-ls -lh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 68K
--rw-rw----+ 1 tdenecker tdenecker 8.5M Oct 25 21:57 <span class=" -Color -Color-C9">hg38_exons.bed.gz</span>
+ls<span class="w"> </span>-lh
 </pre></div>
 </div>
 </div>
@@ -779,12 +487,7 @@ ls -lh
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vérification du type de fichier</span>
-file hg38_exons.bed.gz
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38_exons.bed.gz: gzip compressed data, was &quot;hg38_exons.bed&quot;, from Unix, last modified: Tue Nov 20 11:29:21 2018
+file<span class="w"> </span>hg38_exons.bed.gz
 </pre></div>
 </div>
 </div>
@@ -793,7 +496,7 @@ file hg38_exons.bed.gz
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On le décompresse</span>
-gunzip hg38_exons.bed.gz
+gunzip<span class="w"> </span>hg38_exons.bed.gz
 </pre></div>
 </div>
 </div>
@@ -801,13 +504,7 @@ gunzip hg38_exons.bed.gz
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Le fichier a perdu l&#39;extension gz. Il pèse 81Mo.</span>
-ls -lh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 78M
--rw-rw----+ 1 tdenecker tdenecker 81M Oct 25 21:57 hg38_exons.bed
+ls<span class="w"> </span>-lh
 </pre></div>
 </div>
 </div>
@@ -815,91 +512,89 @@ ls -lh
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vérification du type de fichier : il a changé.</span>
-file hg38_exons.bed
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38_exons.bed: ASCII text
+file<span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="le-fichier-hg38-exons-bed">
-<h2>Le fichier hg38_exons.bed<a class="headerlink" href="#le-fichier-hg38-exons-bed" title="Permalink to this headline">#</a></h2>
+<h2>Le fichier hg38_exons.bed<a class="headerlink" href="#le-fichier-hg38-exons-bed" title="Permalink to this heading">#</a></h2>
 <p>Contient les coordonnées (début/fin) des exons humains au format BED.</p>
 <section id="focus-sur-le-format-bed">
-<h3>Focus sur le format BED<a class="headerlink" href="#focus-sur-le-format-bed" title="Permalink to this headline">#</a></h3>
+<h3>Focus sur le format BED<a class="headerlink" href="#focus-sur-le-format-bed" title="Permalink to this heading">#</a></h3>
 <section id="type-de-fichier">
-<h4>Type de fichier<a class="headerlink" href="#type-de-fichier" title="Permalink to this headline">#</a></h4>
+<h4>Type de fichier<a class="headerlink" href="#type-de-fichier" title="Permalink to this heading">#</a></h4>
 <p>Annotation</p>
 </section>
 <section id="signification-du-nom">
-<h4>Signification du nom<a class="headerlink" href="#signification-du-nom" title="Permalink to this headline">#</a></h4>
+<h4>Signification du nom<a class="headerlink" href="#signification-du-nom" title="Permalink to this heading">#</a></h4>
 <p>Browser Extensible Format</p>
 </section>
 <section id="qui-le-genere">
-<h4>Qui le génère<a class="headerlink" href="#qui-le-genere" title="Permalink to this headline">#</a></h4>
+<h4>Qui le génère<a class="headerlink" href="#qui-le-genere" title="Permalink to this heading">#</a></h4>
 <p>Les outils d’annotation, TopHat</p>
 </section>
 <section id="qui-le-lit">
-<h4>Qui le lit<a class="headerlink" href="#qui-le-lit" title="Permalink to this headline">#</a></h4>
+<h4>Qui le lit<a class="headerlink" href="#qui-le-lit" title="Permalink to this heading">#</a></h4>
 <p>Les visualisateurs, vous</p>
 </section>
 <section id="remarque">
-<h4>Remarque<a class="headerlink" href="#remarque" title="Permalink to this headline">#</a></h4>
+<h4>Remarque<a class="headerlink" href="#remarque" title="Permalink to this heading">#</a></h4>
 <p>Le format BED est un format multi-forme, qui peut être utilisé dans beaucoup de contextes.</p>
 </section>
-<section id="exemple-1-simple">
-<h4>Exemple 1 (simple)<a class="headerlink" href="#exemple-1-simple" title="Permalink to this headline">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr1</span>   <span class="mi">100</span>   <span class="mi">200</span>    <span class="n">peak_1</span>    <span class="mi">123</span>
+<section id="exemple-1-bed6-simple">
+<h4>Exemple 1 - BED6 (simple)<a class="headerlink" href="#exemple-1-bed6-simple" title="Permalink to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr1</span>   <span class="mi">100</span>   <span class="mi">200</span>    <span class="n">peak_1</span>    <span class="mi">123</span>    <span class="o">+</span>
 </pre></div>
 </div>
 </section>
 <section id="explications">
-<h4>Explications<a class="headerlink" href="#explications" title="Permalink to this headline">#</a></h4>
+<h4>Explications<a class="headerlink" href="#explications" title="Permalink to this heading">#</a></h4>
 <p>Chaque ligne est une annotation. Les informations sont tabulées, ie. chaque ligne contient un nombre fixe de colonnes (ici, 5), séparées par des tabulations.</p>
 <p>Le format BED est utilisé pour beaucoup de types d’annotations, comme les régions MACS :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>(chr1) le nombre du chromosome (ou du scaffold)</p></li>
 <li><p>(100) position extrême en 5’</p></li>
 <li><p>(2099) position extrême en 3’</p></li>
-<li><p>(peak_1) nom systématique de la jonction</p></li>
+<li><p>(peak_1) nom de l’annotation</p></li>
 <li><p>(123) score pour cette région</p></li>
+<li><p>(+) brin</p></li>
 </ol>
-<p>Dans d’autres contextes, on peut ne trouver que les 3 ou 4 premiers champs.</p>
+<p>Dans d’autres contextes, on peut ne trouver que les 3 premiers champs.</p>
 </section>
-<section id="exemple-2-jonctions-entre-exons">
-<h4>Exemple 2 (jonctions entre exons)<a class="headerlink" href="#exemple-2-jonctions-entre-exons" title="Permalink to this headline">#</a></h4>
+<section id="exemple-2-bed12-jonctions-entre-exons">
+<h4>Exemple 2 - BED12 (jonctions entre exons)<a class="headerlink" href="#exemple-2-bed12-jonctions-entre-exons" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr1</span>   <span class="mi">990</span>   <span class="mi">2099</span>   <span class="n">JUNC00001560</span>   <span class="mi">3</span>   <span class="o">+</span>   <span class="mi">990</span>   <span class="mi">2099</span>   <span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>   <span class="mi">2</span>   <span class="mi">40</span><span class="p">,</span><span class="mi">67</span>   <span class="mi">0</span><span class="p">,</span><span class="mi">1042</span>
 </pre></div>
 </div>
 </section>
 <section id="id1">
-<h4>Explications<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
-<p>Ici, le format contient 12 colonnes (BED12):
-6. (chr1) le nombre du chromosome (ou du scaffold)
-7. (990) position extrême en 5’ des lectures chevauchant la jonction
-8. (2099) position extrême en 3’ des lectures chevauchant la jonction
-9. (JUNC00001560) nom systématique de la jonction
-10. (3) nombre de lectures couvrant la jonction
-11. (+) brin
-12. (990) même chose que la colonne 2
-13. (2099) même chose que la colonne 3
-14. (255,0,0) code couleur (RVB)
-15. (2) pas important
-16. (40,67) taille maximum des lectures couvrant l’exon à gauche et à droite de l’intron.
-17. (0,1042) pas important</p>
+<h4>Explications<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p>Ici, le format contient 12 colonnes (BED12):</p>
+<ol class="arabic simple">
+<li><p>(chr1) le nombre du chromosome (ou du scaffold)</p></li>
+<li><p>(990) position extrême en 5’ des lectures chevauchant la jonction</p></li>
+<li><p>(2099) position extrême en 3’ des lectures chevauchant la jonction</p></li>
+<li><p>(JUNC00001560) nom systématique de la jonction</p></li>
+<li><p>(3) nombre de lectures couvrant la jonction</p></li>
+<li><p>(+) brin</p></li>
+<li><p>(990) même chose que la colonne 2</p></li>
+<li><p>(2099) même chose que la colonne 3</p></li>
+<li><p>(255,0,0) code couleur (RVB)</p></li>
+<li><p>(2) pas important</p></li>
+<li><p>(40,67) taille maximum des lectures couvrant l’exon à gauche et à droite de l’intron.</p></li>
+<li><p>(0,1042) pas important</p></li>
+</ol>
 <p><img alt="" src="_images/BED.png" /></p>
 </section>
 <section id="pour-en-savoir-plus">
-<h4>Pour en savoir plus<a class="headerlink" href="#pour-en-savoir-plus" title="Permalink to this headline">#</a></h4>
+<h4>Pour en savoir plus<a class="headerlink" href="#pour-en-savoir-plus" title="Permalink to this heading">#</a></h4>
 <p>Documentation : <a class="reference external" href="http://genome.ucsc.edu/FAQ/FAQformat.html#format1">http://genome.ucsc.edu/FAQ/FAQformat.html#format1</a></p>
 </section>
 </section>
 <section id="notre-fichier">
-<h3>Notre fichier<a class="headerlink" href="#notre-fichier" title="Permalink to this headline">#</a></h3>
+<h3>Notre fichier<a class="headerlink" href="#notre-fichier" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chr1</span>	<span class="mi">100000636</span>	<span class="mi">100000739</span>	<span class="n">RNU6</span><span class="o">-</span><span class="mi">1318</span><span class="n">P</span><span class="o">|</span><span class="n">ENST00000365389</span><span class="o">|</span><span class="n">snRNA</span>	<span class="o">.</span>	<span class="o">-</span>
 <span class="n">chr1</span>	<span class="mi">100007033</span>	<span class="mi">100007156</span>	<span class="n">AC118553</span><span class="mf">.2</span><span class="o">|</span><span class="n">ENST00000638792</span><span class="o">|</span><span class="n">protein_coding</span>	<span class="o">.</span>	<span class="o">+</span>
 <span class="n">chr1</span>	<span class="mi">100007033</span>	<span class="mi">100007156</span>	<span class="n">AC118553</span><span class="mf">.2</span><span class="o">|</span><span class="n">ENST00000638968</span><span class="o">|</span><span class="n">nonsense_mediated_decay</span>	<span class="o">.</span>	<span class="o">+</span>
@@ -919,7 +614,7 @@ file hg38_exons.bed
 </section>
 </section>
 <section id="visualiser-le-contenu-d-un-fichier">
-<h2>Visualiser le contenu d’un fichier<a class="headerlink" href="#visualiser-le-contenu-d-un-fichier" title="Permalink to this headline">#</a></h2>
+<h2>Visualiser le contenu d’un fichier<a class="headerlink" href="#visualiser-le-contenu-d-un-fichier" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>On utilisera <code class="docutils literal notranslate"><span class="pre">less</span></code> ou <code class="docutils literal notranslate"><span class="pre">more</span></code> (*) pour parcourir le fichier ligne à ligne (logiciels de type ‘pager’).</p></li>
 <li><p>On utilisera <code class="docutils literal notranslate"><span class="pre">head</span></code> ou <code class="docutils literal notranslate"><span class="pre">tail</span></code> pour voir les <strong>n premières</strong> ou <strong>n dernières</strong> lignes d’un fichier.</p></li>
@@ -941,8 +636,8 @@ q : pour quitter. <br></p>
 </div>
 </section>
 <section id="exercices">
-<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this headline">#</a></h2>
-<ol class="simple">
+<h2>Exercices<a class="headerlink" href="#exercices" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>Utilisez la commande <code class="docutils literal notranslate"><span class="pre">head</span></code> pour regarder les 10 premières lignes du fichier hg38_exons.bed</p></li>
 <li><p>Utilisez la commande <code class="docutils literal notranslate"><span class="pre">tail</span></code> pour regarder les 10 dernières lignes du fichier hg38_exons.bed</p></li>
 <li><p>Promenez-vous dans le fichier hg38_exons.bed en utilisant la commande less. Quittez <code class="docutils literal notranslate"><span class="pre">less</span></code>.</p></li>
@@ -954,32 +649,18 @@ q : pour quitter. <br></p>
 </div>
 </section>
 <section id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this headline">#</a></h2>
+<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head -n <span class="m">10</span> hg38_exons.bed
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chr1	100000636	100000739	RNU6-1318P|ENST00000365389|snRNA	.	-
-chr1	100007033	100007156	AC118553.2|ENST00000638792|protein_coding	.	+
-chr1	100007033	100007156	AC118553.2|ENST00000638968|nonsense_mediated_decay	.	+
-chr1	100007033	100007156	AC118553.2|ENST00000639037|protein_coding	.	+
-chr1	100007033	100007156	AC118553.2|ENST00000639040|nonsense_mediated_decay	.	+
-chr1	100007033	100007156	AC118553.2|ENST00000639171|nonsense_mediated_decay	.	+
-chr1	100007033	100007156	AC118553.2|ENST00000640238|nonsense_mediated_decay	.	+
-chr1	100007033	100007156	AC118553.2|ENST00000640357|nonsense_mediated_decay	.	+
-chr1	100007033	100007156	SLC35A3|ENST00000370153|protein_coding	.	+
-chr1	100007033	100007156	SLC35A3|ENST00000370155|nonsense_mediated_decay	.	+
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 </div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail -n <span class="m">10</span> hg38_exons.bed
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>less hg38_exons.bed <span class="c1"># q to quit</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>less<span class="w"> </span>hg38_exons.bed<span class="w"> </span><span class="c1"># q to quit</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">hg38_exons</span><span class="o">.</span><span class="n">bed</span>
@@ -987,23 +668,18 @@ chr1	100007033	100007156	SLC35A3|ENST00000370155|nonsense_mediated_decay	.	+
 </div>
 </section>
 <section id="compter-les-lignes-d-un-fichier">
-<h2>Compter les lignes d’un fichier<a class="headerlink" href="#compter-les-lignes-d-un-fichier" title="Permalink to this headline">#</a></h2>
-<p>Utiliser la commande wc (word count) avec l’argument -l (line).</p>
+<h2>Compter les lignes d’un fichier<a class="headerlink" href="#compter-les-lignes-d-un-fichier" title="Permalink to this heading">#</a></h2>
+<p>Utiliser la commande <code class="docutils literal notranslate"><span class="pre">wc</span></code> (word count) avec l’argument -l (line).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wc -l hg38_exons.bed  <span class="c1"># 1261870 exons</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1261870 hg38_exons.bed
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wc<span class="w"> </span>-l<span class="w"> </span>hg38_exons.bed<span class="w">  </span><span class="c1"># 1261870 exons</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="extraire-des-colonnes">
-<h2>Extraire des colonnes<a class="headerlink" href="#extraire-des-colonnes" title="Permalink to this headline">#</a></h2>
+<h2>Extraire des colonnes<a class="headerlink" href="#extraire-des-colonnes" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Pour extraire des colonnes on utilisera la commande <code class="docutils literal notranslate"><span class="pre">cut</span></code> avec l’argument <code class="docutils literal notranslate"><span class="pre">-f</span></code> (field)</p></li>
 <li><p>Les colonnes du fichiers doivent nécessairement être séparées par une <strong>tabulation</strong> (sinon utiliser l’argument <code class="docutils literal notranslate"><span class="pre">-d</span></code> pour ‘delimiter’)</p></li>
@@ -1013,28 +689,28 @@ chr1	100007033	100007156	SLC35A3|ENST00000370155|nonsense_mediated_decay	.	+
 <p>Si la lecture vous fatigue, utilisez <ctrl> + c (cancel) pour arrêter le défilement.</p>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># extraire la colonne 1</span>
-cut -f <span class="m">1</span> hg38_exons.bed
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># extraire les colonnes 1 et 2</span>
-cut -f <span class="m">1</span>,2 hg38_exons.bed
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span>,2<span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># cut ignore malheureusement l’ordre indiqué</span>
-cut -f <span class="m">2</span>,1 hg38_exons.bed 
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">2</span>,1<span class="w"> </span>hg38_exons.bed<span class="w"> </span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># extraire la colonne 3 jusqu&#39;à 5</span>
-cut -f <span class="m">3</span>-5 hg38_exons.bed
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">3</span>-5<span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># extraire depuis la colonne 3 jusqu&#39;à la fin de la ligne</span>
-cut -f <span class="m">3</span>- hg38_exons.bed
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">3</span>-<span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 </section>
 <section id="trier-un-fichier">
-<h2>Trier un fichier<a class="headerlink" href="#trier-un-fichier" title="Permalink to this headline">#</a></h2>
+<h2>Trier un fichier<a class="headerlink" href="#trier-un-fichier" title="Permalink to this heading">#</a></h2>
 <p>Il faut utiliser la commande <code class="docutils literal notranslate"><span class="pre">sort</span></code> (tri alphabétique par défaut).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-k</span></code> (<strong>k</strong>ey): e.g</p>
@@ -1046,17 +722,17 @@ cut -f <span class="m">3</span>- hg38_exons.bed
 </li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tri alphabétique en considérant tous les caractères de chaque ligne</span>
-sort hg38_exons.bed
+sort<span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tri par chromosome (colonne 1)</span>
-sort -k1,1 hg38_exons.bed 
+sort<span class="w"> </span>-k1,1<span class="w"> </span>hg38_exons.bed<span class="w"> </span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trier le fichier sur la colonne 1 (chromosomes, tri alphabétique) </span>
 <span class="c1"># puis par colonne 2 (starts, tri numérique):</span>
 <span class="c1"># Trier les lignes par coordonnées</span>
-sort -k1,1 -k2,2nr hg38_exons.bed
+sort<span class="w"> </span>-k1,1<span class="w"> </span>-k2,2nr<span class="w"> </span>hg38_exons.bed
 </pre></div>
 </div>
 </section>
@@ -1074,7 +750,7 @@ sort -k1,1 -k2,2nr hg38_exons.bed
             mode: "bash"
         },
         kernelOptions: {
-            kernelName: "bash",
+            name: "bash",
             path: "./."
         },
         predefinedOutput: true
@@ -1082,50 +758,124 @@ sort -k1,1 -k2,2nr hg38_exons.bed
     </script>
     <script>kernelName = 'bash'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="08_storage.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Stockage fichiers</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="08_storage.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Stockage fichiers</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="10_redirection.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="10_redirection.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Redirections</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#telecharger-et-decompresser-un-fichier">Télécharger et décompresser un fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-fichier-hg38-exons-bed">Le fichier hg38_exons.bed</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#focus-sur-le-format-bed">Focus sur le format BED</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-de-fichier">Type de fichier</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#signification-du-nom">Signification du nom</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qui-le-genere">Qui le génère</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qui-le-lit">Qui le lit</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remarque">Remarque</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-1-bed6-simple">Exemple 1 - BED6 (simple)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#explications">Explications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-2-bed12-jonctions-entre-exons">Exemple 2 - BED12 (jonctions entre exons)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Explications</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pour-en-savoir-plus">Pour en savoir plus</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notre-fichier">Notre fichier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-le-contenu-d-un-fichier">Visualiser le contenu d’un fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices">Exercices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compter-les-lignes-d-un-fichier">Compter les lignes d’un fichier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extraire-des-colonnes">Extraire des colonnes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trier-un-fichier">Trier un fichier</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Thomas Denecker & Claire Toffano-Nioche<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Thomas Denecker & Claire Toffano-Nioche
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "/shared/home/pfrancois/.local/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/site-packages/nbclient/client.py", line 1117, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/site-packages/nbclient/util.py", line 78, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/site-packages/nbclient/util.py", line 57, in just_run
+    return loop.run_until_complete(coro)
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/site-packages/nbclient/client.py", line 558, in async_execute
+    await self.async_execute_cell(
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/site-packages/nbclient/client.py", line 862, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/shared/ifbstor1/software/jupyterhub/lib/python3.9/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from jupyterquiz import display_quiz
+
+q1=[{
+        "question": "Combien de modules différents sont disponibles sur le cluster de l'IFB ?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 740, 
+                "correct": True,
+                "feedback": "Bravo !"
+            },
+            {
+                "type": "range",
+                "range": [ 650, 750], 
+                "correct": False,
+                "feedback": "Pas assez précis ;) Peut $etre avec la commande : module avail -l | wc -l"
+            },
+            {
+                "type": "default",
+                "feedback": "Try :  module avail -l | wc -l"
+            }
+        ]
+    }]
+
+display_quiz(q1)
+------------------
+
+[0;31m-------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                     Traceback (most recent call last)
+[0;32m/tmp/ipykernel_26331/1528445059.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0;32mfrom[0m [0mjupyterquiz[0m [0;32mimport[0m [0mdisplay_quiz[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;34m[0m[0m
+[1;32m      3[0m q1=[{
+[1;32m      4[0m         [0;34m"question"[0m[0;34m:[0m [0;34m"Combien de modules différents sont disponibles sur le cluster de l'IFB ?"[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m         [0;34m"type"[0m[0;34m:[0m [0;34m"numeric"[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'jupyterquiz'
+ModuleNotFoundError: No module named 'jupyterquiz'
+
