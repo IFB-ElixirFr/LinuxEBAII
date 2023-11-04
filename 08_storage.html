@@ -492,6 +492,11 @@ ls<span class="w"> </span>-l
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 0
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -505,6 +510,13 @@ mkdir<span class="w"> </span>ref<span class="w"> </span>fastq
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On a bien deux dossiers</span>
 ls<span class="w"> </span>-l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 8
+drwxrwx---+ 2 pfrancois pfrancois 4096 Nov  4 13:03 <span class=" -Color -Color-Bold -Color-Bold-Blue">fastq</span>
+drwxrwx---+ 2 pfrancois pfrancois 4096 Nov  4 13:03 <span class=" -Color -Color-Bold -Color-Bold-Blue">ref</span>
 </pre></div>
 </div>
 </div>
@@ -528,7 +540,8 @@ ls<span class="w"> </span>-l
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On créé un chemin vers un dossier ‘bam’</span>
-<span class="c1"># L&#39;option -p permet de créer tous les dossiers intermédiaires manquants.mkdir -p rna-seq/output/bam</span>
+<span class="c1"># L&#39;option -p permet de créer tous les dossiers intermédiaires manquants.</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>rna-seq/output/bam
 </pre></div>
 </div>
 </div>
@@ -540,10 +553,43 @@ ls<span class="w"> </span>-R
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.:
+<span class=" -Color -Color-Bold -Color-Bold-Blue">rna-seq</span>
+
+./rna-seq:
+<span class=" -Color -Color-Bold -Color-Bold-Blue">fastq</span>  <span class=" -Color -Color-Bold -Color-Bold-Blue">output</span>  <span class=" -Color -Color-Bold -Color-Bold-Blue">ref</span>
+
+./rna-seq/fastq:
+
+./rna-seq/output:
+<span class=" -Color -Color-Bold -Color-Bold-Blue">bam</span>
+
+./rna-seq/output/bam:
+
+./rna-seq/ref:
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tree
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Le fichier d&#39;index ne nous sera pas utile, supprimons le</span>
+rm<span class="w"> </span>chip-seq/output/hg38.fa.fai
+tree<span class="w"> </span><span class="c1"># on vérifie que c&#39;est fait</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rm: cannot remove ‘chip-seq/output/hg38.fa.fai’: No such file or directory
+.
+└── rna-seq
+    ├── fastq
+    ├── output
+    │   └── bam
+    └── ref
+
+5 directories, 0 files
 </pre></div>
 </div>
 </div>
@@ -587,6 +633,19 @@ mv<span class="w"> </span>rna-seq/<span class="w"> </span>chip-seq
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+└── rna-seq
+    ├── fastq
+    ├── output
+    │   ├── bam
+    │   └── hg38.fa.fai
+    └── ref
+
+5 directories, 1 file
+</pre></div>
+</div>
+</div>
 </div>
 <ul>
 <li><p>rm : Permet de supprimer un fichier ou un dossier (-r) mais WARNING attention à son usage, si le fichier est important, on ne vous demandera pas si vous êtes VRAIMENT sûrs de vouloir le supprimer !</p>
@@ -602,6 +661,18 @@ mv<span class="w"> </span>rna-seq/<span class="w"> </span>chip-seq
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Le fichier d&#39;index ne nous sera pas utile, supprimons le</span>
 rm<span class="w"> </span>chip-seq/output/hg38.fa.fai
 tree<span class="w"> </span><span class="c1"># on vérifie que c&#39;est fait</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+└── chip-seq
+    ├── fastq
+    ├── output
+    │   └── bam
+    └── ref
+
+5 directories, 0 files
 </pre></div>
 </div>
 </div>
@@ -628,8 +699,8 @@ le dernier correspond aux droits de tous les autres utilisateurs.</p></li>
 <li><p><strong>Déplacez-vous dans votre dossier projet</strong></p></li>
 <li><p>Créez un répertoire <strong>annotations dans votre dossier projet</strong></p></li>
 <li><p><strong>Déplacez-vous dans le dossier annotations</strong></p></li>
-<li><p><strong>Dans ce dossier créez un dossier hg38 et son sous-dossier gff (hg38/gff)</strong></p></li>
-<li><p>Déplacez-vous dans le répertoire <strong>hg38/gff</strong></p></li>
+<li><p><strong>Dans ce dossier créez un dossier hg38 ddddddddet son sous-dossier gff (hg38/gff)</strong></p></li>
+<li><p>Déplacez-vs dans le répertoire <em>8/gff</em>*</p></li>
 <li><p>Déplacez-vous dans annotations.</p></li>
 <li><p>Créez un sous-dossier <strong>mm10</strong> et son sous-dossier gff (<strong>mm10/gff</strong>)</p></li>
 <li><p>Déplacez-vous dans <strong>mm10/gff</strong></p></li>
@@ -666,6 +737,11 @@ mkdir<span class="w"> </span>annotations
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Où sommes nous ?</span>
 <span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/projects/2325_ebaii/coursLinux/demo/annotations
 </pre></div>
 </div>
 </div>
@@ -713,6 +789,11 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>mm10/gff
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On voit un dossier gff</span>
 ls<span class="w"> </span>../../hg38
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Blue">gff</span>
 </pre></div>
 </div>
 </div>

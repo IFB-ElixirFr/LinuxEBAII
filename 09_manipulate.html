@@ -453,8 +453,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: cd: /shared/projects/2325_ebaii/coursLinux/demo/annotations/hg38: No such file or directory
-?2004h
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?2004h
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
@@ -476,6 +475,24 @@ wget<span class="w"> </span>https://zenodo.org/record/5716151/files/hg38_exons.b
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-11-04 12:46:47--  https://zenodo.org/record/5716151/files/hg38_exons.bed.gz
+Resolving zenodo.org (zenodo.org)... 188.185.33.206, 188.185.10.78, 188.185.22.33, ...
+Connecting to zenodo.org (zenodo.org)|188.185.33.206|:443... connected.
+HTTP request sent, awaiting response... 301 MOVED PERMANENTLY
+Location: /records/5716151/files/hg38_exons.bed.gz [following]
+--2023-11-04 12:46:47--  https://zenodo.org/records/5716151/files/hg38_exons.bed.gz
+Reusing existing connection to zenodo.org:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 8838009 (8.4M) [application/octet-stream]
+Saving to: ‘hg38_exons.bed.gz’
+
+100%[======================================&gt;] 8,838,009   11.6MB/s   in 0.7s   
+
+2023-11-04 12:46:48 (11.6 MB/s) - ‘hg38_exons.bed.gz’ saved [8838009/8838009]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -484,11 +501,22 @@ ls<span class="w"> </span>-lh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 68K
+-rw-rw----+ 1 pfrancois pfrancois 8.5M Nov  4 12:46 hg38_exons.bed.gz
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vérification du type de fichier</span>
 file<span class="w"> </span>hg38_exons.bed.gz
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38_exons.bed.gz: gzip compressed data, was &quot;hg38_exons.bed&quot;, from Unix, last modified: Tue Nov 20 11:29:21 2018
 </pre></div>
 </div>
 </div>
@@ -509,11 +537,22 @@ ls<span class="w"> </span>-lh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 65M
+-rw-rw----+ 1 pfrancois pfrancois 81M Nov  4 12:46 hg38_exons.bed
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vérification du type de fichier : il a changé.</span>
 file<span class="w"> </span>hg38_exons.bed
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38_exons.bed: ASCII text
 </pre></div>
 </div>
 </div>
@@ -657,6 +696,20 @@ q : pour quitter. <br></p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chr1	100000636	100000739	RNU6-1318P|ENST00000365389|snRNA	.	-
+chr1	100007033	100007156	AC118553.2|ENST00000638792|protein_coding	.	+
+chr1	100007033	100007156	AC118553.2|ENST00000638968|nonsense_mediated_decay	.	+
+chr1	100007033	100007156	AC118553.2|ENST00000639037|protein_coding	.	+
+chr1	100007033	100007156	AC118553.2|ENST00000639040|nonsense_mediated_decay	.	+
+chr1	100007033	100007156	AC118553.2|ENST00000639171|nonsense_mediated_decay	.	+
+chr1	100007033	100007156	AC118553.2|ENST00000640238|nonsense_mediated_decay	.	+
+chr1	100007033	100007156	AC118553.2|ENST00000640357|nonsense_mediated_decay	.	+
+chr1	100007033	100007156	SLC35A3|ENST00000370153|protein_coding	.	+
+chr1	100007033	100007156	SLC35A3|ENST00000370155|nonsense_mediated_decay	.	+
+</pre></div>
+</div>
+</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>hg38_exons.bed
 </pre></div>
@@ -674,6 +727,11 @@ q : pour quitter. <br></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wc<span class="w"> </span>-l<span class="w"> </span>hg38_exons.bed<span class="w">  </span><span class="c1"># 1261870 exons</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1261870 hg38_exons.bed
 </pre></div>
 </div>
 </div>

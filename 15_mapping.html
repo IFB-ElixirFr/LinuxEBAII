@@ -462,7 +462,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Créez un répertoire pour y stocker l’index dans chip-seq/</span>
-<span class="nb">cd</span><span class="w"> </span>/shared/projects/form_2022_32/coursLinux/demo/chip-seq/<span class="w">   </span>
+<span class="nb">cd</span><span class="w"> </span>/shared/projects/2325_ebaii/coursLinux/demo/chip-seq/<span class="w">   </span>
 mkdir<span class="w"> </span>index
 <span class="nb">cd</span><span class="w"> </span>index
 </pre></div>
@@ -504,16 +504,16 @@ wget<span class="w"> </span>http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chrom
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 18:47:13--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-11-04 13:07:12--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 12709705 (12M) [application/x-gzip]
 Saving to: ‘chr21.fa.gz’
 
-100%[======================================&gt;] 12,709,705  7.39MB/s   in 1.6s   
+100%[======================================&gt;] 12,709,705  6.98MB/s   in 1.7s   
 
-2022-11-10 18:47:16 (7.39 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+2023-11-04 13:07:14 (6.98 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -522,6 +522,22 @@ Saving to: ‘chr21.fa.gz’
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zcat<span class="w"> </span>chr21.fa.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt;chr21
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+gzip: stdout: Broken pipe
 </pre></div>
 </div>
 </div>
@@ -564,7 +580,7 @@ Input files DNA, FASTA:
   chr21.fa
 Building a SMALL index
 Reading reference sizes
-  Time reading reference sizes: 00:00:00
+  Time reading reference sizes: 00:00:01
 Calculating joined length
 Writing header
 Reserving space for joined string
@@ -579,12 +595,12 @@ Building DifferenceCoverSample
   Building sPrime
   Building sPrimeOrder
   V-Sorting samples
-  V-Sorting samples time: 00:00:00
+  V-Sorting samples time: 00:00:01
   Allocating rank array
   Ranking v-sort output
-  Ranking v-sort output time: 00:00:00
+  Ranking v-sort output time: 00:00:01
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:01
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -605,7 +621,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:10
+  Sorting block time: 00:00:20
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -644,7 +660,7 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:13
+Total time for call to driver() for forward index: 00:00:27
 Reading reference sizes
   Time reading reference sizes: 00:00:01
 Calculating joined length
@@ -665,7 +681,7 @@ Building DifferenceCoverSample
   V-Sorting samples time: 00:00:01
   Allocating rank array
   Ranking v-sort output
-  Ranking v-sort output time: 00:00:00
+  Ranking v-sort output time: 00:00:01
   Invoking Larsson-Sadakane on ranks
   Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
@@ -688,7 +704,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:10
+  Sorting block time: 00:00:17
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -727,7 +743,7 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 1
-Total time for backward call to driver() for mirror index: 00:00:14
+Total time for backward call to driver() for mirror index: 00:00:23
 </pre></div>
 </div>
 </div>
@@ -862,8 +878,8 @@ bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>core.47529		      siNT_ER_E2_r3_chr21_trim.bam.bai
-siNT_ER_E2_r3_chr21_trim.bam  siNT_ER_E2_r3_chr21_trim_bowtie2.log
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21_trim.bam      siNT_ER_E2_r3_chr21_trim_bowtie2.log
+siNT_ER_E2_r3_chr21_trim.bam.bai
 </pre></div>
 </div>
 </div>
