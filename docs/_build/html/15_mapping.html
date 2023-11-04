@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Mapping &#8212; Linux en Bioinformatique</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +62,103 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '15_mapping';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Arrêter le serveur Jupyterhub" href="16_stopJupyter.html" />
     <link rel="prev" title="Rogner les reads" href="14_rogner.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="00_home.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Linux en Bioinformatique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Linux en Bioinformatique - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Linux en Bioinformatique - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -113,598 +167,275 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_team.html">
-   L’équipe pédagogique
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_introduction.html">
-   Le cluster de l’IFB
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_jupyter.html">
-   C’est quoi JupyterHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_bash.html">
-   Comment converser avec le terminal ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_module.html">
-   Charger l’environnement logiciel
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="06_protoCommande.html">
-   Prototype(s) d’une commande
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quizz_01.html">
-   Quizz 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cards_01.html">
-   Fiches de révision
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="01_team.html">L’équipe pédagogique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_introduction.html">Le cluster de l’IFB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_jupyter.html">C’est quoi JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_bash.html">Comment converser avec le terminal ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_module.html">Charger l’environnement logiciel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_protoCommande.html">Prototype(s) d’une commande</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quizz_01.html">Quizz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cards_01.html">Fiches de révision</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Arborescence
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Arborescence</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="07_arborescence.html">
-   Arborescence de fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_storage.html">
-   Stockage fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09_manipulate.html">
-   Manipuler des fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_redirection.html">
-   Redirections
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_linuxIsMore.html">
-   Linux c’est aussi tellement plus !
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quizz_02.html">
-   Quizz 2
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="07_arborescence.html">Arborescence de fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_storage.html">Stockage fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_manipulate.html">Manipuler des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_redirection.html">Redirections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_bonnesPratiques.html">Quelques bonnes pratiques…</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quizz_02.html">Quizz 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Qualité des lectures
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Qualité des lectures</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="12_data.html">
-   Jeu de données
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="13_fastqc.html">
-   Analyser la qualité avec fastQC
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_rogner.html">
-   Rogner les reads
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="12_data.html">Jeu de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_fastqc.html">Analyser la qualité avec fastQC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_rogner.html">Rogner les reads</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Read mapping
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Read mapping</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Mapping
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="16_stopJupyter.html">
-   Arrêter le serveur Jupyterhub
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_stopJupyter.html">Arrêter le serveur Jupyterhub</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ressources
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="17_raccourcis.html">
-   Les raccourcis clavier du terminal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="formats.html">
-   Formats
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pourquoiCaPlante.html">
-   Pourquoi ça plante ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="glossaire.html">
-   Glossaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="genindex.html">
-   Index
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="17_raccourcis.html">Les raccourcis clavier du terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pourquoiCaPlante.html">Pourquoi ça plante ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/15_mapping.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IFB-ElixirFr/LinuxEBAII" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F15_mapping.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/15_mapping.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F15_mapping.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/15_mapping.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aligner-les-reads">
-   Aligner les reads
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lapproche-de-bowtie-seed-and-extend">
-   L’approche de bowtie: seed and extend
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Aligner les reads
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creation-de-l-index">
-   Création de l’index
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alignement">
-   Alignement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alignement-do-not-run">
-   Alignement (do not run!)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-1">
-     Partie 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-2">
-     Partie 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-3">
-     Partie 3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-4">
-     Partie 4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-5">
-     Partie 5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-6">
-     Partie 6
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#commande-finale">
-     Commande finale
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fichier-bam">
-   Fichier bam
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualiser-le-contenu-du-fichier-bam">
-   Visualiser le contenu du fichier bam
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bitwise-flag">
-   Bitwise flag
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-extended-cigar-string">
-   The extended CIGAR string
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pourquoi-filtrer-sur-la-qualite">
-   Pourquoi filtrer sur la qualité ?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering-for-mapping-quality-mapq">
-   Filtering for Mapping Quality (MAPQ)
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Mapping</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aligner-les-reads">
-   Aligner les reads
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lapproche-de-bowtie-seed-and-extend">
-   L’approche de bowtie: seed and extend
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Aligner les reads
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#creation-de-l-index">
-   Création de l’index
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alignement">
-   Alignement
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alignement-do-not-run">
-   Alignement (do not run!)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-1">
-     Partie 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-2">
-     Partie 2
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-3">
-     Partie 3
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-4">
-     Partie 4
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-5">
-     Partie 5
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#partie-6">
-     Partie 6
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#commande-finale">
-     Commande finale
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fichier-bam">
-   Fichier bam
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualiser-le-contenu-du-fichier-bam">
-   Visualiser le contenu du fichier bam
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bitwise-flag">
-   Bitwise flag
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-extended-cigar-string">
-   The extended CIGAR string
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pourquoi-filtrer-sur-la-qualite">
-   Pourquoi filtrer sur la qualité ?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#filtering-for-mapping-quality-mapq">
-   Filtering for Mapping Quality (MAPQ)
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mapping</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aligner-les-reads">Aligner les reads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lapproche-de-bowtie-seed-and-extend">L’approche de bowtie: seed and extend</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aligner les reads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-de-l-index">Création de l’index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alignement">Alignement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alignement-do-not-run">Alignement (do not run!)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-1">Partie 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-2">Partie 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-3">Partie 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-4">Partie 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-5">Partie 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-6">Partie 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commande-finale">Commande finale</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-bam">Fichier bam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-le-contenu-du-fichier-bam">Visualiser le contenu du fichier bam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-flag">Bitwise flag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-extended-cigar-string">The extended CIGAR string</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-filtrer-sur-la-qualite">Pourquoi filtrer sur la qualité ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-for-mapping-quality-mapq">Filtering for Mapping Quality (MAPQ)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="mapping">
-<h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">#</a></h1>
+<h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this heading">#</a></h1>
 <section id="aligner-les-reads">
-<h2>Aligner les reads<a class="headerlink" href="#aligner-les-reads" title="Permalink to this headline">#</a></h2>
+<h2>Aligner les reads<a class="headerlink" href="#aligner-les-reads" title="Permalink to this heading">#</a></h2>
 <p>Objectif : Trouver la région du génome qui a produit les read</p>
 <ul class="simple">
 <li><p>Trouver dans le génome le mot correspondant au read</p></li>
@@ -712,7 +443,7 @@ title="Print to PDF"
 <p><img alt="" src="_images/ebaii_mapping.png" /></p>
 </section>
 <section id="lapproche-de-bowtie-seed-and-extend">
-<h2>L’approche de bowtie: seed and extend<a class="headerlink" href="#lapproche-de-bowtie-seed-and-extend" title="Permalink to this headline">#</a></h2>
+<h2>L’approche de bowtie: seed and extend<a class="headerlink" href="#lapproche-de-bowtie-seed-and-extend" title="Permalink to this heading">#</a></h2>
 <p>Une extrémité du read est interrogée (la graine)</p>
 <p><img alt="" src="_images/ebaii_mapping_readSeed.png" /></p>
 <p>On cherche ses régions correspondantes sur le génome (à l’aide d’un index créé initialement) avec ou sans mismatch.</p>
@@ -720,7 +451,7 @@ title="Print to PDF"
 <p><img alt="" src="_images/ebaii_mapping_positions.png" /></p>
 </section>
 <section id="id1">
-<h2>Aligner les reads<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2>Aligner les reads<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Pour l’alignement nous utiliserons Bowtie 2</p>
 <p>Bowtie 2 nécessite de préparer un index</p>
 <ul class="simple">
@@ -731,27 +462,36 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Créez un répertoire pour y stocker l’index dans chip-seq/</span>
-<span class="nb">cd</span> /shared/projects/form_2022_32/coursLinux/demo/chip-seq/   
-mkdir index
-<span class="nb">cd</span> index
+<span class="nb">cd</span><span class="w"> </span>/shared/projects/form_2022_32/coursLinux/demo/chip-seq/<span class="w">   </span>
+mkdir<span class="w"> </span>index
+<span class="nb">cd</span><span class="w"> </span>index
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory ‘index’: File exists
+?2004h
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="creation-de-l-index">
-<h2>Création de l’index<a class="headerlink" href="#creation-de-l-index" title="Permalink to this headline">#</a></h2>
+<h2>Création de l’index<a class="headerlink" href="#creation-de-l-index" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Ne faire qu’une seule fois par génome d’intérêt et version majeure !</p>
 </div>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Allez sur le site de l’UCSC à l’adresse suivante</p></li>
 </ol>
 <ul class="simple">
 <li><p><a class="reference external" href="https://genome.ucsc.edu/">https://genome.ucsc.edu/</a></p></li>
 </ul>
-<ol class="simple">
+<ol class="arabic simple" start="2">
 <li><p>Cliquez sur Downloads &gt; Genome Data &gt; human &gt; hg38 &gt; Data set by chromosome.</p></li>
 <li><p>Recherchez le fichier chr21.fa.gz</p></li>
 <li><p>Cliquez bouton droit “Copy link address”</p></li>
@@ -759,21 +499,21 @@ mkdir index
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Téléchargez l’index avec wget</span>
-wget http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz 
+wget<span class="w"> </span>http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz<span class="w"> </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-14 18:29:09--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 18:47:13--  http://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr21.fa.gz
 Resolving hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)... 128.114.119.163
 Connecting to hgdownload.soe.ucsc.edu (hgdownload.soe.ucsc.edu)|128.114.119.163|:80... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 12709705 (12M) [application/x-gzip]
 Saving to: ‘chr21.fa.gz’
 
-100%[======================================&gt;] 12,709,705  7.20MB/s   in 1.7s   
+100%[======================================&gt;] 12,709,705  7.39MB/s   in 1.6s   
 
-2022-11-14 18:29:11 (7.20 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
+2022-11-10 18:47:16 (7.39 MB/s) - ‘chr21.fa.gz’ saved [12709705/12709705]
 </pre></div>
 </div>
 </div>
@@ -781,23 +521,7 @@ Saving to: ‘chr21.fa.gz’
 <p>Il est possible de visualiser un fichier compressé avec <code class="docutils literal notranslate"><span class="pre">zcat</span></code> (<code class="docutils literal notranslate"><span class="pre">z</span></code> (zip) + <code class="docutils literal notranslate"><span class="pre">cat</span></code>)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zcat chr21.fa.gz <span class="p">|</span> head 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt;chr21
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
-
-gzip: stdout: Broken pipe
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zcat<span class="w"> </span>chr21.fa.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>
 </pre></div>
 </div>
 </div>
@@ -805,16 +529,16 @@ gzip: stdout: Broken pipe
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># décompression</span>
-gunzip chr21.fa.gz
+gunzip<span class="w"> </span>chr21.fa.gz
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load bowtie2/2.3.4.3 samtools/1.9		<span class="c1"># ici on charge 2 outils à la fois</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>bowtie2/2.3.4.3<span class="w"> </span>samtools/1.9<span class="w">		</span><span class="c1"># ici on charge 2 outils à la fois</span>
 <span class="c1"># Construction de l’index</span>
-bowtie2-build chr21.fa chr21_hg38
+bowtie2-build<span class="w"> </span>chr21.fa<span class="w"> </span>chr21_hg38
 </pre></div>
 </div>
 </div>
@@ -845,7 +569,7 @@ Calculating joined length
 Writing header
 Reserving space for joined string
 Joining reference sequences
-  Time to join reference sequences: 00:00:01
+  Time to join reference sequences: 00:00:00
 bmax according to bmaxDivN setting: 10022154
 Using parameters --bmax 7516616 --dcv 1024
   Doing ahead-of-time memory usage test
@@ -855,12 +579,12 @@ Building DifferenceCoverSample
   Building sPrime
   Building sPrimeOrder
   V-Sorting samples
-  V-Sorting samples time: 00:00:01
+  V-Sorting samples time: 00:00:00
   Allocating rank array
   Ranking v-sort output
   Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:00
+  Invoking Larsson-Sadakane on ranks time: 00:00:01
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -881,7 +605,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:21
+  Sorting block time: 00:00:10
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -920,7 +644,7 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 0
-Total time for call to driver() for forward index: 00:00:30
+Total time for call to driver() for forward index: 00:00:13
 Reading reference sizes
   Time reading reference sizes: 00:00:01
 Calculating joined length
@@ -943,7 +667,7 @@ Building DifferenceCoverSample
   Ranking v-sort output
   Ranking v-sort output time: 00:00:00
   Invoking Larsson-Sadakane on ranks
-  Invoking Larsson-Sadakane on ranks time: 00:00:01
+  Invoking Larsson-Sadakane on ranks time: 00:00:00
   Sanity-checking and returning
 Building samples
 Reserving space for 12 sample suffixes
@@ -964,7 +688,7 @@ Getting block 1 of 1
   No samples; assembling all-inclusive block
   Sorting block of length 40088619 for bucket 1
   (Using difference cover)
-  Sorting block time: 00:00:19
+  Sorting block time: 00:00:10
 Returning block of 40088620 for bucket 1
 Exited Ebwt loop
 fchr[A]: 0
@@ -1003,86 +727,86 @@ Headers:
     ebwtTotSz: 13362880
     color: 0
     reverse: 1
-Total time for backward call to driver() for mirror index: 00:00:28
+Total time for backward call to driver() for mirror index: 00:00:14
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="alignement">
-<h2>Alignement<a class="headerlink" href="#alignement" title="Permalink to this headline">#</a></h2>
+<h2>Alignement<a class="headerlink" href="#alignement" title="Permalink to this heading">#</a></h2>
 <p>On crée un répertoire de travail et on se positionne dans celui-ci
 On lancera l’alignement dans depuis le dossier ‘bam’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a directory </span>
-mkdir -p ../bam 
+mkdir<span class="w"> </span>../bam<span class="w"> </span>
 <span class="c1"># Change directory </span>
-<span class="nb">cd</span> ../bam 
+<span class="nb">cd</span><span class="w"> </span>../bam<span class="w"> </span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="alignement-do-not-run">
-<h2>Alignement (do not run!)<a class="headerlink" href="#alignement-do-not-run" title="Permalink to this headline">#</a></h2>
+<h2>Alignement (do not run!)<a class="headerlink" href="#alignement-do-not-run" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Pour des raison pédagogique, nous allons diviser la commande en plusieurs blocs.</p>
 </div>
 <section id="partie-1">
-<h3>Partie 1<a class="headerlink" href="#partie-1" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Partie 1<a class="headerlink" href="#partie-1" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>L’alignement est réalisé avec bowtie2, qui produit un flux de texte au format sam (texte), volumineux.</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perform alignment</span>
-bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log 
+bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span>
 </pre></div>
 </div>
 </section>
 <section id="partie-2">
-<h3>Partie 2<a class="headerlink" href="#partie-2" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Partie 2<a class="headerlink" href="#partie-2" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>L’alignement est réalisé avec bowtie2, qui produit un flux de texte au format sam (texte), volumineux.</p></li>
 <li><p>Ce flux de texte peut être redirigé (|) vers ‘samtools view -hbS’ (-h: header, -b output is BAM, -S: input is SAM) pour produire une version compressée (format bam).</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># -bS (sortie en bam, entrée en sam) </span>
-bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log <span class="p">|</span> samtools view -hbS
+bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>view<span class="w"> </span>-hbS
 </pre></div>
 </div>
 </section>
 <section id="partie-3">
-<h3>Partie 3<a class="headerlink" href="#partie-3" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Partie 3<a class="headerlink" href="#partie-3" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>L’alignement est réalisé avec bowtie2, qui produit un flux de texte au format sam (texte), volumineux.</p></li>
 <li><p>Ce flux de texte peut être redirigé (|) vers ‘samtools view -hbS’ (-h: header, -b output is BAM, -S: input is SAM) pour produire une version compressée (format bam).</p></li>
 <li><p>On sélectionne le sous-ensemble des reads pour lequel la mapping quality (-q: quality) est au moins égale à 30.</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># -q 30 (quality 30)</span>
-bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log <span class="p">|</span> samtools view -hbS -q <span class="m">30</span>
+bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>view<span class="w"> </span>-hbS<span class="w"> </span>-q<span class="w"> </span><span class="m">30</span>
 </pre></div>
 </div>
 </section>
 <section id="partie-4">
-<h3>Partie 4<a class="headerlink" href="#partie-4" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Partie 4<a class="headerlink" href="#partie-4" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>L’alignement est réalisé avec bowtie2, qui produit un flux de texte au format sam (texte), volumineux.</p></li>
 <li><p>Ce flux de texte peut être redirigé (|) vers ‘samtools view -hbS’ (-h: header, -b output is BAM, -S: input is SAM) pour produire une version compressée (format bam).</p></li>
 <li><p>On sélectionne le sous-ensemble des reads pour lequel la mapping quality (-q: quality) est au moins égale à 30.</p></li>
 <li><p>Le flux de texte est redirigé (|) vers <code class="docutils literal notranslate"><span class="pre">samtools</span> <span class="pre">sort</span></code> (trie par coordonnées génomiques).</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Trie l’alignement</span>
-bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log <span class="p">|</span> samtools view -hbS -q <span class="m">30</span> <span class="p">|</span> samtools sort
+bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>view<span class="w"> </span>-hbS<span class="w"> </span>-q<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>sort
 </pre></div>
 </div>
 </section>
 <section id="partie-5">
-<h3>Partie 5<a class="headerlink" href="#partie-5" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Partie 5<a class="headerlink" href="#partie-5" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>L’alignement est réalisé avec bowtie2, qui produit un flux de texte au format sam (texte), volumineux.</p></li>
 <li><p>Ce flux de texte peut être redirigé (|) vers ‘samtools view -hbS’ (-h: header, -b output is BAM, -S: input is SAM) pour produire une version compressée (format bam).</p></li>
 <li><p>On sélectionne le sous-ensemble des reads pour lequel la mapping quality (-q: quality) est au moins égale à 30.</p></li>
@@ -1090,15 +814,15 @@ bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER
 <li><p>Le flux de texte est redirigé dans un fichier (‘&gt;’)</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ‘&gt;’ est un opérateur de redirection </span>
-bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log <span class="p">|</span> samtools view -hbS -q <span class="m">30</span> <span class="p">|</span> samtools sort <span class="se">\</span>
-  &gt; siNT_ER_E2_r3_chr21_trim.bam
+bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>view<span class="w"> </span>-hbS<span class="w"> </span>-q<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>sort<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim.bam
 </pre></div>
 </div>
 </section>
 <section id="partie-6">
-<h3>Partie 6<a class="headerlink" href="#partie-6" title="Permalink to this headline">#</a></h3>
-<ol class="simple">
+<h3>Partie 6<a class="headerlink" href="#partie-6" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>L’alignement est réalisé avec bowtie2, qui produit un flux de texte au format sam (texte), volumineux.</p></li>
 <li><p>Ce flux de texte peut être redirigé (|) vers ‘samtools view -hbS’ (-h: header, -b output is BAM, -S: input is SAM) pour produire une version compressée (format bam).</p></li>
 <li><p>On sélectionne le sous-ensemble des reads pour lequel la mapping quality (-q: quality) est au moins égale à 30.</p></li>
@@ -1107,26 +831,26 @@ bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER
 <li><p>Le fichier est indexé pour optimiser la recherche de position dans le BAM (création d’un fichier *.bai).</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexation de l’alignement</span>
-bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log <span class="p">|</span> samtools view -hbS -q <span class="m">30</span> <span class="p">|</span> samtools sort <span class="se">\</span>
-  &gt; siNT_ER_E2_r3_chr21_trim.bam
+bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>view<span class="w"> </span>-hbS<span class="w"> </span>-q<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>sort<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim.bam
 </pre></div>
 </div>
 </section>
 <section id="commande-finale">
-<h3>Commande finale<a class="headerlink" href="#commande-finale" title="Permalink to this headline">#</a></h3>
+<h3>Commande finale<a class="headerlink" href="#commande-finale" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER_E2_r3_chr21_trim.fastq <span class="se">\</span>
-  <span class="m">2</span>&gt; siNT_ER_E2_r3_chr21_trim_bowtie2.log <span class="p">|</span> samtools view -hbS -q <span class="m">30</span> <span class="p">|</span> samtools sort <span class="se">\</span>
-  &gt; siNT_ER_E2_r3_chr21_trim.bam
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bowtie2<span class="w"> </span>-p<span class="w"> </span><span class="m">4</span><span class="w"> </span>-x<span class="w"> </span>../index/chr21_hg38<span class="w"> </span>-U<span class="w"> </span>../trimmed/siNT_ER_E2_r3_chr21_trim.fastq<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="m">2</span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim_bowtie2.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>view<span class="w"> </span>-hbS<span class="w"> </span>-q<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>samtools<span class="w"> </span>sort<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&gt;<span class="w"> </span>siNT_ER_E2_r3_chr21_trim.bam
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>samtools index siNT_ER_E2_r3_chr21_trim.bam
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>samtools<span class="w"> </span>index<span class="w"> </span>siNT_ER_E2_r3_chr21_trim.bam
 </pre></div>
 </div>
 </div>
@@ -1138,8 +862,8 @@ bowtie2 -p <span class="m">4</span> -x ../index/chr21_hg38 -U ../trimmed/siNT_ER
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21_trim.bam      siNT_ER_E2_r3_chr21_trim_bowtie2.log
-siNT_ER_E2_r3_chr21_trim.bam.bai
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>core.47529		      siNT_ER_E2_r3_chr21_trim.bam.bai
+siNT_ER_E2_r3_chr21_trim.bam  siNT_ER_E2_r3_chr21_trim_bowtie2.log
 </pre></div>
 </div>
 </div>
@@ -1147,7 +871,7 @@ siNT_ER_E2_r3_chr21_trim.bam.bai
 </section>
 </section>
 <section id="fichier-bam">
-<h2>Fichier bam<a class="headerlink" href="#fichier-bam" title="Permalink to this headline">#</a></h2>
+<h2>Fichier bam<a class="headerlink" href="#fichier-bam" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>SAM: ‘Sequence Alignment/MAP’</p></li>
 <li><p>BAM: binary/compressed version of SAM</p></li>
@@ -1167,19 +891,19 @@ siNT_ER_E2_r3_chr21_trim.bam.bai
 </ul>
 </section>
 <section id="visualiser-le-contenu-du-fichier-bam">
-<h2>Visualiser le contenu du fichier bam<a class="headerlink" href="#visualiser-le-contenu-du-fichier-bam" title="Permalink to this headline">#</a></h2>
+<h2>Visualiser le contenu du fichier bam<a class="headerlink" href="#visualiser-le-contenu-du-fichier-bam" title="Permalink to this heading">#</a></h2>
 <p>Le fichier bam est compressé. On peut voir son contenu avec la commande samtools.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualiser le contenu du fichier bam</span>
 <span class="c1"># On utilise l’argument -h pour visualiser aussi le ‘header’.</span>
 <span class="c1"># On renvoie le flux de texte dans less. </span>
 <span class="c1"># On ajoute le paramètre -S pour tronquer les lignes qui excèdent</span>
 <span class="c1"># la largeur de l’écran </span>
-samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
+samtools<span class="w"> </span>view<span class="w"> </span>-h<span class="w"> </span>siNT_ER_E2_r3_chr21_trim.bam<span class="w"> </span><span class="p">|</span><span class="w"> </span>less<span class="w"> </span>-S
 </pre></div>
 </div>
 </section>
 <section id="bitwise-flag">
-<h2>Bitwise flag<a class="headerlink" href="#bitwise-flag" title="Permalink to this headline">#</a></h2>
+<h2>Bitwise flag<a class="headerlink" href="#bitwise-flag" title="Permalink to this heading">#</a></h2>
 <p>De nombreuses informations sont stockées dans la colonne 2 du fichier SAM/BAM</p>
 <ul class="simple">
 <li><p>read pairs</p></li>
@@ -1211,7 +935,7 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
 </div>
 </section>
 <section id="the-extended-cigar-string">
-<h2>The extended CIGAR string<a class="headerlink" href="#the-extended-cigar-string" title="Permalink to this headline">#</a></h2>
+<h2>The extended CIGAR string<a class="headerlink" href="#the-extended-cigar-string" title="Permalink to this heading">#</a></h2>
 <p>Quelques exemples de drapeaux (flag)</p>
 <ul class="simple">
 <li><p>M : match ou mismatch…</p></li>
@@ -1232,7 +956,7 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
 </div>
 </section>
 <section id="pourquoi-filtrer-sur-la-qualite">
-<h2>Pourquoi filtrer sur la qualité ?<a class="headerlink" href="#pourquoi-filtrer-sur-la-qualite" title="Permalink to this headline">#</a></h2>
+<h2>Pourquoi filtrer sur la qualité ?<a class="headerlink" href="#pourquoi-filtrer-sur-la-qualite" title="Permalink to this heading">#</a></h2>
 <p>Sommes-nous plus confiants</p>
 <ul class="simple">
 <li><p>dans l’alignement du read 1 ?</p></li>
@@ -1247,7 +971,7 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
 <p><img alt="" src="_images/filter_quality2.png" /></p>
 </section>
 <section id="filtering-for-mapping-quality-mapq">
-<h2>Filtering for Mapping Quality (MAPQ)<a class="headerlink" href="#filtering-for-mapping-quality-mapq" title="Permalink to this headline">#</a></h2>
+<h2>Filtering for Mapping Quality (MAPQ)<a class="headerlink" href="#filtering-for-mapping-quality-mapq" title="Permalink to this heading">#</a></h2>
 <p>Mapping quality is a score that integrates both the quality of the read itself and the number of positions it maps</p>
 <p>Mapping quality score is computed from the probability that alignment is wrong:</p>
 <ul class="simple">
@@ -1276,7 +1000,7 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
             mode: "bash"
         },
         kernelOptions: {
-            kernelName: "bash",
+            name: "bash",
             path: "./."
         },
         predefinedOutput: true
@@ -1284,50 +1008,121 @@ samtools view -h siNT_ER_E2_r3_chr21_trim.bam <span class="p">|</span> less -S
     </script>
     <script>kernelName = 'bash'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="14_rogner.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Rogner les reads</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="14_rogner.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Rogner les reads</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="16_stopJupyter.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="16_stopJupyter.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Arrêter le serveur Jupyterhub</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aligner-les-reads">Aligner les reads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lapproche-de-bowtie-seed-and-extend">L’approche de bowtie: seed and extend</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Aligner les reads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-de-l-index">Création de l’index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alignement">Alignement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alignement-do-not-run">Alignement (do not run!)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-1">Partie 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-2">Partie 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-3">Partie 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-4">Partie 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-5">Partie 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partie-6">Partie 6</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commande-finale">Commande finale</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fichier-bam">Fichier bam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualiser-le-contenu-du-fichier-bam">Visualiser le contenu du fichier bam</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-flag">Bitwise flag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-extended-cigar-string">The extended CIGAR string</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-filtrer-sur-la-qualite">Pourquoi filtrer sur la qualité ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filtering-for-mapping-quality-mapq">Filtering for Mapping Quality (MAPQ)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Thomas Denecker & Claire Toffano-Nioche<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Thomas Denecker & Claire Toffano-Nioche
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

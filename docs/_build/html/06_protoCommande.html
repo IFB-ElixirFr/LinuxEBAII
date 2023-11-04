@@ -1,48 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Prototype(s) d’une commande &#8212; Linux en Bioinformatique</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,61 +62,103 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06_protoCommande';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quizz 1" href="quizz_01.html" />
     <link rel="prev" title="Charger l’environnement logiciel" href="05_module.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="00_home.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Linux en Bioinformatique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Linux en Bioinformatique - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Linux en Bioinformatique - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -113,446 +167,258 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="01_team.html">
-   L’équipe pédagogique
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="02_introduction.html">
-   Le cluster de l’IFB
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="03_jupyter.html">
-   C’est quoi JupyterHub
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_bash.html">
-   Comment converser avec le terminal ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="05_module.html">
-   Charger l’environnement logiciel
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Prototype(s) d’une commande
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quizz_01.html">
-   Quizz 1
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cards_01.html">
-   Fiches de révision
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="01_team.html">L’équipe pédagogique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_introduction.html">Le cluster de l’IFB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_jupyter.html">C’est quoi JupyterHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_bash.html">Comment converser avec le terminal ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_module.html">Charger l’environnement logiciel</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prototype(s) d’une commande</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quizz_01.html">Quizz 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cards_01.html">Fiches de révision</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Arborescence
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Arborescence</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="07_arborescence.html">
-   Arborescence de fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="08_storage.html">
-   Stockage fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09_manipulate.html">
-   Manipuler des fichiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="10_redirection.html">
-   Redirections
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_linuxIsMore.html">
-   Linux c’est aussi tellement plus !
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="quizz_02.html">
-   Quizz 2
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="07_arborescence.html">Arborescence de fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_storage.html">Stockage fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_manipulate.html">Manipuler des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_redirection.html">Redirections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_bonnesPratiques.html">Quelques bonnes pratiques…</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quizz_02.html">Quizz 2</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Qualité des lectures
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Qualité des lectures</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="12_data.html">
-   Jeu de données
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="13_fastqc.html">
-   Analyser la qualité avec fastQC
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="14_rogner.html">
-   Rogner les reads
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="12_data.html">Jeu de données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_fastqc.html">Analyser la qualité avec fastQC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_rogner.html">Rogner les reads</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Read mapping
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Read mapping</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="15_mapping.html">
-   Mapping
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="16_stopJupyter.html">
-   Arrêter le serveur Jupyterhub
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="15_mapping.html">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_stopJupyter.html">Arrêter le serveur Jupyterhub</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ressources
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="17_raccourcis.html">
-   Les raccourcis clavier du terminal
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="formats.html">
-   Formats
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pourquoiCaPlante.html">
-   Pourquoi ça plante ?
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="glossaire.html">
-   Glossaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="genindex.html">
-   Index
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="17_raccourcis.html">Les raccourcis clavier du terminal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">Formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pourquoiCaPlante.html">Pourquoi ça plante ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/IFB-ElixirFr/LinuxEBAII/main?urlpath=tree/docs/06_protoCommande.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/IFB-ElixirFr/LinuxEBAII" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F06_protoCommande.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06_protoCommande.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/IFB-ElixirFr/LinuxEBAII/issues/new?title=Issue%20on%20page%20%2F06_protoCommande.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="_sources/06_protoCommande.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trouver-de-l-aide">
-   Trouver de l’aide !
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zoom-sur-la-commande-ls">
-   Zoom sur la commande ls
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-commande-ls-et-ses-arguments">
-     La commande ls et ses arguments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     La commande ls et ses arguments
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Prototype(s) d’une commande</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#trouver-de-l-aide">
-   Trouver de l’aide !
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#zoom-sur-la-commande-ls">
-   Zoom sur la commande ls
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#la-commande-ls-et-ses-arguments">
-     La commande ls et ses arguments
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     La commande ls et ses arguments
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Prototype(s) d’une commande</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trouver-de-l-aide">Trouver de l’aide !</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-sur-la-commande-ls">Zoom sur la commande ls</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-commande-ls-et-ses-arguments">La commande ls et ses arguments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">La commande ls et ses arguments</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="prototype-s-d-une-commande">
-<h1>Prototype(s) d’une commande<a class="headerlink" href="#prototype-s-d-une-commande" title="Permalink to this headline">#</a></h1>
+<h1>Prototype(s) d’une commande<a class="headerlink" href="#prototype-s-d-une-commande" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Une commande réalise une tâche (trier, sélectionner, ouvrir, aligner des reads,…).</p></li>
 <li><p>Elle dispose d’un certain nombre d’arguments qui peuvent être facultatifs et qui peuvent modifier son mode de fonctionnement.</p>
@@ -568,13 +434,17 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple d&#39;argument sans valeur associée</span>
 <span class="c1"># v pouvant signifier verbose, version (ou autre suivant la commande).</span>
-module load fastqc
-fastqc -v <span class="c1"># quelle est la version du logiciel fastqc sur ce serveur ?</span>
+module<span class="w"> </span>load<span class="w"> </span>fastqc
+fastqc<span class="w"> </span>-v<span class="w"> </span><span class="c1"># quelle est la version du logiciel fastqc sur ce serveur ?</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FastQC v0.11.9
+?2004h
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -582,7 +452,7 @@ fastqc -v <span class="c1"># quelle est la version du logiciel fastqc sur ce ser
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple de commande avec une valeur choisie par l&#39;utilisateur</span>
-<span class="nb">cd</span> /shared/projects/form_2022_32/
+<span class="nb">cd</span><span class="w"> </span>/shared/projects/2325_ebaii/
 </pre></div>
 </div>
 </div>
@@ -590,22 +460,7 @@ fastqc -v <span class="c1"># quelle est la version du logiciel fastqc sur ce ser
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exemple d&#39;argument avec valeur associée </span>
-tree -L <span class="m">1</span> <span class="c1"># Afficher sous forme d’arbre l’arborescence sur un niveaux</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
-├── atelier_variant
-├── chipseq
-├── cours
-├── coursLinux
-├── data
-├── SingleCellRNASeq
-├── TP_croisement
-└── untitled.md
-
-7 directories, 1 file
+tree<span class="w"> </span>-L<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1"># Afficher sous forme d’arbre l’arborescence sur un niveaux</span>
 </pre></div>
 </div>
 </div>
@@ -617,132 +472,7 @@ tree -L <span class="m">1</span> <span class="c1"># Afficher sous forme d’arbr
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demander de l&#39;aide (help) sur fastqc avec l&#39;argument -h</span>
-fastqc -h  
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            FastQC - A high throughput sequence QC analysis tool
-
-SYNOPSIS
-
-	fastqc seqfile1 seqfile2 .. seqfileN
-
-    fastqc [-o output dir] [--(no)extract] [-f fastq|bam|sam] 
-           [-c contaminant file] seqfile1 .. seqfileN
-
-DESCRIPTION
-
-    FastQC reads a set of sequence files and produces from each one a quality
-    control report consisting of a number of different modules, each one of 
-    which will help to identify a different potential type of problem in your
-    data.
-    
-    If no files to process are specified on the command line then the program
-    will start as an interactive graphical application.  If files are provided
-    on the command line then the program will run with no user interaction
-    required.  In this mode it is suitable for inclusion into a standardised
-    analysis pipeline.
-    
-    The options for the program as as follows:
-    
-    -h --help       Print this help file and exit
-    
-    -v --version    Print the version of the program and exit
-    
-    -o --outdir     Create all output files in the specified output directory.
-                    Please note that this directory must exist as the program
-                    will not create it.  If this option is not set then the 
-                    output file for each sequence file is created in the same
-                    directory as the sequence file which was processed.
-                    
-    --casava        Files come from raw casava output. Files in the same sample
-                    group (differing only by the group number) will be analysed
-                    as a set rather than individually. Sequences with the filter
-                    flag set in the header will be excluded from the analysis.
-                    Files must have the same names given to them by casava
-                    (including being gzipped and ending with .gz) otherwise they
-                    won&#39;t be grouped together correctly.
-                    
-    --nano          Files come from nanopore sequences and are in fast5 format. In
-                    this mode you can pass in directories to process and the program
-                    will take in all fast5 files within those directories and produce
-                    a single output file from the sequences found in all files.                    
-                    
-    --nofilter      If running with --casava then don&#39;t remove read flagged by
-                    casava as poor quality when performing the QC analysis.
-                   
-    --extract       If set then the zipped output file will be uncompressed in
-                    the same directory after it has been created.  By default
-                    this option will be set if fastqc is run in non-interactive
-                    mode.
-                    
-    -j --java       Provides the full path to the java binary you want to use to
-                    launch fastqc. If not supplied then java is assumed to be in
-                    your path.
-                   
-    --noextract     Do not uncompress the output file after creating it.  You
-                    should set this option if you do not wish to uncompress
-                    the output when running in non-interactive mode.
-                    
-    --nogroup       Disable grouping of bases for reads &gt;50bp. All reports will
-                    show data for every base in the read.  WARNING: Using this
-                    option will cause fastqc to crash and burn if you use it on
-                    really long reads, and your plots may end up a ridiculous size.
-                    You have been warned!
-                    
-    --min_length    Sets an artificial lower limit on the length of the sequence
-                    to be shown in the report.  As long as you set this to a value
-                    greater or equal to your longest read length then this will be
-                    the sequence length used to create your read groups.  This can
-                    be useful for making directly comaparable statistics from 
-                    datasets with somewhat variable read lengths.
-                    
-    -f --format     Bypasses the normal sequence file format detection and
-                    forces the program to use the specified format.  Valid
-                    formats are bam,sam,bam_mapped,sam_mapped and fastq
-                    
-    -t --threads    Specifies the number of files which can be processed
-                    simultaneously.  Each thread will be allocated 250MB of
-                    memory so you shouldn&#39;t run more threads than your
-                    available memory will cope with, and not more than
-                    6 threads on a 32 bit machine
-                  
-    -c              Specifies a non-default file which contains the list of
-    --contaminants  contaminants to screen overrepresented sequences against.
-                    The file must contain sets of named contaminants in the
-                    form name[tab]sequence.  Lines prefixed with a hash will
-                    be ignored.
-
-    -a              Specifies a non-default file which contains the list of
-    --adapters      adapter sequences which will be explicity searched against
-                    the library. The file must contain sets of named adapters
-                    in the form name[tab]sequence.  Lines prefixed with a hash
-                    will be ignored.
-                    
-    -l              Specifies a non-default file which contains a set of criteria
-    --limits        which will be used to determine the warn/error limits for the
-                    various modules.  This file can also be used to selectively 
-                    remove some modules from the output all together.  The format
-                    needs to mirror the default limits.txt file found in the
-                    Configuration folder.
-                    
-   -k --kmers       Specifies the length of Kmer to look for in the Kmer content
-                    module. Specified Kmer length must be between 2 and 10. Default
-                    length is 7 if not specified.
-                    
-   -q --quiet       Supress all progress messages on stdout and only report errors.
-   
-   -d --dir         Selects a directory to be used for temporary files written when
-                    generating report images. Defaults to system temp directory if
-                    not specified.
-                    
-BUGS
-
-    Any bugs in fastqc should be reported either to simon.andrews@babraham.ac.uk
-    or in www.bioinformatics.babraham.ac.uk/bugzilla/
-                   
-    
+fastqc<span class="w"> </span>-h<span class="w">  </span>
 </pre></div>
 </div>
 </div>
@@ -750,398 +480,18 @@ BUGS
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># La commande précédente est équivalente mais un peu plus lisible</span>
-fastqc --help
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            FastQC - A high throughput sequence QC analysis tool
-
-SYNOPSIS
-
-	fastqc seqfile1 seqfile2 .. seqfileN
-
-    fastqc [-o output dir] [--(no)extract] [-f fastq|bam|sam] 
-           [-c contaminant file] seqfile1 .. seqfileN
-
-DESCRIPTION
-
-    FastQC reads a set of sequence files and produces from each one a quality
-    control report consisting of a number of different modules, each one of 
-    which will help to identify a different potential type of problem in your
-    data.
-    
-    If no files to process are specified on the command line then the program
-    will start as an interactive graphical application.  If files are provided
-    on the command line then the program will run with no user interaction
-    required.  In this mode it is suitable for inclusion into a standardised
-    analysis pipeline.
-    
-    The options for the program as as follows:
-    
-    -h --help       Print this help file and exit
-    
-    -v --version    Print the version of the program and exit
-    
-    -o --outdir     Create all output files in the specified output directory.
-                    Please note that this directory must exist as the program
-                    will not create it.  If this option is not set then the 
-                    output file for each sequence file is created in the same
-                    directory as the sequence file which was processed.
-                    
-    --casava        Files come from raw casava output. Files in the same sample
-                    group (differing only by the group number) will be analysed
-                    as a set rather than individually. Sequences with the filter
-                    flag set in the header will be excluded from the analysis.
-                    Files must have the same names given to them by casava
-                    (including being gzipped and ending with .gz) otherwise they
-                    won&#39;t be grouped together correctly.
-                    
-    --nano          Files come from nanopore sequences and are in fast5 format. In
-                    this mode you can pass in directories to process and the program
-                    will take in all fast5 files within those directories and produce
-                    a single output file from the sequences found in all files.                    
-                    
-    --nofilter      If running with --casava then don&#39;t remove read flagged by
-                    casava as poor quality when performing the QC analysis.
-                   
-    --extract       If set then the zipped output file will be uncompressed in
-                    the same directory after it has been created.  By default
-                    this option will be set if fastqc is run in non-interactive
-                    mode.
-                    
-    -j --java       Provides the full path to the java binary you want to use to
-                    launch fastqc. If not supplied then java is assumed to be in
-                    your path.
-                   
-    --noextract     Do not uncompress the output file after creating it.  You
-                    should set this option if you do not wish to uncompress
-                    the output when running in non-interactive mode.
-                    
-    --nogroup       Disable grouping of bases for reads &gt;50bp. All reports will
-                    show data for every base in the read.  WARNING: Using this
-                    option will cause fastqc to crash and burn if you use it on
-                    really long reads, and your plots may end up a ridiculous size.
-                    You have been warned!
-                    
-    --min_length    Sets an artificial lower limit on the length of the sequence
-                    to be shown in the report.  As long as you set this to a value
-                    greater or equal to your longest read length then this will be
-                    the sequence length used to create your read groups.  This can
-                    be useful for making directly comaparable statistics from 
-                    datasets with somewhat variable read lengths.
-                    
-    -f --format     Bypasses the normal sequence file format detection and
-                    forces the program to use the specified format.  Valid
-                    formats are bam,sam,bam_mapped,sam_mapped and fastq
-                    
-    -t --threads    Specifies the number of files which can be processed
-                    simultaneously.  Each thread will be allocated 250MB of
-                    memory so you shouldn&#39;t run more threads than your
-                    available memory will cope with, and not more than
-                    6 threads on a 32 bit machine
-                  
-    -c              Specifies a non-default file which contains the list of
-    --contaminants  contaminants to screen overrepresented sequences against.
-                    The file must contain sets of named contaminants in the
-                    form name[tab]sequence.  Lines prefixed with a hash will
-                    be ignored.
-
-    -a              Specifies a non-default file which contains the list of
-    --adapters      adapter sequences which will be explicity searched against
-                    the library. The file must contain sets of named adapters
-                    in the form name[tab]sequence.  Lines prefixed with a hash
-                    will be ignored.
-                    
-    -l              Specifies a non-default file which contains a set of criteria
-    --limits        which will be used to determine the warn/error limits for the
-                    various modules.  This file can also be used to selectively 
-                    remove some modules from the output all together.  The format
-                    needs to mirror the default limits.txt file found in the
-                    Configuration folder.
-                    
-   -k --kmers       Specifies the length of Kmer to look for in the Kmer content
-                    module. Specified Kmer length must be between 2 and 10. Default
-                    length is 7 if not specified.
-                    
-   -q --quiet       Supress all progress messages on stdout and only report errors.
-   
-   -d --dir         Selects a directory to be used for temporary files written when
-                    generating report images. Defaults to system temp directory if
-                    not specified.
-                    
-BUGS
-
-    Any bugs in fastqc should be reported either to simon.andrews@babraham.ac.uk
-    or in www.bioinformatics.babraham.ac.uk/bugzilla/
-                   
-    
+fastqc<span class="w"> </span>--help
 </pre></div>
 </div>
 </div>
 </div>
 <section id="trouver-de-l-aide">
-<h2>Trouver de l’aide !<a class="headerlink" href="#trouver-de-l-aide" title="Permalink to this headline">#</a></h2>
+<h2>Trouver de l’aide !<a class="headerlink" href="#trouver-de-l-aide" title="Permalink to this heading">#</a></h2>
 <p>Appeler la police, appeler son collègue, chercher sur internet ou utiliser la commande <strong>man</strong> (<strong>man</strong>uel)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtenir de l&#39;aide sur la commande ls</span>
-man ls  
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>LS(1)                            User Commands                           LS(1)
-
-
-
-NNAAMMEE
-       ls - list directory contents
-
-SSYYNNOOPPSSIISS
-       llss [_O_P_T_I_O_N]... [_F_I_L_E]...
-
-DDEESSCCRRIIPPTTIIOONN
-       List  information  about  the FILEs (the current directory by default).
-       Sort entries alphabetically if none of --ccffttuuvvSSUUXX nor ----ssoorrtt  is  speci‐
-       fied.
-
-       Mandatory  arguments  to  long  options are mandatory for short options
-       too.
-
-       --aa, ----aallll
-              do not ignore entries starting with .
-
-       --AA, ----aallmmoosstt--aallll
-              do not list implied . and ..
-
-       ----aauutthhoorr
-              with --ll, print the author of each file
-
-       --bb, ----eessccaappee
-              print C-style escapes for nongraphic characters
-
-       ----bblloocckk--ssiizzee=_S_I_Z_E
-              scale sizes by SIZE before printing them; e.g., &#39;--block-size=M&#39;
-              prints sizes in units of 1,048,576 bytes; see SIZE format below
-
-       --BB, ----iiggnnoorree--bbaacckkuuppss
-              do not list implied entries ending with ~
-
-       --cc     with --lltt: sort by, and show, ctime (time of last modification of
-              file status information); with --ll: show ctime and sort by  name;
-              otherwise: sort by ctime, newest first
-
-       --CC     list entries by columns
-
-       ----ccoolloorr[=_W_H_E_N]
-              colorize  the  output;  WHEN can be &#39;never&#39;, &#39;auto&#39;, or &#39;always&#39;
-              (the default); more info below
-
-       --dd, ----ddiirreeccttoorryy
-              list directories themselves, not their contents
-
-       --DD, ----ddiirreedd
-              generate output designed for Emacs&#39; dired mode
-
-       --ff     do not sort, enable --aaUU, disable --llss ----ccoolloorr
-
-       --FF, ----ccllaassssiiffyy
-              append indicator (one of */=&gt;@|) to entries
-
-       ----ffiillee--ttyyppee
-              likewise, except do not append &#39;*&#39;
-
-       ----ffoorrmmaatt=_W_O_R_D
-              across --xx, commas --mm, horizontal --xx, long --ll, single-column  --11,
-              verbose --ll, vertical --CC
-
-       ----ffuullll--ttiimmee
-              like --ll ----ttiimmee--ssttyyllee=_f_u_l_l_-_i_s_o
-
-       --gg     like --ll, but do not list owner
-
-       ----ggrroouupp--ddiirreeccttoorriieess--ffiirrsstt
-              group directories before files;
-
-              can   be  augmented  with  a  ----ssoorrtt  option,  but  any  use  of
-              ----ssoorrtt=_n_o_n_e (--UU) disables grouping
-
-       --GG, ----nnoo--ggrroouupp
-              in a long listing, don&#39;t print group names
-
-       --hh, ----hhuummaann--rreeaaddaabbllee
-              with --ll, print sizes in human readable format (e.g., 1K 234M 2G)
-
-       ----ssii   likewise, but use powers of 1000 not 1024
-
-       --HH, ----ddeerreeffeerreennccee--ccoommmmaanndd--lliinnee
-              follow symbolic links listed on the command line
-
-       ----ddeerreeffeerreennccee--ccoommmmaanndd--lliinnee--ssyymmlliinnkk--ttoo--ddiirr
-              follow each command line symbolic link
-
-              that points to a directory
-
-       ----hhiiddee=_P_A_T_T_E_R_N
-              do not list implied entries matching shell  PATTERN  (overridden
-              by --aa or --AA)
-
-       ----iinnddiiccaattoorr--ssttyyllee=_W_O_R_D
-              append indicator with style WORD to entry names: none (default),
-              slash (--pp), file-type (----ffiillee--ttyyppee), classify (--FF)
-
-       --ii, ----iinnooddee
-              print the index number of each file
-
-       --II, ----iiggnnoorree=_P_A_T_T_E_R_N
-              do not list implied entries matching shell PATTERN
-
-       --kk, ----kkiibbiibbyytteess
-              default to 1024-byte blocks for disk usage
-
-       --ll     use a long listing format
-
-       --LL, ----ddeerreeffeerreennccee
-              when showing file information for a symbolic link, show informa‐
-              tion  for  the file the link references rather than for the link
-              itself
-
-       --mm     fill width with a comma separated list of entries
-
-       --nn, ----nnuummeerriicc--uuiidd--ggiidd
-              like --ll, but list numeric user and group IDs
-
-       --NN, ----lliitteerraall
-              print raw entry names (don&#39;t treat e.g. control characters  spe‐
-              cially)
-
-       --oo     like --ll, but do not list group information
-
-       --pp, ----iinnddiiccaattoorr--ssttyyllee=_s_l_a_s_h
-              append / indicator to directories
-
-       --qq, ----hhiiddee--ccoonnttrrooll--cchhaarrss
-              print ? instead of nongraphic characters
-
-       ----sshhooww--ccoonnttrrooll--cchhaarrss
-              show nongraphic characters as-is (the default, unless program is
-              &#39;ls&#39; and output is a terminal)
-
-       --QQ, ----qquuoottee--nnaammee
-              enclose entry names in double quotes
-
-       ----qquuoottiinngg--ssttyyllee=_W_O_R_D
-              use quoting style WORD for entry names: literal, locale,  shell,
-              shell-always, c, escape
-
-       --rr, ----rreevveerrssee
-              reverse order while sorting
-
-       --RR, ----rreeccuurrssiivvee
-              list subdirectories recursively
-
-       --ss, ----ssiizzee
-              print the allocated size of each file, in blocks
-
-       --SS     sort by file size
-
-       ----ssoorrtt=_W_O_R_D
-              sort  by  WORD instead of name: none (--UU), size (--SS), time (--tt),
-              version (--vv), extension (--XX)
-
-       ----ttiimmee=_W_O_R_D
-              with --ll, show time as WORD instead of default modification time:
-              atime or access or use (--uu) ctime or status (--cc); also use spec‐
-              ified time as sort key if ----ssoorrtt=_t_i_m_e
-
-       ----ttiimmee--ssttyyllee=_S_T_Y_L_E
-              with --ll, show times using style STYLE: full-iso, long-iso,  iso,
-              locale,  or  +FORMAT;  FORMAT  is interpreted like in &#39;date&#39;; if
-              FORMAT  is  FORMAT1&lt;newline&gt;FORMAT2,  then  FORMAT1  applies  to
-              non-recent  files  and FORMAT2 to recent files; if STYLE is pre‐
-              fixed with &#39;posix-&#39;, STYLE takes effect only outside  the  POSIX
-              locale
-
-       --tt     sort by modification time, newest first
-
-       --TT, ----ttaabbssiizzee=_C_O_L_S
-              assume tab stops at each COLS instead of 8
-
-       --uu     with  --lltt:  sort by, and show, access time; with --ll: show access
-              time and sort by name; otherwise: sort by access time
-
-       --UU     do not sort; list entries in directory order
-
-       --vv     natural sort of (version) numbers within text
-
-       --ww, ----wwiiddtthh=_C_O_L_S
-              assume screen width instead of current value
-
-       --xx     list entries by lines instead of by columns
-
-       --XX     sort alphabetically by entry extension
-
-       --11     list one file per line
-
-       SELinux options:
-
-       ----llccoonntteexxtt
-              Display security context.   Enable --ll. Lines  will  probably  be
-              too wide for most displays.
-
-       --ZZ, ----ccoonntteexxtt
-              Display  security context so it fits on most displays.  Displays
-              only mode, user, group, security context and file name.
-
-       ----ssccoonntteexxtt
-              Display only security context and file name.
-
-       ----hheellpp display this help and exit
-
-       ----vveerrssiioonn
-              output version information and exit
-
-       SIZE is an integer and optional unit (example:  10M  is  10*1024*1024).
-       Units  are K, M, G, T, P, E, Z, Y (powers of 1024) or KB, MB, ... (pow‐
-       ers of 1000).
-
-       Using color to distinguish file types is disabled both by  default  and
-       with  ----ccoolloorr=_n_e_v_e_r.  With ----ccoolloorr=_a_u_t_o, ls emits color codes only when
-       standard output is connected to a terminal.  The LS_COLORS  environment
-       variable can change the settings.  Use the dircolors command to set it.
-
-   EExxiitt ssttaattuuss::
-       0      if OK,
-
-       1      if minor problems (e.g., cannot access subdirectory),
-
-       2      if serious trouble (e.g., cannot access command-line argument).
-
-       GNU  coreutils  online  help:  &lt;http://www.gnu.org/software/coreutils/&gt;
-       Report ls translation bugs to &lt;http://translationproject.org/team/&gt;
-
-AAUUTTHHOORR
-       Written by Richard M. Stallman and David MacKenzie.
-
-CCOOPPYYRRIIGGHHTT
-       Copyright © 2013 Free Software Foundation, Inc.   License  GPLv3+:  GNU
-       GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;.
-       This  is  free  software:  you  are free to change and redistribute it.
-       There is NO WARRANTY, to the extent permitted by law.
-
-SSEEEE AALLSSOO
-       The full documentation for llss is maintained as a  Texinfo  manual.   If
-       the  iinnffoo and llss programs are properly installed at your site, the com‐
-       mand
-
-              iinnffoo ccoorreeuuttiillss &#39;&#39;llss iinnvvooccaattiioonn&#39;&#39;
-
-       should give you access to the complete manual.
-
-
-
-GNU coreutils 8.22                April 2018                             LS(1)
+man<span class="w"> </span>ls<span class="w">  </span>
 </pre></div>
 </div>
 </div>
@@ -1149,724 +499,7 @@ GNU coreutils 8.22                April 2018                             LS(1)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtenir de l&#39;aide sur la commande man ...</span>
-man man  
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAN(1)                        Manual pager utils                        MAN(1)
-
-
-
-NNAAMMEE
-       man - an interface to the on-line reference manuals
-
-SSYYNNOOPPSSIISS
-       mmaann  [--CC  _f_i_l_e]  [--dd]  [--DD]  [----wwaarrnniinnggss[=_w_a_r_n_i_n_g_s]]  [--RR _e_n_c_o_d_i_n_g] [--LL
-       _l_o_c_a_l_e] [--mm _s_y_s_t_e_m[,...]] [--MM _p_a_t_h] [--SS _l_i_s_t]  [--ee  _e_x_t_e_n_s_i_o_n]  [--ii|--II]
-       [----rreeggeexx|----wwiillddccaarrdd]   [----nnaammeess--oonnllyy]  [--aa]  [--uu]  [----nnoo--ssuubbppaaggeess]  [--PP
-       _p_a_g_e_r] [--rr _p_r_o_m_p_t] [--77] [--EE _e_n_c_o_d_i_n_g] [----nnoo--hhyypphheennaattiioonn] [----nnoo--jjuussttiiffii‐‐
-       ccaattiioonn]  [--pp  _s_t_r_i_n_g]  [--tt]  [--TT[_d_e_v_i_c_e]]  [--HH[_b_r_o_w_s_e_r]] [--XX[_d_p_i]] [--ZZ]
-       [[_s_e_c_t_i_o_n] _p_a_g_e ...] ...
-       mmaann --kk [_a_p_r_o_p_o_s _o_p_t_i_o_n_s] _r_e_g_e_x_p ...
-       mmaann --KK [--ww|--WW] [--SS _l_i_s_t] [--ii|--II] [_-_-_r_e_g_e_x] [_s_e_c_t_i_o_n] _t_e_r_m ...
-       mmaann --ff [_w_h_a_t_i_s _o_p_t_i_o_n_s] _p_a_g_e ...
-       mmaann --ll [--CC _f_i_l_e] [--dd] [--DD] [----wwaarrnniinnggss[=_w_a_r_n_i_n_g_s]]  [--RR  _e_n_c_o_d_i_n_g]  [--LL
-       _l_o_c_a_l_e]  [--PP  _p_a_g_e_r]  [--rr  _p_r_o_m_p_t]  [--77] [--EE _e_n_c_o_d_i_n_g] [--pp _s_t_r_i_n_g] [--tt]
-       [--TT[_d_e_v_i_c_e]] [--HH[_b_r_o_w_s_e_r]] [--XX[_d_p_i]] [--ZZ] _f_i_l_e ...
-       mmaann --ww|--WW [--CC _f_i_l_e] [--dd] [--DD] _p_a_g_e ...
-       mmaann --cc [--CC _f_i_l_e] [--dd] [--DD] _p_a_g_e ...
-       mmaann [--??VV]
-
-DDEESSCCRRIIPPTTIIOONN
-       mmaann is the system&#39;s manual pager. Each _p_a_g_e argument given  to  mmaann  is
-       normally  the  name of a program, utility or function.  The _m_a_n_u_a_l _p_a_g_e
-       associated with each of these arguments is then found and displayed.  A
-       _s_e_c_t_i_o_n,  if  provided, will direct mmaann to look only in that _s_e_c_t_i_o_n of
-       the manual.  The default action is to search in all  of  the  available
-       _s_e_c_t_i_o_n_s, following a pre-defined order and to show only the first _p_a_g_e
-       found, even if _p_a_g_e exists in several _s_e_c_t_i_o_n_s.
-
-       The table below shows the _s_e_c_t_i_o_n numbers of the manual followed by the
-       types of pages they contain.
-
-
-       1   Executable programs or shell commands
-       2   System calls (functions provided by the kernel)
-       3   Library calls (functions within program libraries)
-       4   Special files (usually found in _/_d_e_v)
-       5   File formats and conventions eg _/_e_t_c_/_p_a_s_s_w_d
-       6   Games
-       7   Miscellaneous  (including  macro  packages  and  conventions), e.g.
-           mmaann(7), ggrrooffff(7)
-       8   System administration commands (usually only for root)
-       9   Kernel routines [Non standard]
-
-       A manual _p_a_g_e consists of several sections.
-
-       Conventional  section  names  include  NNAAMMEE,  SSYYNNOOPPSSIISS,  CCOONNFFIIGGUURRAATTIIOONN,
-       DDEESSCCRRIIPPTTIIOONN,  OOPPTTIIOONNSS,  EEXXIITT SSTTAATTUUSS, RREETTUURRNN VVAALLUUEE, EERRRROORRSS, EENNVVIIRROONNMMEENNTT,
-       FFIILLEESS, VVEERRSSIIOONNSS, CCOONNFFOORRMMIINNGG TTOO,  NNOOTTEESS,  BBUUGGSS,  EEXXAAMMPPLLEE,  AAUUTTHHOORRSS,  and
-       SSEEEE AALLSSOO.
-
-       The following conventions apply to the SSYYNNOOPPSSIISS section and can be used
-       as a guide in other sections.
-
-
-       bboolldd tteexxtt          type exactly as shown.
-       _i_t_a_l_i_c _t_e_x_t        replace with appropriate argument.
-       [--aabbcc]             any or all arguments within [ ] are optional.
-       --aa|--bb              options delimited by | cannot be used together.
-       _a_r_g_u_m_e_n_t ...       _a_r_g_u_m_e_n_t is repeatable.
-       [_e_x_p_r_e_s_s_i_o_n] ...   entire _e_x_p_r_e_s_s_i_o_n within [ ] is repeatable.
-
-       Exact rendering may vary depending on the output device.  For instance,
-       man will usually not be able to render italics when running in a termi‐
-       nal, and will typically use underlined or coloured text instead.
-
-       The command or function illustration is a pattern that should match all
-       possible invocations.  In some cases it is advisable to illustrate sev‐
-       eral exclusive invocations as is shown in the SSYYNNOOPPSSIISS section of  this
-       manual page.
-
-EEXXAAMMPPLLEESS
-       mmaann _l_s
-           Display the manual page for the _i_t_e_m (program) _l_s.
-
-       mmaann --aa _i_n_t_r_o
-           Display,  in  succession,  all  of the available _i_n_t_r_o manual pages
-           contained within the manual.  It is possible to quit  between  suc‐
-           cessive displays or skip any of them.
-
-       mmaann --tt _a_l_i_a_s | _l_p_r _-_P_p_s
-           Format  the manual page referenced by `_a_l_i_a_s&#39;, usually a shell man‐
-           ual page, into the default ttrrooffff or ggrrooffff format and pipe it to the
-           printer  named  _p_s.   The default output for ggrrooffff is usually Post‐
-           Script.  mmaann ----hheellpp should advise as to which processor is bound to
-           the --tt option.
-
-       mmaann --ll --TT_d_v_i _._/_f_o_o_._1_x_._g_z &gt;&gt; _._/_f_o_o_._1_x_._d_v_i
-           This  command  will  decompress  and format the nroff source manual
-           page _._/_f_o_o_._1_x_._g_z into a ddeevviiccee iinnddeeppeennddeenntt ((ddvvii)) file.   The  redi‐
-           rection is necessary as the --TT flag causes output to be directed to
-           ssttddoouutt with no pager.  The output could be viewed  with  a  program
-           such  as  xxddvvii or further processed into PostScript using a program
-           such as ddvviippss..
-
-       mmaann --kk _p_r_i_n_t_f
-           Search the short descriptions and manual page names for the keyword
-           _p_r_i_n_t_f  as  regular expression.  Print out any matches.  Equivalent
-           to aapprrooppooss --rr _p_r_i_n_t_f..
-
-       mmaann --ff _s_m_a_i_l
-           Lookup the manual pages referenced by _s_m_a_i_l and print out the short
-           descriptions of any found.  Equivalent to wwhhaattiiss --rr _s_m_a_i_l..
-
-OOVVEERRVVIIEEWW
-       Many  options are available to mmaann in order to give as much flexibility
-       as possible to the user.  Changes can be made to the search path,  sec‐
-       tion  order,  output  processor,  and  other  behaviours and operations
-       detailed below.
-
-       If set, various environment variables are interrogated to determine the
-       operation  of  mmaann.   It  is  possible  to set the `catch all&#39; variable
-       $MMAANNOOPPTT to any string in command line format with  the  exception  that
-       any  spaces  used as part of an option&#39;s argument must be escaped (pre‐
-       ceded by a backslash).  mmaann will parse $MMAANNOOPPTT prior to parsing its own
-       command  line.   Those options requiring an argument will be overridden
-       by the same options found on the command line.  To  reset  all  of  the
-       options set in $MMAANNOOPPTT, --DD can be specified as the initial command line
-       option.  This will allow man to `forget&#39; about the options specified in
-       $MMAANNOOPPTT although they must still have been valid.
-
-       The  manual  pager  utilities  packaged as mmaann--ddbb make extensive use of
-       iinnddeexx database caches.  These caches contain information such as  where
-       each  manual  page  can  be found on the filesystem and what its _w_h_a_t_i_s
-       (short one line description of the man page) contains, and allow mmaann to
-       run  faster  than  if it had to search the filesystem each time to find
-       the appropriate manual page.  If requested using  the  --uu  option,  mmaann
-       will  ensure  that  the caches remain consistent, which can obviate the
-       need to manually run software to update traditional _w_h_a_t_i_s  text  data‐
-       bases.
-
-       If  mmaann  cannot  find a mmaannddbb initiated iinnddeexx database for a particular
-       manual page hierarchy, it will still search for  the  requested  manual
-       pages,  although  file globbing will be necessary to search within that
-       hierarchy.  If wwhhaattiiss or aapprrooppooss fails to find an iinnddeexx it will try  to
-       extract information from a traditional _w_h_a_t_i_s database instead.
-
-       These  utilities  support  compressed  source  nroff  files  having, by
-       default, the extensions of ..ZZ, ..zz and ..ggzz.  It is possible to deal with
-       any  compression  extension, but this information must be known at com‐
-       pile time.  Also, by default, any cat  pages  produced  are  compressed
-       using ggzziipp.  Each `global&#39; manual page hierarchy such as _/_u_s_r_/_s_h_a_r_e_/_m_a_n
-       or _/_u_s_r_/_X_1_1_R_6_/_m_a_n may have any directory as  its  cat  page  hierarchy.
-       Traditionally  the cat pages are stored under the same hierarchy as the
-       man pages, but for reasons such as those specified in the FFiillee  HHiieerraarr‐‐
-       cchhyy  SSttaannddaarrdd  ((FFHHSS)),  it  may  be better to store them elsewhere.  For
-       details on how to do this, please read mmaannppaatthh(5).  For details on  why
-       to do this, read the standard.
-
-       International  support is available with this package.  Native language
-       manual pages are accessible (if available on your system)  via  use  of
-       _l_o_c_a_l_e  functions.   To  activate  such support, it is necessary to set
-       either $LLCC__MMEESSSSAAGGEESS, $LLAANNGG  or  another  system  dependent  environment
-       variable to your language locale, usually specified in the PPOOSSIIXX 11000033..11
-       based format:
-
-       &lt;_l_a_n_g_u_a_g_e&gt;[__&lt;_t_e_r_r_i_t_o_r_y&gt;[..&lt;_c_h_a_r_a_c_t_e_r_-_s_e_t&gt;[,,&lt;_v_e_r_s_i_o_n&gt;]]]
-
-       If the desired page is available in your _l_o_c_a_l_e, it will  be  displayed
-       in lieu of the standard (usually American English) page.
-
-       Support  for  international message catalogues is also featured in this
-       package and can be activated in the same way, again if  available.   If
-       you  find  that  the  manual pages and message catalogues supplied with
-       this package are not available in your native language  and  you  would
-       like  to supply them, please contact the maintainer who will be coordi‐
-       nating such activity.
-
-       For information regarding other features and extensions available  with
-       this manual pager, please read the documents supplied with the package.
-
-DDEEFFAAUULLTTSS
-       mmaann  will search for the desired manual pages within the _i_n_d_e_x database
-       caches. If the --uu option is given, a cache consistency  check  is  per‐
-       formed  to  ensure the databases accurately reflect the filesystem.  If
-       this option is always given, it is not generally necessary to run mmaannddbb
-       after the caches are initially created, unless a cache becomes corrupt.
-       However, the cache consistency check can be slow on systems  with  many
-       manual  pages  installed, so it is not performed by default, and system
-       administrators may wish to run mmaannddbb every week or so to keep the data‐
-       base  caches  fresh.   To forestall problems caused by outdated caches,
-       mmaann will fall back to file globbing if a cache lookup fails, just as it
-       would if no cache was present.
-
-       Once  a  manual page has been located, a check is performed to find out
-       if a relative preformatted `cat&#39; file already exists and is newer  than
-       the nroff file.  If it does and is, this preformatted file is (usually)
-       decompressed and then displayed, via use of a pager.  The pager can  be
-       specified  in  a number of ways, or else will fall back to a default is
-       used (see option --PP for details).  If no cat is found or is older  than
-       the  nroff  file, the nroff is filtered through various programs and is
-       shown immediately.
-
-       If a cat file can be produced (a relative cat directory exists and  has
-       appropriate  permissions),  mmaann will compress and store the cat file in
-       the background.
-
-       The filters are deciphered by a number of means. Firstly,  the  command
-       line option --pp or the environment variable $MMAANNRROOFFFFSSEEQQ is interrogated.
-       If --pp was not used and the environment variable was not set,  the  ini‐
-       tial  line  of  the nroff file is parsed for a preprocessor string.  To
-       contain a valid preprocessor string, the first line must resemble
-
-       &#39;&#39;\\&quot;&quot; &lt;ssttrriinngg&gt;
-
-       where ssttrriinngg can be any combination of letters described by  option  --pp
-       below.
-
-       If  none of the above methods provide any filter information, a default
-       set is used.
-
-       A formatting pipeline is formed from the filters and the  primary  for‐
-       matter  (nnrrooffff or [ttgg]rrooffff with --tt) and executed.  Alternatively, if an
-       executable program _m_a_n_d_b___n_f_m_t (or _m_a_n_d_b___t_f_m_t with --tt) exists in the man
-       tree  root,  it  is executed instead.  It gets passed the manual source
-       file, the preprocessor string, and optionally the device specified with
-       --TT or --EE as arguments.
-
-OOPPTTIIOONNSS
-       Non argument options that are duplicated either on the command line, in
-       $MMAANNOOPPTT, or both, are not harmful.  For options that require  an  argu‐
-       ment, each duplication will override the previous argument value.
-
-   GGeenneerraall ooppttiioonnss
-       --CC _f_i_l_e, ----ccoonnffiigg--ffiillee==_f_i_l_e
-              Use  this  user  configuration  file  rather than the default of
-              _~_/_._m_a_n_p_a_t_h.
-
-       --dd, ----ddeebbuugg
-              Print debugging information.
-
-       --DD, ----ddeeffaauulltt
-              This option is normally issued as  the  very  first  option  and
-              resets  mmaann&#39;&#39;ss  behaviour  to  its  default.  Its use is to reset
-              those options that may have been set in  $MMAANNOOPPTT.   Any  options
-              that follow --DD will have their usual effect.
-
-       ----wwaarrnniinnggss[=_w_a_r_n_i_n_g_s]
-              Enable  warnings from _g_r_o_f_f.  This may be used to perform sanity
-              checks on the source text of manual pages.  _w_a_r_n_i_n_g_s is a comma-
-              separated  list  of  warning  names;  if it is not supplied, the
-              default is &quot;mac&quot;.  See the “Warnings” node in iinnffoo ggrrooffff  for  a
-              list of available warning names.
-
-   MMaaiinn mmooddeess ooff ooppeerraattiioonn
-       --ff, ----wwhhaattiiss
-              Equivalent to wwhhaattiiss.  Display a short description from the man‐
-              ual page, if available. See wwhhaattiiss(1) for details.
-
-       --kk, ----aapprrooppooss
-              Equivalent to aapprrooppooss.  Search the short  manual  page  descrip‐
-              tions  for keywords and display any matches.  See aapprrooppooss(1) for
-              details.
-
-       --KK, ----gglloobbaall--aapprrooppooss
-              Search for text in all manual  pages.   This  is  a  brute-force
-              search,  and is likely to take some time; if you can, you should
-              specify a section to reduce the number of pages that need to  be
-              searched.   Search terms may be simple strings (the default), or
-              regular expressions if the ----rreeggeexx option is used.
-
-       --ll, ----llooccaall--ffiillee
-              Activate `local&#39; mode.  Format and display  local  manual  files
-              instead  of  searching  through  the system&#39;s manual collection.
-              Each manual page argument will be interpreted as an nroff source
-              file in the correct format.  No cat file is produced.  If &#39;-&#39; is
-              listed as one of the arguments, input will be taken from  stdin.
-              When  this  option  is  not used, and man fails to find the page
-              required, before displaying the error message,  it  attempts  to
-              act as if this option was supplied, using the name as a filename
-              and looking for an exact match.
-
-       --ww, ----wwhheerree, ----ppaatthh, ----llooccaattiioonn
-              Don&#39;t actually display the manual pages, but do print the  loca‐
-              tion(s) of the source nroff files that would be formatted.
-
-       --WW, ----wwhheerree--ccaatt, ----llooccaattiioonn--ccaatt
-              Don&#39;t  actually display the manual pages, but do print the loca‐
-              tion(s) of the cat files that would be displayed.  If -w and  -W
-              are both specified, print both separated by a space.
-
-       --cc, ----ccaattmmaann
-              This  option  is  not for general use and should only be used by
-              the ccaattmmaann program.
-
-       --RR _e_n_c_o_d_i_n_g, ----rreeccooddee=_e_n_c_o_d_i_n_g
-              Instead of formatting the manual page in the usual  way,  output
-              its  source converted to the specified _e_n_c_o_d_i_n_g.  If you already
-              know the encoding of the source file,  you  can  also  use  mmaann‐‐
-              ccoonnvv(1)  directly.   However,  this option allows you to convert
-              several manual pages to a  single  encoding  without  having  to
-              explicitly  state  the encoding of each, provided that they were
-              already installed in a structure similar to a manual page  hier‐
-              archy.
-
-   FFiinnddiinngg mmaannuuaall ppaaggeess
-       --LL _l_o_c_a_l_e, ----llooccaallee==_l_o_c_a_l_e
-              mmaann will normally determine your current locale by a call to the
-              C function sseettllooccaallee(3) which interrogates  various  environment
-              variables, possibly including $LLCC__MMEESSSSAAGGEESS and $LLAANNGG.  To tempo‐
-              rarily override the determined value, use this option to  supply
-              a  _l_o_c_a_l_e  string  directly  to mmaann.  Note that it will not take
-              effect until the search for pages actually begins.  Output  such
-              as  the  help  message will always be displayed in the initially
-              determined locale.
-
-       --mm _s_y_s_t_e_m[,...], ----ssyysstteemmss==_s_y_s_t_e_m[,...]
-              If this system has access to  other  operating  system&#39;s  manual
-              pages,  they can be accessed using this option.  To search for a
-              manual page from NewOS&#39;s manual page collection, use the  option
-              --mm NNeewwOOSS.
-
-              The  _s_y_s_t_e_m  specified  can  be a combination of comma delimited
-              operating system names.  To include a search of the native oper‐
-              ating  system&#39;s manual pages, include the system name mmaann in the
-              argument string.  This option will override the $SSYYSSTTEEMM environ‐
-              ment variable.
-
-       --MM _p_a_t_h, ----mmaannppaatthh==_p_a_t_h
-              Specify  an alternate manpath to use.  By default, mmaann uses mmaann‐‐
-              ppaatthh derived code to determine the path to search.  This  option
-              overrides the $MMAANNPPAATTHH environment variable and causes option --mm
-              to be ignored.
-
-              A path specified as a manpath must be the root of a manual  page
-              hierarchy  structured  into  sections as described in the man-db
-              manual (under &quot;The manual page system&quot;).  To view  manual  pages
-              outside such hierarchies, see the --ll option.
-
-       --SS _l_i_s_t, --ss _l_i_s_t, ----sseeccttiioonnss==_l_i_s_t
-              List  is  a  colon-  or comma-separated list of `order specific&#39;
-              manual sections to search.  This option overrides  the  $MMAANNSSEECCTT
-              environment  variable.   (The  --ss  spelling is for compatibility
-              with System V.)
-
-       --ee _s_u_b_-_e_x_t_e_n_s_i_o_n, ----eexxtteennssiioonn==_s_u_b_-_e_x_t_e_n_s_i_o_n
-              Some systems incorporate large packages of manual pages, such as
-              those  that accompany the TTccll package, into the main manual page
-              hierarchy.  To get around the problem of having two manual pages
-              with  the  same name such as eexxiitt(3), the TTccll pages were usually
-              all assigned to section ll.  As this is unfortunate,  it  is  now
-              possible  to put the pages in the correct section, and to assign
-              a specific `extension&#39; to them, in this case, eexxiitt(3tcl).  Under
-              normal  operation,  mmaann  will  display  eexxiitt(3) in preference to
-              eexxiitt(3tcl).  To negotiate this situation and to avoid having  to
-              know  which  section  the page you require resides in, it is now
-              possible to give mmaann a  _s_u_b_-_e_x_t_e_n_s_i_o_n  string  indicating  which
-              package  the page must belong to.  Using the above example, sup‐
-              plying the option --ee ttccll to mmaann  will  restrict  the  search  to
-              pages having an extension of **ttccll.
-
-       --ii, ----iiggnnoorree--ccaassee
-              Ignore  case  when  searching  for  manual  pages.   This is the
-              default.
-
-       --II, ----mmaattcchh--ccaassee
-              Search for manual pages case-sensitively.
-
-       ----rreeggeexx
-              Show all pages with any part of  either  their  names  or  their
-              descriptions  matching  each  _p_a_g_e argument as a regular expres‐
-              sion, as with aapprrooppooss(1).  Since there is usually no  reasonable
-              way  to  pick a &quot;best&quot; page when searching for a regular expres‐
-              sion, this option implies --aa.
-
-       ----wwiillddccaarrdd
-              Show all pages with any part of  either  their  names  or  their
-              descriptions matching each _p_a_g_e argument using shell-style wild‐
-              cards, as with aapprrooppooss(1) ----wwiillddccaarrdd.  The  _p_a_g_e  argument  must
-              match  the  entire  name or description, or match on word bound‐
-              aries in the description.  Since there is usually no  reasonable
-              way  to  pick  a &quot;best&quot; page when searching for a wildcard, this
-              option implies --aa.
-
-       ----nnaammeess--oonnllyy
-              If the ----rreeggeexx or ----wwiillddccaarrdd option is  used,  match  only  page
-              names,  not page descriptions, as with wwhhaattiiss(1).  Otherwise, no
-              effect.
-
-       --aa, ----aallll
-              By default, mmaann will exit after  displaying  the  most  suitable
-              manual  page  it finds.  Using this option forces mmaann to display
-              all the manual pages with names that match the search criteria.
-
-       --uu, ----uuppddaattee
-              This option causes mmaann to perform an `inode  level&#39;  consistency
-              check on its database caches to ensure that they are an accurate
-              representation of the filesystem.  It will only  have  a  useful
-              effect if mmaann is installed with the setuid bit set.
-
-       ----nnoo--ssuubbppaaggeess
-              By default, mmaann will try to interpret pairs of manual page names
-              given on the command line as equivalent to a single manual  page
-              name  containing  a  hyphen or an underscore.  This supports the
-              common pattern of programs that implement a  number  of  subcom‐
-              mands,  allowing  them to provide manual pages for each that can
-              be accessed using similar syntax as would be used to invoke  the
-              subcommands themselves.  For example:
-
-                $ man -aw git diff
-                /usr/share/man/man1/git-diff.1.gz
-
-              To disable this behaviour, use the ----nnoo--ssuubbppaaggeess option.
-
-                $ man -aw --no-subpages git diff
-                /usr/share/man/man1/git.1.gz
-                /usr/share/man/man3/Git.3pm.gz
-                /usr/share/man/man1/diff.1.gz
-
-   CCoonnttrroolllliinngg ffoorrmmaatttteedd oouuttppuutt
-       --PP _p_a_g_e_r, ----ppaaggeerr==_p_a_g_e_r
-              Specify  which  output  pager to use.  By default, mmaann uses lleessss
-              --ss.  This option overrides the $MMAANNPPAAGGEERR  environment  variable,
-              which  in turn overrides the $PPAAGGEERR environment variable.  It is
-              not used in conjunction with --ff or --kk.
-
-              The value may be a simple command name or a command  with  argu‐
-              ments, and may use shell quoting (backslashes, single quotes, or
-              double quotes).  It may not use pipes to connect  multiple  com‐
-              mands;  if  you  need that, use a wrapper script, which may take
-              the file to display either as an argument or on standard input.
-
-       --rr _p_r_o_m_p_t, ----pprroommpptt==_p_r_o_m_p_t
-              If a recent version of lleessss is  used  as  the  pager,  mmaann  will
-              attempt  to  set  its  prompt  and  some  sensible options.  The
-              default prompt looks like
-
-               MMaannuuaall ppaaggee _n_a_m_e((_s_e_c)) lliinnee _x
-
-              where _n_a_m_e denotes the manual page name, _s_e_c denotes the section
-              it  was  found  under  and  _x  the current line number.  This is
-              achieved by using the $LLEESSSS environment variable.
-
-              Supplying --rr with a string  will  override  this  default.   The
-              string  may  contain  the text $$MMAANN__PPNN which will be expanded to
-              the name of the current manual page and its  section  name  sur‐
-              rounded  by `(&#39; and `)&#39;.  The string used to produce the default
-              could be expressed as
-
-              \\ MMaannuuaall\\ ppaaggee\\ \\$$MMAANN__PPNN\\ ??llttlliinnee\\ %%lltt??LL//%%LL..::
-              bbyyttee\\ %%bbBB??ss//%%ss....??\\ ((EENNDD))::??ppBB\\ %%ppBB\\\\%%....
-              ((pprreessss hh ffoorr hheellpp oorr qq ttoo qquuiitt))
-
-              It is broken into three lines here for the sake  of  readability
-              only.   For its meaning see the lleessss(1) manual page.  The prompt
-              string is first evaluated by  the  shell.   All  double  quotes,
-              back-quotes  and  backslashes in the prompt must be escaped by a
-              preceding backslash.  The prompt string may end in an escaped  $
-              which  may  be followed by further options for less.  By default
-              mmaann sets the --iixx88 options.
-
-              If you want to override  mmaann&#39;s  prompt  string  processing  com‐
-              pletely, use the $MMAANNLLEESSSS environment variable described below.
-
-       --77, ----aasscciiii
-              When  viewing a pure _a_s_c_i_i(7) manual page on a 7 bit terminal or
-              terminal emulator, some characters  may  not  display  correctly
-              when  using  the  _l_a_t_i_n_1(7)  device  description with GGNNUU nnrrooffff.
-              This option allows pure _a_s_c_i_i manual pages to  be  displayed  in
-              _a_s_c_i_i  with the _l_a_t_i_n_1 device.  It will not translate any _l_a_t_i_n_1
-              text.  The following table  shows  the  translations  performed:
-              some  parts  of it may only be displayed properly when using GGNNUU
-              nnrrooffff&#39;s _l_a_t_i_n_1(7) device.
-
-
-              Description        Octal   latin1   ascii
-              ──────────────────────────────────────────
-              continuation        255      ‐        -
-              hyphen
-              bullet   (middle    267      ·        o
-              dot)
-              acute accent        264      ´        &#39;
-              multiplication      327      ×        x
-              sign
-
-              If  the  _l_a_t_i_n_1  column displays correctly, your terminal may be
-              set up for _l_a_t_i_n_1 characters and this option is  not  necessary.
-              If  the  _l_a_t_i_n_1 and _a_s_c_i_i columns are identical, you are reading
-              this page using this option or mmaann  did  not  format  this  page
-              using  the  _l_a_t_i_n_1  device description.  If the _l_a_t_i_n_1 column is
-              missing or corrupt, you may need to view manual pages with  this
-              option.
-
-              This  option is ignored when using options --tt, --HH, --TT, or --ZZ and
-              may be useless for nnrrooffff other than GGNNUU&#39;&#39;ss.
-
-       --EE _e_n_c_o_d_i_n_g, ----eennccooddiinngg=_e_n_c_o_d_i_n_g
-              Generate output for a character encoding other than the default.
-              For backward compatibility, _e_n_c_o_d_i_n_g may be an nnrrooffff device such
-              as aasscciiii, llaattiinn11, or uuttff88 as well as a true  character  encoding
-              such as UUTTFF--88.
-
-       ----nnoo--hhyypphheennaattiioonn, ----nnhh
-              Normally, nnrrooffff will automatically hyphenate text at line breaks
-              even in words that do not contain hyphens, if it is necessary to
-              do  so  to  lay  out  words on a line without excessive spacing.
-              This option disables automatic hyphenation, so words  will  only
-              be hyphenated if they already contain hyphens.
-
-              If  you  are  writing  a  manual page and simply want to prevent
-              nnrrooffff from hyphenating a word at an inappropriate point, do  not
-              use  this  option,  but consult the nnrrooffff documentation instead;
-              for instance, you can put &quot;\%&quot; inside a word to indicate that it
-              may  be  hyphenated at that point, or put &quot;\%&quot; at the start of a
-              word to prevent it from being hyphenated.
-
-       ----nnoo--jjuussttiiffiiccaattiioonn, ----nnjj
-              Normally, nnrrooffff will automatically justify text to both margins.
-              This  option disables full justification, leaving justified only
-              to the left margin, sometimes called &quot;ragged-right&quot; text.
-
-              If you are writing a manual page  and  simply  want  to  prevent
-              nnrrooffff  from  justifying  certain  paragraphs,  do  not  use this
-              option,  but  consult  the  nnrrooffff  documentation  instead;   for
-              instance,  you  can  use  the  &quot;.na&quot;,  &quot;.nf&quot;,  &quot;.fi&quot;,  and &quot;.ad&quot;
-              requests to temporarily disable adjusting and filling.
-
-       --pp _s_t_r_i_n_g, ----pprreepprroocceessssoorr==_s_t_r_i_n_g
-              Specify the sequence of preprocessors to  run  before  nnrrooffff  or
-              ttrrooffff/ggrrooffff.  Not all installations will have a full set of pre‐
-              processors.  Some of the preprocessors and the letters  used  to
-              designate  them are: eeqqnn (ee), ggrraapp (gg), ppiicc (pp), ttbbll (tt), vvggrriinndd
-              (vv), rreeffeerr (rr).  This option overrides the $MMAANNRROOFFFFSSEEQQ  environ‐
-              ment  variable.   zzssooeelliimm  is  always run as the very first pre‐
-              processor.
-
-       --tt, ----ttrrooffff
-              Use _g_r_o_f_f _-_m_a_n_d_o_c to format the manual  page  to  stdout.   This
-              option is not required in conjunction with --HH, --TT, or --ZZ.
-
-       --TT[_d_e_v_i_c_e], ----ttrrooffff--ddeevviiccee[=_d_e_v_i_c_e]
-              This option is used to change ggrrooffff (or possibly ttrrooffff&#39;&#39;ss) output
-              to be suitable for a device other than the default.  It  implies
-              --tt.   Examples  (provided  with Groff-1.17) include ddvvii, llaattiinn11,
-              ppss, uuttff88, XX7755 and XX110000.
-
-       --HH[_b_r_o_w_s_e_r], ----hhttmmll[=_b_r_o_w_s_e_r]
-              This option will cause ggrrooffff to produce HTML  output,  and  will
-              display  that output in a web browser.  The choice of browser is
-              determined by the optional _b_r_o_w_s_e_r argument if one is  provided,
-              by  the  $BBRROOWWSSEERR  environment  variable,  or  by a compile-time
-              default if that is unset (usually llyynnxx).   This  option  implies
-              --tt, and will only work with GGNNUU ttrrooffff.
-
-       --XX[_d_p_i], ----ggxxddiittvviieeww[=_d_p_i]
-              This  option  displays the output of ggrrooffff in a graphical window
-              using the ggxxddiittvviieeww program.  The _d_p_i (dots per inch) may be 75,
-              75-12,  100, or 100-12, defaulting to 75; the -12 variants use a
-              12-point base font.   This  option  implies  --TT  with  the  X75,
-              X75-12, X100, or X100-12 device respectively.
-
-       --ZZ, ----ddiittrrooffff
-              ggrrooffff  will run ttrrooffff and then use an appropriate post-processor
-              to produce output suitable for  the  chosen  device.   If  _g_r_o_f_f
-              _-_m_a_n_d_o_c  is  ggrrooffff, this option is passed to ggrrooffff and will sup‐
-              press the use of a post-processor.  It implies --tt.
-
-   GGeettttiinngg hheellpp
-       --??, ----hheellpp
-              Print a help message and exit.
-
-       ----uussaaggee
-              Print a short usage message and exit.
-
-       --VV, ----vveerrssiioonn
-              Display version information.
-
-EEXXIITT SSTTAATTUUSS
-       00      Successful program execution.
-
-       11      Usage, syntax or configuration file error.
-
-       22      Operational error.
-
-       33      A child process returned a non-zero exit status.
-
-       1166     At least one of the pages/files/keywords didn&#39;t exist or  wasn&#39;t
-              matched.
-
-EENNVVIIRROONNMMEENNTT
-       MMAANNPPAATTHH
-              If  $MMAANNPPAATTHH is set, its value is used as the path to search for
-              manual pages.
-
-       MMAANNRROOFFFFOOPPTT
-              The contents of $MMAANNRROOFFFFOOPPTT are added to the command line  every
-              time mmaann invokes the formatter (nnrrooffff, ttrrooffff, or ggrrooffff).
-
-       MMAANNRROOFFFFSSEEQQ
-              If $MMAANNRROOFFFFSSEEQQ is set, its value is used to determine the set of
-              preprocessors to pass each manual  page  through.   The  default
-              preprocessor list is system dependent.
-
-       MMAANNSSEECCTT
-              If  $MMAANNSSEECCTT is set, its value is a colon-delimited list of sec‐
-              tions and it is used  to  determine  which  manual  sections  to
-              search and in what order.
-
-       MMAANNPPAAGGEERR, PPAAGGEERR
-              If $MMAANNPPAAGGEERR or $PPAAGGEERR is set ($MMAANNPPAAGGEERR is used in preference),
-              its value is used as the name of the program used to display the
-              manual page.  By default, lleessss --ss is used.
-
-              The  value  may be a simple command name or a command with argu‐
-              ments, and may use shell quoting (backslashes, single quotes, or
-              double  quotes).   It may not use pipes to connect multiple com‐
-              mands; if you need that, use a wrapper script,  which  may  take
-              the file to display either as an argument or on standard input.
-
-       MMAANNLLEESSSS
-              If  $MMAANNLLEESSSS  is set, mmaann will not perform any of its usual pro‐
-              cessing to set up a prompt string for the lleessss pager.   Instead,
-              the  value  of $MMAANNLLEESSSS will be copied verbatim into $LLEESSSS.  For
-              example, if you want to set the prompt string unconditionally to
-              “my prompt string”, set $MMAANNLLEESSSS to ‘--PPssmmyy pprroommpptt ssttrriinngg’.
-
-       BBRROOWWSSEERR
-              If  $BBRROOWWSSEERR is set, its value is a colon-delimited list of com‐
-              mands, each of which in turn is used  to  try  to  start  a  web
-              browser  for  mmaann  ----hhttmmll.  In each command, _%_s is replaced by a
-              filename containing the HTML output from ggrrooffff, _%_%  is  replaced
-              by a single percent sign (%), and _%_c is replaced by a colon (:).
-
-       SSYYSSTTEEMM If  $SSYYSSTTEEMM  is  set,  it will have the same effect as if it had
-              been specified as the argument to the --mm option.
-
-       MMAANNOOPPTT If $MMAANNOOPPTT is set, it will be parsed prior to mmaann&#39;&#39;ss command line
-              and  is expected to be in a similar format.  As all of the other
-              mmaann specific environment variables can be expressed  as  command
-              line  options,  and  are  thus  candidates for being included in
-              $MMAANNOOPPTT it is expected that they will become obsolete.  N.B. All
-              spaces  that  should be interpreted as part of an option&#39;s argu‐
-              ment must be escaped.
-
-       MMAANNWWIIDDTTHH
-              If $MMAANNWWIIDDTTHH is set, its value is used as the  line  length  for
-              which  manual pages should be formatted.  If it is not set, man‐
-              ual pages will be formatted with a line  length  appropriate  to
-              the  current terminal (using an iiooccttll(2) if available, the value
-              of $CCOOLLUUMMNNSS, or falling back to  80  characters  if  neither  is
-              available).   Cat pages will only be saved when the default for‐
-              matting can be used, that is when the terminal  line  length  is
-              between 66 and 80 characters.
-
-       MMAANN__KKEEEEPP__FFOORRMMAATTTTIINNGG
-              Normally,  when output is not being directed to a terminal (such
-              as to a file or a pipe), formatting characters are discarded  to
-              make  it  easier to read the result without special tools.  How‐
-              ever, if $MMAANN__KKEEEEPP__FFOORRMMAATTTTIINNGG is set  to  any  non-empty  value,
-              these  formatting  characters  are retained.  This may be useful
-              for wrappers around mmaann that can  interpret  formatting  charac‐
-              ters.
-
-       MMAANN__KKEEEEPP__SSTTDDEERRRR
-              Normally,  when  output is being directed to a terminal (usually
-              to a pager), any error output from the command used  to  produce
-              formatted  versions of manual pages is discarded to avoid inter‐
-              fering with the pager&#39;s display.  Programs such as  ggrrooffff  often
-              produce  relatively  minor  error  messages  about typographical
-              problems such as poor alignment, which are unsightly and  gener‐
-              ally  confusing when displayed along with the manual page.  How‐
-              ever,  some  users   want   to   see   them   anyway,   so,   if
-              $MMAANN__KKEEEEPP__SSTTDDEERRRR  is  set  to  any non-empty value, error output
-              will be displayed as usual.
-
-       LLAANNGG, LLCC__MMEESSSSAAGGEESS
-              Depending on system and implementation, either or both of  $LLAANNGG
-              and  $LLCC__MMEESSSSAAGGEESS  will  be interrogated for the current message
-              locale.  mmaann will display its messages in that locale (if avail‐
-              able).  See sseettllooccaallee(3) for precise details.
-
-FFIILLEESS
-       _/_e_t_c_/_m_a_n___d_b_._c_o_n_f
-              man-db configuration file.
-
-       _/_u_s_r_/_s_h_a_r_e_/_m_a_n
-              A global manual page hierarchy.
-
-       _/_u_s_r_/_s_h_a_r_e_/_m_a_n_/_i_n_d_e_x_._(_b_t_|_d_b_|_d_i_r_|_p_a_g_)
-              A traditional global _i_n_d_e_x database cache.
-
-       _/_v_a_r_/_c_a_c_h_e_/_m_a_n_/_i_n_d_e_x_._(_b_t_|_d_b_|_d_i_r_|_p_a_g_)
-              An FHS compliant global _i_n_d_e_x database cache.
-
-SSEEEE AALLSSOO
-       aapprrooppooss(1),   ggrrooffff(1),   lleessss(1),   mmaannppaatthh(1),   nnrrooffff(1),  ttrrooffff(1),
-       wwhhaattiiss(1), zzssooeelliimm(1), sseettllooccaallee(3), mmaannppaatthh(5),  aasscciiii(7),  llaattiinn11(7),
-       mmaann(7), ccaattmmaann(8), mmaannddbb(8), the man-db package manual, FFSSSSTTNNDD
-
-HHIISSTTOORRYY
-       1990, 1991 - Originally written by John W. Eaton (jwe@che.utexas.edu).
-
-       Dec 23 1992: Rik Faith (faith@cs.unc.edu) applied bug fixes supplied by
-       Willem Kasdorp (wkasdo@nikhefk.nikef.nl).
-
-       30th April 1994 - 23rd February 2000: Wilf. (G.Wilford@ee.surrey.ac.uk)
-       has been developing and maintaining this package with the help of a few
-       dedicated people.
-
-       30th  October  1996  -  30th  March  2001:   Fabrizio   Polacco   &lt;fpo‐
-       lacco@debian.org&gt;  maintained  and enhanced this package for the Debian
-       project, with the help of all the community.
-
-       31st March 2001 - present day: Colin  Watson  &lt;cjwatson@debian.org&gt;  is
-       now developing and maintaining man-db.
-
-
-
-2.6.3                             2012-09-17                            MAN(1)
+man<span class="w"> </span>man<span class="w">  </span>
 </pre></div>
 </div>
 </div>
@@ -1883,9 +516,9 @@ HHIISSTTOORRYY
 </div>
 </section>
 <section id="zoom-sur-la-commande-ls">
-<h2>Zoom sur la commande ls<a class="headerlink" href="#zoom-sur-la-commande-ls" title="Permalink to this headline">#</a></h2>
+<h2>Zoom sur la commande ls<a class="headerlink" href="#zoom-sur-la-commande-ls" title="Permalink to this heading">#</a></h2>
 <section id="la-commande-ls-et-ses-arguments">
-<h3>La commande ls et ses arguments<a class="headerlink" href="#la-commande-ls-et-ses-arguments" title="Permalink to this headline">#</a></h3>
+<h3>La commande ls et ses arguments<a class="headerlink" href="#la-commande-ls-et-ses-arguments" title="Permalink to this heading">#</a></h3>
 <p>La commande ls peut prendre un certain nombre d’arguments.</p>
 <p>Parmis les arguments principaux:</p>
 <ul class="simple">
@@ -1900,11 +533,11 @@ HHIISSTTOORRYY
 <p><strong>Sous Linux les noms des fichiers cachés commencent par un point (e.g ‘.bashrc’).</strong></p>
 </section>
 <section id="id1">
-<h3>La commande ls et ses arguments<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>La commande ls et ses arguments<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans le dossier</span>
-<span class="nb">cd</span> /shared/bank/homo_sapiens/hg38/fasta   
+<span class="nb">cd</span><span class="w"> </span>/shared/bank/homo_sapiens/hg38/fasta<span class="w">   </span>
 </pre></div>
 </div>
 </div>
@@ -1912,12 +545,7 @@ HHIISSTTOORRYY
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On liste les fichiers</span>
-ls   
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hg38.fa  hg38.fa.fai
+ls<span class="w">   </span>
 </pre></div>
 </div>
 </div>
@@ -1925,14 +553,7 @@ ls
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Information détaillée sur les fichiers (taille, date modif,...)</span>
-ls -l 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3196788
--rw-rw-r-- 1 glecorguille glecorguille 3273481150 Jan 16  2014 hg38.fa
--rw-rw-r-- 1 glecorguille glecorguille      19381 Nov 21  2016 hg38.fa.fai
+ls<span class="w"> </span>-l<span class="w"> </span>
 </pre></div>
 </div>
 </div>
@@ -1940,14 +561,7 @@ ls -l
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers et tailles en Ko,Mo,Go,To... </span>
-ls -lh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3.1G
--rw-rw-r-- 1 glecorguille glecorguille 3.1G Jan 16  2014 hg38.fa
--rw-rw-r-- 1 glecorguille glecorguille  19K Nov 21  2016 hg38.fa.fai
+ls<span class="w"> </span>-lh
 </pre></div>
 </div>
 </div>
@@ -1955,14 +569,7 @@ ls -lh
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers, tailles en Ko,Mo,Go,To…, tri par date</span>
-ls -tlh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3.1G
--rw-rw-r-- 1 glecorguille glecorguille  19K Nov 21  2016 hg38.fa.fai
--rw-rw-r-- 1 glecorguille glecorguille 3.1G Jan 16  2014 hg38.fa
+ls<span class="w"> </span>-tlh
 </pre></div>
 </div>
 </div>
@@ -1971,14 +578,7 @@ ls -tlh
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vue détaillée des fichiers, tailles en Ko,Mo,Go,To…, tri par date</span>
 <span class="c1"># du plus ancien au plus récent</span>
-ls -rtlh
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3.1G
--rw-rw-r-- 1 glecorguille glecorguille 3.1G Jan 16  2014 hg38.fa
--rw-rw-r-- 1 glecorguille glecorguille  19K Nov 21  2016 hg38.fa.fai
+ls<span class="w"> </span>-rtlh
 </pre></div>
 </div>
 </div>
@@ -2006,7 +606,7 @@ ls -rtlh
             mode: "bash"
         },
         kernelOptions: {
-            kernelName: "bash",
+            name: "bash",
             path: "./."
         },
         predefinedOutput: true
@@ -2014,50 +614,106 @@ ls -rtlh
     </script>
     <script>kernelName = 'bash'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="05_module.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Charger l’environnement logiciel</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_module.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Charger l’environnement logiciel</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="quizz_01.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="quizz_01.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Quizz 1</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trouver-de-l-aide">Trouver de l’aide !</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom-sur-la-commande-ls">Zoom sur la commande ls</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-commande-ls-et-ses-arguments">La commande ls et ses arguments</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">La commande ls et ses arguments</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Thomas Denecker & Claire Toffano-Nioche<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Thomas Denecker & Claire Toffano-Nioche
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
