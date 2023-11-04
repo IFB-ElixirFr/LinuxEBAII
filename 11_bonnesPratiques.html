@@ -421,28 +421,23 @@ document.write(`
 <p>Bien qu’il soit possible d’utiliser des espaces dans les noms de fichiers/dossiers, cette pratique risque de d’engendrer des erreurs !</p>
 <p>Voyons ça d’un peu plus près…</p>
 <p>Vous connaissez la syntaxe générique des commandes linux:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">command</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>argument1<span class="w"> </span>argument2
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: [options]: command not found
-?2004h
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">[options]</span> <span class="pre">argument1</span> <span class="pre">argument2</span></code></p>
 <p>Ici, les arguments sont séparés par des espaces. Si vous essayez d’utiliser directement des noms de fichiers avec des espaces, ils seront traités comme des arguments distincts plutôt que comme un seul argument.</p>
 <p>Exemple - on veut écrire le texte “bonjour EBAII 2023” dans le fichier : <code class="docutils literal notranslate"><span class="pre">bonjour</span> <span class="pre">ebaii.txt</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bonjour EBAII 2023&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>bonjour<span class="w"> </span>ebaii.txt
 cat<span class="w"> </span>bonjour<span class="w"> </span>ebaii.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour EBAII 2023 ebaii.txt
+cat: ebaii.txt: No such file or directory
+?2004h
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
