@@ -1,4 +1,4 @@
-# Livre Introdcution à Linux pour la bioinformatique
+# Livre Introduction à Linux pour la bioinformatique
 
 ## Site web 
 
