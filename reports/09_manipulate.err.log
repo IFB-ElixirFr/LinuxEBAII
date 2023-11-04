@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 # On se déplace dans annotations
 # remplacer <project> 
 # cd /shared/projects/<project>/annotations/hg38 
-cd /shared/projects/form_2022_32/coursLinux/demo/annotations/hg38 
+cd /shared/projects/2325_ebaii/coursLinux/demo/annotations/hg38 
 ------------------
 
 
