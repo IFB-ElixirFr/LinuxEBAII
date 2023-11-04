@@ -506,11 +506,44 @@ cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>chr1
+chr10
+chr11
+chr12
+chr13
+chr14
+chr15
+chr16
+chr17
+chr18
+chr19
+chr2
+chr20
+chr21
+chr22
+chr3
+chr4
+chr5
+chr6
+chr7
+chr8
+chr9
+chrX
+chrY
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nombre de chromosomes différents</span>
 cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>hg38_exons.bed<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
 </pre></div>
 </div>
 </div>
@@ -524,12 +557,68 @@ cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 117347 chr1
+  46414 chr10
+  75294 chr11
+  72970 chr12
+  20371 chr13
+  43618 chr14
+  47068 chr15
+  60375 chr16
+  77950 chr17
+  22378 chr18
+  73716 chr19
+  97092 chr2
+  28097 chr20
+  14332 chr21
+  27854 chr22
+  80596 chr3
+  49351 chr4
+  55719 chr5
+  56433 chr6
+  60961 chr7
+  45192 chr8
+  45468 chr9
+  39510 chrX
+   3764 chrY
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># La liste des chromosomes présents dans le fichier et leur nombre trié</span>
 <span class="c1"># par ordre décroissant (-r: reverse, -n: numeric, -k: ‘kolonne’)</span>
 cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>hg38_exons.bed<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nr<span class="w"> </span>-k<span class="w"> </span><span class="m">1</span>,1
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 117347 chr1
+  97092 chr2
+  80596 chr3
+  77950 chr17
+  75294 chr11
+  73716 chr19
+  72970 chr12
+  60961 chr7
+  60375 chr16
+  56433 chr6
+  55719 chr5
+  49351 chr4
+  47068 chr15
+  46414 chr10
+  45468 chr9
+  45192 chr8
+  43618 chr14
+  39510 chrX
+  28097 chr20
+  27854 chr22
+  22378 chr18
+  20371 chr13
+  14332 chr21
+   3764 chrY
 </pre></div>
 </div>
 </div>
@@ -558,10 +647,20 @@ cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27854
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="s2">&quot;chr22&quot;</span><span class="w"> </span>hg38_exons.bed<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;lincRNA&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>846
 </pre></div>
 </div>
 </div>
@@ -572,10 +671,20 @@ cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><sp
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27854
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="s2">&quot;chr22&quot;</span><span class="w"> </span>hg38_exons.bed<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;lincRNA&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>846
 </pre></div>
 </div>
 </div>

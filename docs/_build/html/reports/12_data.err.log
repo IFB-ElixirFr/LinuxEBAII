@@ -17,8 +17,8 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# form_2022_32 à adapter à votre projet
-cd /shared/projects/form_2022_32/coursLinux/demo/chip-seq/fastq
+# 2325_ebaii à adapter à votre projet
+cd /shared/projects/2325_ebaii/coursLinux/demo/chip-seq/fastq
 ------------------
 
 

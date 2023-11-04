@@ -495,6 +495,11 @@ Nous utiliserons les commandes <code class="docutils literal notranslate"><span 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank/homo_sapiens/hg19/star-2.7.5a
+</pre></div>
+</div>
+</div>
 </div>
 <p><img alt="" src="_images/arborescence7.png" /></p>
 <div class="cell docutils container">
@@ -505,11 +510,21 @@ Nous utiliserons les commandes <code class="docutils literal notranslate"><span 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank/homo_sapiens/hg19
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>./star-2.7.5a
 <span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank/homo_sapiens/hg19/star-2.7.5a
 </pre></div>
 </div>
 </div>
@@ -526,6 +541,80 @@ Nous utiliserons les commandes <code class="docutils literal notranslate"><span 
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># -d : List directories only</span>
 tree<span class="w"> </span>-d
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.
+├── GRCh37
+│   ├── bowtie2
+│   ├── bwa
+│   ├── fasta
+│   ├── gff
+│   ├── picard
+│   ├── snpeff
+│   ├── star -&gt; star-2.7.2b
+│   ├── star-2.6
+│   ├── star-2.7.2b
+│   └── star-2.7.5a
+├── GRCh38
+│   ├── bwa
+│   ├── fasta
+│   ├── gff3
+│   ├── gnomad
+│   │   ├── 2.1
+│   │   │   ├── exomes
+│   │   │   └── genomes
+│   │   └── 3.0
+│   │       └── genomes
+│   ├── gtf
+│   ├── star -&gt; star-2.6.1a
+│   ├── star-2.6.1a
+│   ├── star-2.7.5a
+│   └── trinity
+│       ├── __chkpts
+│       └── ref_genome.fa.star.idx
+├── GRCh38.p14
+│   ├── Ensembl_110
+│   │   ├── fasta
+│   │   ├── gff3
+│   │   ├── gtf
+│   │   └── indexes
+│   │       ├── bowtie2-2.5.1
+│   │       ├── star-2.7.10b
+│   │       └── star-2.7.11a
+│   ├── latest_ensembl -&gt; Ensembl_110
+│   ├── latest_refseq -&gt; RefSeq_2023_10
+│   └── RefSeq_2023_10
+│       ├── fasta
+│       ├── gff
+│       ├── gtf
+│       └── indexes
+├── hg19
+│   ├── bowtie
+│   ├── bowtie2
+│   ├── bwa
+│   ├── fasta
+│   ├── gtf
+│   ├── hisat2
+│   ├── picard
+│   ├── snpeff
+│   │   └── hg19
+│   ├── star-2.6
+│   ├── star-2.7.2b
+│   └── star-2.7.5a
+├── hg38
+│   ├── bmtool
+│   ├── bowtie2
+│   ├── fasta
+│   ├── hisat2
+│   ├── srprism
+│   ├── star-2.6
+│   ├── star-2.7.2b
+│   └── star-2.7.5a
+└── latest_genome -&gt; GRCh38.p14
+
+67 directories
 </pre></div>
 </div>
 </div>
@@ -560,6 +649,11 @@ tree<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank/homo_sapiens/hg38/star-2.7.5a
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -569,12 +663,22 @@ tree<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank/homo_sapiens/hg38
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On se déplace dans le dossier bank</span>
 <span class="nb">cd</span><span class="w"> </span>../..
 <span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank
 </pre></div>
 </div>
 </div>
@@ -602,6 +706,11 @@ tree<span class="w"> </span>-d
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/bank/uniprot_swissprot
+</pre></div>
+</div>
+</div>
 </div>
 <p>Utilisez la <strong>complétion</strong> pour les noms les noms de fichier (<strong>touche <TAB></strong>) et éventuellement les noms de commandes</p>
 </section>
@@ -621,6 +730,11 @@ whoami
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pfrancois
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -634,6 +748,11 @@ whoami
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># /</span>
 <span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/
 </pre></div>
 </div>
 </div>

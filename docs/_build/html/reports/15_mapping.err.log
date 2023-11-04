@@ -18,7 +18,7 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 # Créez un répertoire pour y stocker l’index dans chip-seq/
-cd /shared/projects/form_2022_32/coursLinux/demo/chip-seq/   
+cd /shared/projects/2325_ebaii/coursLinux/demo/chip-seq/   
 mkdir index
 cd index
 ------------------

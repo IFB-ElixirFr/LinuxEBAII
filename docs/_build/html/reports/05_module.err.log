@@ -18,8 +18,7 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 # Afficher la liste des environnements disponibles
-module avail -l | head  
-
+module avail -l | head
 ------------------
 
 

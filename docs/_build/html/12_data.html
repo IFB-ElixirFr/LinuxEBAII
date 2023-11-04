@@ -455,11 +455,11 @@ document.write(`
 <p>On peut utiliser un navigateur (e.g Cyberduck) pour téléverser sur le serveur.
 Mieux, on peut effectuer directement le téléchargement depuis le terminal si on dispose de l’URL.
 On utilise alors la commande <code class="docutils literal notranslate"><span class="pre">wget</span></code>.</p>
-<p>se déplacer dans l’arborescence de votre projet : <code class="docutils literal notranslate"><span class="pre">/shared/projects/&lt;project&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">form_2022_32</span></code> à adapter) et dans les sous-répertoires <code class="docutils literal notranslate"><span class="pre">chip-seq</span></code> puis <code class="docutils literal notranslate"><span class="pre">fastq</span></code>.</p>
+<p>se déplacer dans l’arborescence de votre projet : <code class="docutils literal notranslate"><span class="pre">/shared/projects/&lt;project&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">2325_ebaii</span></code> à adapter) et dans les sous-répertoires <code class="docutils literal notranslate"><span class="pre">chip-seq</span></code> puis <code class="docutils literal notranslate"><span class="pre">fastq</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># form_2022_32 à adapter à votre projet</span>
-<span class="nb">cd</span><span class="w"> </span>/shared/projects/form_2022_32/coursLinux/demo/chip-seq/fastq
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2325_ebaii à adapter à votre projet</span>
+<span class="nb">cd</span><span class="w"> </span>/shared/projects/2325_ebaii/coursLinux/demo/chip-seq/fastq
 </pre></div>
 </div>
 </div>
@@ -475,8 +475,13 @@ On utilise alors la commande <code class="docutils literal notranslate"><span cl
 <p>Vérifier qu’on est bien dans le répertoire <code class="docutils literal notranslate"><span class="pre">/shared/projects/&lt;projet&gt;/chip-seq/fastq</span></code> (<code class="docutils literal notranslate"><span class="pre">&lt;projet&gt;</span></code> à adapter) avec <code class="docutils literal notranslate"><span class="pre">pwd</span></code> :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># form_2022_32 à adapter à votre projet</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2325_ebaii à adapter à votre projet</span>
 <span class="nb">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared/projects/2325_ebaii/coursLinux/demo/chip-seq/fastq
 </pre></div>
 </div>
 </div>
@@ -489,16 +494,20 @@ On utilise alors la commande <code class="docutils literal notranslate"><span cl
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2022-11-10 17:53:10--  https://zenodo.org/record/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
-Resolving zenodo.org (zenodo.org)... 188.184.117.155
-Connecting to zenodo.org (zenodo.org)|188.184.117.155|:443... connected.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-11-04 13:05:15--  https://zenodo.org/record/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
+Resolving zenodo.org (zenodo.org)... 188.185.10.78, 188.185.33.206, 188.185.22.33, ...
+Connecting to zenodo.org (zenodo.org)|188.185.10.78|:443... connected.
+HTTP request sent, awaiting response... 301 MOVED PERMANENTLY
+Location: /records/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz [following]
+--2023-11-04 13:05:15--  https://zenodo.org/records/5571592/files/siNT_ER_E2_r3_chr21.fastq.gz
+Reusing existing connection to zenodo.org:443.
 HTTP request sent, awaiting response... 200 OK
 Length: 10857524 (10M) [application/octet-stream]
 Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
 
 100%[======================================&gt;] 10,857,524  --.-K/s   in 0.1s    
 
-2022-11-10 17:53:11 (102 MB/s) - ‘siNT_ER_E2_r3_chr21.fastq.gz’ saved [10857524/10857524]
+2023-11-04 13:05:15 (75.4 MB/s) - ‘siNT_ER_E2_r3_chr21.fastq.gz’ saved [10857524/10857524]
 </pre></div>
 </div>
 </div>
@@ -507,6 +516,11 @@ Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21.fastq.gz
 </pre></div>
 </div>
 </div>
@@ -528,6 +542,11 @@ Saving to: ‘siNT_ER_E2_r3_chr21.fastq.gz’
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>siNT_ER_E2_r3_chr21.fastq
 </pre></div>
 </div>
 </div>

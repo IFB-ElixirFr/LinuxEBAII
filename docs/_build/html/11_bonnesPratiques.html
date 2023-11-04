@@ -421,28 +421,23 @@ document.write(`
 <p>Bien qu’il soit possible d’utiliser des espaces dans les noms de fichiers/dossiers, cette pratique risque de d’engendrer des erreurs !</p>
 <p>Voyons ça d’un peu plus près…</p>
 <p>Vous connaissez la syntaxe générique des commandes linux:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">command</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>argument1<span class="w"> </span>argument2
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: [options]: command not found
-?2004h
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">[options]</span> <span class="pre">argument1</span> <span class="pre">argument2</span></code></p>
 <p>Ici, les arguments sont séparés par des espaces. Si vous essayez d’utiliser directement des noms de fichiers avec des espaces, ils seront traités comme des arguments distincts plutôt que comme un seul argument.</p>
 <p>Exemple - on veut écrire le texte “bonjour EBAII 2023” dans le fichier : <code class="docutils literal notranslate"><span class="pre">bonjour</span> <span class="pre">ebaii.txt</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bonjour EBAII 2023&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>bonjour<span class="w"> </span>ebaii.txt
 cat<span class="w"> </span>bonjour<span class="w"> </span>ebaii.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour EBAII 2023 ebaii.txt
+cat: ebaii.txt: No such file or directory
+?2004h
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -465,11 +460,21 @@ cat<span class="w"> </span><span class="s2">&quot;bonjour ebaii.txt&quot;</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour EBAII 2023
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;bonjour EBAII 2023&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>bonjour<span class="se">\ </span>ebaii.txt
 cat<span class="w"> </span>bonjour<span class="se">\ </span>ebaii.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bonjour EBAII 2023
 </pre></div>
 </div>
 </div>
@@ -492,6 +497,26 @@ cat<span class="w"> </span>my_script_windows.sh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2023-11-04 12:47:49--  https://raw.githubusercontent.com/IFB-ElixirFr/LinuxEBAII/EBAII23/docs/data/my_script_windows.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 141 [text/plain]
+Saving to: ‘my_script_windows.sh’
+
+100%[======================================&gt;] 141         --.-K/s   in 0s      
+
+2023-11-04 12:47:49 (7.58 MB/s) - ‘my_script_windows.sh’ saved [141/141]
+
+#!/bin/bash
+#Ecrit hostname dans une variable
+host_name=$(hostname)
+#Affiche hostname avec la commande echo
+echo &quot;hostname: $host_name&quot;
+</pre></div>
+</div>
+</div>
 </div>
 <p>La commande cat affiche les lignes suivantes essayons de comprendre rapidement ce que fait notre script :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -508,6 +533,14 @@ cat<span class="w"> </span>my_script_windows.sh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bash: ./my_script_windows.sh: /bin/bash^M: bad interpreter: No such file or directory
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>Le shell vous retourne une erreur : <code class="docutils literal notranslate"><span class="pre">&quot;/bin/bash^M</span> <span class="pre">:</span> <span class="pre">mauvais</span> <span class="pre">interpréteur:</span> <span class="pre">Aucun</span> <span class="pre">fichier</span> <span class="pre">ou</span> <span class="pre">dossier</span> <span class="pre">de</span> <span class="pre">ce</span> <span class="pre">type&quot;</span></code> ?????</p>
 <p>Pourtant le script semble bien écrit ? Alors il faut aller chercher plus loin…</p>
@@ -521,6 +554,15 @@ cat<span class="w"> </span>my_script_windows.sh
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>-A<span class="w"> </span>my_script_windows.sh
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#!/bin/bash^M$
+#Ecrit hostname dans une variable^M$
+host_name=$(hostname)^M$
+#Affiche hostname avec la commande echo^M$
+echo &quot;hostname: $host_name&quot;^M$
 </pre></div>
 </div>
 </div>
@@ -542,6 +584,11 @@ cat<span class="w"> </span>my_script_windows.sh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>my_script_windows.sh: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
+</pre></div>
+</div>
+</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_script_windows.sh:<span class="w"> </span>Bourne-Again<span class="w"> </span>shell<span class="w"> </span>script,<span class="w"> </span>ASCII<span class="w"> </span>text<span class="w"> </span>executable,<span class="w"> </span>with<span class="w"> </span>CRLF<span class="w"> </span>line<span class="w"> </span>terminators
 </pre></div>
@@ -555,6 +602,12 @@ file<span class="w"> </span>my_script_windows.sh
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dos2unix: converting file my_script_windows.sh to Unix format ...
+my_script_windows.sh: Bourne-Again shell script, ASCII text executable
+</pre></div>
+</div>
+</div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>my_script_windows.sh:<span class="w"> </span>Bourne-Again<span class="w"> </span>shell<span class="w"> </span>script,<span class="w"> </span>ASCII<span class="w"> </span>text<span class="w"> </span>executable
 </pre></div>
@@ -564,6 +617,16 @@ file<span class="w"> </span>my_script_windows.sh
 <div class="cell_input docutils container">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>-A<span class="w"> </span>my_script_windows.sh
 ./my_script_windows.sh
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>#!/bin/bash$
+#Ecrit hostname dans une variable$
+host_name=$(hostname)$
+#Affiche hostname avec la commande echo$
+echo &quot;hostname: $host_name&quot;$
+hostname: cpu-node-41.ifb.local
 </pre></div>
 </div>
 </div>
